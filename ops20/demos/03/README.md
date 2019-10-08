@@ -1,7 +1,7 @@
 # Demo 3: Remediation of Shopping Cart
 
-| [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
-|--------|-------|------------|
+| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+|--------|-------|------------|-----------|
 
 [Watch the stage ready demonstration](https://coming.soon)
 
@@ -23,6 +23,13 @@ Blah, blah
 7. [Kubernetes](/tools/README.md#Kubernetes)
 
 ![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide60.png)
+
+>**Presenter Setup Checklist:**
+- [ ] Dashboard open in own tab.<br />
+- [ ] AKS connection string ready to copy and paste.
+- [ ] Cloud shell open in tab (can open from troubleshooting guide).
+> Be sure all above are complete before beginning demo
+
 
 In this demo you will need run a few commands from [Cloud Shell](https://shell.azure.com).
 

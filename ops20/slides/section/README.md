@@ -1,7 +1,7 @@
 # Sections
 
-| [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
-|--------|-------|------------|
+| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+|--------|-------|------------|-----------|
 
 The Powerpoint portion of this presentation can be broken up in to four (4) sections.
 

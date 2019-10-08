@@ -1,9 +1,9 @@
 # OPS20 - Responding To Incidents Script
 
-| [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
-|--------|-------|------------|
+| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+|--------|-------|------------|-----------|
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide1.png)
+![](../../media/slides/Slide1.png)
 
 - Respond with urgency, rather than react
 - Prioritize for clear communication
@@ -12,12 +12,12 @@
 
 ## Slide 2 (Title Slide)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide2.png)
+![](../../media/slides/Slide2.png)
 
 
 ## Slide 3 (Resources)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide3.png)
+![](../../media/slides/Slide3.png)
 
 Let’s get started ..
 
@@ -31,7 +31,7 @@ And I'll show this slide at the very end as well If you miss it.
 
 ## Slide 4 (TTR)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide4.png)
+![](../../media/slides/Slide4.png)
 
 How many of you are familiar with the acronym T. T. R. ?
 Who can tell me what that stands for?
@@ -49,7 +49,7 @@ We must do better at knowing when something is wrong and being able to respond t
 
 ## Slide 5 (Elite/High Performers)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide5.png)
+![](../../media/slides/Slide5.png)
 
 Each year, the ”DevOps Research and Assessment” organization conducts the “State of DevOps”.
 
@@ -59,19 +59,19 @@ In the context of providing end user value through digital services, engineering
 
 ## Slide 6 (Medium Performers)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide6.png)
+![](../../media/slides/Slide6.png)
 
 Organizations categorized as “Medium Performers” are recovering from incidents in less than 24 hours …
 
 ## Slide 7 (Low Performers)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide7.png)
+![](../../media/slides/Slide7.png)
 
 While “Low Performers” will often take between one week to one month to recover from service disruptions.
 
 ## Slide 8 (2,604 Times Faster)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide8.png)
+![](../../media/slides/Slide8.png)
 
 One of the more shocking numbers from the State of DevOps Report is that those who respond and recover in less than an hour (“Elite” and “High” performers) are recovering over 2,600 times faster than their ”Low” performing peers.
 
@@ -83,7 +83,7 @@ Elite performers respond and recover faster than the rest of us, because they un
 
 ## Slide 9 (Foundations)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide9.png)
+![](../../media/slides/Slide9.png)
 
 Many of the things we are going to be discussing today are foundational concepts around incident management - foundations of building reliable systems.
 
@@ -91,13 +91,13 @@ If you attended the OPS10 session of Ignite The Tour, you’ll recall the Dicker
 
 ## Slide 10 (Hierarchy of Reliability)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide10.png)
+![](../../media/slides/Slide10.png)
 
 For those of you who aren’t familiar, let’s take a few moments and understand our objectives when it comes to building resilient and reliable systems.
 
 ## Slide 11 (Monitoring)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide11.png)
+![](../../media/slides/Slide11.png)
 
 The principles and practices of monitoring are at the base of building reliable systems.
 
@@ -107,7 +107,7 @@ We should be able to ask our monitoring systems anything, as well as have it ale
 
 ## Slide 12 (Incident Response)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide12.png)
+![](../../media/slides/Slide12.png)
 
 When that alert takes place there must be some sort of response - a coordinated effort for the engineers to deal with the issue.. 
 
@@ -115,19 +115,19 @@ When that alert takes place there must be some sort of response - a coordinated 
 
 ## Slide 13 (Post-Incident Review)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide13.png)
+![](../../media/slides/Slide13.png)
 
 We can them learn from the incident through a Post-Incident Review exercise.
 
 ## Slide 14 (The Rest of the Hierachy)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide14.png)
+![](../../media/slides/Slide14.png)
 
 It’s this “Incident Response” portion that we are going to focus on today.
 
 ## Slide 15 (Presentation Title)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide15.png)
+![](../../media/slides/Slide15.png)
 
 My name is Jason Hand
 
@@ -139,7 +139,7 @@ and I’m excited to be here with you talking about
 
 ## Slide 16 (Incidents: Service Disruptions)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide16.png)
+![](../../media/slides/Slide16.png)
 
 I think we should discuss for a moment what we mean by incidents so we can come to a general understanding for today’s presentation.
 
@@ -147,7 +147,7 @@ I’m confident everyone would agree that an incident is a “service disruption
 
 ## Slide 17 (Incidents: Feared/Avoided)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide17.png)
+![](../../media/slides/Slide17.png)
 
 Incidents are commonly feared and avoided. 
 
@@ -159,7 +159,7 @@ It’s not been until more recently through many of the conversations around dev
 
 ## Slide 18 (Incidents: Subjective)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide18.png)
+![](../../media/slides/Slide18.png)
 
 Incidents can also be subjective. 
 
@@ -173,7 +173,7 @@ Subjectivity is an unfortunate property of incidents in a lot of cases, even whe
 
 ## Slide 19 (Incidents: Unplanned Work/Investments)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide19.png)
+![](../../media/slides/Slide19.png)
 
 The last thing I want to point out regarding incidents, is that most of what we as engineers and technologists do is planned work. 
 
@@ -187,7 +187,7 @@ Often, we view this as a bad thing, but if you stop and think about it, incident
 
 ## Slide 20 (Incidents are the pulse of your systems)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide20.png)
+![](../../media/slides/Slide20.png)
 
 I like to remind people that incidents should be viewed as the ”pulse of your systems”.
 
@@ -203,7 +203,7 @@ It’s telling you what’s going on.
 
 ## Slide 21 (Lifecycle of an Incident)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide21.png)
+![](../../media/slides/Slide21.png)
 
 And all of that (in terms of monitoring) is part of the first phase of an incident – the detection phase.
 
@@ -219,7 +219,7 @@ We’ll go over remediation a little more towards the end of the presentation.
 
 ## Slide 22 (Tailwind Traders Challenges)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide22.png)
+![](../../media/slides/Slide22.png)
 
 You’ve probably heard about Tailwind Traders – our fictional online retailer.
 
@@ -241,7 +241,7 @@ These are the challenges that Tailwind Traders (and probably many of you) are fa
 
 ## Slide 23 (Incident Response Foundations: Rosters, Roles, Rotations)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide23.png)
+![](../../media/slides/Slide23.png)
 
 If we are going to talk about the foundations of building reliable systems, including the foundations of a good incident response plan,
 
@@ -255,13 +255,13 @@ And last, we’ll talk about what a rotation is.
 
 ## Slide 24 (Rosters: Multiple members)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide24.png)
+![](../../media/slides/Slide24.png)
 
 A roster, or team, is made up of multiple engineers.
 
 ## Slide 25 (Rosters: Multiple rotations)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide25.png)
+![](../../media/slides/Slide25.png)
 
 Rosters can also contain multiple rotations
 
@@ -269,13 +269,13 @@ We’ll go over what a rotation is in a moment, but we need to build some sort o
 
 ## Slide 26 (Roles: Primary Responder)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide26.png)
+![](../../media/slides/Slide26.png)
 
 The first role we need to talk about is the “Primary Responder” – the Primary “On-call” engineer.
 
 ## Slide 27 (Roles: Secondary Responder)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide27.png)
+![](../../media/slides/Slide27.png)
 
 Then we have the secondary responder – who is there as back up -
 
@@ -283,7 +283,7 @@ Another engineer who can step in if  the primary responder is unavailable or unr
 
 ## Slide 28 (Roles: Subject Matter Experts)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide28.png)
+![](../../media/slides/Slide28.png)
 
 It’s very common within on-call rosters to identify subject matter experts, so that early responders know who to escalate to quickly.
 
@@ -295,7 +295,7 @@ Who are the people that we can reach out to if our primary and secondary respond
 
 ## Slide 29 (Roles: Incident Commander)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide29.png)
+![](../../media/slides/Slide29.png)
 
 Another important role to identify, in many cases, is the incident commander.
 
@@ -312,7 +312,7 @@ It's good to have a central person who can keep tabs on what's going on and who'
 
 ## Slide 30 (Roles: Scribe)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide30.png)
+![](../../media/slides/Slide30.png)
 
 That takes us to our next role – the scribe
 
@@ -331,7 +331,7 @@ It’s all data to be analyzed – but only if we capture it.
 
 ## Slide 31 (Roles: Communication Coordinator)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide31.png)
+![](../../media/slides/Slide31.png)
 
 The last role I want to touch on is the Communication Coordinator.
 
@@ -346,7 +346,7 @@ It's always good to put someone in charge of managing that communication and mak
 
 ## Slide 32 (Rotations: Scheduled Shifts)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide32.png)
+![](../../media/slides/Slide32.png)
 
 A rotation is a scheduled shift.
 
@@ -354,7 +354,7 @@ Engineers takes the “on-call” responsibility for their own specific recurrin
 
 ## Slide 33 (Rotations: Types)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide33.png)
+![](../../media/slides/Slide33.png)
 
 There are many different types of shifts that you can create – some more common than others.
 
@@ -366,7 +366,7 @@ And of course there are many ways to **customize** shifts, especially for weeken
 
 ## Slide 34 (Key Takeaway)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide34.png)
+![](../../media/slides/Slide34.png)
 
 One of the things we really must change about how we look at incident response is that we need to respond with a sense of urgency but do so in a way that is less reactionary and more prepared and planned for.
 
@@ -376,7 +376,7 @@ From there, we can respond methodically with the urgency and importance incident
 
 ## Slide 35 (Incident Tracking: When did we know?)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide35.png)
+![](../../media/slides/Slide35.png)
 
 Another thing we want to do, to address the challenges of Tailwind Traders and their incident response improvements is we want to be able to track:
 
@@ -386,7 +386,7 @@ Is this a new incident? If we are trying to reduce the time it takes to recover 
 
 ## Slide 36 (Incident Tracking: How did we know?)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide36.png)
+![](../../media/slides/Slide36.png)
 
 Not only that but we want to keep track of:
 
@@ -398,7 +398,7 @@ If we plan to learn and improve, capturing how we knew will uncover improvement 
 
 ## Slide 37 (Incident Tracking: Who is aware of this?)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide37.png)
+![](../../media/slides/Slide37.png)
 
 If I’m just finding out about a problem, am I the first to know?
 
@@ -406,7 +406,7 @@ If I’m just finding out about a problem, am I the first to know?
 
 ## Slide 38 (Incident Tracking: Is anyone doing anything?)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide38.png)
+![](../../media/slides/Slide38.png)
 
 And let’s say others are aware of the problem, **what (if anything) is being done?**
 
@@ -416,7 +416,7 @@ These are difficult questions to answer if nothing is tracked.
 
 ## Slide 39 (Incident Tracking: How bad is it?)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide39.png)
+![](../../media/slides/Slide39.png)
 
 And last, **How bad is it**?
 
@@ -426,7 +426,7 @@ These are just some of the details we want to begin tracking to improve our inci
 
 ## Slide 40 (Unique Channel: Conversation Bridge)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide40.png)
+![](../../media/slides/Slide40.png)
 
 To address some of the challenges around how we communicate we also want to find a way to create a unique channel or space for engineers to discuss the details of the incident - a **"conversation bridge"** in our persistent group chat tool. 
 
@@ -434,7 +434,7 @@ Which for Tailwind Traders is Microsoft Teams.
 
 ## Slide 41 (Unique Channel: Incident Related Only)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide41.png)
+![](../../media/slides/Slide41.png)
 
 We want a channel that is unique to the incident only.
 
@@ -446,7 +446,7 @@ We ONLY want conversations related to the incident. Because then we can take tha
 
 ## Slide 42 (Logic App: Response Improvements)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide42.png)
+![](../../media/slides/Slide42.png)
 
 As you can see, we have several ideas around what we need to do to improve our incident response practices. 
 
@@ -462,7 +462,7 @@ A Logic App is a way to schedule, automate, and stitch together data and service
 
 ## Slide 43 (Logic App: Connectors Used)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide43.png)
+![](../../media/slides/Slide43.png)
 
 We’re going to use Azure Boards (a part of Azure Devops) to create and track our issues.
 
@@ -475,7 +475,7 @@ Last, the Logic App goes into Azure Storage to look up who is “On-call” and 
 
 ## Slide 44 (Logic App : Azure Boards)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide44.png)
+![](../../media/slides/Slide44.png)
 
 Before we switch to the demo and take a closer look at our Logic App, let’s examine all the functionality we are creating to address Tailwind Traders challenges.
 
@@ -487,7 +487,7 @@ Then depending on different triggers and steps within the Logic App, the details
 
 ## Slide 45 (Logic App : Azure Storage)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide45.png)
+![](../../media/slides/Slide45.png)
 
 Another way we are using Logic Apps here is to look up the engineer that is currently on-call..
 
@@ -497,7 +497,7 @@ This is done using a table within Azure Storage to maintain our “On-call” ro
 
 ## Slide 46 (Logic App : Microsoft Teams)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide46.png)
+![](../../media/slides/Slide46.png)
 
 We'll also show off Microsoft Teams and how we can create a channel – on the fly - whenever an incident is created.
 
@@ -507,13 +507,13 @@ That way we have a unique channel that is reserved specifically for the incident
 
 ## Slide 47 (Demo : Creating an incident response plan)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide47.png)
+![](../../media/slides/Slide47.png)
 
 Now I’m going to show you how all of that is done using a Logic App.
 
 ## Slide 48 (Key Takeaway)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide48.png)
+![](../../media/slides/Slide48.png)
 
 The key take-away I want to point out is this :
 
@@ -527,7 +527,7 @@ Prioritizing for good communication – clear communication is an essential part
 
 ## Slide 49 (Lifecycle of an Incident: Remediation)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide49.png)
+![](../../media/slides/Slide49.png)
 
 Although thinking of incidents in terms of phases allows for us to shorten each in their own unique ways, responding to and remediating an incident often begin to blur. Especially when actions to mitigate or improve the situation, have the opposite result.
 
@@ -535,7 +535,7 @@ Now that we’ve covered the foundations of building a good incident response pl
 
 ## Slide 50 (Remediation Improvements)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide50.png)
+![](../../media/slides/Slide50.png)
 
 When it comes to some of the improvements, we’d like to make to our remediation efforts,
 
@@ -562,7 +562,7 @@ And we’ll also show you a chatops approach to updating a status page from with
 
 ## Slide 51 (Troubleshooting Guides : Context & Guidance)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide51.png)
+![](../../media/slides/Slide51.png)
 
 There are many ways to add helpful information to a troubleshooting guide:
 
@@ -580,7 +580,7 @@ There are many ways to add helpful information to a troubleshooting guide:
 
 ## Slide 52 (Update Stakeholders)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide52.png)
+![](../../media/slides/Slide52.png)
 
 It's important that internal teams are aware of what's happening when an incident occurs.
 
@@ -596,7 +596,7 @@ They have every right to this information, but we've got to find a better way to
 
 ## Slide 53 (Chatops)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide53.png)
+![](../../media/slides/Slide53.png)
 
 The approach we'll use to updating stakeholders is known as chatops.
 
@@ -606,7 +606,7 @@ Chatops is nothing more than infusing a group chat tool with the conversations a
 
 ## Slide 54 (Chatops: Benefits)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide54.png)
+![](../../media/slides/Slide54.png)
 
 - [Collaboration] Earlier, we talked about how we need to prioritize for good, clear communication.
 
@@ -624,7 +624,7 @@ Getting that information out people’s heads and into chat, so that that same i
 
 ## Slide 55 (Chatops: Microsoft Teams)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide55.png)
+![](../../media/slides/Slide55.png)
 
 Microsoft Teams is a central place where we have a lot of conversations about our engineering efforts, so we are going to start there in our ChatOps solution to providing status updates and additional context.
 
@@ -632,13 +632,13 @@ In the next demo we’ll use an outgoing webhook that allows us to update a stat
 
 ## Slide 56 (Chatops: Azure Function)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide56.png)
+![](../../media/slides/Slide56.png)
 
 The webhook hits an Azure Function endpoint that has some Node.js code behind it.
 
 ## Slide 57 (Chatops: Azure Storage)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide57.png)
+![](../../media/slides/Slide57.png)
 
 The function then updates a static HTML page stored in Azure Blob Storage.
 
@@ -650,13 +650,13 @@ That saves an immense amount of time updating those not involved in the response
 
 ## Slide 58 (Demo: Troubleshooting Guides & Status Page)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide58.png)
+![](../../media/slides/Slide58.png)
 
 Let's take a look at our troubleshooting guide and how to update a status page using Microsoft Teams and an Azure Function.
 
 ## Slide 59 (QR Code to see broken cart)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide59.png)
+![](../../media/slides/Slide59.png)
 
 If you’d like to play along with this fictitious incident and you have your phone nearby, I encourage you to snap a picture of this QR code.
 
@@ -675,11 +675,11 @@ Use https://www.qrcode-monkey.com/ to generate a new code for your presentation.
 
 ## Slide 60 (Remediation of Shopping Cart)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide60.png)
+![](../../media/slides/Slide60.png)
 
 ## Slide 61 (Key Takeaway)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide61.png)
+![](../../media/slides/Slide61.png)
 
 The last key takeaway I’d like you to go home with is this:
 
@@ -693,27 +693,27 @@ Information and an obstacle free path to making an impact are our best tools.
 
 ## Slide 62 (Hidden: Speaker Note)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide62.png)
+![](../../media/slides/Slide62.png)
 
 ## Slide 63 (Hidden: Speaker Note)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide63.png)
+![](../../media/slides/Slide63.png)
 
 ## Slide 64 (Hidden: Speaker Note)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide64.png)
+![](../../media/slides/Slide64.png)
 
 ## Slide 65 (Hidden: Speaker Note)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide65.png)
+![](../../media/slides/Slide65.png)
 
 ## Slide 66 (Hidden: Speaker Note)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide66.png)
+![](../../media/slides/Slide66.png)
 
 ## Slide 67 (3 Main Takeaways)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide67.png)
+![](../../media/slides/Slide67.png)
 
 To summarize what we've talked about,
 
@@ -729,24 +729,24 @@ We need a methodical and orchestrated response.
 
 ## Slide 68 (Docs alert)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide68.png)
+![](../../media/slides/Slide68.png)
 
 ## Slide 69 (MS Learn Alert)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide69.png)
+![](../../media/slides/Slide69.png)
 
 ## Slide 70 (Resources)
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide70.png)
+![](../../media/slides/Slide70.png)
 
 ## Slide 71 ()
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide71.png)
+![](../../media/slides/Slide71.png)
 
 ## Slide 72 ()
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide72.png)
+![](../../media/slides/Slide72.png)
 
 ## Slide 73 ()
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide73.png)
+![](../../media/slides/Slide73.png)

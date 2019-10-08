@@ -1,7 +1,7 @@
 # Breaking Tailwind Traders
 
-| [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
-|--------|-------|------------|
+| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+|--------|-------|------------|-----------|
 
 In order to demonstrate certain aspects of incident management, including the use of observability tools such as Log Analytics, Troubleshooting Guides, KQL, and more, we will need to artificially cause problems in our Tailwind Traders e-commerce site.
 

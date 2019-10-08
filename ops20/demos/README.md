@@ -1,7 +1,27 @@
 # Technical Demonstrations
 
-| [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
-|--------|-------|------------|
+| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+|--------|-------|------------|-----------|
+
+## Pre-delivery Preparation
+
+Before delivering the technical demonstrations, you will want to prepare a few things to save time and to create a demonstration audience members can follow. 
+
+Be sure to address each item on the presenter setup checklist below. 
+
+>**Presenter Setup Checklist:**
+- [ ] Logic App open in Design View.<br />
+- [ ] Azure Boards - Query for work items open in tab.
+- [ ] Microsoft Teams open in browser tab (or native).
+- [ ] Troubleshooting Guide open in tab
+- [ ] Status page is open in tab.
+- [ ] Postman is open and ready to send the alert.
+- [ ] Dashboard open in own tab.
+- [ ] AKS connection string ready to copy and paste.
+- [ ] Cloud shell open in tab (can open from troubleshooting guide).
+> Be sure all above are complete before beginning demo
+
+---
 
 There are three (3) technical demonstrations for this presentation. 
 
@@ -13,10 +33,6 @@ This demo uses the following:
 - Azure Boards
 - Microsoft Teams
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide47.png)
-
----
-
 ## Demo 2: [Troubleshooting Guides & Status Page](02/README.md)
 
 This demo uses the following:
@@ -24,10 +40,6 @@ This demo uses the following:
 - Microsoft Teams
 - Azure Functions (Serverless)
 - Static HTML website
-
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide58.png)
-
----
 
 ## Demo 3: [Remediation of Shopping Cart](03/README.md)
 
@@ -40,7 +52,3 @@ This demo uses the following:
 - Log Analytics
 - KQL
 - Kubernetes
-
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide60.png)
-
----

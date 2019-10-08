@@ -1,7 +1,7 @@
 # Demo 2: Troubleshooting Guides & Status Page
 
-| [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
-|--------|-------|------------|
+| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+|--------|-------|------------|-----------|
 
 [Watch the stage ready demonstration](https://coming.soon)
 
@@ -27,7 +27,12 @@ Blah, blah
 
 ## Part 1: Show the Troubleshooting Guide
 
-> **Presenter Setup Checklist:** <br />[] Troubleshooting Guide open in tab<br />[] Status page is open in tab.<br />[] Microsoft Teams open in browser tab (or native).<br />[] Postman is open and ready to send the alert.
+> **Presenter Setup Checklist:**
+- [ ] Troubleshooting Guide open in tab
+- [ ] Status page is open in tab.
+- [ ] Microsoft Teams open in browser tab (or native).
+- [ ] Postman is open and ready to send the alert.
+> Be sure all above are complete before beginning demo
 
 ## Part 2: Update Status Page from Microsoft Teams
 

@@ -45,11 +45,12 @@ This training repository is divided in to the following sections:
 
  [Full-length video can be viewed here (Coming Soon..)](https://coming.soon).
 
+
 ### **Slides**
 
 >**What's Here?** Stage ready videos, a speaking script, numbered slide thumbnails, and the master Powerpoint slide deck.
 
-Begin by familiarizing yourself with the presentation.
+Begin by familiarizing yourself with the presentation. Videos, speaking scripts, and the master Powerpoint slide deck can be found in the [slides](slides/README.md) section.
  
 The Powerpoint slide deck is divided up in to four (4) sections. There are also three (3) technical demonstrations as part of the 45-minute presentation.
 
