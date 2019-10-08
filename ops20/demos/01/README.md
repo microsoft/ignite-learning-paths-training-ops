@@ -3,6 +3,16 @@
 | [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
 |--------|-------|------------|-----------|
 
+>**Do you need to show videos instead of doing the demo live?:** Below, you'll find "stage-ready" videos that may be used in the event this presentation should be delivered offline.
+
+| Part | Video | Description | 
+|--------|-------|-----|-------|
+| Demo 1: Part 1 | [Link](https://coming.soon) | Describe the Logic App |
+| Demo 1: Part 2 | [Link](https://coming.soon) | Describe the configuration  and usage of Azure Boards |
+| Demo 1: Part 3 | [Link](https://coming.soon) | Describe what's happening in Microsoft Teams
+
+---
+
 **Q: What are we trying to demonstrate?**
 
 **A: Answer**
@@ -53,33 +63,22 @@ View the Demo here
 
 ## Setup
 
+>**Presenter Note:** As of October 8, the creation of Logic Apps is not 100% complete. It should be ready by 8/11/2019, at which point this first step will be removed from the setup instructions.
+
 Although much of the demo environment creation is automated, there are a few manual steps still left to take care of once the Tailwind Traders app is running.
 
-### 1. Deploy Logic App Using ARM Template
+### 1. Authenticate Logic App Connectors for Azure Devops and Microsoft Teams
 
-We still need to create the main Logic App used in demo one. Rather than manaully create this each time, we can use a template to shortcut the process. 
-
-[The JSON representing the Logic App is found here](deployment/logic_apps/azuredeploy-la-main.json).
-
-We will use the above JSON to create a new Logic App within the same resource group we just deployed in to.
-
-[Watch this video for the process](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/06_Deploy_Logic_App_From_Template.mp4)
+Coming soon .. 
 
 ---
 
-### 2. Configure Azure Boards
 
-[replace this walk through video now that we aren't using the custom work item type](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/08_Azure_Boards_Setup.mp4)
-
-### 3. Microsoft Teams
-
-Aside from within the Logic App, there are no changes required to Microsoft Teams for the demonstration.
-
-### 4. Postman
+### 2. Postman
 
 Postman is a tool (available on Windows and Mac) that allows you to send data to a URL with JSON in the body of the message. This is what is used to trigger the Logic App.
 
-The sample JSON is available here. This is what is used in the on-stage demo when the presenter "triggers the alert". Be sure to download and familiarize yourself with Postman prior to the presentation.
+The sample [JSON is available here](ops20/demos/01/alert_body.json). This is what is used in the on-stage demo when the presenter "triggers the alert". Be sure to download and familiarize yourself with Postman prior to the presentation.
 
 ---
 

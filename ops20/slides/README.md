@@ -12,11 +12,11 @@
 The Powerpoint slide deck is divided up in to four (4) sections.
 
 1. **Intro & Foundations of Incident Management**
-2. **Redmediation Improvements (Context & Guidance)**
+2. **Remediation Improvements (Context & Guidance)**
 3. **Tools to Reduce the Time to Recover**
 4. **Summary & Closing**
 
-There are also three (3) technical demonstrations as part of the 45-minute presentation.
+There are also [three (3) technical demonstrations](../demos/README.md) as part of the 45-minute presentation.
 
 
 [Video of Powerpoint presentation only](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/01_Presentation_No_Demo.mp4)

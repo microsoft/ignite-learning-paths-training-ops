@@ -1,4 +1,4 @@
-# OPS20 - Responding To Incidents (Train the Trainer)
+# OPS20 - Responding To Incidents
 
 ## Session Abstract
 
@@ -79,7 +79,7 @@ A "Deploy to Azure" button streamlines the process, but make sure you have creat
 
 >**What's Here?** Pre-delivery preparation, stage ready videos, required files (such as JSON templates), and walk-through videos
 
-Detailed explanations of each demonstration associated with this presentation can be found in this section. There are 3 "live from stage" technical demonstrations that utilize the following tools.
+Detailed explanations of each demonstration associated with this presentation can be found in this section. There are 3 "live from stage" technical demonstrations that utilize a number of tools both in and out of Azure. [You can get a high level overview of the tools and how we will be using them here](tools/README.md).
 
 | Demo  | Minutes | Video |
 |----------|----------|-------|
