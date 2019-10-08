@@ -1,14 +1,14 @@
 # Demo 1: Creating An Incident Response Plan
 
-| [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
-|--------|-------|------------|
+| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+|--------|-------|------------|-----------|
 
 **Q: What are we trying to demonstrate?**
 
 **A: Answer**
 This is the first on-stage technical demonstration for **OPS20 - Responding to Incidents**. 
 
-In this demo, we want to help the audience connect principles and practices of modern incident management (discussed in Section 1 of the presentation) with concrete "hands on" examples.
+In this demo, we want to help the audience connect principles and practices of modern incident management (discussed in [Section 1 of the presentation](../../slides/section/01/README.md)) with concrete "hands on" examples.
 
 We want to provide examples to demonstrate the foundations of:
 
@@ -85,7 +85,11 @@ The sample JSON is available here. This is what is used in the on-stage demo whe
 
 ## Part 1: Show Logic App In Detail
 
-> **Presenter Setup Checklist:** <br />[] Logic App open in Design View.<br />[] Azure Boards - Query for work items open in tab.<br />[] Microsoft Teams open in browser tab (or native).<br />[] Postman is open and ready to send the alert.
+>**Presenter Setup Checklist:**
+- [ ] Logic App open in Design View.<br />
+- [ ] Azure Boards - Query for work items open in tab.
+- [ ] Microsoft Teams open in browser tab (or native).
+> Be sure all above are complete before beginning demo
 
 Begin the demonstration from the **Design Editor** of the Logic App.
 
@@ -98,6 +102,8 @@ Expand each step and explain what is happening
 - Post to Chat Channel (Microsoft Teams)
 
 [Watch Demo 1: Part 1](https://coming.soon)
+
+---
 
 ## Part 2: Show Azure Boards Query & Reporting
 
@@ -122,6 +128,8 @@ Create a new chart such as one of the above to deomonstrate the ease to quickly 
 [Watch Demo 1: Part 2](https://coming.soon)
 
 Now we will change to the Microsoft Teams tab (or native application).
+
+---
 
 ## Part 3: Show Microsoft Teams
 
