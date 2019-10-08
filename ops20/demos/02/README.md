@@ -3,6 +3,15 @@
 | [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
 |--------|-------|------------|-----------|
 
+>**Do you need to show videos instead of doing the demo live?:** Below, you'll find "stage-ready" videos that may be used in the event this presentation should be delivered offline.
+
+| Part | Video | Description | 
+|--------|-------|-----|-------|
+| Demo 2: Part 1 | [Link](https://coming.soon) | Describe the Troubleshooting Guide |
+| Demo 2: Part 2 | [Link](https://coming.soon) | Demonstrate opening, updating, and closing a status announcement |
+
+---
+
 [Watch the stage ready demonstration](https://coming.soon)
 
 **Q: What are we trying to demonstrate?**

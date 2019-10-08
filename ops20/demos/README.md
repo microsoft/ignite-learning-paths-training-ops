@@ -17,7 +17,7 @@ Be sure to address each item on the presenter setup checklist below.
 - [ ] Status page is open in tab.
 - [ ] Postman is open and ready to send the alert.
 - [ ] Dashboard open in own tab.
-- [ ] AKS connection string ready to copy and paste.
+- [ ] [AKS connection string](03/README.md) ready to copy and paste.
 - [ ] Cloud shell open in tab (can open from troubleshooting guide).
 > Be sure all above are complete before beginning demo
 

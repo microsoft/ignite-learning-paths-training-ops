@@ -3,6 +3,18 @@
 | [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
 |--------|-------|------------|-----------|
 
+>**Do you need to show videos instead of doing the demo live?:** Below, you'll find "stage-ready" videos that may be used in the event this presentation should be delivered offline.
+
+| Part | Video | Description | 
+|--------|-------|-----|-------|
+| Demo 3: Part 1 | [Link](https://coming.soon) | Demonstrate the Azure Dashboard |
+| Demo 3: Part 2 | [Link](https://coming.soon) | Demonstrate Azure Service Health |
+| Demo 3: Part 3 | [Link](https://coming.soon) | Demonstrate Application Map |
+| Demo 3: Part 4 | [Link](https://coming.soon) | Demonstrate Azure Workbook |
+| Demo 3: Part 5 | [Link](https://coming.soon) | Demonstrate Log Analytics |
+| Demo 3: Part 6 | [Link](https://coming.soon) | Demonstrate KQL - Kusto Query Language |
+
+
 [Watch the stage ready demonstration](https://coming.soon)
 
 **Q: What are we trying to demonstrate?**
@@ -35,6 +47,7 @@ In this demo you will need run a few commands from [Cloud Shell](https://shell.a
 
 The following commands are used to **"fix"** the problem in demo 3.
 
+# Connect to AKS
 To connect to the Kubernetes cluster, run the following:
 
 ``` az cli
