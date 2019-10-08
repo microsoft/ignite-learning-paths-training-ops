@@ -1,7 +1,7 @@
 # OPS20 - Responding To Incidents Script
 
-[/ Slides /](../../slides/README.md)
-## Slide 1 (Hidden: Presenter Notes)
+| [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+|--------|-------|------------|
 
 ![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide1.png)
 

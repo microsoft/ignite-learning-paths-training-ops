@@ -1,5 +1,8 @@
 # Technical Demonstrations
 
+| [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+|--------|-------|------------|
+
 There are three (3) technical demonstrations for this presentation. 
 
 ## Demo 1: [Creating An Incident Response Plan](01/README.md)

@@ -1,11 +1,20 @@
 # Demo 1: Creating An Incident Response Plan
 
+| [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+|--------|-------|------------|
+
 **Q: What are we trying to demonstrate?**
 
 **A: Answer**
+This is the first on-stage technical demonstration for **OPS20 - Responding to Incidents**. 
 
-**Summary of demo**:
-This is the first on-stage technical demonstration for OPS20 - Responding to Incidents. In this demo, we want to help the audience connect principles and practices of modern incident management with concrete "hands on" examples.
+In this demo, we want to help the audience connect principles and practices of modern incident management (discussed in Section 1 of the presentation) with concrete "hands on" examples.
+
+We want to provide examples to demonstrate the foundations of:
+
+- Rosters (teams)
+- Roles
+- Rotations
 
 To do so, we are going to use a Logic App to trigger an automation sequence when a bit of JSON is sent to an HTTP Endpoint. 
 

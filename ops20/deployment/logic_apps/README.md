@@ -1,5 +1,8 @@
 # Logic Apps
 
+| [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+|--------|-------|------------|
+
 >**Presenter Note:** As of Monday October 7th, this step has not been added to the automated deployment. Efforts are being made to include all three (3) Logic Apps, as well as the table storage in the blue **"Deploy to Azure"** button.
 
 ## Logic App One
