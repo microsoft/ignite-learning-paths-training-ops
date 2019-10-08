@@ -1,10 +1,7 @@
 # Tools
 
-| Quick Link          |            |           |
-| ------------- |:-------------:|-------- |
-| [Demo One](../demos/01/README.md) | [Demo Two](../demos/02/README.md) | [Demo Three](../demos/03/README.md) |
-
----
+| [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+|--------|-------|------------|
 
 ## Logic App
 

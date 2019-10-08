@@ -1,5 +1,8 @@
 # Demo 3: Remediation of Shopping Cart
 
+| [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+|--------|-------|------------|
+
 [Watch the stage ready demonstration](https://coming.soon)
 
 **Q: What are we trying to demonstrate?**
