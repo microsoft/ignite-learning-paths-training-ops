@@ -4,7 +4,7 @@
 
 We are looking forward to working with all speakers who will deliver the content built below - we welcome your feedback and help to keep the content up-to-date. 
 
-* There are **x5 45 minute sessions** ([OPS10](ops210/README.md), [OPS20](ops220/README.md), [ops230](ops230/README.md), [ops240](ops240/README.md) and [ops250](ops250/README.md))
+* There are **x5 45 minute sessions** ([OPS10](ops10/README.md), [OPS20](ops20/README.md), [OPS30](ops30/README.md), [OPS40](ops40/README.md) and [OPS50](ops50/README.md))
 
 ## Learning Path Description
 
@@ -12,12 +12,17 @@ Coming soon..
 
 ## Session Descriptions
 
-### [OPS10: Building the Foundation for Modern Ops: Monitoring ](./ops10)
-#### Abstract:
+### [OPS10: Building the Foundation for Modern Ops: Monitoring ](/ops10/README.md)
+
+#### Abstract
+
 Coming soon..
 
-### [OPS20: Responding to Incidents ](./ops20)
+---
+
+### [OPS20: Responding to Incidents ](/ops20/README.md)
 #### Abstract:
+
 Your systems are down!
 
 Customers are calling. Every moment counts.
@@ -30,15 +35,21 @@ In this session, we’ll explore incident management best practices that will he
 
 We’ll also explore the tools Azure provides to get you back into a working state when time is of the essence.
 
-### [OPS30: Learning from Failure ](./ops30)
+---
+
+### [OPS30: Learning from Failure ](/ops30/README.md)
 #### Abstract:
 
 Coming soon..
 
-### [OPS40: Deployment Practices for Greater Reliability ](./ops40)
+---
+
+### [OPS40: Deployment Practices for Greater Reliability ](/ops40/README.md)
 #### Abstract:
 
 Coming soon..
+
+---
 
 ### [OPS50: Preparing for Growth: Capacity Planning and Scaling ](./ops50)
 #### Abstract:

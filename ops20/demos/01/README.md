@@ -5,17 +5,17 @@
 
 >**Do you need to show videos instead of doing the demo live?:** Below, you'll find "stage-ready" videos that may be used in the event this presentation should be delivered offline.
 
-| Part | Video | Description | 
-|--------|-------|-----|-------|
-| Demo 1: Part 1 | [Link](https://coming.soon) | Describe the Logic App |
-| Demo 1: Part 2 | [Link](https://coming.soon) | Describe the configuration  and usage of Azure Boards |
-| Demo 1: Part 3 | [Link](https://coming.soon) | Describe what's happening in Microsoft Teams
+|  | Video | Description
+|--------|-------|-----|
+| [Part 1: Logic App](#part-1-logic-app) | [Link](https://coming.soon) | Describe the Logic App
+| [Part 2: Azure Boards](#part-2-azure-boards-query-view--reporting) | [Link](https://coming.soon) | Describe the configuration  and usage of Azure Boards
+| [Part 3: Microsoft Teams](#part-3-microsoft-teams) | [Link](https://coming.soon) | Describe what's happening in Microsoft Teams
 
 ---
 
-**Q: What are we trying to demonstrate?**
+**Question:** *What are we trying to demonstrate?*
 
-**A: Answer**
+**Answer:**
 This is the first on-stage technical demonstration for **OPS20 - Responding to Incidents**. 
 
 In this demo, we want to help the audience connect principles and practices of modern incident management (discussed in [Section 1 of the presentation](../../slides/section/01/README.md)) with concrete "hands on" examples.
@@ -26,9 +26,9 @@ We want to provide examples to demonstrate the foundations of:
 - Roles
 - Rotations
 
-To do so, we are going to use a Logic App to trigger an automation sequence when a bit of JSON is sent to an HTTP Endpoint. 
+To do so, we are going to use a Logic App to trigger an automation sequence when a bit of JSON is sent to an HTTP Endpoint.
 
-This helps us (as the presenter) to begin this presentation "**when the alert is received**". 
+This helps us (as the presenter) to begin this presentation "**when the alert is received**".
 
 The Logic App will automatically generate a work item in Azure Boards (a component of Azure Devops).
 
@@ -44,18 +44,6 @@ The supporting Logic Apps will populate the "Assigned To" field of the work item
 
 We will be guiding the audience through the technical details of only one Logic App during this demonstration.
 
-[Watch the stage ready demonstration](https://coming.soon)
-
-*This demo uses the following:*
-
-1. [Logic App](../../tools/README.md)
-2. [Azure Boards](../../tools/README.md)
-3. [Microsoft Teams](../../tools/README.md)
-4. [Postman](../../tools/README.md)
-
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slide_thumbnails/Slide47.png)
-
-View the Demo here
 
 >**NOTE:** the JSON representing this Logic App [can be found here](deployment/azuredeploy-la-main.json).
 
@@ -63,16 +51,13 @@ View the Demo here
 
 ## Setup
 
->**Presenter Note:** As of October 8, the creation of Logic Apps is not 100% complete. It should be ready by 8/11/2019, at which point this first step will be removed from the setup instructions.
-
 Although much of the demo environment creation is automated, there are a few manual steps still left to take care of once the Tailwind Traders app is running.
 
 ### 1. Authenticate Logic App Connectors for Azure Devops and Microsoft Teams
 
-Coming soon .. 
+Coming soon ..
 
 ---
-
 
 ### 2. Postman
 
@@ -81,14 +66,15 @@ Postman is a tool (available on Windows and Mac) that allows you to send data to
 The sample [JSON is available here](ops20/demos/01/alert_body.json). This is what is used in the on-stage demo when the presenter "triggers the alert". Be sure to download and familiarize yourself with Postman prior to the presentation.
 
 ---
-
-## Part 1: Show Logic App In Detail
-
 >**Presenter Setup Checklist:**
-- [ ] Logic App open in Design View.<br />
+
+- [ ] Logic App open in Design View.
 - [ ] Azure Boards - Query for work items open in tab.
 - [ ] Microsoft Teams open in browser tab (or native).
+  
 > Be sure all above are complete before beginning demo
+
+## Part 1: Logic App
 
 Begin the demonstration from the **Design Editor** of the Logic App.
 
@@ -104,7 +90,7 @@ Expand each step and explain what is happening
 
 ---
 
-## Part 2: Show Azure Boards Query & Reporting
+## Part 2: Azure Boards (Query View & Reporting)
 
 Switch to the tab containing Azure Boards. You should be looking at your work items in the query view. The query view should be empty because there are currently no items that meet the criteria.
 
@@ -130,7 +116,7 @@ Now we will change to the Microsoft Teams tab (or native application).
 
 ---
 
-## Part 3: Show Microsoft Teams
+## Part 3: Microsoft Teams
 
 Starting in Microsoft Teams, the audience should notice a new chat channel that mathes the number of the work item from Azure Boards. It is bold because it is new to us and there is an update in there we have not viewed.
 
