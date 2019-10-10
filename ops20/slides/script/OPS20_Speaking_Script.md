@@ -1,24 +1,37 @@
 # OPS20 - Responding To Incidents Script
 
-| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) |
 |--------|-------|------------|-----------|
 
 | [Transcript](../../script/OPS20_Speaking_Script.md) | [Video](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_One.mp4) | [Powerpoint](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slides/OPS20_Responding_to_Incidents_Oct3.pptx) | [Tools](/ops20/tools/README.md) |
 |------------|-------|------------|-------|
 
+- [Section 1](#section-1)
+  - [Slide 1 (3 Takeaways)](#slide-1-takeaways)
+  - [Slide 2 (Title Slide)](#slide-2-title-slide)
+  - [Slide 3 (Resources)](#slide-3-resources)
+  - [Slide 4 (Time To Resolve)](#slide-4-ttr)
+  - [Slide 5 (Elite & High Performers)](#slide-5-elitehigh-performers)
+  - [Slide 6 (Medium Performers)](#slide-6-medium-performers)
+  - [Slide 7 (Low Performers)](#slide-7-low-performers)
+
+## Section 1
+
+### Slide 1 (3 Main Takeaways)
+
 ![](../../media/slides/Slide1.png)
 
-- Respond with urgency, rather than react
-- Prioritize for clear communication
-- Make information & resources accessible
+1. Respond with urgency, rather than react
+2. Prioritize for clear communication
+3. Make information & resources accessible
 
 
-## Slide 2 (Title Slide)
+### Slide 2 (Title Slide)
 
 ![](../../media/slides/Slide2.png)
 
 
-## Slide 3 (Resources)
+### Slide 3 (Resources)
 
 ![](../../media/slides/Slide3.png)
 
@@ -32,7 +45,7 @@ but across all the talks that you're going to be participating in here at “Ign
 
 And I'll show this slide at the very end as well If you miss it.
 
-## Slide 4 (TTR)
+### Slide 4 (TTR)
 
 ![](../../media/slides/Slide4.png)
 
@@ -50,7 +63,7 @@ I think you’d all agree that complete prevention of problems isn’t very real
 We must do better at knowing when something is wrong and being able to respond to it in an effective way. 
  
 
-## Slide 5 (Elite/High Performers)
+### Slide 5 (Elite/High Performers)
 
 ![](../../media/slides/Slide5.png)
 
@@ -60,19 +73,19 @@ In the most recent 2019 report, they had some interesting numbers that I wanted 
 
 In the context of providing end user value through digital services, engineering teams that can detect, respond, and remediate disruptions in services in under an hour were classified as “Elite or High Performers”.
 
-## Slide 6 (Medium Performers)
+### Slide 6 (Medium Performers)
 
 ![](../../media/slides/Slide6.png)
 
 Organizations categorized as “Medium Performers” are recovering from incidents in less than 24 hours …
 
-## Slide 7 (Low Performers)
+### Slide 7 (Low Performers)
 
 ![](../../media/slides/Slide7.png)
 
 While “Low Performers” will often take between one week to one month to recover from service disruptions.
 
-## Slide 8 (2,604 Times Faster)
+### Slide 8 (2,604 Times Faster)
 
 ![](../../media/slides/Slide8.png)
 
@@ -84,7 +97,7 @@ This really challenges many of our long-standing beliefs that releasing more oft
 
 Elite performers respond and recover faster than the rest of us, because they understand the importance of having a good foundational response plan when things inevitably go wrong.
 
-## Slide 9 (Foundations)
+### Slide 9 (Foundations)
 
 ![](../../media/slides/Slide9.png)
 
@@ -92,13 +105,13 @@ Many of the things we are going to be discussing today are foundational concepts
 
 If you attended the OPS10 session of Ignite The Tour, you’ll recall the Dickerson Hierarchy of Reliability.
 
-## Slide 10 (Hierarchy of Reliability)
+### Slide 10 (Hierarchy of Reliability)
 
 ![](../../media/slides/Slide10.png)
 
 For those of you who aren’t familiar, let’s take a few moments and understand our objectives when it comes to building resilient and reliable systems.
 
-## Slide 11 (Monitoring)
+### Slide 11 (Monitoring)
 
 ![](../../media/slides/Slide11.png)
 
@@ -108,7 +121,7 @@ Observability is provided through high confidence in our monitoring practices an
 
 We should be able to ask our monitoring systems anything, as well as have it alert us when something isn’t the way we want it to be.
 
-## Slide 12 (Incident Response)
+### Slide 12 (Incident Response)
 
 ![](../../media/slides/Slide12.png)
 
@@ -116,19 +129,19 @@ When that alert takes place there must be some sort of response - a coordinated 
 
 .. to understand what’s going on and do something about it.
 
-## Slide 13 (Post-Incident Review)
+### Slide 13 (Post-Incident Review)
 
 ![](../../media/slides/Slide13.png)
 
 We can them learn from the incident through a Post-Incident Review exercise.
 
-## Slide 14 (The Rest of the Hierachy)
+### Slide 14 (The Rest of the Hierachy)
 
 ![](../../media/slides/Slide14.png)
 
 It’s this “Incident Response” portion that we are going to focus on today.
 
-## Slide 15 (Presentation Title)
+### Slide 15 (Presentation Title)
 
 ![](../../media/slides/Slide15.png)
 
@@ -140,7 +153,7 @@ and I’m excited to be here with you talking about
 
 “Responding To Incidents”
 
-## Slide 16 (Incidents: Service Disruptions)
+### Slide 16 (Incidents: Service Disruptions)
 
 ![](../../media/slides/Slide16.png)
 
@@ -148,7 +161,7 @@ I think we should discuss for a moment what we mean by incidents so we can come 
 
 I’m confident everyone would agree that an incident is a “service disruption” - something that is affecting our user's ability to use the services they have come to rely on.
 
-## Slide 17 (Incidents: Feared/Avoided)
+### Slide 17 (Incidents: Feared/Avoided)
 
 ![](../../media/slides/Slide17.png)
 
@@ -160,7 +173,7 @@ Historically, we’ve felt that incidents reflected poorly in several areas of o
 
 It’s not been until more recently through many of the conversations around devops and site reliability engineering, that we are starting to rethink incidents and now view them as opportunities to learn and improve our systems..
 
-## Slide 18 (Incidents: Subjective)
+### Slide 18 (Incidents: Subjective)
 
 ![](../../media/slides/Slide18.png)
 
@@ -174,7 +187,7 @@ Others will label disruptions as incidents even if a customer never experienced 
 
 Subjectivity is an unfortunate property of incidents in a lot of cases, even when it comes to identifying severity levels.
 
-## Slide 19 (Incidents: Unplanned Work/Investments)
+### Slide 19 (Incidents: Unplanned Work/Investments)
 
 ![](../../media/slides/Slide19.png)
 
@@ -188,7 +201,7 @@ So when an incident occurs, it is disruptive. It is unplanned work.
 
 Often, we view this as a bad thing, but if you stop and think about it, incidents are really “investments” in providing the value we are trying to deliver to end users.
 
-## Slide 20 (Incidents are the pulse of your systems)
+### Slide 20 (Incidents are the pulse of your systems)
 
 ![](../../media/slides/Slide20.png)
 
@@ -204,7 +217,7 @@ But that doesn’t necessarily mean it’s a bad thing.
 
 It’s telling you what’s going on.
 
-## Slide 21 (Lifecycle of an Incident)
+### Slide 21 (Lifecycle of an Incident)
 
 ![](../../media/slides/Slide21.png)
 
@@ -220,7 +233,7 @@ And you can see there’s much more to an incident than just the response.
 
 We’ll go over remediation a little more towards the end of the presentation.
 
-## Slide 22 (Tailwind Traders Challenges)
+### Slide 22 (Tailwind Traders Challenges)
 
 ![](../../media/slides/Slide22.png)
 
@@ -242,7 +255,7 @@ When it comes to dealing with customer impacting issues, Tailwind Traders is fac
 
 These are the challenges that Tailwind Traders (and probably many of you) are faced with when something goes wrong.
 
-## Slide 23 (Incident Response Foundations: Rosters, Roles, Rotations)
+### Slide 23 (Incident Response Foundations: Rosters, Roles, Rotations)
 
 ![](../../media/slides/Slide23.png)
 
@@ -256,13 +269,13 @@ Then we’ll talk about some of the “Roles” of the people that make up that 
 
 And last, we’ll talk about what a rotation is.
 
-## Slide 24 (Rosters: Multiple members)
+### Slide 24 (Rosters: Multiple members)
 
 ![](../../media/slides/Slide24.png)
 
 A roster, or team, is made up of multiple engineers.
 
-## Slide 25 (Rosters: Multiple rotations)
+### Slide 25 (Rosters: Multiple rotations)
 
 ![](../../media/slides/Slide25.png)
 
@@ -270,13 +283,13 @@ Rosters can also contain multiple rotations
 
 We’ll go over what a rotation is in a moment, but we need to build some sort of framework around who is on-call at any given point.
 
-## Slide 26 (Roles: Primary Responder)
+### Slide 26 (Roles: Primary Responder)
 
 ![](../../media/slides/Slide26.png)
 
 The first role we need to talk about is the “Primary Responder” – the Primary “On-call” engineer.
 
-## Slide 27 (Roles: Secondary Responder)
+### Slide 27 (Roles: Secondary Responder)
 
 ![](../../media/slides/Slide27.png)
 
@@ -284,7 +297,7 @@ Then we have the secondary responder – who is there as back up -
 
 Another engineer who can step in if  the primary responder is unavailable or unreachable
 
-## Slide 28 (Roles: Subject Matter Experts)
+### Slide 28 (Roles: Subject Matter Experts)
 
 ![](../../media/slides/Slide28.png)
 
@@ -296,7 +309,7 @@ Who is our front-end expert?
 
 Who are the people that we can reach out to if our primary and secondary responders aren't able to diagnose and resolve the issue themselves.
 
-## Slide 29 (Roles: Incident Commander)
+### Slide 29 (Roles: Incident Commander)
 
 ![](../../media/slides/Slide29.png)
 
@@ -313,7 +326,7 @@ People aren’t stepping on each other or undoing each others work.
 
 It's good to have a central person who can keep tabs on what's going on and who's doing what.
 
-## Slide 30 (Roles: Scribe)
+### Slide 30 (Roles: Scribe)
 
 ![](../../media/slides/Slide30.png)
 
@@ -332,7 +345,7 @@ What were people saying, doing, feeling, and even experiencing?
 
 It’s all data to be analyzed – but only if we capture it.
 
-## Slide 31 (Roles: Communication Coordinator)
+### Slide 31 (Roles: Communication Coordinator)
 
 ![](../../media/slides/Slide31.png)
 
@@ -347,7 +360,7 @@ There are many people within an organization who need to be made aware of what�
 
 It's always good to put someone in charge of managing that communication and making sure that other stakeholders are aware of what's happening and what’s being done.
 
-## Slide 32 (Rotations: Scheduled Shifts)
+### Slide 32 (Rotations: Scheduled Shifts)
 
 ![](../../media/slides/Slide32.png)
 
@@ -355,7 +368,7 @@ A rotation is a scheduled shift.
 
 Engineers takes the “on-call” responsibility for their own specific recurring rotation.
 
-## Slide 33 (Rotations: Types)
+### Slide 33 (Rotations: Types)
 
 ![](../../media/slides/Slide33.png)
 
@@ -367,7 +380,7 @@ There are many different types of shifts that you can create – some more commo
 
 And of course there are many ways to **customize** shifts, especially for weekends when engineers need more flexibility. Engineers should be able to easily hand off the role to someone when non-work-related conflicts arise.
 
-## Slide 34 (Key Takeaway)
+### Slide 34 (Key Takeaway)
 
 ![](../../media/slides/Slide34.png)
 
@@ -377,7 +390,7 @@ Putting simple things in place like “on-call” roles, rosters, and rotations 
 
 From there, we can respond methodically with the urgency and importance incidents deserve.
 
-## Slide 35 (Incident Tracking: When did we know?)
+### Slide 35 (Incident Tracking: When did we know?)
 
 ![](../../media/slides/Slide35.png)
 
@@ -387,7 +400,7 @@ Another thing we want to do, to address the challenges of Tailwind Traders and t
 
 Is this a new incident? If we are trying to reduce the time it takes to recover from incidents, we’ll need to start capturing when we are aware of issues.
 
-## Slide 36 (Incident Tracking: How did we know?)
+### Slide 36 (Incident Tracking: How did we know?)
 
 ![](../../media/slides/Slide36.png)
 
@@ -399,7 +412,7 @@ Did our monitoring systems tell us, or did a customer inform us?
 
 If we plan to learn and improve, capturing how we knew will uncover improvement opportunities in our monitoring practices.
 
-## Slide 37 (Incident Tracking: Who is aware of this?)
+### Slide 37 (Incident Tracking: Who is aware of this?)
 
 ![](../../media/slides/Slide37.png)
 
@@ -407,7 +420,7 @@ If I’m just finding out about a problem, am I the first to know?
 
 **Who else is aware?**
 
-## Slide 38 (Incident Tracking: Is anyone doing anything?)
+### Slide 38 (Incident Tracking: Is anyone doing anything?)
 
 ![](../../media/slides/Slide38.png)
 
@@ -417,7 +430,7 @@ Is everyone assuming someone else is looking in to it?
 
 These are difficult questions to answer if nothing is tracked.
 
-## Slide 39 (Incident Tracking: How bad is it?)
+### Slide 39 (Incident Tracking: How bad is it?)
 
 ![](../../media/slides/Slide39.png)
 
@@ -427,7 +440,7 @@ We may not have any notion of severity or impact and there’s no place for us t
 
 These are just some of the details we want to begin tracking to improve our incident response.
 
-## Slide 40 (Unique Channel: Conversation Bridge)
+### Slide 40 (Unique Channel: Conversation Bridge)
 
 ![](../../media/slides/Slide40.png)
 
@@ -435,7 +448,7 @@ To address some of the challenges around how we communicate we also want to find
 
 Which for Tailwind Traders is Microsoft Teams.
 
-## Slide 41 (Unique Channel: Incident Related Only)
+### Slide 41 (Unique Channel: Incident Related Only)
 
 ![](../../media/slides/Slide41.png)
 
@@ -447,7 +460,7 @@ We don’t conversations about what people are doing for lunch.
 
 We ONLY want conversations related to the incident. Because then we can take that text (or data) and analyze later in a Post-incident review.
 
-## Slide 42 (Logic App: Response Improvements)
+### Slide 42 (Logic App: Response Improvements)
 
 ![](../../media/slides/Slide42.png)
 
@@ -463,7 +476,7 @@ And we’ll address most of this using nothing more than a Logic App.
 
 A Logic App is a way to schedule, automate, and stitch together data and services both internal and external to your organization.
 
-## Slide 43 (Logic App: Connectors Used)
+### Slide 43 (Logic App: Connectors Used)
 
 ![](../../media/slides/Slide43.png)
 
@@ -476,7 +489,7 @@ That’s going to allow us to create and track our engineering efforts around sp
 
 Last, the Logic App goes into Azure Storage to look up who is “On-call” and assign them to the incident, as well as provide a custom troubleshooting guide related to the type of problem.
 
-## Slide 44 (Logic App : Azure Boards)
+### Slide 44 (Logic App : Azure Boards)
 
 ![](../../media/slides/Slide44.png)
 
@@ -488,7 +501,7 @@ Additional ways we’ll be using Azure Boards is to assign an engineer to the in
 
 Then depending on different triggers and steps within the Logic App, the details of the incident will be updated.
 
-## Slide 45 (Logic App : Azure Storage)
+### Slide 45 (Logic App : Azure Storage)
 
 ![](../../media/slides/Slide45.png)
 
@@ -498,7 +511,7 @@ As well as, lookup and provide helpful troubleshooting guides to the first respo
 
 This is done using a table within Azure Storage to maintain our “On-call” roster and rotations.
 
-## Slide 46 (Logic App : Microsoft Teams)
+### Slide 46 (Logic App : Microsoft Teams)
 
 ![](../../media/slides/Slide46.png)
 
@@ -508,13 +521,13 @@ It will then take the details of the incident and post them right into the new c
 
 That way we have a unique channel that is reserved specifically for the incident.
 
-## Slide 47 (Demo : Creating an incident response plan)
+### Slide 47 (Demo : Creating an incident response plan)
 
 ![](../../media/slides/Slide47.png)
 
 Now I’m going to show you how all of that is done using a Logic App.
 
-## Slide 48 (Key Takeaway)
+### Slide 48 (Key Takeaway)
 
 ![](../../media/slides/Slide48.png)
 
@@ -528,7 +541,7 @@ It’s in a centralized location and everyone knows how to get to it.
 
 Prioritizing for good communication – clear communication is an essential part of building a good incident response plan.
 
-## Slide 49 (Lifecycle of an Incident: Remediation)
+### Slide 49 (Lifecycle of an Incident: Remediation)
 
 ![](../../media/slides/Slide49.png)
 
@@ -536,13 +549,13 @@ Although thinking of incidents in terms of phases allows for us to shorten each 
 
 Now that we’ve covered the foundations of building a good incident response plan, let's talk about remediation efforts and what that looks like for Tailwind Traders.
 
-## Slide 50 (Remediation Improvements)
+### Slide 50 (Remediation Improvements)
 
 ![](../../media/slides/Slide50.png)
 
 When it comes to some of the improvements, we’d like to make to our remediation efforts,
 
-### Context & Guidance Section
+#### Context & Guidance Section
 
 We would love to have better context and guidance on what engineers should be doing to restore services.
 
@@ -551,7 +564,7 @@ Of course, we are looking for ways to automate many of the common problems we se
 Each engineer arrives to assist in remediation efforts with different context, mental models, expertise, and more. 
 If we can find ways to provide additional context and guidance, we believe that should help us reduce our time to resolve.
 
-### Update Stakeholders Section
+#### Update Stakeholders Section
 
 We also need to find a way to prevent people from tapping us on the shoulder for updates. 
 
@@ -563,7 +576,7 @@ We’ll use Troubleshooting Guides, part of Application Insights to help provide
 
 And we’ll also show you a chatops approach to updating a status page from within the incident chat channel. 
 
-## Slide 51 (Troubleshooting Guides : Context & Guidance)
+### Slide 51 (Troubleshooting Guides : Context & Guidance)
 
 ![](../../media/slides/Slide51.png)
 
@@ -581,7 +594,7 @@ There are many ways to add helpful information to a troubleshooting guide:
 
 - [Images] You can also put in images if you think perhaps an architectural diagram or visual aid is going to be helpful.
 
-## Slide 52 (Update Stakeholders)
+### Slide 52 (Update Stakeholders)
 
 ![](../../media/slides/Slide52.png)
 
@@ -597,7 +610,7 @@ They have every right to this information, but we've got to find a better way to
 
 - [Expectations] What kind of expectations should they have in terms of when they're going to hear back from us?
 
-## Slide 53 (Chatops)
+### Slide 53 (Chatops)
 
 ![](../../media/slides/Slide53.png)
 
@@ -607,7 +620,7 @@ The approach we'll use to updating stakeholders is known as chatops.
 
 Chatops is nothing more than infusing a group chat tool with the conversations and actions you perform throughout your day.
 
-## Slide 54 (Chatops: Benefits)
+### Slide 54 (Chatops: Benefits)
 
 ![](../../media/slides/Slide54.png)
 
@@ -625,7 +638,7 @@ Getting that information out people’s heads and into chat, so that that same i
 
 - [Empathy] When you understand more about what your peers, coworkers, and leadership are doing and thinking, including how they make their decisions, you’re able to be a lot more empathetic about what is taking place.
 
-## Slide 55 (Chatops: Microsoft Teams)
+### Slide 55 (Chatops: Microsoft Teams)
 
 ![](../../media/slides/Slide55.png)
 
@@ -633,13 +646,13 @@ Microsoft Teams is a central place where we have a lot of conversations about ou
 
 In the next demo we’ll use an outgoing webhook that allows us to update a status page.
 
-## Slide 56 (Chatops: Azure Function)
+### Slide 56 (Chatops: Azure Function)
 
 ![](../../media/slides/Slide56.png)
 
 The webhook hits an Azure Function endpoint that has some Node.js code behind it.
 
-## Slide 57 (Chatops: Azure Storage)
+### Slide 57 (Chatops: Azure Storage)
 
 ![](../../media/slides/Slide57.png)
 
@@ -651,13 +664,13 @@ Which is where we're already spending our time trying to understand what's going
 
 That saves an immense amount of time updating those not involved in the response.
 
-## Slide 58 (Demo: Troubleshooting Guides & Status Page)
+### Slide 58 (Demo: Troubleshooting Guides & Status Page)
 
 ![](../../media/slides/Slide58.png)
 
 Let's take a look at our troubleshooting guide and how to update a status page using Microsoft Teams and an Azure Function.
 
-## Slide 59 (QR Code to see broken cart)
+### Slide 59 (QR Code to see broken cart)
 
 ![](../../media/slides/Slide59.png)
 
@@ -676,11 +689,11 @@ I thought we should show some additional things that can go a long way in reduci
 > **NOTE TO SPEAKER:** This code needs to be re-created for each new deployment.
 Use https://www.qrcode-monkey.com/ to generate a new code for your presentation.
 
-## Slide 60 (Remediation of Shopping Cart)
+### Slide 60 (Remediation of Shopping Cart)
 
 ![](../../media/slides/Slide60.png)
 
-## Slide 61 (Key Takeaway)
+### Slide 61 (Key Takeaway)
 
 ![](../../media/slides/Slide61.png)
 
@@ -694,27 +707,27 @@ There are many paths to both success and failure.
 
 Information and an obstacle free path to making an impact are our best tools.
 
-## Slide 62 (Hidden: Speaker Note)
+### Slide 62 (Hidden: Speaker Note)
 
 ![](../../media/slides/Slide62.png)
 
-## Slide 63 (Hidden: Speaker Note)
+### Slide 63 (Hidden: Speaker Note)
 
 ![](../../media/slides/Slide63.png)
 
-## Slide 64 (Hidden: Speaker Note)
+### Slide 64 (Hidden: Speaker Note)
 
 ![](../../media/slides/Slide64.png)
 
-## Slide 65 (Hidden: Speaker Note)
+### Slide 65 (Hidden: Speaker Note)
 
 ![](../../media/slides/Slide65.png)
 
-## Slide 66 (Hidden: Speaker Note)
+### Slide 66 (Hidden: Speaker Note)
 
 ![](../../media/slides/Slide66.png)
 
-## Slide 67 (3 Main Takeaways)
+### Slide 67 (3 Main Takeaways)
 
 ![](../../media/slides/Slide67.png)
 
@@ -730,26 +743,26 @@ We need a methodical and orchestrated response.
 
 - [Make ..] information & resources available and accessible to a larger audience.
 
-## Slide 68 (Docs alert)
+### Slide 68 (Docs alert)
 
 ![](../../media/slides/Slide68.png)
 
-## Slide 69 (MS Learn Alert)
+### Slide 69 (MS Learn Alert)
 
 ![](../../media/slides/Slide69.png)
 
-## Slide 70 (Resources)
+### Slide 70 (Resources)
 
 ![](../../media/slides/Slide70.png)
 
-## Slide 71 ()
+### Slide 71 ()
 
 ![](../../media/slides/Slide71.png)
 
-## Slide 72 ()
+### Slide 72 ()
 
 ![](../../media/slides/Slide72.png)
 
-## Slide 73 ()
+### Slide 73 ()
 
 ![](../../media/slides/Slide73.png)

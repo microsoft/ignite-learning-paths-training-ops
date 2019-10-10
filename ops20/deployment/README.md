@@ -5,19 +5,19 @@
 
 ## Prerequisities
 
-### Accounts You Will Need
+To present **OPS20 - Responding to Incidents**, you'll need an account with the following services.
 
-To present OPS20 - Responding to Incidents, you'll need an account with the following services.
-
-- [Azure](../tools/README.md)
-- [Azure Devops](../tools/README.md)
-- [Microsoft Teams](../tools/README.md)
+- Azure
+- Azure Devops
+- Microsoft Teams
 
 If you do not already have accounts with each, please register first.
 
+---
+
 ### Service Principal Requirement
 
-Part of the demo environment uses Kubernetes. 
+Part of the demo environment uses Kubernetes.
 
 As a result, a service principal is required in order to provision all of the necessary pieces of infrastructure.
 
@@ -61,7 +61,7 @@ az provider register --namespace Microsoft.ContainerRegistry
 
 ### Automated Deployment
 
-To deploy the demo environment used for OPS20 - Responding To Incidents, [use the instructions found in the official deployment repository](https://github.com/microsoft/ignite-learning-paths/tree/master/ops/ops20) or just press the blue "Deploy to Azure" button below.
+Once you have your service principal information created and available to copy and paste, you may deploy the demo environment used for *OPS20 - Responding To Incidents*, simply by pressing the blue "*Deploy to Azure*" button below.
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fneilpeterson%2Ftailwind-reference-deployment%2Fmaster%2Fdeployment-artifacts-aks%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
@@ -89,13 +89,9 @@ It will take several minutes, but by deleting the entire resource group, all res
 
 ---
 
-## Next Step After Deploying
-
-[Go here to deploy the Logic App needed in demo 1 (to be automated)](../deployment/logic_apps/README.md)
-
----
-
 ## Source Repositories
+
+For a deeper understanding of the infrastructure and applications this presentations uses as a demo environment, please reference the following repositories and documentation.
 
 https://github.com/microsoft/TailwindTraders
 
