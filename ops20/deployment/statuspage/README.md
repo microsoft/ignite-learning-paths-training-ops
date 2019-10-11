@@ -2,7 +2,7 @@
 
 The Status Page portion of the demo utilizes a webhook in Microsoft Teams to trigger an Azure Function which then updates HTML on a file stored in a web server on Azure Storage.
 
-The Azure Function and associated storage files are part of the automated deployment. 
+The Azure Function and associated storage files are part of the automated deployment.
 
 ![](https://github.com/Azure-Samples/functions-teams-incident-status-page-bot/raw/master/tailwind-incident-bot.gif)
 
@@ -10,15 +10,9 @@ The Azure Function and associated storage files are part of the automated deploy
 
 The deployment will provide nearly everything you need to demonstrate a status page update. However, you will need to perform a few actions in Microsoft Teams that cannot be automated during the deployment.
 
-### Azure Table Storage
+### Create Outgoing Webhook
 
-Incident statuses are stored in a table in the storage account, but we will be manually creating the table.
-
-In the Azure portal, open the storage account that already exists in the resource group associated withe the deployment and add a table named `statuses`.
-
-*![Create table](https://github.com/Azure-Samples/functions-teams-incident-status-page-bot/raw/master/create-table.png)*
-
-Now navigate to the function app, and open the `teams-webhook` function.
+Navigate to the function app, and open the `teams-webhook` function.
 
 Click "**Get Function URL**" and copy the URL.
 
@@ -43,3 +37,13 @@ We currently do not use this.
 Close the dialog box.
 
 >**Note:** Reference this [repository](https://github.com/Azure-Samples/functions-teams-incident-status-page-bot) for additional information on installation and configuration of the status page update process using chatops.
+
+### View the Status Page
+
+You can access your status page HTML by clicking on the link displayed in the overview screen of the Azure Function.
+
+![](../../media/screenshots/demo02_ViewStatusPage.png)
+
+There, you'll see something like the following image, indicating that "Everything is okay!"... and there should be no text below the **History** section.
+
+![](../../media/screenshots/demo02_ViewStatusPage2.png)

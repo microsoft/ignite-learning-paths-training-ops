@@ -66,11 +66,11 @@ Be sure to address each item on the presenter setup checklist below.
 >**Presenter Setup Checklist:**
 
 - [ ] Logic App open in Design View.
-- [ ] Azure Boards - Query for work items open in tab.
+- [ ] Azure Boards in view
+- [ ] Postman is open and ready to send the alert.
 - [ ] Microsoft Teams open in browser tab (or native).
 - [ ] Troubleshooting Guide open in tab
 - [ ] Status page is open in tab.
-- [ ] Postman is open and ready to send the alert.
 - [ ] Dashboard open in own tab.
 - [ ] [AKS connection string](03/README.md) ready to copy and paste.
 - [ ] Cloud shell open in tab (can open from troubleshooting guide).

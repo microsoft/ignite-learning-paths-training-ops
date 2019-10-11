@@ -1,17 +1,28 @@
 # OPS20 (Tailwind Traders AKS Deployment)
 
-| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
-|--------|-------|------------|-----------|
+| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md)
+|--------|-------|------------|------|
 
-## Prerequisities
+## Prerequisites
 
 To present **OPS20 - Responding to Incidents**, you'll need an account with the following services.
 
-- Azure
-- Azure Devops
+- Microsoft Azure
 - Microsoft Teams
 
-If you do not already have accounts with each, please register first.
+### Azure Subscription
+
+If you are presenting the demonstrations live you will need to access the Azure Portal, which requires an Azure account. If you have not done so already, [sign up for free here](https://portal.azure.com).
+
+### Microsoft Teams
+
+You will also be demonstrating functionality from within Microsoft Teams. If you do not have an account, [sign up for one here](https://teams.microsoft.com/start).
+
+### Postman
+
+To send an alert to the Logic App used in Demo 1, requires sending a JSON payload to a URL. This is accomplished easily using the Postman tool.[ Windows and Mac versions are both avaiable](https://www.getpostman.com/downloads/).
+
+This or similar tool is recommended for the first demonstration. 
 
 ---
 
@@ -43,21 +54,7 @@ The output should look similar to this:
 
 >See [az ad sp create-for-rbac](https://docs.microsoft.com/en-us/cli/azure/ad/sp?WT.mc_id=none-github-nepeters&view=azure-cli-latest#az-ad-sp-create-for-rbac) for more information.
 
-### Provider registration
-
-The Tailwind Traders application uses many Azure services. In some cases, if a service has not yet been used in your subscription, a provider registration may be needed. The following commands will ensure your subscription is capable of running the Tailwind Traders application.
-
-``` az cli
-az provider register --namespace Microsoft.OperationalInsights
-az provider register --namespace Microsoft.DocumentDB
-az provider register --namespace Microsoft.DBforPostgreSQL
-az provider register --namespace Microsoft.OperationsManagement
-az provider register --namespace Microsoft.ContainerService
-az provider register --namespace Microsoft.Sql
-az provider register --namespace Microsoft.ContainerRegistry
-```
-
-## Instructions
+## Demo Environment Deployment Instructions
 
 ### Automated Deployment
 
@@ -69,9 +66,22 @@ Once you have your service principal information created and available to copy a
 
 [Video of the process is available here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/00_Deployment.mp4)
 
-Once the deployment has completed and you have verified that you can access the Tailwind Traders site, your next step is to deploy an additional Logic App that will be used in the first technical demonstration ([Demo One](demos/01/README.md)) of this presentation.
+---
 
->**Presenter Note:** This step should be automated soon and the Logic App will be deployed with the rest of the resources.
+## Post-Deployment Steps
+
+- Authenticate your accounts inside the `teams` and `visualstudioteamservices` API Connection types listed in the new Resource Group
+-  Verify the Azure Function URL (Statuspage) is loading
+- Create the Application Dashboard by going to Application Insights and pressing the button that says `Application Dashboard`
+- Open your new Azure Devops Project (not the Organization) and verify everything worked
+- Highlight and copy the name of the Kubernetest service. We'll use this to connect to the cluster and make changes
+- Check each of the Logic Apps and make sure they aren't requiring authentication
+- Create Troubleshooting Guide using [template found here](../demos/02/TroubleshootingGuide_ARM_Template.json)
+- Copy HTTP Endpoint URL from main Logic App and paste in to Postman 
+- [Setup webhook for Statuspage function](statuspage/README.md)
+- [Break the shopping cart](break_tailwindtraders/README.md)
+
+That's all we need to take care of for now.
 
 ---
 
@@ -86,6 +96,24 @@ az group delete --name <resource group name> --yes --no-wait
 ```
 
 It will take several minutes, but by deleting the entire resource group, all resources associated with the demo environment will be destroyed.
+
+---
+
+## Having Trouble?
+
+### Provider registration
+
+The Tailwind Traders application uses many Azure services. In some cases, if a service has not yet been used in your subscription, a provider registration may be needed. The following commands will ensure your subscription is capable of running the Tailwind Traders application.
+
+``` az cli
+az provider register --namespace Microsoft.OperationalInsights
+az provider register --namespace Microsoft.DocumentDB
+az provider register --namespace Microsoft.DBforPostgreSQL
+az provider register --namespace Microsoft.OperationsManagement
+az provider register --namespace Microsoft.ContainerService
+az provider register --namespace Microsoft.Sql
+az provider register --namespace Microsoft.ContainerRegistry
+```
 
 ---
 
