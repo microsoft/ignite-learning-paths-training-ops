@@ -90,25 +90,21 @@ Expand each step and explain what is happening
 
 ---
 
-## Part 2: Azure Boards (Query View & Reporting)
+## Part 2: Azure Boards
 
-Switch to the tab containing Azure Boards. You should be looking at your work items in the query view. The query view should be empty because there are currently no items that meet the criteria.
+Switch to the tab containing Azure Boards. You should be looking at your work items in the boards view. The query view should be empty because there are currently no items that meet the criteria.
 
 >**Presenter Note:** After confirming there are no current work items, we send the alert using Postman.
 
-Once the alert has been sent to the Logic App endpoint, return to the query view in Azure Boards and refresh the screen.
-
-The new Work Item will appear.
-
-While viewing it, the details on the right will update to reflect that you (the presenter) have been assigned to the work item.
-
->**Presenter Note:** This requires you to update the Azure Table Storage entry so that it contains your own email address rather than the default placeholder. [Read more](https://coming.soon) about the Azure Storage portion of the demo environment.
+Once the alert has been sent to the Logic App endpoint, return to Azure Boards and watch as the details automatically change to reflect that you (the presenter) have been assigned to the work item.
 
 Switch to the "Charts" view and create a new chart. (e.g. )
 
 ![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/screenshots/demo1_part2_00.png)
 
 Create a new chart such as one of the above to deomonstrate the ease to quickly get a better understanding.
+
+Create a new query to display just the issues assigned to yourself.
 
 [Watch Demo 1: Part 2](https://coming.soon)
 
