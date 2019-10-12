@@ -48,15 +48,21 @@ Once the Troubleshooting Guide has been created, begin exploring it.
 
 ## Part 2: Update Status Page from Microsoft Teams
 
+Part 2 is broken up further. You can view the videos for each.
+
+- [demo1_2](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo2_2a.mp4)
+- [demo1_2_1](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo2_2b.mp4)
+
+
 To set the status of our Status Page to open, run the following from the chat field in Microsoft Teams:
 
 ``` Teams
-@TailwindStatus open [message]
-@TailwindStatus update [message]
-@TailwindStatus close [message]
-@TailwindStatus help [message]
+@StatusPage open [message]
+@StatusPage update [message]
+@StatusPage close [message]
+@StatusPage help [message]
 ```
 
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/screenshots/TailwindStatus.png)
+![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/screenshots/StatusPage.png)
 
 >**Presenter Notes:** [More on the Microsoft Teams outgoing webhook can be found here](../../deployment/statuspage/README.md)

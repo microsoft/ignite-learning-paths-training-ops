@@ -98,7 +98,7 @@ Detailed explanations of each demonstration associated with this presentation ca
   - [Master PowerPoint file (including notes for each slide)](https://globaleventcdn.blob.core.windows.net/assets/ops%2Fops20%2Fslides%2FOPS20_Responding%20to%20Incidents_Oct3.pptx?sv=2018-03-28&ss=bqtf&srt=sco&sp=rwdlacup&se=2019-10-04T05:52:51Z&sig=UWiHX7Tv2X391SQmxWTLgB%2BRntOo31YkiYKR2zHzCeo%3D)
 - Videos
   - [Full-length recording of presentation](https://coming.soon)
-  - ["Director's Cut" Full-length recording of presentation](https://coming.soon)
+  - ["Director's Cut" Full-length recording of presentation](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/TTT_DirectorsCut.mp4)
   - [Individual recordings of stage-ready hands-on demos (3 Demos)](demos/README.md)
   - [Individual recordings of stage-ready Powerpoint presention (4 Sections)](slides/README.md)
   - [Full-length recording of environment deployment](https://coming.soon)
