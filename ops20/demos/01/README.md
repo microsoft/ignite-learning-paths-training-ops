@@ -8,7 +8,7 @@
 |  | Video | Description
 |--------|-------|-----|
 | [Part 1: Logic App](#part-1-logic-app) | [Link](https://coming.soon) | Describe the Logic App
-| [Part 2: Azure Boards](#part-2-azure-boards-query-view--reporting) | [Link](https://coming.soon) | Describe the configuration  and usage of Azure Boards
+| [Part 2: Azure Boards](#part-2-azure-boards) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo1_2.mp4) | Describe the configuration  and usage of Azure Boards
 | [Part 3: Microsoft Teams](#part-3-microsoft-teams) | [Link](https://coming.soon) | Describe what's happening in Microsoft Teams
 
 ---
@@ -106,7 +106,10 @@ Create a new chart such as one of the above to deomonstrate the ease to quickly 
 
 Create a new query to display just the issues assigned to yourself.
 
-[Watch Demo 1: Part 2](https://coming.soon)
+[Watch Demo 1: Part 2 Video](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo1_2.mp4)
+
+[Watch Demo 1: Part 2.1 Video](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo1_2_1.mp4)
+
 
 Now we will change to the Microsoft Teams tab (or native application).
 

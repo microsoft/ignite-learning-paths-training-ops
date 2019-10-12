@@ -64,7 +64,7 @@ Once you have your service principal information created and available to copy a
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
-[Video of the process is available here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/00_Deployment.mp4)
+[Video of the process is available here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/TTT_DirectorsCut.mp4)
 
 ---
 
@@ -80,6 +80,8 @@ Once you have your service principal information created and available to copy a
 - Copy HTTP Endpoint URL from main Logic App and paste in to Postman 
 - [Setup webhook for Statuspage function](statuspage/README.md)
 - [Break the shopping cart](break_tailwindtraders/README.md)
+
+[A video of all of the steps above is available here]()
 
 That's all we need to take care of for now.
 
