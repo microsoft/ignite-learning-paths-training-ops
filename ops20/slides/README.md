@@ -11,15 +11,17 @@ The Powerpoint slide deck is divided up in to four (4) sections.
 
 | Section / Demo | Minutes | Slides | Video
 |----------|----------|-------|-----|
-|[1 - Intro & Foundations of Incident Response ](section/01/README.md)|16 | *1 - 46* | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_One.mp4)
-|[2 - Remediation Improvements (Context & Guidance)](section/02/README.md)|6 | *48 - 57* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_Two.mp4)
-|[3 - Tools to Reduce the Time To Recover](section/03/README.md)|1 | *59* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_Three.mp4)
-[4 - Summary & Closing](section/04/README.md) | 2 | *66 - 73* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_Four.mp4)
+|[1 - Intro & Foundations of Incident Response ](section/01/README.md)|16 | *1 - 29* | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_One.mp4)
+|[2 - Remediation Improvements (Context & Guidance)](section/02/README.md)|6 | *30 - 38* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_Two.mp4)
+|[3 - Tools to Reduce the Time To Recover](section/03/README.md)|1 | *40* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_Three.mp4)
+[4 - Summary & Closing](section/04/README.md) | 2 | *47 - 53* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_Four.mp4)
 | Total       |25 | |[Link](https://coming.soon)
 
 ---
+[View all slides and a transcript](script/OPS20_Speaking_Script.md)
 
-[Download the master Powerpoint file](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slides/OPS20_Responding_to_Incidents_Oct3.pptx)
+
+[Download the master Powerpoint file](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slides/OPS20_Responding_to_incidents_master.pptx)
 
 [Presentation thumbnails and a speaking script can be found here](script/OPS20_Speaking_Script.md)
 
