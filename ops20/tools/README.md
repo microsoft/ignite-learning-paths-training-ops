@@ -3,7 +3,7 @@
 | [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
 |--------|-------|------------|-----------|
 
-| [Transcript](../../script/OPS20_Speaking_Script.md) | [Video](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_One.mp4) | [Powerpoint](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slides/OPS20_Responding_to_incidents_master.pptx) | [Tools](/ops20/tools/README.md) |
+| [Transcript](../../script/OPS20_Speaking_Script.md) | [Video](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/OPS20_Final_Full.mp4) | [Powerpoint](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slides/OPS20_Responding_to_incidents_master.pptx) | [Tools](/ops20/tools/README.md) |
 |------------|-------|------------|-------|
 
 ## Additional Resources
@@ -26,7 +26,7 @@
 
 ## [Demo 1](../demos/01/README.md): Creating An Incident Response Plan
 
-[Watch the stage ready demonstration](https://coming.soon)
+[Watch the stage ready demonstration](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/OPS20_Final_Full.mp4)
 
 This demo uses the following:
 
@@ -39,7 +39,7 @@ This demo uses the following:
 
 ## [Demo 2](../demos/02/README.md): Troubleshooting Guides & Status Page
 
-[Watch the stage ready demonstration](https://coming.soon)
+[Watch the stage ready demonstration](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/OPS20_Final_Full.mp4)
 
 This demo uses the following:
 
@@ -50,4 +50,4 @@ This demo uses the following:
 
 ## [Demo 3](../demos/03/README.md): Remediation of Shopping Cart
 
-[Watch the stage ready demonstration](https://coming.soon)
+[Watch the stage ready demonstration](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/OPS20_Final_Full.mp4)
