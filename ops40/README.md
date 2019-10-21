@@ -1,5 +1,4 @@
-
-# ops40 - Train the trainer
+# OPS40 - Deployment Practices for Greater Reliability
 
 ## Session Abstract
 
@@ -9,9 +8,9 @@ In this session, we will see how continuous delivery pipelines have helped Tailw
 
 ## How To Use
 
-Welcome, Presenter! 
+Welcome, Presenter!
 
-We're glad you are here and look forward to your delivery of this amazing content. As an experienced presenter, we know you know HOW to present so this guide will focus on WHAT you need to present. It will provide you a full run-through of the presentation created by the presentation design team. 
+We're glad you are here and look forward to your delivery of this amazing content. As an experienced presenter, we know you know HOW to present so this guide will focus on WHAT you need to present. It will provide you a full run-through of the presentation created by the presentation design team.
 
 Along with the video of the presentation, this document will link to all the assets you need to successfully present including PowerPoint slides and demo instructions &
 code.
@@ -20,48 +19,21 @@ code.
 2.  Watch the video presentation
 3.  Ask questions of the Lead Presenter
 
-
 ## Assets in Train-The-Trainer kit
 
 - This guide
-- [PowerPoint presentation](https://#)
-- [Full-length recording of presentation](https://#)
-- [Full-length recording of presentation - Director Cut](https://youtu.be/0kGGhoEB-48)
-- [Demo Instructions](demos/demo-instructions.md)
-  
+- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/PPT/OPS40_Deployment_Practices_for_Greater_Reliability.pptx)
+- Full-length recording of presentation [here](https://youtu.be/K04c7pwYF4E)
+- Director Cut Full-length recording of presentation [here](https://youtu.be/T95Cw-sumNs)
+- Individual recordings of stage-ready hands-on demos [here](https://microsoft.sharepoint.com/teams/CloudDevAdvocacy/Shared%20Documents/Forms/AllItems.aspx?viewid=16de824f%2D342c%2D4917%2D87e2%2D316d639025f5&id=%2Fteams%2FCloudDevAdvocacy%2FShared%20Documents%2F%40%40TeamDocs%2FEvents%2FIgnite%20Tour%2FFY20%20Ignite%20Tour%2FContent%2FOPS%20%2D%20Improving%20Your%20Reliability%20through%20Modern%20Operations%20Practices%2FOPS40%20Video%2Ffinal%2Ddemo%2Draw)
+- Demo Guide [here](https://github.com/microsoft/ignite-learning-paths/tree/master/ops/ops40)
 
-## Become a Presenter
+## Become a Certified Presenter
 
-To become a certified presenter, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+To become a *Trained Presenters*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
 
 - Complete name:
-- The code of this presentation: ops40
-- Link (ex: unlisted YouTube video) to a video of you presenting (~10 minutes). 
-  > It doesn't need to be this content, the important is to show your presenter skills
+- The code of this presentation: AIML50
+- Link (ex: unlisted YouTube video) to a video of you presenting (~10 minutes).
 
-A mentor will get back to you with the information on the process.
-
-## Certified Presenters
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-
-<table>
-<tr>
-    <td align="center"><a href="http://cloud5mins.com/">
-        <img src="https://avatars2.githubusercontent.com/u/2404846?s=460&v=4" width="100px;" alt="Frank Boucher"/><br />
-        <sub><b>Frank Boucher</b></sub></a><br />
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=fboucher" title="talk">📢</a>
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=fboucher" title="Documentation">📖</a> 
-    </td>
-    <td align="center"><a href="https://blogs.technet.microsoft.com/neilp/">
-        <img src="https://avatars3.githubusercontent.com/u/7844635?s=460&v=4" width="100px;" alt="Neil Peterson"/><br />
-        <sub><b>Neil Peterson</b></sub></a><br />
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="talk">🎨</a>
-            <a href="https://github.com/neilpeterson/ignite-tour-fy20/commits?author=neilpeterson" title="design">📖</a> 
-    </td>
-</tr></table>
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+> It doesn't need to be this content, the important part is to show your presenter skills
