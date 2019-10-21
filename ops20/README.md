@@ -107,7 +107,7 @@ Detailed explanations of each demonstration associated with this presentation ca
   
   ---
 
-## Become a Presenter
+## Become a Certified Presenter
 
 To become a **Trained Presenter**, contact scalablecontent@microsoft.com. 
 
