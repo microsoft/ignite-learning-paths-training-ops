@@ -7,8 +7,8 @@
 
 |  | Video | Description
 |--------|-------|-----|
-| [Part 1: Troubleshooting Guide](#part-1-azure-troubleshooting-guide) | [Link](https://coming.soon) | Deploy the Troubleshooting Guide via [ARM template found here](TroubleshootingGuide_ARM_Template.json) and discuss features
-| [Part 2: Update Status Page](#part-2-update-status-page-from-microsoft-teams) | [Link](https://coming.soon) | Demonstrate opening, updating, and closing a status announcement
+| [Part 1: Troubleshooting Guide](#part-1-azure-troubleshooting-guide) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_2_full.mp4) | Deploy the Troubleshooting Guide via [ARM template found here](TroubleshootingGuide_ARM_Template.json) and discuss features
+| [Part 2: Update Status Page](#part-2-update-status-page-from-microsoft-teams) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_2_full.mp4) | Demonstrate opening, updating, and closing a status announcement
 
 ---
 
@@ -47,11 +47,6 @@ Once the Troubleshooting Guide has been created, begin exploring it.
 
 
 ## Part 2: Update Status Page from Microsoft Teams
-
-Part 2 is broken up further. You can view the videos for each.
-
-- [demo1_2](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo2_2a.mp4)
-- [demo1_2_1](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo2_2b.mp4)
 
 
 To set the status of our Status Page to open, run the following from the chat field in Microsoft Teams:
