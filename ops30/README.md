@@ -14,7 +14,7 @@ We're glad you are here and look forward to your delivery of this amazing conten
 
 As an experienced presenter, we know you know **HOW** to present so this guide will focus on **WHAT** you need to present.
 
-Among many resources, a [full run-through video of the presentation](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/ops30_Final_Full.mp4), delivered by the original content creator is available to review and a great starting point.
+Among many resources, a [full run-through video of the presentation](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/OPS30_Full.mp4), delivered by the original content creator is available to review and a great starting point.
 
 Along with the video of the presentation, this document will link to all the assets you need to successfully present including PowerPoint slides and demo instructions & code.
 
@@ -31,9 +31,9 @@ This training repository is divided in to the following sections:
 
 | [Slides](slides/README.md) | [Demos](/ops30/demos/README.md) | [Deployment](/ops30/deployment/README.md) | 
 |--------|-------|------------|
-| 73 slides - 25 minutes, | 3 demos - 20 minutes, | 1 automated deployment
+| 56 slides - 30 minutes, | 2 demos - 15 minutes, | 1 automated deployment
 
- [Full-length video can be viewed here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/ops30_Final_Full.mp4).
+ [Full-length video can be viewed here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/OPS30_Full.mp4).
 
 
 ### **Slides**
@@ -42,15 +42,15 @@ This training repository is divided in to the following sections:
 
 Begin by familiarizing yourself with the presentation. Videos, speaking scripts, and the master Powerpoint slide deck can be found in the [slides](slides/README.md) section.
  
-The Powerpoint slide deck is divided up in to four (4) sections. There are also three (3) technical demonstrations as part of the 45-minute presentation.
+The Powerpoint slide deck is divided up in to four (4) sections. There are also three (2) technical demonstrations as part of the 45-minute presentation.
 
 | Section  | Minutes | Slides | Video | 
 |----------|----------|-------|-----|
-|[1 - Section One ](slides/section/01/README.md)|16 | *? - ?* | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/02_Presentation_Section_One.mp4)
-|[2 - Section Two](slides/section/02/README.md)|6 | *? - ?* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/02_Presentation_Section_Two.mp4)
-|[3 - Section Three ](slides/section/03/README.md)|1 | *?* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/02_Presentation_Section_Three.mp4)
-|[4 - Section Four](slides/section/04/README.md)|2 | *?* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/02_Presentation_Section_Four.mp4)
-|Total       |25 | |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/ops30_Final_Full.mp4)
+|[1 - Section One ](slides/section/01/README.md)| x | *? - ?* | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/02_Presentation_Section_One.mp4)
+|[2 - Section Two](slides/section/02/README.md)| x | *? - ?* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/02_Presentation_Section_Two.mp4)
+|[3 - Section Three ](slides/section/03/README.md)| x | *?* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/02_Presentation_Section_Three.mp4)
+|[4 - Section Four](slides/section/04/README.md)| x | *?* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/02_Presentation_Section_Four.mp4)
+|Total       | x | |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/OPS30_Full.mp4)
 |[Presentation thumbnails and a speaking script can be found here](slides/script/ops30_Speaking_Script.md)|  |  |
 
 [Take me there ...](slides/README.md)
@@ -73,9 +73,9 @@ Detailed explanations of each demonstration associated with this presentation ca
 
 | Demo  | Minutes | Video |
 |----------|----------|-------|
-|[1 - Demo one](demos/01/README.md)|?  |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/ops30_Final_Full.mp4)
-|[2 - Demo two](demos/02/README.md)|?   |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/ops30_Final_Full.mp4)
-|[3 - Demo three ](demos/03/README.md)|?    |[Link](https://coming.soon)
+|[1 - Demo one](demos/01/README.md)|?  |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/OPS30_Demo1.mp4)
+|[2 - Demo two](demos/02/README.md)|?   |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/OPS30_Demo1.mp4)
+|[3 - Demo three ](demos/03/README.md)|?    |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/OPS30_Demo1.mp4)
 
 
 [Take me there ...](demos/README.md)
@@ -87,13 +87,15 @@ Detailed explanations of each demonstration associated with this presentation ca
 - Slides
   - [Master PowerPoint file (including notes for each slide)](https://globaleventcdn.blob.core.windows.net/assets/ops%2Fops30%2Fslides%2Fops30_Responding%20to%20Incidents_Oct3.pptx?sv=2018-03-28&ss=bqtf&srt=sco&sp=rwdlacup&se=2019-10-04T05:52:51Z&sig=UWiHX7Tv2X391SQmxWTLgB%2BRntOo31YkiYKR2zHzCeo%3D)
 - Videos
-  - [Full-length recording of presentation](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/ops30_Final_Full.mp4)
+  - [Full-length recording of presentation](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/OPS30_Full.mp4)
   - ["Director's Cut" Full-length recording of presentation](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/TTT_DirectorsCut.mp4)
   - [Individual recordings of stage-ready hands-on demos](demos/README.md)
   - [Individual recordings of stage-ready Powerpoint presention (4 Sections)](slides/README.md)
-  - [Full-length recording of environment deployment](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/ops30_Final_Full.mp4)
+  - [Full-length recording of environment deployment](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/video/OPS30_Full.mp4)
 - Speaker Notes & Transcription
   - [Full speaker transcription from recording](slides/script/ops30_Speaking_Script.md)
+- Suggested Reading
+  - [Post-Incident Reviews (O'Reilly)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/resources/Post-Incident-Reviews-JasonHand.pdf) ![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/resources/media/pir_icon.png)
   
   ---
 

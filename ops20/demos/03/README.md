@@ -3,17 +3,17 @@
 | [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) |
 |--------|-------|------------|-----------|
 
->**Do you need to show videos instead of doing the demo live?:** Below, you'll find "stage-ready" videos that may be used in the event this presentation should be delivered offline.
+>**Do you need to show videos instead of doing the demo live?:** Below, you'll find "stage-ready" videos that may be used in the event this presentation should be delivered offline. As of 10/18 all links below point to the full recording of demo 3. This will be broken down further soon.
 
 |  | Video | Description
 |--------|-------|-----|
-| [Part 1: Azure Dashboard](#part-1-azure-dashboard) | [Link](https://coming.soon) | Demonstrate the Azure Dashboard
-| [Part 2: Azure Service Health](#part-2-azure-service-health) | [Link](https://coming.soon) | Demonstrate Azure Service Health
-| [Part 3: Application Map](#part-3-application-map) | [Link](https://coming.soon) | Demonstrate Application Map
-| [Part 4: Azure Workbook](#part-4-azure-workbook) | [Link](https://coming.soon) | Demonstrate Azure Workbook
-| [Part 5: Log Analytics](#part-5-log-analytics) | [Link](https://coming.soon) | Demonstrate Log Analytics
-| [Part 6: KQL (Kusto Query Language)](#part-6-kql-kusto-query-language) | [Link](https://coming.soon) | Demonstrate KQL - Kusto Query Language
-| [Part 7: Kubernetes](#part-7-kubernetes) | [Link](https://coming.soon) | Demonstrated editing the configmap
+| [Part 1: Azure Dashboard](#part-1-azure-dashboard) | [Link](https://https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_3_full.mp4) | Demonstrate the Azure Dashboard
+| [Part 2: Azure Service Health](#part-2-azure-service-health) | [Link](https://https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_3_full.mp4) | Demonstrate Azure Service Health
+| [Part 3: Application Map](#part-3-application-map) | [Link](https://https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_3_full.mp4) | Demonstrate Application Map
+| [Part 4: Azure Workbook](#part-4-azure-workbook) | [Link](https://https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_3_full.mp4) | Demonstrate Azure Workbook
+| [Part 5: Log Analytics](#part-5-log-analytics) | [Link](https://https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_3_full.mp4) | Demonstrate Log Analytics
+| [Part 6: KQL (Kusto Query Language)](#part-6-kql-kusto-query-language) | [Link](https://https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_3_full.mp4) | Demonstrate KQL - Kusto Query Language
+| [Part 7: Kubernetes](#part-7-kubernetes) | [Link](https://https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_3_full.mp4) | Demonstrated editing the configmap
 
 **Question:** *What are we trying to demonstrate?*
 
