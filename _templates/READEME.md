@@ -26,9 +26,9 @@ code.
 - [Full-length recording of presentation - Director Cut](https://youtu.be/0kGGhoEB-48)
 - [Demo Instructions](demos/demo-instructions.md)
 
-## Become a Certified Presenter
+## Become a Trained Presenter
 
-To become a certified presenter, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+To become a trained presenter, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
 
 - Complete name:
 - The code of this presentation: ops40
