@@ -22,9 +22,9 @@ code.
 ## Assets in Train-The-Trainer kit
 
 - This guide
-- PowerPoint presentation including notes for each slide [here](). **TO BE UPLOADED TO CDN**
+- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/OPS50_Preparing%20for%20Growth-%20Capacity%20Planning%20and%20Scaling.pptx)
 - Full-length recording of presentation [here](https://youtu.be/7SB1bQGwC3s)
-- Full-length script of presentation [here](script.md). This is also included in the presenter notes within Powerpoint.
+- Full-length script of presentation [here](script.md). 
 - Director Cut Full-length recording of presentation [here](). **TO BE UPLOADED TO YT**
 - Individual recordings of stage-ready hands-on demos [here](). **TO BE UPLOADED TO CDN**
 - Demo Guide [here](https://github.com/microsoft/ignite-learning-paths/tree/master/ops/ops50)
