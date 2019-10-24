@@ -24,7 +24,7 @@ code.
 - This guide
 - PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/PPT/OPS40_Deployment_Practices_for_Greater_Reliability.pptx)
 - Full-length recording of presentation [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/dry-run/ops40-dry-run-three.mp4)
-- Director Cut Full-length recording of presentation [here](https://youtu.be/T95Cw-sumNs)
+- Director Cut Full-length recording of presentation [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/directors-cut/ops40-directors-cut.mp4)
 - Demo Guide [here](https://github.com/microsoft/ignite-learning-paths/tree/master/ops/ops40)
 - Individual recordings of stage-ready hands-on demos:
     - [Demo 1 Part 1](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo1-part1.mp4)
