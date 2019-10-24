@@ -26,9 +26,9 @@ code.
 - Full-length recording of presentation [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/dry-run/ops40-dry-run-three.mp4)
 - Director Cut Full-length recording of presentation [here](https://youtu.be/T95Cw-sumNs)
 - Individual recordings of stage-ready hands-on demos:
- - [Demo 1 Part 1](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo1-part1.mp4)
- - [Demo 1 Part 2](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo1-part2.mp4)
- - [Demo 2](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo2.mp4)
+ * [Demo 1 Part 1](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo1-part1.mp4)
+ * [Demo 1 Part 2](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo1-part2.mp4)
+ * [Demo 2](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo2.mp4)
 - Demo Guide [here](https://github.com/microsoft/ignite-learning-paths/tree/master/ops/ops40)
 
 ## Become a Trained Presenter
