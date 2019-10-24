@@ -23,9 +23,12 @@ code.
 
 - This guide
 - PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/PPT/OPS40_Deployment_Practices_for_Greater_Reliability.pptx)
-- Full-length recording of presentation [here](https://youtu.be/K04c7pwYF4E)
+- Full-length recording of presentation [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/dry-run/ops40-dry-run-three.mp4)
 - Director Cut Full-length recording of presentation [here](https://youtu.be/T95Cw-sumNs)
-- Individual recordings of stage-ready hands-on demos [here](https://microsoft.sharepoint.com/teams/CloudDevAdvocacy/Shared%20Documents/Forms/AllItems.aspx?viewid=16de824f%2D342c%2D4917%2D87e2%2D316d639025f5&id=%2Fteams%2FCloudDevAdvocacy%2FShared%20Documents%2F%40%40TeamDocs%2FEvents%2FIgnite%20Tour%2FFY20%20Ignite%20Tour%2FContent%2FOPS%20%2D%20Improving%20Your%20Reliability%20through%20Modern%20Operations%20Practices%2FOPS40%20Video%2Ffinal%2Ddemo%2Draw)
+- Individual recordings of stage-ready hands-on demos:
+ - [Demo 1 Part 1](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo1-part1.mp4)
+ - [Demo 1 Part 2](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo1-part2.mp4)
+ - [Demo 2](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo2.mp4)
 - Demo Guide [here](https://github.com/microsoft/ignite-learning-paths/tree/master/ops/ops40)
 
 ## Become a Trained Presenter
