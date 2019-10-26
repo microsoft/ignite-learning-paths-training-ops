@@ -51,446 +51,121 @@ All of these services are a single point of failure right now within the Tailwin
 If one of these was to get any extensive amount of load it would probably crash and there's no easy way for them to solve that at the moment, 
 so one thing we'll look at in this session is how we could design these services to be both more scalable and reliable in the process.
 
-Now let's take a look at another issue that could come and bite us. these services here all, require you to pre provision capacity if
+Now let's take a look at another issue that could come and bite us. these services here all, require you to pre provision capacity i we exceed those pre provisioned limits we're going to start returning error messages to our customers and throttling their requests.
 
-we exceed those pre provision limits
+With cosmos DB for example, our noSQL datastore, we pre-provision the throughput.
+ 
+With cognitive services, we select the tier and that tier has a maximum number of requests per second. Once we hit either of these, clients are going to get throttled.
 
-we're going to start returning error
+ Will this marketing event that make us hit these limits? Right now the Tailwind traders team just don't know. 
+ So that's another thing we're going to have to figure out.
+ 
+And we even need to plan for growth where we've done stuff right. Here we're using logic apps and functions which are both examples of serverless technology. 
 
-messages to our customers and FRA tling
+This means these services scale automatically and we pay per request which is brilliant. 
 
-their requests with cosmos DB for
+We are paying per use here. which is also great, that means, your bill grows just as your customer base does.
 
-example our no sequel datastore we pre
+But we should at least be aware of the impact that this upcoming event may have on our costs and understand our upcoming cloud bill at the end of the month.
 
-provision the frupa with cognitive
+So another thing that we'll take a look at in this session is understanding and predicting our cloud spend.
 
-services we select the tier and that
+Within the Tailwing traders engineering team, there's a number of things for us to focus on.
 
-tier has a maximum number of requests
+And hopefully these sound like challenges that you may have come across in your own day jobs as well.
 
-per second once we hit either of these
+## Capacity Planning 
 
-clients are going to get throttled will
 
-this marketing event that make us hit
+So let's dive in and see how you can prepare for growth as well as seeing how we can make our products more scalable and reliable in the process.
 
-these limits right now the toe-in
+Let's start by talking about scaling and when we may need to scale. 
 
-traders team just don't know so that's
+Sometimes we can plan for scale. Maybe there's an upcoming sale event on our e-commerce website, or we've got a big product launch like Tailwind traders.
 
-another thing we're going to have to
+Sometimes we don't have the privilege of prior notice. Maybe a celebrity endorsed one of our products, or worse, you've been hit by a distributed denial of service attack.
 
-figure out and we even need to plan for
+Hopefully if ever these happen, you don't have to have any human intervention and the system gracefully handles the new load for you.
 
-growth where we've done stuff right here
+But we all know that this nirvana is very rarely, if not even possible for complex distributed systems that we often have today.
 
-we're using logic apps and functions
+We're going to look at how we can plan for and scale in all three of these scenarios during this
 
-which are both examples of toked
+session.
 
-serverless
+So before we dive into the meat of this session, I want to give you a quick primer.
 
-technology this means these services
+From now on in this session I will expect some prerequisite knowledge of scaling.
 
-scale automatically and we pay per
+If you're not familiar with these terms then this session might not be for you and you should maybe check out the awesome content in our fundamentals track.
 
-request which is brilliant but we are
+Alternatively, there's a whole ton of great content on these topics in the Azure architecture center. Head over there if you want to find out more.
 
-paying per use here which is also great
+But hopefully you know the difference between scaling up and scaling out
 
-your bill grows just as your customer
+manually scaling versus auto scaling 
 
-base does but we should at least be
+and then having to scale things yourself manually, like pre provisioning request units in cosmos DB, versus services that are inherently scalable like Azure functions or Azure storage and they just scale for us.
 
-aware of the impact that this upcoming
+Do hopefully I've still got you... so let's go.
 
-event may have on our core
+I want to kick off the session by just highlighting that making our app more scalable it also makes it more reliable. 
 
-and our upcoming cloud bill at the end
+For example, if our system auto scales, then given a component failure of a single machine, the auto scaling service will provision another to meet your minimum virtual machine count requirements.
 
-of the month so another thing that we'll
+Likewise, if you're leveraging higher level services such as Azure storage that are inherently scalable we've also built them to be reliable, so data will be replicated etc.
 
-take a look at in this session is
+One good analogy is these accessibility ramps that you often see outside of buildings. They were initially designed to help those with wheelchairs, the secondary benefit of those however was that they also help parents with pushchairs too. 
 
-understanding and predicting our cloud
+This is how I like to think of scalability and reliability. If we design our systems to be scalable, the secondary benefit is that they're most likely going to be more reliable as well. 
 
-spend so there's a lot of things for us
+So let's look at how we may plan for scale and growth...
 
-to look at as it's how in traders
+The first question I often get asked is 'do I need to do capacity planning in the cloud?, it's got infinite scale hasn't it?' 
 
-engineering team there's a number of
+Well yes there probably is enough scale in the cloud to meet your applications demands, but we still need to understand our capacity needs for a couple of reasons. 
 
-things for us to focus on and hopefully
+Firstly, we need to think about our forecasted cloud spend for our friends in finance. We'll talk more on that shortly. 
 
-these sound like challenges that you may
+And secondly, although there's likely enough resources in the cloud, not all of the services that we consume will scale automatically, so you need to be aware that when you're going to have to scale things up, or when you're potentially going to hit service limits that are imposed by the cloud provider.
 
-have come across in your own day jobs as
+So how do we capacity planned for these kind of things in the cloud?
 
-well so let's dive in and see how you
+Let's take a look at the Tailwind traders architecture again.
 
-can prepare for growth as well we're
+The first thing we should do when looking to capacity planning in the cloud,  is to map out the current resource requirements for the larger components within our application.
 
-seeing how we can make our products more
+We would ideally do this for everything, but we can start with the larger components.
 
-scalable and reliable in the process so
+So in this example we can maybe identify those larger components as things such as:
 
-let's talk about let's start by talking
+The azure kubernetes service cluster.
+Our rewards app running in Azure app service.
+Our various databases, Cosmos DB, Azure SQL and the like.
 
-about scaling and when we may need to
+And for each of these large components we need to understand what our current resource usage is.  This will help us plan for future usage. 
 
-scale sometimes we can plan for scale
+Now I can't go through that for all of the components in this session but as an example, let's look at the azure cosmos DB database that we have here.
 
-maybe there's an upcoming sale event on
+But before we dive into the demo and look at cloud capacity measures with cosmos DB,  you need to understand how we measure capacity in cosmos DB.  So I'm going to give you a whirlwind tour...
 
-our e-commerce website or we've got a
+Storage is measured in gigabytes consumed and that scales automatically for us so that bits pretty simple.
 
-big product launch like towering traders
+Throughput however is omething that we pre provision and we use a metric called request units to measure this. 
 
-sometimes we don't have the privilege of
+It's a mixture of memory, CPU and IOPS to give you a single metric to plan your capacity by.
 
-prior notice maybe a celebrity endorser
+You provision request units in increments of a hundred request units per second and every database operation is measured in request units.
 
-of products or worse you've been hit by
+Reads are pretty simple. A one kilobyte read is a single request unit. Other operations are calculated on a number of factors, such as item size data consistency, query patterns etc 
 
-a distributed denial of service attack
+When profiling your application, every response that you get from cosmos DB will contain the request charge header, telling you exactly how many request units that that request used. So if you're unsure of how much you're going to use, you can look at your queries and see exactly how many request units they consumed.
 
-hopefully if ever these happen you don't
+So now we understand how we measure capacity in cosmos DB let's look at how we could go and retrieve those capacity metrics.
 
-have to have any human intervention and
+## Demo 1 - Capacity Metrics
 
-the system gracefully handles a new load
-
-for you but we all know that this
-
-nirvana is very rarely if not even
-
-possible for complex distributed systems
-
-we often have today we're going to look
-
-at how we can plan for and scour in all
-
-three of these scenarios during these
-
-sessions so before we dive into the meat
-
-of this session I want to give you a
-
-quick primer from now on in this session
-
-I will expect some prerequisite
-
-knowledge of scaling if you're not
-
-familiar with these terms then this
-
-session might not be for you and you
-
-should maybe check out the awesome
-
-content in our fundamentals track
-
-alternate sleeve there's a whole ton of
-
-great content on these topics in the
-
-Azure architecture center head over
-
-there if you want to find out more but
-
-hopefully you know the difference
-
-between scaling up and scaling out
-
-manually scaling versus auto scaling and
-
-then having to scale things yourself
-
-manually like pre provisioning request
-
-units in cosmos DB versus services that
-
-are inherently scalable like Asha
-
-functions or Azure storage and they just
-
-scale for us so hopefully I still got
-
-you so let's go I wanna kick off the
-
-session by just highlighting that making
-
-our app more scalable it also makes it
-
-more reliable for example if our system
-
-auto scales then given a component
-
-failure of a single machine the auto
-
-scaling service will provision another
-
-to meet your minimum virtual machine
-
-count requirements likewise if you're
-
-leveraging higher level services such as
-
-as a storage that are inherently
-
-scalable we've also built them to be
-
-reliable so data will be replicated etc
-
-one good analogy is these accessibility
-
-ramps that you often see outside of
-
-buildings they were initially designed
-
-to help those with wheelchairs the
-
-secondary benefit of those however was
-
-that they also help parents with
-
-pushchairs this is how I like to think
-
-of scalability and reliability if we
-
-design our systems to be scalable the
-
-secondary benefit is that they're most
-
-likely to be more reliable as well so
-
-let's look at how we may plan for scalp
-
-and growth the first question I often
-
-get asked is do I need to do capacity
-
-planning in the scale right it's got
-
-infinite scale well yes there probably
-
-is enough scale in the cloud to meet
-
-your applications demands but we still
-
-need to understand our capacity needs
-
-for a couple of reasons
-
-firstly we need to think about our
-
-forecasted cloud spend for our friends
-
-in finance we'll talk more on that
-
-shortly and secondly although there's
-
-likely enough resources in the cloud not
-
-all of the services that we consume will
-
-scale automatically so you need to be
-
-aware that when you're going to have to
-
-scale things up or when you're
-
-potentially going to hit service limits
-
-that are imposed by the cloud provider
-
-so how do we capacity planned for these
-
-kind of things in the cloud let's take a
-
-look at that's how when traders
-
-architecture again the first thing we
-
-should do when looking to capacity
-
-planning account is map out the current
-
-resource requirements for the larger
-
-components within our application we
-
-should do this ideally for everything
-
-but we can start with the larger
-
-components so in this example we can
-
-maybe identify those larger components
-
-as things as the azure kubernetes
-
-service Kuster our rewards app running
-
-in Azure app service our various
-
-databases cosmas DB as a sequel and the
-
-like maybe even our Asia cognitive
-
-services too
-
-and in fact each of these large
-
-components we need to understand what
-
-our current resource usage is this will
-
-help us plan for future usage now I
-
-can't go through that for all of the
-
-components in this session but as an
-
-example let's look at the azure cosmos
-
-DB database that we have here now before
-
-we dive into their demo and look at
-
-cloud capacity measures with cosmos DB
-
-you need to understand how we measure
-
-capacity in cosmos DB so I'm going to
-
-give you a whirlwind tour storage is
-
-measured in gigabytes consumed and that
-
-scales automatically for us so that bits
-
-pretty simple throughput however is
-
-something that we pre provision and we
-
-use a metric called request units to
-
-measure this it's a mixture of memory
-
-CPU and I ops to give you a single
-
-metric to plan your capacity by your
-
-provision request units in increments of
-
-a hundred request units per second and
-
-every database operation is measured in
-
-request units reads are pretty simple a
-
-one kilobyte read is a single request
-
-unit other operations are calculated on
-
-a number of factors such as item size
-
-data consistency query patterns etc when
-
-profiling your application every
-
-response that you get from cosmos DB
-
-will contain the request charge header
-
-telling you exactly how many request
-
-units that that request used so if
-
-you're unsure of how much you're going
-
-to use you can look at your queries and
-
-see exactly how many request units they
-
-consumed so now we understand how we
-
-measure capacity in cosmos DB let's look
-
-at how we could go and retrieve those
-
-capacity metrics so if we come and head
-
-over to the azure portal in our browser
-
-and we search for monitor we can then
-
-look at metrics this is where we'll find
-
-any metrics for any resources that we
-
-have residing within Asia we can select
-
-a particular resource I'm going to
-
-select all of the resource groups here
-
-within the ignite the tour subscription
-
-and I can filter on resource type and we
-
-want to look at Asia cosmos DB accounts
-
-so if we pick this coupons one here for
-
-example we can start looking at metrics
-
-we can look at available storage and
-
-then we can add another metric and it
-
-will replicate those configuration that
-
-we just had so we can look at things
-
-like
-
-later usage and you can see here that
-
-we're actually not using any data in
-
-comparison to this storage that's
-
-available to us likewise we could look
-
-at something such as our pre provisioned
-
-frou prett so this table has I believe
-
-
-Request units as well so if we let that
-
-load will be able to say we have 1,000
-
-request units provisioned but actually
-
-right now there's very little activity
-
-happening at the moment so we've got
-
-plenty of opportunity for scout within
-
-those request units actually we could
-
-potentially scale this database down
-
-given the amount of request units that
-
-it isn't using so let's jump back into
-
-the slide so now that we've got our
+so now that we've got our
 
 capacity metrics let's look at a
 
