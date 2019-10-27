@@ -1,5 +1,20 @@
 # OPS 10 Main Script
 
+## Background
+This is the main script for the talk. For ease sake, it contains both the talk track for the slides and for the demo segments. 
+
+There are four demos in this talk ([script 1](../demos/demo1.md), [script 2](../demos/demo2.md), [script 3](../demos/demo3.md) and [script 4](../demos/demo4.md)) for which you have to do some setup including:
+
+1. deployment of the tailwind traders application
+1. sending specific kinds of traffic to this application
+1. downloading a specific JSON file to your local machine
+
+Instructions for that setup can be found in the [first demo script](../demos/demo1.md).
+
+The rest of this document is the full script with lines in between each slide. Enjoy!
+
+## Script
+
 Welcome to OPS10, the first session in the OPS learning path. I’m really delighted you could join us today. I thought we could start out with a brief introduction to the learning path and exactly what you will be able to gain from it even within the first few minutes.
 
 We are here today to talk about this hairy beast of a subject, reliability.  It doesn’t matter who you are or what you do for a living in your organization. Whether you are an operations person, someone in IT, whether you consider yourself in devops, sre, it management or perhaps a developer responsible for the creation of software. We all have a sense that the reliability of our systems, services and products are crucial to their success and to the success of our organization. 
@@ -192,7 +207,7 @@ On the technical side of the context question, it will be really helpful for us 
 
 Ok, so let’s stop talking abstractly about this idea and see a demonstration of two of the Azure features than can help improve operational awareness for you.
 
-<switch to demo>
+{switch to demo}
 
 Time for a demo. I’d like to show you two Azure offerings that can help you with this operational awareness. There are a number of components of operational awareness, but let’s start off with   trying to answer two deceptively simple questions for the tailwind traders app: what’s actually running and how well is it doing?
 
@@ -210,38 +225,42 @@ Tailwind traders has added these stubs in their app (by the way, did I mention t
 1. go to details on failed requests
 1. (breadcrumbs)
 
-So hopefully you can see why this Azure monitor feature excites me so much. It makes it really easy for me to understand just what components are in play, how they talk to each other, their performance, error rates, and so on. All from one screen. Just fabulous. I do want to give you one quick piece of advice about Application Map before we move on to the second part of the demo: instrument your code and go look at this screen now. Get very familiar with it and all of the data it can offer you. Don’t wait until your next downtime and say “wait, what was that thing <presenter name> was talking about on stage back in <current month>? Where is it again in the portal?”
+So hopefully you can see why this Azure monitor feature excites me so much. It makes it really easy for me to understand just what components are in play, how they talk to each other, their performance, error rates, and so on. All from one screen. Just fabulous. I do want to give you one quick piece of advice about Application Map before we move on to the second part of the demo: instrument your code and go look at this screen now. Get very familiar with it and all of the data it can offer you. Don’t wait until your next downtime and say “wait, what was that thing PRESENTER NAME HERE was talking about on stage back in CURRENT MONTH HERE? Where is it again in the portal?”
 
 Ok, so let’s look at a second, slightly more traditional way people gain operational awareness. This tool is more closely aligned with answering the questions about how something is performing in production at this moment. But for this demo, I promise to show you an aspect of Azure you may not have seen before.
 
 There’s been a hint of this demo on the screen prior to this. Let’s go back to the App Insights home screen again. On this screen, you can see these icons all over the place (point to pin icons). If I hover over any of them, the say things like “Pin this chart to the dashboard”. Dashboards in Azure offer the ability to collect together on one screen all of the metrics, graphs, listings, etc. that you decide are important to you for operational awareness. There are at least four ways I know of to add the information you consider important to a dashboard. The first one is through these pins. Clicking on these pins will save that item to the current dashboard, which is the last dashboard you used. 
 
-So, if I click these two pins, <click pins>
+So, if I click these two pins, {click pins}
 
-you can see this alert at the top that I have changed my dashboard and now it has some unsaved changes. If we click on that alert, we get to the dashboard in question <click> and you can see we now have two graphs on it. We can then save that dashboard <choose save>.
+you can see this alert at the top that I have changed my dashboard and now it has some unsaved changes. If we click on that alert, we get to the dashboard in question {click} and you can see we now have two graphs on it. We can then save that dashboard {choose save}.
 
-The second method for creating a dashboard starts on the dashboard screen itself. If I click edit, <click edit> I get this really cool tile editor which lets me move the items on the dashboard around <move one next to the other>, add new ones by dragging them over <drag the clock over>, and so on. Once I am done <click done>. I can then save the dashboard <click save>.
+The second method for creating a dashboard starts on the dashboard screen itself. If I click edit, {click edit} I get this really cool tile editor which lets me move the items on the dashboard around {move one next to the other}, add new ones by dragging them over {drag the clock over}, and so on. Once I am done {click done}. I can then save the dashboard {click save}.
 
-Once I have a dashboard I like, I can do something which leads to a third way to get a dashboard. I can click on share, here at the top, and now I have published a dashboard that others can simply open to use. <open dashboard name, browse published dashboards>. 
+Once I have a dashboard I like, I can do something which leads to a third way to get a dashboard. I can click on share, here at the top, and now I have published a dashboard that others can simply open to use. {open dashboard name, browse published dashboards}. 
 
 And for the final way I will mention to create dashboards, I want to draw your attention to the Download and Upload buttons. If I click Download, this will export this dashboard to a file in JSON format and then download it to my local machine. Similarly, if someone sends me a dashboard JSON file, I can import it in as a new dashboard using the Upload button. I’ll demo that in a few seconds, but first let me digress to show you the feature I promised and then you will see how this all comes together.
 
-One aspect of Azure you may not have encountered before is the Azure Resource Graph. The Azure Resource Graph is a data representation of all of the resources in Azure that you are using. In the past, if you wanted to get a handle on this, you would have to write a bunch of code that would query our APIs and then maybe generate some reports. With Azure Resource Graph, we can almost instantaneously query for the information we desire. That gets done using the Azure Resource Graph Explorer. I find it easiest to use the top search bar <search for resource  graph explorer>. This provides a query environment which allow you to <open resource item> run queries over the dataset of the current set of resources you have in use. If you think of them as database queries where the database stores a magically updated list of all of your resources, you get the right idea. 
+One aspect of Azure you may not have encountered before is the Azure Resource Graph. The Azure Resource Graph is a data representation of all of the resources in Azure that you are using. In the past, if you wanted to get a handle on this, you would have to write a bunch of code that would query our APIs and then maybe generate some reports. With Azure Resource Graph, we can almost instantaneously query for the information we desire. That gets done using the Azure Resource Graph Explorer. I find it easiest to use the top search bar {search for resource graph explorer}. This provides a query environment which allow you to {open resource item} run queries over the dataset of the current set of resources you have in use. If you think of them as database queries where the database stores a magically updated list of all of your resources, you get the right idea. 
 
-So for example, if I wanted info on all of the disks I’m using on all of the compute notes I’m running, I could do something like this:
-open resources, scroll to microsoft.compute.disks, click on it to add ‘where type == "microsoft.compute/disks”’
-<click run query>
+So for example, if I wanted info on all of the disks I’m using on all of the compute notes I’m running, I could do something like this: 
+
+{open resources, scroll to microsoft.compute.disks, click on it to add 'where type == "microsoft.compute/disks"’}
+	
+{click run query}
+	
+
 Now I have a list of all of the (read the number) disks in use, complete with what kind they are, what region they are in, and lots of other great stuff.
 
 I don’t want to dwell on this screen or even really explain it much because it is the same interface as the one we’ll be explore in more depth when we talk about log analytics later in the talk and I don’t want to steal its thunder. What I _do_ want to do is tie this back in to dashboards.
 
-If we go back to dashboard, <click dashboard> and click on the Upload button we mentioned before and feed it an exported JSON dashboard file you will find in the Github repo for this session, I get the following:
+If we go back to dashboard, {click dashboard} and click on the Upload button we mentioned before and feed it an exported JSON dashboard file you will find in the Github repo for this session, I get the following:
 
-<click upload, upload AzureInventoryDashboard.json>
+{click upload, upload AzureInventoryDashboard.json}
 
-Here’s a spiffy new dashboard that shows you a pretty dashboard of all of your resources currently in play. <show items on dashboard>. You can see that the tiles are Resource Graph queries (in teeny tiny type), and just to prove this, if I click on a tile <click on Sum of all Disk sizes> you can see the actual query being run. In this case, it says for all disk resources, take the diskSizeGB property, convert that to a long (signed 64-bit) number representation, then the final line sums that up). I promise we’ll come back to this very powerful query interface later. Now back to the presentation.
+Here’s a spiffy new dashboard that shows you a pretty dashboard of all of your resources currently in play. {show items on dashboard}. You can see that the tiles are Resource Graph queries (in teeny tiny type), and just to prove this, if I click on a tile {click on Sum of all Disk sizes} you can see the actual query being run. In this case, it says for all disk resources, take the diskSizeGB property, convert that to a long (signed 64-bit) number representation, then the final line sums that up). I promise we’ll come back to this very powerful query interface later. Now back to the presentation.
 
-<back to slides>
+{back to slides}
 
 
 With the operational awareness we’ve gained through the tools we just saw, we can now confidently get into the subject you’ve all been waiting for—Monitoring for Reliability.
@@ -491,7 +510,7 @@ This might lead you to ask “Ok, so where’s the best place to measure SLIs?�
 
 Enough talk, let’s see a demo.
 
-<switch to demo>
+{switch to demo}
 
 For this demo, tailwind traders app back into the picture. We’ll bring in all of that log analytics knowledge we now have and all of the SLI info and see how we actually measure one.
 
@@ -518,7 +537,7 @@ The next line computes the ratio of successful calls to total calls and multiple
 
 If we run this query, here’s what we get… Congratulations you’ve now seen your first SLI with Azure Monitor. Let’s take this one step further.
 
-<back to slides>
+{back to slides}
 
 We’ve determined how we are going to measure the reliability of something, but from an operations perspective, that only gets us half way to our goal. We can say this web server is 50% available, but is that good or bad? Or more precisely, is that the appropriate level of reliability?  This is where service level objectives, or SLOs, come into play. 
 
@@ -562,7 +581,7 @@ Both are used commonly in the field, but the good news is you can and should sta
 
 Let me show you the quickest of demos for SLOs. 
 
-<switch to demo>
+{switch to demo}
 Here’s a very slightly modified version of our previous query. 
 
 Paste in:
@@ -581,7 +600,7 @@ When I say slightly, I mean we’ve added a single line that represents our SLO.
 
 When we run this, we get a graph that looks like this. Here’s the 75% mark. A quick visual inspection can show you how well we did in relationship to this objective.
 
-<back to slides>
+{back to slides}
 
 To wrap up our discussion of SLIs and SLOs, I want to say two things. The first is to answer one question some people have when they first hear about SLIs and SLOs. Sometimes when I talk to people about them, they say “Wait a second, there’s another S-L acronym that gets used all the time. That’s SLA, for Service Level Agreement. Why didn’t you talk about that? How they connected?” The quick answer to this question is SLAs are legal agreements that are usually used to say “here’s a contract that states the ramifications, usually monetary, if you, the vendor, didn’t provide the level of service you promised.” While there definitely can be a connection between SLIs, SLOs and SLAs we could have a much longer discussion about, SLAs don’t really come up much in the SRE context because they are legal agreements, not a practice that directly leads to improved reliability. 
 
@@ -636,7 +655,7 @@ If you include this sort of helpful context, I pretty much guarantee you will im
 
 ---
 
-And with that, let’s wrap up this session. To succinctly summarize what our time together has provided, I hope you now can say: <read slide>
+And with that, let’s wrap up this session. To succinctly summarize what our time together has provided, I hope you now can say: {read slide}
 
 ---
 
