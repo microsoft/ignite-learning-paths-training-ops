@@ -1,7 +1,7 @@
 # OPS 10 Demo 1 Script - App Insights Application Map
 
 ## Background
-* Note: This is the same script as found in the [main](main.md) file, just broken out for convenience
+* Note: This is the same script as found in the [main](../scripts/main.md) file, just broken out for convenience
 
 ## Before you Demo
 

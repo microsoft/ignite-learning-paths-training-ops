@@ -1,7 +1,7 @@
 # OPS 10 Demo 3 Script - SLIs in Log Analytics
 
 ## Background
-* Note: This is the same script as found in the [main](main.md) file, just broken out for convenience
+* Note: This is the same script as found in the [main](../scripts/main.md) file, just broken out for convenience
 
 ## Before you Demo
 1. Be sure to deploy the app and send traffic to it as per the [demo 1 script](demo1.md)
