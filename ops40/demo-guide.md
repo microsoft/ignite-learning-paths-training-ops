@@ -1,3 +1,5 @@
+# OPS40 Demo Guide
+
 First, deploy the Tailwind Traders application onto a Kubernetes cluster. Deployment steps and automation can be found here:
 
 https://github.com/microsoft/ignite-learning-paths-training-ops/tree/master/deployment
@@ -6,7 +8,7 @@ Once completed, fork this repo into your own GitHub account and clone to your de
 
 https://github.com/microsoft/ignite-learning-paths-training-ops.git
 
-Update the values in the `/ops/ops40/demos/azure_pipeline/azure-pipelines.yaml` file to match the AKS and ACR deployments. The following commands can be used to find these values.
+Update the values in the `/ops40/demos/azure_pipeline/azure-pipelines.yaml` file to match the AKS and ACR deployments. The following commands can be used to find these values.
 
 ```
 az acr list -o table
@@ -208,7 +210,7 @@ Containers:
         azureSubscription: $(azureSubscription)
         scriptLocation: 'inlineScript'
         inlineScript: |
-          pwsh ./ops/deployment/helm-values/generate-config.ps1 -resourceGroup $(aks-cluster-rg-pre-prod) -sqlPwd Password2020! -gvaluesTemplate ops/deployment/helm-values/gvalues.template -outputFile ./values.yaml
+          pwsh ./deployment/helm-values/generate-config.ps1 -resourceGroup $(aks-cluster-rg-pre-prod) -sqlPwd Password2020! -gvaluesTemplate ops/deployment/helm-values/gvalues.template -outputFile ./values.yaml
 
     - task: PowerShell@2
       displayName: Parse host name
@@ -222,7 +224,7 @@ Containers:
       displayName: Run Pester tests
       inputs:
         targetType: 'inline'
-        script: 'invoke-pester -Script @{ Path = ''./ops/ops40/demos/azure_pipeline/tests/''; Parameters = @{ hostName = ''$(hostDB)'' }} -OutputFile "./test-results.xml" -OutputFormat ''NUnitXML'''
+        script: 'invoke-pester -Script @{ Path = ''./ops40/demos/azure_pipeline/tests/''; Parameters = @{ hostName = ''$(hostDB)'' }} -OutputFile "./test-results.xml" -OutputFormat ''NUnitXML'''
 
     - task: PublishTestResults@2
       displayName: Publish test results
