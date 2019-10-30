@@ -210,7 +210,7 @@ Containers:
         azureSubscription: $(azureSubscription)
         scriptLocation: 'inlineScript'
         inlineScript: |
-          pwsh ./deployment/helm-values/generate-config.ps1 -resourceGroup $(aks-cluster-rg-pre-prod) -sqlPwd Password2020! -gvaluesTemplate ops/deployment/helm-values/gvalues.template -outputFile ./values.yaml
+          pwsh ./deployment/helm-values/generate-config.ps1 -resourceGroup $(aks-cluster-rg-pre-prod) -sqlPwd Password2020! -gvaluesTemplate deployment/helm-values/gvalues.template -outputFile ./values.yaml
 
     - task: PowerShell@2
       displayName: Parse host name
