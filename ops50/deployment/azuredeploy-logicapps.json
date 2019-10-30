@@ -1,0 +1,162 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"prefix" : {
+            "type" : "string",
+            "metadata": {
+                "description": "unique prefix passed in from parent template"
+            }
+        },
+        "cosmosAccountKey" : {
+            "type" : "string",
+            "metadata": {
+                "description": "cosmosdb account key passed in from parent template"
+            }
+        }
+	},
+	"variables": {
+        "name": "[concat(parameters('prefix'), 'logicapp')]",
+		"location": "[resourceGroup().location]",
+		"singleQuote": "'"
+	},
+	"resources": [
+        {
+			"type": "Microsoft.Web/connections",
+			"apiVersion": "2016-06-01",
+			"name": "documentdb",
+			"location": "[variables('location')]",
+			"properties": {
+				"displayName": "CosmosDB",
+                "parameterValues": {
+					"databaseAccount": "[concat(parameters('prefix'),'acc')]",
+                    "accessKey": "[parameters('cosmosAccountKey')]"
+				},
+				"api": {
+					"id": "[concat('subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/documentdb')]"
+				}
+			}
+		},
+		{
+			"type": "Microsoft.Logic/workflows",
+			"apiVersion": "2017-07-01",
+			"name": "[variables('name')]",
+			"location": "[variables('location')]",
+			"dependsOn": [
+				"[resourceId('Microsoft.Web/connections', 'documentdb')]"
+			],
+			"properties": {
+				"state": "Enabled",
+				"definition": {
+                    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+                    "actions": {
+                        "Create_or_update_document": {
+                            "inputs": {
+                                "body": {
+                                    "MyPartitionKey1": "@{variables('id')}",
+                                    "id": "@{variables('id')}",
+                                    "productName": "Electric Hammer"
+                                },
+                                "headers": {
+                                    "x-ms-documentdb-raw-partitionkey": "\"@{variables('id')}\""
+                                },
+                                "host": {
+                                    "connection": {
+                                        "name": "@parameters('$connections')['documentdb']['connectionId']"
+                                    }
+                                },
+                                "method": "post",
+                                "path": "/dbs/@{encodeURIComponent(variables('prefix'),'db')}/colls/@{encodeURIComponent(variables('prefix'),'con')}/docs"
+                            },
+                            "runAfter": {
+                                "Initialise_id_variable": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "ApiConnection"
+                        },
+                        "Initialise_id_variable": {
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "id",
+                                        "type": "String",
+                                        "value": "@{guid()}"
+                                    }
+                                ]
+                            },
+                            "runAfter": {
+                                "Initialize_prefix_variable": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable"
+                        },
+                        "Initialize_prefix_variable": {
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "prefix",
+                                        "type": "String",
+                                        "value": "[parameters('prefix')]"
+                                    }
+                                ]
+                            },
+                            "runAfter": {},
+                            "type": "InitializeVariable"
+                        },
+                        "Query_documents": {
+                            "inputs": {
+                                "body": {
+                                    "query": "SELECT *\n FROM @{variables('prefix')}con t\n    WHERE t.id = \"@{variables('id')}\""
+                                },
+                                "host": {
+                                    "connection": {
+                                        "name": "@parameters('$connections')['documentdb']['connectionId']"
+                                    }
+                                },
+                                "method": "post",
+                                "path": "/dbs/@{encodeURIComponent(variables('prefix'),'db')}/colls/@{encodeURIComponent(variables('prefix'),'con')}/query"
+                            },
+                            "runAfter": {
+                                "Create_or_update_document": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "ApiConnection"
+                        }
+                    },
+                    "contentVersion": "1.0.0.0",
+                    "outputs": {},
+                    "parameters": {
+						"$connections": {
+							"defaultValue": {},
+							"type": "Object"
+						}
+					},
+                    
+                    "triggers": {
+                        "Recurrence": {
+                            "recurrence": {
+                                "frequency": "Second",
+                                "interval": 3
+                            },
+                            "type": "Recurrence"
+                        }
+                    }
+				},
+                "parameters": {
+					"$connections": {
+						"value": {
+							"documentdb": {
+								"connectionId": "[concat('subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/connections/documentdb')]",
+								"connectionName": "documentdb",
+								"id": "[concat('subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/documentdb')]"
+							}
+						}
+					}
+				}
+			}
+		}
+	]
+}

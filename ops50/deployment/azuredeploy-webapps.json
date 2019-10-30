@@ -1,0 +1,82 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+        "prefix" : {
+            "type" : "string",
+            "metadata": {
+                "description": "unique prefix passed in from parent template"
+            }
+        }
+	},
+	"variables": {
+		"primaryAppServicePlan": "[concat(parameters('prefix'), 'planprimary')]",
+        "primaryAppService": "[concat(parameters('prefix'), 'appprimary')]",
+        "secondaryAppServicePlan": "[concat(parameters('prefix'), 'plansecondary')]",
+        "secondaryAppService": "[concat(parameters('prefix'), 'appsecondary')]"
+    },
+		
+	"resources": [
+      {
+      "apiVersion": "2018-02-01",
+      "type": "Microsoft.Web/serverfarms",
+      "kind": "app",
+      "name": "[variables('primaryAppServicePlan')]",
+      "location": "westeurope",
+      "properties": {},
+      "dependsOn": [],
+      "sku": {
+        "name": "S1"
+      }
+    },
+    {
+      "apiVersion": "2018-11-01",
+      "type": "Microsoft.Web/sites",
+      "kind": "app",
+      "name": "[variables('primaryAppService')]",
+      "location": "westeurope",
+      "properties": {
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('primaryAppServicePlan'))]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverfarms', variables('primaryAppServicePlan'))]"
+      ]
+    },
+    {
+      "apiVersion": "2018-02-01",
+      "type": "Microsoft.Web/serverfarms",
+      "kind": "app",
+      "name": "[variables('secondaryAppServicePlan')]",
+      "location": "northeurope",
+      "properties": {},
+      "dependsOn": [],
+      "sku": {
+        "name": "S1"
+      }
+    },
+    {
+      "apiVersion": "2018-11-01",
+      "type": "Microsoft.Web/sites",
+      "kind": "app",
+      "name": "[variables('secondaryAppService')]",
+      "location": "northeurope",
+      "properties": {
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('secondaryAppServicePlan'))]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverfarms', variables('secondaryAppServicePlan'))]"
+      ]
+    }  
+
+    ],
+    "outputs": {
+		"secondaryWebAppName": {
+			"type": "string",
+			"value": "[variables('secondaryAppService')]"
+		},
+		"primaryWebAppName": {
+			"type": "string",
+			"value": "[variables('primaryAppService')]"
+		}
+	}
+}

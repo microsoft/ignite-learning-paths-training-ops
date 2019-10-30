@@ -35,8 +35,8 @@
 		"contributorRoleDefinitionId": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Authorization/roleDefinitions/', 'b24988ac-6180-42a0-ab88-20f7382dd24c')]",
 		"containerName": "logs",
 		"deploymentImage": "neilpeterson/itt-bootstrap:2.0",
-		"sourceRepo": "https://github.com/microsoft/ignite-learning-paths.git",
-		"entrypoint": "/ops/deployment/deploy.sh",
+		"sourceRepo": "https://github.com/microsoft/ignite-learning-paths-training-ops.git",
+		"entrypoint": "/deployment/deploy.sh",
 		"statusPageName": "[concat('status-',uniqueString(resourceGroup().id))]"
 	},
 	"resources": [{
@@ -66,7 +66,7 @@
 			"properties": {
 				"mode": "Incremental",
 				"templateLink": {
-					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/deployment/azuredeploy-tailwind.json"
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths-training-ops/master/deployment/azuredeploy-tailwind.json"
 				},
 				"parameters": {
 					"servicePrincipalId": {
@@ -85,7 +85,7 @@
 			"properties": {
 				"mode": "Incremental",
 				"templateLink": {
-					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/deployment/azuredeploy-azd.json"
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths-training-ops/master/deployment/azuredeploy-azd.json"
 				},
 				"parameters": {
 					"azureDevOpsOrgName": {
@@ -107,7 +107,7 @@
 			"properties": {
 				"mode": "Incremental",
 				"templateLink": {
-					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/deployment/azuredeploy-logic-apps.json"
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths-training-ops/master/deployment/azuredeploy-logic-apps.json"
 				},
 				"parameters": {
 					"azureDevOpsOrgName": {
@@ -135,7 +135,7 @@
 			"properties": {
 				"mode": "Incremental",
 				"templateLink": {
-					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/deployment/azuredeploy-status.json"
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths-training-ops/master/deployment/azuredeploy-status.json"
 				},
 				"parameters": {
 					"siteName": {

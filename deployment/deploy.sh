@@ -13,7 +13,7 @@ containerVersion=v2
 
 # Tailwind deployment
 tailwindCharts=TailwindTraders-Backend/Deploy/helm
-tailwindChartValuesScript=ignite-learning-paths/ops/deployment/helm-values/generate-config.ps1
+tailwindChartValuesScript=ignite-learning-paths-training-ops/deployment/helm-values/generate-config.ps1
 tailwindChartValues=/values.yaml
 tailwindWebImages=TailwindTraders-Backend/Deploy/tt-images
 tailwindServiceAccount=TailwindTraders-Backend/Deploy/helm/ttsa.yaml
@@ -104,7 +104,7 @@ export EMAIL=$EMAIL
 apt-get update -y
 apt-get -y install python3-pip
 pip3 install azure.cosmosdb.table
-python3 ignite-learning-paths/ops/deployment/azure-table.py
+python3 ignite-learning-paths-training-ops/deployment/azure-table.py
 
 # Notes
 echo "*************** Connection Information ***************"

@@ -1,0 +1,105 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+        "prefix" : {
+            "type" : "string",
+            "metadata": {
+                "description": "unique prefix passed in from parent template"
+            }
+        }
+	},
+	"variables": {
+        "accountName": "[concat(parameters('prefix'), 'acc')]",
+        "databaseName": "[concat(parameters('prefix'), 'db')]",
+        "containerName" : "[concat(parameters('prefix'), 'con')]",
+        "throughput": 1000
+    },
+		
+	"resources": 
+	[
+        {
+            "type": "Microsoft.DocumentDB/databaseAccounts",
+            "apiVersion": "2015-04-08",
+            "name": "[variables('accountName')]",
+            "location": "[resourceGroup().location]",
+            "tags": {},
+            "kind": "GlobalDocumentDB",
+            "properties": {
+                "consistencyPolicy": {
+                "defaultConsistencyLevel": "Eventual",
+                "maxStalenessPrefix": 1,
+                "maxIntervalInSeconds": 5
+                },
+                "locations": [
+                {
+                    "locationName": "[resourceGroup().location]",
+                    "failoverPriority": 0
+                }
+                ],
+                "databaseAccountOfferType": "Standard",
+                "enableAutomaticFailover": true,
+                "enableMultipleWriteLocations": true
+            }
+        },
+        {
+            "type": "Microsoft.DocumentDB/databaseAccounts/apis/databases",
+            "name": "[concat(variables('accountName'), '/sql/', variables('databaseName'))]",
+            "apiVersion": "2016-03-31",
+            "dependsOn": [ "[resourceId('Microsoft.DocumentDB/databaseAccounts/', variables('accountName'))]" ],
+            "properties":{
+                "resource":{
+                    "id": "[variables('databaseName')]"
+                },
+                "options": { "throughput": "[variables('throughput')]" }
+            }
+        },
+        {
+            "type": "Microsoft.DocumentDb/databaseAccounts/apis/databases/containers",
+            "name": "[concat(variables('accountName'), '/sql/', variables('databaseName'), '/', variables('containerName'))]",
+            "apiVersion": "2016-03-31",
+            "dependsOn": [ "[resourceId('Microsoft.DocumentDB/databaseAccounts/apis/databases', variables('accountName'), 'sql', variables('databaseName'))]" ],
+            "properties":
+            {
+                "resource":{
+                    "id":  "[variables('containerName')]",
+                    "partitionKey": {
+                        "paths": [
+                        "/MyPartitionKey1"
+                        ],
+                        "kind": "Hash"
+                    },
+                    "indexingPolicy": {
+                        "indexingMode": "consistent",
+                        "includedPaths": [{
+                                "path": "/*",
+                                "indexes": [
+                                    {
+                                        "kind": "Range",
+                                        "dataType": "number",
+                                        "precision": -1
+                                    },
+                                    {
+                                        "kind": "Range",
+                                        "dataType": "string",
+                                        "precision": -1
+                                    }
+                                ]
+                            }
+                        ],
+                        "excludedPaths": [{
+                                "path": "/MyPathToNotIndex/*"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+	],
+    "outputs": {
+		"cosmosAccountKey" : {
+            "type" : "String",
+            "value" : "[listKeys(resourceId('Microsoft.DocumentDB/databaseAccounts', variables('accountName')), providers('Microsoft.DocumentDB', 'databaseAccounts').apiVersions[0]).primaryMasterKey]"
+        }
+	}
+}

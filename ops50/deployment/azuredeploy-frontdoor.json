@@ -1,0 +1,135 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "prefix": {
+            "type": "string",
+            "metadata": {
+                "description": "unique prefix passed in from parent template"
+            }
+        },
+        "primaryWebAppName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the Primary Web App"
+            }
+        },
+        "secondaryWebAppName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the Secondary Web App"
+            }
+        }
+    },
+    "variables": {
+        "frontDoorHostPrefix" : "[concat(parameters('prefix'), 'twt')]",
+        "primaryWebAppAddress": "[concat(parameters('primaryWebAppName'), '.azurewebsites.net')]",
+        "secondaryWebAppAddress": "[concat(parameters('secondaryWebAppName'), '.azurewebsites.net')]",
+        "frontDoorName": "[concat(variables('frontDoorHostPrefix'), 'fd')]",
+        "frontEndName": "[concat(variables('frontDoorHostPrefix'), 'frontend')]"
+        
+    },
+    "resources": [
+        {
+            "apiVersion": "2019-04-01",
+            "type": "Microsoft.Network/frontDoors",
+            "name": "[variables('frontDoorName')]",
+            "location": "global",
+            "tags": {},
+            "properties": {
+                "friendlyName": "string",
+                "frontendEndpoints": [
+                    {
+                        "name": "[variables('frontEndName')]",
+                        "properties": {
+                            "hostName": "[concat(variables('frontDoorName'), '.azurefd.net')]",
+                            "sessionAffinityEnabledState": "Disabled",
+                            "sessionAffinityTtlSeconds": 0
+                        }
+                    }
+                ],
+                "healthProbeSettings": [
+                    {
+                        "name": "main-health-probe",
+                        "properties": {
+                            "path": "/",
+                            "protocol": "Https",
+                            "intervalInSeconds": 30
+                        }
+                    }
+                ],
+                "loadBalancingSettings": [
+                    {
+                        "name": "main-load-balancing-settings",
+                        "properties": {
+                            "sampleSize": 4,
+                            "successfulSamplesRequired": 3,
+                            "additionalLatencyMilliseconds": 0
+                        }
+                    }
+                ],
+                "backendPools": [
+                    {
+                        "name": "app-service-pool",
+                        "properties": {
+                            "backends": [
+                                {
+                                    "address": "[variables('primaryWebAppAddress')]",
+                                    "httpPort": 80,
+                                    "httpsPort": 443,
+                                    "priority": 1,
+                                    "weight": 50,
+                                    "backendHostHeader": "[variables('primaryWebAppAddress')]"
+                                },
+                                {
+                                    "address": "[variables('secondaryWebAppAddress')]",
+                                    "httpPort": 80,
+                                    "httpsPort": 443,
+                                    "priority": 1,
+                                    "weight": 50,
+                                    "backendHostHeader": "[variables('secondaryWebAppAddress')]"
+                                }
+                            ],
+                            "loadBalancingSettings": {
+                                "id": "[resourceId('Microsoft.Network/frontDoors/loadBalancingSettings', variables('frontDoorName'), 'main-load-balancing-settings')]"
+                            },
+                            "healthProbeSettings": {
+                                "id": "[resourceId('Microsoft.Network/frontDoors/healthProbeSettings', variables('frontDoorName'), 'main-health-probe')]"
+                            }
+                        }
+                    }
+                ],
+                "routingRules": [
+                    {
+                        "name": "main-rule",
+                        "properties": {
+                            "frontendEndpoints": [
+                                {
+                                    "id": "[resourceId('Microsoft.Network/frontDoors/frontendEndpoints', variables('frontDoorName'), variables('frontEndName'))]"
+                                }
+                            ],
+                            "acceptedProtocols": [
+                                "Http",
+                                "Https"
+                            ],
+                            "patternsToMatch": [
+                                "/*"
+                            ],
+                            "routeConfiguration": {
+                                "@odata.type": "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
+                                "forwardingProtocol": "HttpsOnly",
+                                "backendPool": {
+                                    "id": "[resourceId('Microsoft.Network/frontDoors/backendPools', variables('frontDoorName'), 'app-service-pool')]"
+                                },
+                                "CacheConfiguration": {
+                                    "queryParameterStripDirective": "StripNone"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "resources": []
+        }
+    ]
+}

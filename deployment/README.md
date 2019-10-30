@@ -1,5 +1,9 @@
 # Tailwind OPS LP Deployment
 
+## Azure Subscription
+
+If you are presenting the demonstrations live you will need to access the Azure Portal, which requires an Azure account. If you have not done so already, [sign up for free here](https://portal.azure.com).
+
 ## Provider registration
 
 The Tailwind Traders application uses many Azure services. In some cases, if a service has not yet been used in your subscription, a provider registration may be needed. The following commands will ensure your subscription is capable of running the Tailwind Traders application.
@@ -41,3 +45,13 @@ Select **Containers**. Once the container state has changed from **Running** to 
 Scroll to the bottom of the logs to retrieve both the application URL and the command needed to connect to the Kubernetes cluster.
 
 ![alt text](./images/connection.jpg)
+
+## Teardown instructions
+
+When done the demo environment can be deleted using the following command:
+
+```
+az group delete --name <resource group name> --yes --no-wait
+```
+
+The Azure DevOps organization also needs to be deleted. This can be done from the settings for the organization.

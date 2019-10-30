@@ -1,10 +1,10 @@
 First, deploy the Tailwind Traders application onto a Kubernetes cluster. Deployment steps and automation can be found here:
 
-https://github.com/microsoft/ignite-learning-paths/tree/master/ops/deployment
+https://github.com/microsoft/ignite-learning-paths-training-ops/tree/master/deployment
 
 Once completed, fork this repo into your own GitHub account and clone to your development system.
 
-https://github.com/microsoft/ignite-learning-paths.git
+https://github.com/microsoft/ignite-learning-paths-training-ops.git
 
 Update the values in the `/ops/ops40/demos/azure_pipeline/azure-pipelines.yaml` file to match the AKS and ACR deployments. The following commands can be used to find these values.
 
@@ -92,7 +92,7 @@ Browse to the `HOSTS` address and click on the tailwind cart icon.
 
 3. Select **Create Pipeline**.
 
-4. Select **GitHub YAML** and then select the **ignite-learning-paths** repo fork. You should have created this repo during set up.
+4. Select **GitHub YAML** and then select the **ignite-learning-paths-training-ops** repo fork. You should have created this repo during set up.
 
 5. Select **Existing Azure Pipelines YAML file** for the project type.
 
@@ -241,13 +241,3 @@ Containers:
 3. Once the testing stage has completed, show the test results.
 
 ![Azure Pipeline test results](./images/tests.png)
-
-## Teardown instructions
-
-When done the demo environment can be deleted using the following command:
-
-```
-az group delete --name <resource group name> --yes --no-wait
-```
-
-The Azure DevOps organization also needs to be deleted. This can be done from the settings for the organization.

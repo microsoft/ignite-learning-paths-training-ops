@@ -1,0 +1,131 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+	},
+	"variables": {
+		"prefix" : "[toLower(substring(concat('twtdb', uniqueString(resourceGroup().id)), 0, 9))]"
+	},
+	"resources": [
+        {
+			"name": "linkedTemplateQueue",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-05-01",
+			"properties": {
+				"mode": "Incremental",
+				"templateLink": {
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/ops50/deployment/azuredeploy-queue.json?foo=bar"
+				},
+				"parameters": {
+					"prefix" : {
+						"value" : "[variables('prefix')]"
+					}
+				}
+			}
+		},
+		{
+			"name": "linkedTemplateScaleset",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-05-01",
+            "dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'linkedTemplateQueue')]"
+			],
+			"properties": {
+				"mode": "Incremental",
+				"templateLink": {
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/ops50/deployment/azuredeploy-scaleset.json?foo=bar"
+				},
+				"parameters": {
+					"storageAccountName": {
+						"value": "[reference('linkedTemplateQueue').outputs.storageAccountName.value]"
+					},
+					"prefix" : {
+						"value" : "[variables('prefix')]"
+					}
+				}
+			}
+		},
+		{
+			"name": "linkedTemplateCosmos",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-05-01",
+			"properties": {
+				"mode": "Incremental",
+				"templateLink": {
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/ops50/deployment/azuredeploy-cosmos.json?foo=bar"
+				},
+				"parameters": {
+					"prefix" : {
+						"value" : "[variables('prefix')]"
+					}
+				}
+			}
+		},
+		{
+			"name": "linkedTemplateWebApps",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-05-01",
+			"properties": {
+				"mode": "Incremental",
+				"templateLink": {
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/ops50/deployment/azuredeploy-webapps.json?foo=bar"
+				},
+				"parameters": {
+					"prefix" : {
+						"value" : "[variables('prefix')]"
+					}
+				}
+			}
+		},
+		{
+			"name": "linkedTemplateFrontdoor",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-05-01",
+            "dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'linkedTemplateWebApps')]"
+			],
+			"properties": {
+				"mode": "Incremental",
+				"templateLink": {
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/ops50/deployment/azuredeploy-frontdoor.json?foo=bar"
+				},
+				"parameters": {
+					"primaryWebAppName": {
+						"value": "[reference('linkedTemplateWebapps').outputs.primaryWebAppName.value]"
+					},
+					"secondaryWebAppName": {
+						"value": "[reference('linkedTemplateWebapps').outputs.secondaryWebAppName.value]"
+					},
+					"prefix" : {
+						"value" : "[variables('prefix')]"
+					}
+				}
+			}
+		},
+		{
+			"name": "linkedTemplateLogicApps",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-05-01",
+            "dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'linkedTemplateCosmos')]"
+			],
+			"properties": {
+				"mode": "Incremental",
+				"templateLink": {
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/ops50/deployment/azuredeploy-logicapps.json?foo=bar"
+				},
+				"parameters": {
+					"prefix" : {
+
+						
+						"value" : "[variables('prefix')]"
+					},
+					"cosmosAccountKey": {
+						"value" : "[reference('linkedTemplateCosmos').outputs.cosmosAccountKey.value]"
+					}
+				}
+			}
+		}
+	],
+	"outputs": {}
+}
