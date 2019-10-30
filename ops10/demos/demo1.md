@@ -6,17 +6,17 @@
 ## Before you Demo
 
 ### Deployment setup
-This demo expects you to have spun up the demo environment, please see the [deployment guide](../deployment/README.md). At the end of the deployment, you should have the full tailwind traders application running. Note the step in the deployment instructions which suggests you look at the deployment logs. At the end of the logs, you will find out the URL for the running application so you can send traffic to it.
+This demo expects you to have spun up the demo environment, please see the [deployment guide](../../deployment/README.md). At the end of the deployment, you should have the full tailwind traders application running. Note the step in the deployment instructions which suggests you look at the deployment logs. At the end of the logs, you will find out the URL for the running application so you can send traffic to it.
 
 ### Send some traffic
 
-* Note: here is one way to send traffic to the application frontend and for the shopping cart backend service. Please feel free to use your favorite tool for this purpose, the following is just one suggestion. 
+* Note: here is one way to send traffic to the application frontend and for the shopping cart backend service. Please feel free to use your favorite tool for this purpose, the following is just one suggestion.
 
 #### Frontend traffic
-First, we will send some "good" traffic to the web frontend using the Apache Bench tool (ab). 
+First, we will send some "good" traffic to the web frontend using the Apache Bench tool (ab).
 
 ```
-ab -n 500 http://URL_TO_YOUR_DEPLOYED_APP 
+ab -n 500 http://URL_TO_YOUR_DEPLOYED_APP
 ```
 
 For example:
@@ -26,22 +26,22 @@ ab -n 500 http://3a1d8c473f62432b88cb.southeastasia.aksapp.io
 
 
 #### Shopping Cart traffic
-Second we will need to send some "good" traffic to the shopping cart backend service. This is a little trickier in that we will need to send it traffic which it believes is coming from an authenticated source. To be seen as being authenticated, we must send traffic with the correct bearer token in our headers. 
+Second we will need to send some "good" traffic to the shopping cart backend service. This is a little trickier in that we will need to send it traffic which it believes is coming from an authenticated source. To be seen as being authenticated, we must send traffic with the correct bearer token in our headers.
 
 Here's one way to get a valid bearer token:
 
-1. open a browser and browse to the ```URL_TO_YOUR_DEPLOYED_APP``` 
+1. open a browser and browse to the ```URL_TO_YOUR_DEPLOYED_APP```
 1. "Log out" if you are already logged in, then "Log in" (using fake credentials)
 1. add something to your shopping cart
 1. browse to your shopping cart
 1. open the web inspector in your browser. You will see a number of requests going to "shopping cart" as in: ![Figure 1](./figure1.png)
-1. if you click on any of these requests, you will see more info for that request. Scroll until you see the Request section. In that section, you will see an Authorization header listed as seen in: ![Figure 2](figure2.png). 
+1. if you click on any of these requests, you will see more info for that request. Scroll until you see the Request section. In that section, you will see an Authorization header listed as seen in: ![Figure 2](figure2.png).
 
 	You will want to copy everything after the word "Bearer" for the next step (this is the *bearer token* we will need in the next step).
 1. now we can use ab to send the shopping cart "good" traffic:
 
 ```
-ab -n 200 -c 10 -H 'Authorization: Token BEARERTOKENHERE' URL_TO_YOUR_DEPLOYED_APP/cart-api/shoppingcart 
+ab -n 200 -c 10 -H 'Authorization: Token BEARERTOKENHERE' URL_TO_YOUR_DEPLOYED_APP/cart-api/shoppingcart
 ````
 For example:
 ```
@@ -53,12 +53,12 @@ Next, we will want to send the service some "bad" or "error" traffic. We can do 
 First, generate HTTP 401 (non-authorized traffic) by removing the authorization header (note that we are intentionally sending fewer error-causing requests than the previous "good" traffic):
 
 ```
-ab -n 50 -c 10 URL_TO_YOUR_DEPLOYED_APP/cart-api/shoppingcart 
+ab -n 50 -c 10 URL_TO_YOUR_DEPLOYED_APP/cart-api/shoppingcart
 ```
 Second, generate HTTP 404 errors (bad page request) by removing the 's' in "shoppingcart" in the URL:
 
 ```
-ab -n 200 -c 10 -H 'Authorization: Token BEARERTOKENHERE' URL_TO_YOUR_DEPLOYED_APP/cart-api/hoppingcart 
+ab -n 200 -c 10 -H 'Authorization: Token BEARERTOKENHERE' URL_TO_YOUR_DEPLOYED_APP/cart-api/hoppingcart
 ```
 For example:
 ```
@@ -74,7 +74,7 @@ For the first part of the demo, I’d like to show you one of my very favorite s
 Tailwind traders has added these stubs in their app (by the way, did I mention their entire app is available on Github if you want to take a peek? There’s a pointer to this codebase in the resources available for this session). Let’s see just what using app insights gets us.
 
 1. Resource Group -> tt-app-insights -> Application Map
-1. show various components of app. 
+1. show various components of app.
 1. point out stats on components
 1. Point out stats on arrow labels
 1. Click on connector, talk about stats. Note Log Analytics link
