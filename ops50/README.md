@@ -2,7 +2,7 @@
 
 ## Session Abstract
 
-When your growth or the demand for your systems exceeds, or is projected to exceed, your current capacity – that’s a “good” problem to have. However, this can be just as much of a threat to your system’s reliability as any other factor.  
+When your growth or the demand for your systems exceeds, or is projected to exceed, your current capacity – that’s a “good” problem to have. However, this can be just as much of a threat to your system’s reliability as any other factor.
 
 In this session, dive into capacity planning and cost estimation basics, including the tools Azure provides to help with both. We wrap up with a discussion and demonstration of how Tailwind Traders judiciously applied Azure scaling features. Learn how to satisfy your customers and a growing demand, even when “challenged” by success.
 
@@ -24,9 +24,9 @@ code.
 - This guide
 - PowerPoint presentation including notes for each slide [here](presentations.md)
 - Full-length recording of presentation [here](https://youtu.be/7SB1bQGwC3s)
-- Full-length script of presentation [here](script.md). 
+- Full-length script of presentation [here](script.md).
 - Director Cut Full-length recording of presentation [here](). **TO BE COMPLETED**
-- Demo Guide [here](https://github.com/microsoft/ignite-learning-paths/tree/master/ops/ops50)
+- Demo Guide [here](./demos)
 
 ## Become a Trained Presenter
 

@@ -48,7 +48,7 @@ This bash script is located in this [repository]().
 2. Open up the Azure Cloud Shell
 3. Select a Bash Terminal
 4. Enter the command `git clone https://github.com/microsoft/ignite-learning-paths.git`
-5. In the Cloud Shell, open file `ignite-learning-paths/ops/ops50/demos/scaling/params.sh`
+5. In the Cloud Shell, open file `ignite-learning-paths-training-ops/ops50/demos/scaling/params.sh`
 6. Update the params.sh file to include the empty variables. All of these values can be found from the resources deployed in the ARM template above.
 7. You now have the script ready in your Cloud Shell storage, for use in Demo 3.
 
@@ -124,7 +124,7 @@ If you do wish to run this demo within your own account, then the items to demon
 11. Click the Queues square within the storage account overview page
 12. Select the queue named `twtqueue`. Show how there are currently no messages in the queue.
 13. In the third tab, open up the Azure Cloud Shell by clicking the cloud shell icon at the top of the page.
-14. When the terminal has loaded type `cd ignite-learning-paths/ops/ops50/demos/scaling/`
+14. When the terminal has loaded type `cd ignite-learning-paths-training-ops/ops50/demos/scaling/`
 15. Run the script to add messages to the queue `./add-to-queue.sh`
 16. The script will show you the current instances, then after a couple of seconds, start adding messages to the queue.
 17. Navigate back to tab two, and refresh the queue to show that there are now messages being added.

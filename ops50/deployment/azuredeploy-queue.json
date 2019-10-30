@@ -19,8 +19,8 @@
 		"contributorRoleDefinitionId": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Authorization/roleDefinitions/', 'b24988ac-6180-42a0-ab88-20f7382dd24c')]",
 		"containerName": "logs",
 		"deploymentImage": "neilpeterson/itt-bootstrap:2.0",
-		"sourceRepo": "https://github.com/microsoft/ignite-learning-paths.git",
-		"entrypoint": "/ops/ops50/deployment/deploy-queue.sh"
+		"sourceRepo": "https://github.com/microsoft/ignite-learning-paths-training-ops.git",
+		"entrypoint": "/ops50/deployment/deploy-queue.sh"
 	},
 	"resources": [
         {

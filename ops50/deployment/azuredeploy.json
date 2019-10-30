@@ -14,7 +14,7 @@
 			"properties": {
 				"mode": "Incremental",
 				"templateLink": {
-					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/ops50/deployment/azuredeploy-queue.json?foo=bar"
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths-training-ops/master/ops50/deployment/azuredeploy-queue.json?foo=bar"
 				},
 				"parameters": {
 					"prefix" : {
@@ -33,7 +33,7 @@
 			"properties": {
 				"mode": "Incremental",
 				"templateLink": {
-					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/ops50/deployment/azuredeploy-scaleset.json?foo=bar"
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths-training-ops/master/ops50/deployment/azuredeploy-scaleset.json?foo=bar"
 				},
 				"parameters": {
 					"storageAccountName": {
@@ -52,7 +52,7 @@
 			"properties": {
 				"mode": "Incremental",
 				"templateLink": {
-					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/ops50/deployment/azuredeploy-cosmos.json?foo=bar"
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths-training-ops/master/ops50/deployment/azuredeploy-cosmos.json?foo=bar"
 				},
 				"parameters": {
 					"prefix" : {
@@ -68,7 +68,7 @@
 			"properties": {
 				"mode": "Incremental",
 				"templateLink": {
-					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/ops50/deployment/azuredeploy-webapps.json?foo=bar"
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths-training-ops/master/ops50/deployment/azuredeploy-webapps.json?foo=bar"
 				},
 				"parameters": {
 					"prefix" : {
@@ -87,7 +87,7 @@
 			"properties": {
 				"mode": "Incremental",
 				"templateLink": {
-					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/ops50/deployment/azuredeploy-frontdoor.json?foo=bar"
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths-training-ops/master/ops50/deployment/azuredeploy-frontdoor.json?foo=bar"
 				},
 				"parameters": {
 					"primaryWebAppName": {
@@ -112,12 +112,12 @@
 			"properties": {
 				"mode": "Incremental",
 				"templateLink": {
-					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/ops50/deployment/azuredeploy-logicapps.json?foo=bar"
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths-training-ops/master/ops50/deployment/azuredeploy-logicapps.json?foo=bar"
 				},
 				"parameters": {
 					"prefix" : {
 
-						
+
 						"value" : "[variables('prefix')]"
 					},
 					"cosmosAccountKey": {
