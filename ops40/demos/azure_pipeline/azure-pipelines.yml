@@ -56,7 +56,7 @@ stages:
       displayName: 'helm package (tt-cart)'
       inputs:
         command: package
-        chartPath: 'ops/ops40/demos/tailwind-cart-api/cart-api'
+        chartPath: 'ops40/demos/tailwind-cart-api/cart-api'
         arguments: '--version $(Build.BuildId)'
 
     - task: AzureCLI@1
@@ -84,7 +84,7 @@ stages:
       displayName: 'docker build (tt-cart)'
       inputs:
         script: |
-          cd ops/ops40/demos/tailwind-cart-api/Tailwind.Traders.Cart.Api
+          cd ops40/demos/tailwind-cart-api/Tailwind.Traders.Cart.Api
           docker build -t $(containerRegistryFqdn)/cart.api:$(Build.BuildId) .
 
     - task: CmdLine@2
