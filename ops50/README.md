@@ -26,7 +26,7 @@ code.
 - Full-length recording of presentation [here](https://youtu.be/7SB1bQGwC3s)
 - Full-length script of presentation [here](script.md).
 - Director Cut Full-length recording of presentation [here](). **TO BE COMPLETED**
-- Demo Guide [here](./demos)
+- Demo Guide [here](./demo-guide.md)
 
 ## Become a Trained Presenter
 
