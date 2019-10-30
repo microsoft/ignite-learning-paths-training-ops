@@ -26,7 +26,7 @@ code.
 - Full-length recording of presentation [here](https://youtu.be/K04c7pwYF4E)
 - Director Cut Full-length recording of presentation [here](https://youtu.be/T95Cw-sumNs)
 - Individual recordings of stage-ready hands-on demos [here](https://microsoft.sharepoint.com/teams/CloudDevAdvocacy/Shared%20Documents/Forms/AllItems.aspx?viewid=16de824f%2D342c%2D4917%2D87e2%2D316d639025f5&id=%2Fteams%2FCloudDevAdvocacy%2FShared%20Documents%2F%40%40TeamDocs%2FEvents%2FIgnite%20Tour%2FFY20%20Ignite%20Tour%2FContent%2FOPS%20%2D%20Improving%20Your%20Reliability%20through%20Modern%20Operations%20Practices%2FOPS40%20Video%2Ffinal%2Ddemo%2Draw)
-- Demo Guide [here](https://github.com/microsoft/ignite-learning-paths/tree/master/ops/ops40)
+- Demo Guide [here](./demo-guide.md)
 
 ## Become a Presenter
 

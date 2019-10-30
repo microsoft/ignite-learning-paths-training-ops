@@ -1,0 +1,114 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"siteName": {
+			"type": "string"
+		},
+		"storageAccountName": {
+			"type": "string"
+		}
+	},
+	"variables": {
+		"location": "[resourceGroup().location]",
+		"repoUrl": "https://github.com/Azure-Samples/functions-teams-incident-status-page-bot.git",
+		"branch": "master"
+	},
+	"resources": [{
+			"name": "[parameters('siteName')]",
+			"type": "Microsoft.Web/sites",
+			"properties": {
+				"siteConfig": {
+					"appSettings": [{
+							"name": "PROJECT",
+							"value": "src/functions-javascript"
+						},
+						{
+							"name": "FUNCTIONS_WORKER_RUNTIME",
+							"value": "node"
+						},
+						{
+							"name": "AzureWebJobsStorage",
+							"value": "[concat('DefaultEndpointsProtocol=https;AccountName=',parameters('storageAccountName'),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName')), '2015-05-01-preview').key1)]"
+						},
+						{
+							"name": "FUNCTIONS_EXTENSION_VERSION",
+							"value": "~2"
+						},
+						{
+							"name": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
+							"value": "[concat('DefaultEndpointsProtocol=https;AccountName=',parameters('storageAccountName'),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName')), '2015-05-01-preview').key1)]"
+						},
+						{
+							"name": "WEBSITE_CONTENTSHARE",
+							"value": "[concat(toLower(parameters('siteName')), '994d')]"
+						},
+						{
+							"name": "WEBSITE_NODE_DEFAULT_VERSION",
+							"value": "10.14.1"
+						},
+						{
+							"name": "APPINSIGHTS_INSTRUMENTATIONKEY",
+							"value": "[reference(concat('microsoft.insights/components/', parameters('siteName')), '2015-05-01').InstrumentationKey]"
+						},
+						{
+							"name": "AzureSignalRConnectionString",
+							"value": "[listKeys(concat('Microsoft.SignalRService/SignalR/', parameters('siteName')), '2018-10-01').primaryConnectionString]"
+						}
+					]
+				},
+				"name": "[parameters('siteName')]",
+				"clientAffinityEnabled": false,
+				"reserved": false
+			},
+			"resources": [{
+				"apiVersion": "2015-08-01",
+				"name": "web",
+				"type": "sourcecontrols",
+				"dependsOn": [
+					"[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
+				],
+				"properties": {
+					"RepoUrl": "[variables('repoURL')]",
+					"branch": "[variables('branch')]",
+					"IsManualIntegration": true
+				}
+			}],
+			"dependsOn": [
+				"[resourceId('microsoft.insights/components', parameters('siteName'))]",
+				"[resourceId('Microsoft.SignalRService/SignalR', parameters('siteName'))]"
+			],
+			"apiVersion": "2016-03-01",
+			"location": "Central US",
+			"kind": "functionapp"
+		},
+		{
+			"apiVersion": "2015-05-01",
+			"name": "[parameters('siteName')]",
+			"type": "microsoft.insights/components",
+			"location": "centralus",
+			"properties": {
+				"ApplicationId": "[parameters('siteName')]",
+				"Request_Source": "IbizaWebAppExtensionCreate"
+			}
+		},
+		{
+			"type": "Microsoft.SignalRService/SignalR",
+			"name": "[parameters('siteName')]",
+			"apiVersion": "2018-10-01",
+			"location": "[variables('location')]",
+			"properties": {
+				"hostNamePrefix": "[parameters('siteName')]",
+				"features": [{
+					"flag": "ServiceMode",
+					"value": "Serverless"
+				}]
+			},
+			"sku": {
+				"name": "Free_F1",
+				"tier": "Free",
+				"capacity": "1"
+			}
+		}
+	]
+}

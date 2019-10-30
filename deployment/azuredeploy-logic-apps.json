@@ -1,0 +1,444 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"azureDevOpsOrgName": {
+			"type": "string",
+			"metadata": {
+				"description": "Name of the Azure DevOps Orginization."
+			}
+		},
+		"azureDevOpsProject": {
+			"type": "string",
+			"metadata": {
+				"description": "Name of the Azure DevOps Project."
+			}
+		},
+		"storageAccountName": {
+			"type": "string",
+			"metadata": {
+				"description": "Name of the Azure DevOps Project."
+			}
+		},
+		"storageAccountKey": {
+			"type": "string",
+			"metadata": {
+				"description": "Name of the Azure DevOps Project."
+			}
+		}
+	},
+	"variables": {
+		"name": "ops20main",
+		"location": "[resourceGroup().location]",
+		"singleQuote": "'"
+	},
+	"resources": [{
+			"type": "Microsoft.Web/connections",
+			"apiVersion": "2016-06-01",
+			"name": "visualstudioteamservices",
+			"location": "[variables('location')]",
+			"properties": {
+				"displayName": "Azure DevOps",
+				"customParameterValues": {},
+				"api": {
+					"id": "[concat('subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/visualstudioteamservices')]"
+				}
+			}
+		},
+		{
+			"type": "Microsoft.Web/connections",
+			"apiVersion": "2016-06-01",
+			"name": "teams",
+			"location": "[variables('location')]",
+			"properties": {
+				"displayName": "TeamsConnection",
+				"customParameterValues": {},
+				"api": {
+					"id": "[concat('subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/teams')]"
+				}
+			}
+		},
+		{
+			"type": "Microsoft.Web/connections",
+			"apiVersion": "2016-06-01",
+			"name": "azuretables",
+			"location": "[variables('location')]",
+			"properties": {
+				"displayName": "oncall",
+				"parameterValues": {
+					"storageaccount": "[parameters('storageAccountName')]",
+					"sharedkey": "[parameters('storageAccountKey')]"
+				},
+				"api": {
+					"id": "[concat('subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/azuretables')]"
+				}
+			}
+		},
+		{
+			"type": "Microsoft.Logic/workflows",
+			"apiVersion": "2017-07-01",
+			"name": "[variables('name')]",
+			"location": "[variables('location')]",
+			"dependsOn": [
+				"[resourceId('Microsoft.Web/connections', 'visualstudioteamservices')]",
+				"[resourceId('Microsoft.Web/connections', 'teams')]",
+				"[resourceId('Microsoft.Web/connections', 'azuretables')]"
+			],
+			"properties": {
+				"state": "Enabled",
+				"definition": {
+					"$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+					"contentVersion": "1.0.0.0",
+					"parameters": {
+						"$connections": {
+							"defaultValue": {},
+							"type": "Object"
+						}
+					},
+					"triggers": {
+						"manual": {
+							"type": "Request",
+							"kind": "Http",
+							"inputs": {
+								"schema": {
+									"properties": {
+										"alertContext": {
+											"properties": {
+												"AffectedConfigurationItems": {
+													"items": {
+														"type": "string"
+													},
+													"type": "array"
+												},
+												"AlertType": {
+													"type": "string"
+												},
+												"IncludedSearchResults": {
+													"type": "string"
+												},
+												"LinkToSearchResults": {
+													"type": "string"
+												},
+												"Operator": {
+													"type": "string"
+												},
+												"ResultCount": {
+													"type": "integer"
+												},
+												"SearchIntervalDurationMin": {
+													"type": "string"
+												},
+												"SearchIntervalEndtimeUtc": {
+													"type": "string"
+												},
+												"SearchIntervalInMinutes": {
+													"type": "string"
+												},
+												"SearchIntervalStartTimeUtc": {
+													"type": "string"
+												},
+												"SearchQuery": {
+													"type": "string"
+												},
+												"SearchResult": {
+													"properties": {
+														"dataSources": {
+															"items": {
+																"properties": {
+																	"resourceId": {
+																		"type": "string"
+																	},
+																	"tables": {
+																		"items": {
+																			"type": "string"
+																		},
+																		"type": "array"
+																	}
+																},
+																"required": [
+																	"resourceId",
+																	"tables"
+																],
+																"type": "object"
+															},
+															"type": "array"
+														},
+														"tables": {
+															"items": {
+																"properties": {
+																	"columns": {
+																		"items": {
+																			"properties": {
+																				"name": {
+																					"type": "string"
+																				},
+																				"type": {
+																					"type": "string"
+																				}
+																			},
+																			"required": [
+																				"name",
+																				"type"
+																			],
+																			"type": "object"
+																		},
+																		"type": "array"
+																	},
+																	"name": {
+																		"type": "string"
+																	},
+																	"rows": {
+																		"items": {
+																			"items": {
+																				"type": "string"
+																			},
+																			"type": "array"
+																		},
+																		"type": "array"
+																	}
+																},
+																"required": [
+																	"name",
+																	"columns",
+																	"rows"
+																],
+																"type": "object"
+															},
+															"type": "array"
+														}
+													},
+													"type": "object"
+												},
+												"SeverityDescription": {
+													"type": "string"
+												},
+												"Threshold": {
+													"type": "integer"
+												},
+												"WorkspaceId": {
+													"type": "string"
+												}
+											},
+											"type": "object"
+										}
+									},
+									"type": "object"
+								}
+							}
+						}
+					},
+					"actions": {
+						"Create_a_channel": {
+							"runAfter": {
+								"Create_a_work_item": [
+									"Succeeded"
+								]
+							},
+							"type": "ApiConnection",
+							"inputs": {
+								"body": {
+									"displayName": "📟 Incident -  @{body('Create_a_work_item')?['id']} (@{rand(1, 30000)})"
+								},
+								"host": {
+									"connection": {
+										"name": "@parameters('$connections')['teams']['connectionId']"
+									}
+								},
+								"method": "post",
+								"path": "/beta/groups/@{encodeURIComponent('5053167b-f5fb-4b5d-95b1-e256b1bcfcdb')}/channels"
+							}
+						},
+						"Create_a_work_item": {
+							"runAfter": {
+								"Response": [
+									"Succeeded"
+								]
+							},
+							"type": "ApiConnection",
+							"inputs": {
+								"body": {
+									"title": " @{triggerBody()?['alertContext']?['AlertType']}- Severity: @{triggerBody()?['alertContext']?['SeverityDescription']} "
+								},
+								"host": {
+									"connection": {
+										"name": "@parameters('$connections')['visualstudioteamservices']['connectionId']"
+									}
+								},
+								"method": "patch",
+								"path": "[concat('/@{encodeURIComponent(', variables('singleQuote'), parameters('azureDevOpsProject'), variables('singleQuote'), ')}/_apis/wit/workitems/$@{encodeURIComponent(''Issue'')}')]",
+								"queries": {
+									"account": "[parameters('azureDevOpsOrgName')]"
+								}
+							}
+						},
+						"For_each": {
+							"foreach": "@body('Parse_JSON')",
+							"actions": {
+								"Update_a_work_item_2": {
+									"runAfter": {},
+									"type": "ApiConnection",
+									"inputs": {
+										"body": {
+											"userEnteredFields": {
+												"Assigned To": "@items('For_each')['email']"
+											}
+										},
+										"host": {
+											"connection": {
+												"name": "@parameters('$connections')['visualstudioteamservices']['connectionId']"
+											}
+										},
+										"method": "patch",
+										"path": "/_apis/wit/workitems/@{encodeURIComponent(body('Create_a_work_item')?['fields']?['System_Id'])}",
+										"queries": {
+											"account": "[parameters('azureDevOpsOrgName')]"
+										}
+									}
+								}
+							},
+							"runAfter": {
+								"Parse_JSON": [
+									"Succeeded"
+								]
+							},
+							"type": "Foreach"
+						},
+						"Get_entities": {
+							"runAfter": {
+								"Update_a_work_item": [
+									"Succeeded"
+								]
+							},
+							"type": "ApiConnection",
+							"inputs": {
+								"host": {
+									"connection": {
+										"name": "@parameters('$connections')['azuretables']['connectionId']"
+									}
+								},
+								"method": "get",
+								"path": "/Tables/@{encodeURIComponent('oncall')}/entities",
+								"queries": {
+									"$filter": "oncall eq true",
+									"$select": "email"
+								}
+							}
+						},
+						"Parse_JSON": {
+							"runAfter": {
+								"Get_entities": [
+									"Succeeded"
+								]
+							},
+							"type": "ParseJson",
+							"inputs": {
+								"content": "@body('Get_entities')?['value']",
+								"schema": {
+									"items": {
+										"properties": {
+											"email": {
+												"type": "string"
+											},
+											"odata.etag": {
+												"type": "string"
+											}
+										},
+										"required": [
+											"odata.etag",
+											"email"
+										],
+										"type": "object"
+									},
+									"type": "array"
+								}
+							}
+						},
+						"Post_a_message_as_the_Flow_bot_to_a_channel": {
+							"runAfter": {
+								"For_each": [
+									"Succeeded"
+								]
+							},
+							"type": "ApiConnection",
+							"inputs": {
+								"body": {
+									"messageBody": "[concat('<img src=\"https://thumbs.gfycat.com/DelayedVacantDassie-max-1mb.gif\" alt=\"Alert\" height=\"42\" width=\"42\"> <br />\n\n<a href=\"https://', parameters('azureDevOpsOrgName'), '.visualstudio.com/', parameters('azureDevOpsProject'), '/_workitems/edit/@{body(''Update_a_work_item'')?[''id'']}/\">Incident @{body(''Update_a_work_item'')?[''id'']}</a><br />\n<br />\n\n@{triggerBody()?[''alertContext'']?[''AlertType'']} : @{triggerBody()?[''alertContext'']?[''SeverityDescription'']}<br />\n<br />\n\nTroubleshooting Guide Coming. Please Standby...<br />')]",
+									"recipient": {
+										"channelId": "@body('Create_a_channel')?['id']"
+									}
+								},
+								"host": {
+									"connection": {
+										"name": "@parameters('$connections')['teams']['connectionId']"
+									}
+								},
+								"method": "post",
+								"path": "/flowbot/actions/notification/recipienttypes/channel",
+								"queries": {
+									"groupId": "5053167b-f5fb-4b5d-95b1-e256b1bcfcdb"
+								}
+							}
+						},
+						"Response": {
+							"runAfter": {},
+							"type": "Response",
+							"kind": "Http",
+							"inputs": {
+								"body": "Azure Logic Apps will take it from here.",
+								"statusCode": 200
+							}
+						},
+						"Update_a_work_item": {
+							"runAfter": {
+								"Create_a_channel": [
+									"Succeeded"
+								]
+							},
+							"type": "ApiConnection",
+							"inputs": {
+								"body": {
+									"userEnteredFields": {
+										"Description": "<a href=\"https://teams.microsoft.com/l/channel/@{body('Create_a_channel')?['id']}/Active%2520Incident%2520@{body('Create_a_work_item')?['id']}?groupId=042fcb78-dd7d-4300-84c2-1515890c1697&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47\">Communications Channel</a>"
+									}
+								},
+								"host": {
+									"connection": {
+										"name": "@parameters('$connections')['visualstudioteamservices']['connectionId']"
+									}
+								},
+								"method": "patch",
+								"path": "/_apis/wit/workitems/@{encodeURIComponent(body('Create_a_work_item')?['id'])}",
+								"queries": {
+									"account": "[parameters('azureDevOpsOrgName')]",
+									"project": "[parameters('azureDevOpsProject')]"
+								}
+							}
+						}
+					},
+					"outputs": {}
+				},
+				"parameters": {
+					"$connections": {
+						"value": {
+							"teams": {
+								"connectionId": "[concat('subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/connections/teams')]",
+								"connectionName": "teams",
+								"id": "[concat('subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/teams')]"
+							},
+							"azuretables": {
+								"connectionId": "[concat('subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/connections/azuretables')]",
+								"connectionName": "azuretables",
+								"id": "[concat('subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/azuretables')]"
+							},
+							"visualstudioteamservices": {
+								"connectionId": "[concat('subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/connections/visualstudioteamservices')]",
+								"connectionName": "visualstudioteamservices",
+								"id": "[concat('subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/visualstudioteamservices')]"
+							}
+						}
+					}
+				}
+			}
+		}
+	]
+}

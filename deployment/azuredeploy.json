@@ -1,0 +1,218 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"servicePrincipalId": {
+			"type": "string",
+			"metadata": {
+				"description": "The service principle application id is used when deploying the Azure Kubernetes Service cluster."
+			}
+		},
+		"servicePrincipalSecret": {
+			"type": "securestring",
+			"metadata": {
+				"description": "The service principle password is used when deploying the Azure Kubernetes Service cluster."
+			}
+		},
+		"azureDevOpsOrgName": {
+			"type": "string",
+			"metadata": {
+				"description": "The service principle password is used when deploying the Azure Kubernetes Service cluster."
+			}
+		},
+		"emailAddress": {
+			"type": "string",
+			"metadata": {
+				"description": "The email address that will be used for work items assignment in Azure Boards."
+			}
+		}
+	},
+	"variables": {
+		"aciName": "bootstrap-container",
+		"rgname": "[resourceGroup().name]",
+		"bootstrapRoleAssignmentId": "[guid(concat(resourceGroup().id, 'contributor'))]",
+		"identityName": "bootstrap-creds",
+		"contributorRoleDefinitionId": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Authorization/roleDefinitions/', 'b24988ac-6180-42a0-ab88-20f7382dd24c')]",
+		"containerName": "logs",
+		"deploymentImage": "neilpeterson/itt-bootstrap:2.0",
+		"sourceRepo": "https://github.com/microsoft/ignite-learning-paths.git",
+		"entrypoint": "/ops/deployment/deploy.sh",
+		"statusPageName": "[concat('status-',uniqueString(resourceGroup().id))]"
+	},
+	"resources": [{
+			"type": "Microsoft.ManagedIdentity/userAssignedIdentities",
+			"name": "bootstrap-creds",
+			"apiVersion": "2018-11-30",
+			"location": "[resourceGroup().location]"
+		},
+		{
+			"type": "Microsoft.Authorization/roleAssignments",
+			"apiVersion": "2018-09-01-preview",
+			"name": "[variables('bootstrapRoleAssignmentId')]",
+			"dependsOn": [
+				"[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('identityName'))]"
+			],
+			"properties": {
+				"roleDefinitionId": "[variables('contributorRoleDefinitionId')]",
+				"principalId": "[reference(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('identityName')), '2015-08-31-preview').principalId]",
+				"scope": "[resourceGroup().id]",
+				"principalType": "ServicePrincipal"
+			}
+		},
+		{
+			"name": "linkedTemplateTailwind",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-05-01",
+			"properties": {
+				"mode": "Incremental",
+				"templateLink": {
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/deployment/azuredeploy-tailwind.json"
+				},
+				"parameters": {
+					"servicePrincipalId": {
+						"value": "[parameters('servicePrincipalId')]"
+					},
+					"servicePrincipalSecret": {
+						"value": "[parameters('servicePrincipalSecret')]"
+					}
+				}
+			}
+		},
+		{
+			"name": "linkedTemplateDevOps",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-05-01",
+			"properties": {
+				"mode": "Incremental",
+				"templateLink": {
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/deployment/azuredeploy-azd.json"
+				},
+				"parameters": {
+					"azureDevOpsOrgName": {
+						"value": "[parameters('azureDevOpsOrgName')]"
+					},
+					"azureDevOpsProject": {
+						"value": "[parameters('azureDevOpsOrgName')]"
+					}
+				}
+			}
+		},
+		{
+			"name": "linkedTemplateLogicApps",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-05-01",
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'linkedTemplateTailwind')]"
+			],
+			"properties": {
+				"mode": "Incremental",
+				"templateLink": {
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/deployment/azuredeploy-logic-apps.json"
+				},
+				"parameters": {
+					"azureDevOpsOrgName": {
+						"value": "[parameters('azureDevOpsOrgName')]"
+					},
+					"azureDevOpsProject": {
+						"value": "[parameters('azureDevOpsOrgName')]"
+					},
+					"storageAccountName": {
+						"value": "[reference('linkedTemplateTailwind').outputs.storageAccountName.value]"
+					},
+					"storageAccountKey": {
+						"value": "[reference('linkedTemplateTailwind').outputs.storageAccountKey.value]"
+					}
+				}
+			}
+		},
+		{
+			"name": "linkedTemplateStatusPage",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-05-01",
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'linkedTemplateTailwind')]"
+			],
+			"properties": {
+				"mode": "Incremental",
+				"templateLink": {
+					"uri": "https://raw.githubusercontent.com/microsoft/ignite-learning-paths/master/ops/deployment/azuredeploy-status.json"
+				},
+				"parameters": {
+					"siteName": {
+						"value": "[variables('statusPageName')]"
+					},
+					"storageAccountName": {
+						"value": "[reference('linkedTemplateTailwind').outputs.storageAccountName.value]"
+					}
+				}
+			}
+		},
+		{
+			"type": "Microsoft.ContainerInstance/containerGroups",
+			"apiVersion": "2018-10-01",
+			"name": "[variables('aciName')]",
+			"location": "[resourceGroup().location]",
+			"dependsOn": [
+				"[resourceId('Microsoft.Authorization/roleAssignments', variables('bootstrapRoleAssignmentId'))]",
+				"[resourceId('Microsoft.Resources/deployments', 'linkedTemplateTailwind')]"
+			],
+			"identity": {
+				"type": "UserAssigned",
+				"userAssignedIdentities": {
+					"[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('identityName'))]": {}
+				}
+			},
+			"properties": {
+				"osType": "Linux",
+				"restartPolicy": "Never",
+				"containers": [{
+					"name": "[variables('containerName')]",
+					"properties": {
+						"image": "[variables('deploymentImage')]",
+						"command": [
+							"/bin/sh",
+							"-c",
+							"sh /boot-strap.sh"
+						],
+						"resources": {
+							"requests": {
+								"cpu": 2,
+								"memoryInGB": 4
+							}
+						},
+						"environmentVariables": [{
+								"name": "RESOURCE_GROUP_NAME",
+								"secureValue": "[variables('rgname')]"
+							},
+							{
+								"name": "SOURCE_REPOSITORY",
+								"secureValue": "[variables('sourceRepo')]"
+							},
+							{
+								"name": "ENTRYPOINT",
+								"secureValue": "[variables('entrypoint')]"
+							},
+							{
+								"name": "MANAGED_IDENTITY",
+								"secureValue": "[concat(resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', variables('identityName')))]"
+							},
+							{
+								"name": "CLIENT_ID",
+								"secureValue": "[parameters('servicePrincipalId')]"
+							},
+							{
+								"name": "SECRET",
+								"secureValue": "[parameters('servicePrincipalSecret')]"
+							},
+							{
+								"name": "EMAIL",
+								"secureValue": "[parameters('emailAddress')]"
+							}
+						]
+					}
+				}]
+			}
+		}
+	],
+	"outputs": {}
+}

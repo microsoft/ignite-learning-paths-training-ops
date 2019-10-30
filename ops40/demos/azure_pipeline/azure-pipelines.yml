@@ -1,0 +1,192 @@
+trigger:
+- master
+
+pr:
+- master
+
+variables:
+
+  # Azure
+  azureSubscription: azure-service-connection
+
+  # Container Registry
+  containerRegistryName: ttacrt3wkbtypkhaaw
+  containerRegistryFqdn: ttacrt3wkbtypkhaaw.azurecr.io
+
+  # AKS Pre-Production
+  aks-cluster-rg-pre-prod: ops40-e2e-0001
+  aks-cluster-pre-prod: tailwindtradersakst3wkbtypkhaaw
+  ingress-pre-prod: 8e8c8c0095024350b73a.eastus.aksapp.io
+
+  # Production
+  aks-cluster-rg: ops40-e2e-0001
+  aks-cluster: tailwindtradersakst3wkbtypkhaaw
+  ingress: 8e8c8c0095024350b73a.eastus.aksapp.io
+
+# Stages - a collection of related jobs. Stages can be controlled by conditions and approval checks.
+stages:
+
+- stage: build
+  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+
+  # Jobs - a collection of steps to be run on an agent. Jobs can depend on other jobs or be run conditionally.
+  jobs:
+  - job: helm
+
+    pool:
+      name: Hosted Ubuntu 1604
+
+    steps:
+
+    - task: AzureCLI@1
+      displayName: 'AZ ACR Login'
+      inputs:
+        azureSubscription: $(azureSubscription)
+        scriptLocation: inlineScript
+        inlineScript: 'az acr login --name $(containerRegistryName)'
+
+    - task: HelmDeploy@0
+      displayName: 'helm init --client-only'
+      inputs:
+        connectionType: None
+        command: init
+        arguments: '--client-only'
+
+    - task: HelmDeploy@0
+      displayName: 'helm package (tt-cart)'
+      inputs:
+        command: package
+        chartPath: 'ops/ops40/demos/tailwind-cart-api/cart-api'
+        arguments: '--version $(Build.BuildId)'
+
+    - task: AzureCLI@1
+      displayName: 'AZ ACR helm push (tt-cart)'
+      inputs:
+        azureSubscription: $(azureSubscription)
+        scriptLocation: inlineScript
+        inlineScript: 'az acr helm push -n $(containerRegistryName) /home/vsts/work/1/a/cart-api-$(Build.BuildId).tgz'
+
+  - job: docker
+
+    pool:
+      name: Hosted Ubuntu 1604
+
+    steps:
+
+    - task: AzureCLI@1
+      displayName: 'AZ ACR Login'
+      inputs:
+        azureSubscription: $(azureSubscription)
+        scriptLocation: inlineScript
+        inlineScript: 'az acr login --name $(containerRegistryName)'
+
+    - task: CmdLine@2
+      displayName: 'docker build (tt-cart)'
+      inputs:
+        script: |
+          cd ops/ops40/demos/tailwind-cart-api/Tailwind.Traders.Cart.Api
+          docker build -t $(containerRegistryFqdn)/cart.api:$(Build.BuildId) .
+
+    - task: CmdLine@2
+      displayName: 'docker push (tt-web)'
+      inputs:
+        script: |
+          docker push $(containerRegistryFqdn)/cart.api:$(Build.BuildId)
+
+  - job: artifacts
+    dependsOn:
+    - helm
+    - docker
+
+    pool:
+      name: Hosted Ubuntu 1604
+
+    steps:
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifacts'
+      inputs:
+        PathtoPublish: '/home/vsts/work/1/s'
+        artifactName: 'drop'
+
+- stage: release_pre_production
+
+  # Deployment job - special type of job that runs against an environment (run once, matrix, parallel)
+  jobs:
+  - deployment: release_pre_production
+    displayName: Release Pre-Production
+
+    pool:
+      name: Hosted Ubuntu 1604
+
+    environment: pre-production
+
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+
+          - download: current
+            artifact: drop
+            patterns: '**/*'
+
+          - task: HelmDeploy@0
+            displayName: 'helm init --client-only'
+            inputs:
+              connectionType: None
+              command: init
+              arguments: '--client-only'
+
+          - task: AzureCLI@1
+            displayName: Deploy Pre-Production
+            inputs:
+              azureSubscription: $(azureSubscription)
+              scriptLocation: 'inlineScript'
+              inlineScript: |
+                az extension add -n application-insights
+                az acr login --name $(containerRegistryName)
+                az acr helm repo add --name $(containerRegistryName)
+                az aks get-credentials --name $(aks-cluster-pre-prod) --resource-group $(aks-cluster-rg-pre-prod) --admin
+                pwsh /home/vsts/work/1/drop/ops/deployment/helm-values/generate-config.ps1 -resourceGroup $(aks-cluster-rg-pre-prod) -sqlPwd Password2020! -gvaluesTemplate /home/vsts/work/1/drop/ops/deployment/helm-values/gvalues.template -outputFile values.yaml
+                kubectl delete configmap -l release=my-tt-cart
+                helm upgrade my-tt-cart $(containerRegistryName)/cart-api --install -f values.yaml --set ingress.hosts={$(ingress-pre-prod)} --set image.repository=$(containerRegistryFqdn)/cart.api --set image.tag=$(Build.BuildId)
+
+- stage: release_production
+  jobs:
+  - deployment: release_production
+    displayName: Release Production
+
+    pool:
+      name: Hosted Ubuntu 1604
+
+    environment: production
+
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+
+          - download: current
+            artifact: drop
+            patterns: '**/*'
+
+          - task: HelmDeploy@0
+            displayName: 'helm init --client-only'
+            inputs:
+              connectionType: None
+              command: init
+              arguments: '--client-only'
+
+          - task: AzureCLI@1
+            displayName: Deploy Production
+            inputs:
+              azureSubscription: $(azureSubscription)
+              scriptLocation: 'inlineScript'
+              inlineScript: |
+                az extension add -n application-insights
+                az acr login --name $(containerRegistryName)
+                az acr helm repo add --name $(containerRegistryName)
+                az aks get-credentials --name $(aks-cluster) --resource-group $(aks-cluster-rg) --admin
+                pwsh /home/vsts/work/1/drop/ops/deployment/helm-values/generate-config.ps1 -resourceGroup $(aks-cluster-rg-pre-prod) -sqlPwd Password2020! -gvaluesTemplate /home/vsts/work/1/drop/ops/deployment/helm-values/gvalues.template -outputFile values.yaml
+                kubectl delete configmap -l release=my-tt-cart
+                helm upgrade my-tt-cart $(containerRegistryName)/cart-api --install -f values.yaml --set ingress.hosts={$(ingress-pre-prod)} --set image.repository=$(containerRegistryFqdn)/cart.api --set image.tag=$(Build.BuildId)

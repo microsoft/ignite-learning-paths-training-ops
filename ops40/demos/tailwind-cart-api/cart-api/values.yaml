@@ -1,0 +1,48 @@
+replicaCount: 1
+applicationName: tailwindtraders
+
+image:
+  repository: tailwindtradersacr.azurecr.io/cart.api
+  tag: prod
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources:
+  limits:
+    cpu: "500m"
+  requests:
+    cpu: "100m"
+
+nodeSelector:
+  "kubernetes.io/os": linux
+
+tolerations: []
+
+affinity: {}
+
+env:
+  configmap:
+    - name: APPLICATIONINSIGHTSIK
+    - name: AUTHKEY
+    - name: HOST
+    - name: ISSUER
+    - name: UseB2C
+    - name: SECURITYKEY
+    - name: tenantID
+    - name: clientID
+    - name: policyName
+    - name: identityMetadata
+    - name: issuer
+  values:
+    - name: DISABLE_SSL
+      value: "false"
+
+probes:
+  liveness:
+    path: /liveness
+    initialDelaySeconds: 20
+    periodSeconds: 30
+    port: http
