@@ -24,7 +24,7 @@ You need to provide service principal credentials to the deployment for the Azur
 
 Use this button to deploy the Tailwind Traders application.
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2Fignite-learning-paths-learning-ops%2Fmaster%2Fdeployment%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2Fignite-learning-paths-training-ops%2Fmaster%2Fdeployment%2Fazuredeploy.json" target="_blank">
  <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 

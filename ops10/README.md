@@ -2,9 +2,9 @@
 
 ## Session Abstract
 
-You are concerned about the reliability of your systems, services, and products. Where should you start?   
+You are concerned about the reliability of your systems, services, and products. Where should you start?
 
-In this session, you’ll get an introduction to modern operations disciplines and a framework for reliability work. We jump into monitoring: the foundational practice you must tackle before you can make any headway with reliability. Using Tailwind Traders as an example, we’ll demonstrate how to monitor your environment, including the right (and wrong) things to monitor – and why. You’ll leave with the crucial tools and knowledge you need to discuss and improve reliability using objective data. 
+In this session, you’ll get an introduction to modern operations disciplines and a framework for reliability work. We jump into monitoring: the foundational practice you must tackle before you can make any headway with reliability. Using Tailwind Traders as an example, we’ll demonstrate how to monitor your environment, including the right (and wrong) things to monitor – and why. You’ll leave with the crucial tools and knowledge you need to discuss and improve reliability using objective data.
 
 ## How To Use
 
@@ -23,8 +23,8 @@ code.
 
 - This guide
 - PowerPoint presentation including notes for each slide COMING SOON
-- Full script for presentation and demos [here](script/main.md)
-- Demo setup information and scripts: ([script 1](../demos/demo1.md), [script 2](../demos/demo2.md), [script 3](../demos/demo3.md) and [script 4](../demos/demo4.md)) 
+- Full script for presentation and demos [here](./scripts/main.md)
+- Demo setup information and scripts: ([script 1](./demos/demo1.md), [script 2](./demos/demo2.md), [script 3](./demos/demo3.md) and [script 4](./demos/demo4.md))
 - Full-length recording of presentation COMING SOON
 - Director Cut Full-length recording of presentation  COMING SOON
 - Individual recordings of stage-ready hands-on demos COMING SOON
