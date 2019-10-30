@@ -7,9 +7,9 @@
 
 |  | Video | Description
 |--------|-------|-----|
-| [Part 1: Logic App](#part-1-logic-app) | [Link](https://coming.soon) | Describe the Logic App
-| [Part 2: Azure Boards](#part-2-azure-boards) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo1_2.mp4) | Describe the configuration  and usage of Azure Boards
-| [Part 3: Microsoft Teams](#part-3-microsoft-teams) | [Link](https://coming.soon) | Describe what's happening in Microsoft Teams
+| [Part 1: Logic App](#part-1-logic-app) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4) | Describe the Logic App
+| [Part 2: Azure Boards](#part-2-azure-boards) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4) | Describe the configuration  and usage of Azure Boards
+| [Part 3: Microsoft Teams](#part-3-microsoft-teams) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4) | Describe what's happening in Microsoft Teams
 
 ---
 
@@ -95,23 +95,6 @@ Expand each step and explain what is happening
 Switch to the tab containing Azure Boards. You should be looking at your work items in the boards view. The query view should be empty because there are currently no items that meet the criteria.
 
 >**Presenter Note:** After confirming there are no current work items, we send the alert using Postman.
-
-Once the alert has been sent to the Logic App endpoint, return to Azure Boards and watch as the details automatically change to reflect that you (the presenter) have been assigned to the work item.
-
-Switch to the "Charts" view and create a new chart. (e.g. )
-
-![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/screenshots/demo1_part2_00.png)
-
-Create a new chart such as one of the above to deomonstrate the ease to quickly get a better understanding.
-
-Create a new query to display just the issues assigned to yourself.
-
-[Watch Demo 1: Part 2 Video](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo1_2.mp4)
-
-[Watch Demo 1: Part 2.1 Video](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo1_2_1.mp4)
-
-
-Now we will change to the Microsoft Teams tab (or native application).
 
 ---
 
