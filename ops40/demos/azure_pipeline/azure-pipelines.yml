@@ -10,18 +10,18 @@ variables:
   azureSubscription: azure-service-connection
 
   # Container Registry
-  containerRegistryName: ttacrt3wkbtypkhaaw
-  containerRegistryFqdn: ttacrt3wkbtypkhaaw.azurecr.io
+  containerRegistryName: ttacrbs7vnmucf2unc
+  containerRegistryFqdn: ttacrbs7vnmucf2unc.azurecr.io
 
   # AKS Pre-Production
-  aks-cluster-rg-pre-prod: ops40-e2e-0001
-  aks-cluster-pre-prod: tailwindtradersakst3wkbtypkhaaw
-  ingress-pre-prod: 8e8c8c0095024350b73a.eastus.aksapp.io
+  aks-cluster-rg-pre-prod: new-repo-test-002
+  aks-cluster-pre-prod: tailwindtradersaksbs7vnmucf2unc
+  ingress-pre-prod: 3777c2b6d77e4f1bb05c.eastus.aksapp.io
 
   # Production
-  aks-cluster-rg: ops40-e2e-0001
-  aks-cluster: tailwindtradersakst3wkbtypkhaaw
-  ingress: 8e8c8c0095024350b73a.eastus.aksapp.io
+  aks-cluster-rg: new-repo-test-002
+  aks-cluster: tailwindtradersaksbs7vnmucf2unc
+  ingress: 3777c2b6d77e4f1bb05c.eastus.aksapp.io
 
 # Stages - a collection of related jobs. Stages can be controlled by conditions and approval checks.
 stages:
@@ -56,7 +56,7 @@ stages:
       displayName: 'helm package (tt-cart)'
       inputs:
         command: package
-        chartPath: 'ops/ops40/demos/tailwind-cart-api/cart-api'
+        chartPath: 'ops40/demos/tailwind-cart-api/cart-api'
         arguments: '--version $(Build.BuildId)'
 
     - task: AzureCLI@1
@@ -84,7 +84,7 @@ stages:
       displayName: 'docker build (tt-cart)'
       inputs:
         script: |
-          cd ops/ops40/demos/tailwind-cart-api/Tailwind.Traders.Cart.Api
+          cd ops40/demos/tailwind-cart-api/Tailwind.Traders.Cart.Api
           docker build -t $(containerRegistryFqdn)/cart.api:$(Build.BuildId) .
 
     - task: CmdLine@2

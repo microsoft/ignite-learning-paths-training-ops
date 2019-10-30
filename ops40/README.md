@@ -25,6 +25,6 @@ code.
 - Demo Guide [here](./demo-guide.md)
 - Full-length recording of presentation [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/dry-run/ops40-final.mp4)
 - Director Cut Full-length recording of presentation [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/directors-cut/ops40-directors-cut.mp4)
-- Individual recordings of stage-ready hands-on demos
-  - Part 1  [here](https://microsoft.sharepoint.com/teams/CloudDevAdvocacy/Shared%20Documents/Forms/AllItems.aspx?viewid=16de824f%2D342c%2D4917%2D87e2%2D316d639025f5&id=%2Fteams%2FCloudDevAdvocacy%2FShared%20Documents%2F%40%40TeamDocs%2FEvents%2FIgnite%20Tour%2FFY20%20Ignite%20Tour%2FContent%2FOPS%20%2D%20Improving%20Your%20Reliability%20through%20Modern%20Operations%20Practices%2FOPS40%20Video%2Ffinal%2Ddemo%2Draw)
-
+- Individual recordings of stage-ready demos:
+  - Part 1  [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo1-part1.mp4)
+  - Part 2 [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo1-part2.mp4)
