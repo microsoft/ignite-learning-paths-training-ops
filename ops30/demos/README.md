@@ -1,6 +1,6 @@
 # Technical Demonstrations
 
-| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+| [README](/ops30/README.md) | [Slides](/ops30/slides/README.md) | [Demos](/ops30/demos/README.md) | [Deployment](/ops30/deployment/README.md) | 
 |--------|-------|------------|-----------|
 
 ## [Demo 1: ](01/README.md)
@@ -17,11 +17,9 @@ This demo uses the following:
 
 ---
 
-## [Demo 2: ](02/README.md)
+## [Demo 2:](02/README.md)
 
 **What are we trying to demonstrate?**
-
-
 
 This demo uses the following:
 
@@ -30,18 +28,6 @@ This demo uses the following:
 - x
 
 ---
-
-## [Demo 3: ](03/README.md)
-
-**What are we trying to demonstrate?**
-
-
-
-This demo uses the following:
-
-- x
-- x
-
 
 ## Pre-delivery Preparation
 

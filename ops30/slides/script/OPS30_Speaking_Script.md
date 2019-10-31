@@ -10,7 +10,7 @@
 
 ### Slide 1 (3 Main Takeaways)
 
-![](../../media/slides/Slide1.png)
+![](../media/slides/Slide1.png)
 
 
 
