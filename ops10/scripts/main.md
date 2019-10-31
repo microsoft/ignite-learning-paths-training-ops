@@ -7,7 +7,7 @@ This is the main script for the talk (the talk track to accompany the slides). I
 
 There are four demos in this talk ([demo script 1](../demos/demo1.md), [demo script 2](../demos/demo2.md), [demo script 3](../demos/demo3.md) and [script 4](../demos/demo4.md)) for which you have to do some setup. including:
 
-1. *Deploy* the Tailwind Traders application. Please see the [deployment instructions for the OPS Learning path](../deployment/README.md) for instructions.
+1. *Deploy* the Tailwind Traders application. Please see the [deployment instructions for the OPS Learning path](../../deployment/README.md) for instructions.
 1. *Send specific kinds of traffic to the application* after it has been deployed. Please see the instructions for this in ([demo script 1](../demos/demo1.md).
 1. *Download a specific JSON file* to your local machine (details also found in [demo script 1](../demos/demo1.md)).
 
