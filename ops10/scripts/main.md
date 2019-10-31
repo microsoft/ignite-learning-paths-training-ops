@@ -9,7 +9,7 @@ There are four demos in this talk ([demo script 1](../demos/demo1.md), [demo scr
 
 1. *Deploy* the Tailwind Traders application. Please see the [deployment instructions for the OPS Learning path](../../deployment/README.md) for instructions.
 1. *Send specific kinds of traffic to the application* after it has been deployed. Please see the instructions for this in ([demo script 1](../demos/demo1.md).
-1. *Download a specific JSON file* to your local machine (details also found in [demo script 1](../demos/demo1.md)).
+1. *Download a specific JSON file* to your local machine (details also found in [demo script 2](../demos/demo2.md)).
 
 The rest of this document is the full script with lines in between each slide. Enjoy!
 
