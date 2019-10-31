@@ -1,4 +1,4 @@
-# Demo 2: Troubleshooting Guides & Status Page
+# Demo 2: 
 
 | [README](/ops30/README.md) | [Slides](/ops30/slides/README.md) | [Demos](/ops30/demos/README.md) | [Deployment](/ops30/deployment/README.md) | 
 |--------|-------|------------|-----------|

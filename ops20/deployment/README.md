@@ -28,66 +28,25 @@ This or similar tool is recommended for the first demonstration.
 
 ### Service Principal Requirement
 
-Part of the demo environment uses Kubernetes.
-
-As a result, a service principal is required in order to provision all of the necessary pieces of infrastructure.
-
-If you have already generated a service principal ID, you do **NOT** need to do it again. Use the same ID and password as before.
-
-If you have never created a service principal, run the following command from [Cloud Shell](https://shell.azure.com):
-
-``` az cli
-az ad sp create-for-rbac
-```
-
-The output should look similar to this:
-
-``` az cli
-{
-  "appId": "2ddb2923-88c6-45cc-98zz-36717cq35001",
-  "displayName": "azure-cli-2019-09-04-17-35-58",
-  "name": "http://azure-cli-2019-09-04-17-35-58",
-  "password": "3c371136-dafd-4b1f-a793-50885537e9a7",
-  "tenant": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-}
-```
+Please read the following link for information regarding service principals. You will be prompted for this information in the next step.
 
 >See [az ad sp create-for-rbac](https://docs.microsoft.com/en-us/cli/azure/ad/sp?WT.mc_id=none-github-nepeters&view=azure-cli-latest#az-ad-sp-create-for-rbac) for more information.
 
 ## Demo Environment Deployment Instructions
 
-### Automated Deployment
+Please follow the [instructions to deploy this environment found here](../../deployment/README.md).
 
-Once you have your service principal information created and available to copy and paste, you may deploy the demo environment used for *OPS20 - Responding To Incidents*, simply by pressing the blue "*Deploy to Azure*" button below.
-
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fneilpeterson%2Ftailwind-reference-deployment%2Fmaster%2Fdeployment-artifacts-aks%2Fazuredeploy.json" target="_blank">
-    <img src="http://azuredeploy.net/deploybutton.png"/>
-</a>
-
-[Video of the process is available here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/TTT_DirectorsCut.mp4)
+- [Video of the process is available here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/TTT_DirectorsCut.mp4)
 
 ---
 
 ## Post-Deployment Steps
 
-[A video of all of the steps above is available here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/post_deployment.mp4)
-
-
-- Authenticate your accounts inside the `teams` and `visualstudioteamservices` API Connection types listed in the new Resource Group
--  Verify the Azure Function URL (Statuspage) is loading
-- Create the Application Dashboard by going to Application Insights and pressing the button that says `Application Dashboard`
-- Open your new Azure Devops Project (not the Organization) and verify everything worked
-- Highlight and copy the az cli command from the container to access the K8s cluster
-- Check each of the Logic Apps and make sure they aren't requiring authentication
-- Copy HTTP Endpoint URL from main Logic App and paste in to Postman
-- [Setup webhook for Statuspage function](statuspage/README.md)
-- [Break the shopping cart](break_tailwindtraders/README.md)
-
-That's all we need to take care of for now.
+Once the Tailwind Traders demo environment has finished deploying, return here and [follow the instructions found in the post-deployment.md](/ops20/deployment/post-deployment.md).
 
 ---
 
-## **IMPORTANT:** When you are done
+## **IMPORTANT:** When you are done with the demo and presentation
 
 Be sure to delete the resources when you have completed the presentation.
 

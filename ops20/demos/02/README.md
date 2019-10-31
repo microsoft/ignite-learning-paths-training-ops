@@ -36,8 +36,8 @@ As of Thursday October 10th the Troubleshooting Guide has not been added to the 
 
 There are two (2) template files in this repository.
 
-- [ARM](demos/two/troubleshooting_guide_template/TroubleshootingARMTemplate.json)
-- [Gallery](demos/two/troubleshooting_guide_template/TroubleshootingGuideGalleryTemplate.json)
+- [ARM](demos/01/troubleshooting_guide_template/TroubleshootingARMTemplate.json)
+- [Gallery](demos/02/troubleshooting_guide_template/TroubleshootingGuideGalleryTemplate.json)
 
 We are using the gallery method as it seems to be more responsive for on-stage demos and much of the rest of the deployment is done using ARM templates.
 
@@ -45,9 +45,7 @@ Once the Troubleshooting Guide has been created, begin exploring it.
 
 >**Presenter Note:** If you haven't done so already, you will want to [follow the instructions to "Break the Tailwind Traders site"](../../deployment/break_tailwindtraders/README.md). Much of the functionality of the Troubleshooting Guide requires data from our monitoring services in order to populate anything interesting to demonstrate. You will want to break the deployment as soon as possible once you have verified everything else is ready to go.
 
-
 ## Part 2: Update Status Page from Microsoft Teams
-
 
 To set the status of our Status Page to open, run the following from the chat field in Microsoft Teams:
 
