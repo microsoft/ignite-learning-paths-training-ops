@@ -1,15 +1,15 @@
 # OPS 10 Main Script
 
 ## Background
-This is the main script for the talk. For ease sake, it contains both the talk track for the slides and for the demo segments. 
+This is the main script for the talk (the talk track to accompany the slides). It also contains the talk tracks and instructions for the demos (same exact text as in the demo scripts, just inserted here so you don't have flip between files).
 
-There are four demos in this talk ([script 1](../demos/demo1.md), [script 2](../demos/demo2.md), [script 3](../demos/demo3.md) and [script 4](../demos/demo4.md)) for which you have to do some setup including:
+### Pre-Requisites
 
-1. deployment of the tailwind traders application
-1. sending specific kinds of traffic to this application
-1. downloading a specific JSON file to your local machine
+There are four demos in this talk ([demo script 1](../demos/demo1.md), [demo script 2](../demos/demo2.md), [demo script 3](../demos/demo3.md) and [script 4](../demos/demo4.md)) for which you have to do some setup. including:
 
-Instructions for that setup can be found in the [first demo script](../demos/demo1.md).
+1. *Deploy* the Tailwind Traders application. Please see the [deployment instructions for the OPS Learning path](../deployment/README.md) for instructions.
+1. *Send specific kinds of traffic to the application* after it has been deployed. Please see the instructions for this in ([demo script 1](../demos/demo1.md).
+1. *Download a specific JSON file* to your local machine (details also found in [demo script 1](../demos/demo1.md)).
 
 The rest of this document is the full script with lines in between each slide. Enjoy!
 
@@ -170,13 +170,13 @@ Though it may sound peculiar, my experience talking with people in the operation
 
 As part of obtaining that baseline, we’ll want to perhaps dive into looking at past performance. While it is true "Past performance is no guarantee of future results" it can sometimes help us calibrate our expectations. Similarly, if we have access to information about past outages or hiccups with a service, those may give us at least some sense of potential failure modes that we’re going to need to incorporate into our thinking around reliability. 
 
-And finally, it will be useful for us to gain some contextual knowledge around a system. Context can fall into a wide variety of bucket, much of it socio-technical. For example, and the socio- side we’ll want to gather good information about the stakeholders associated with a service or an application. You would think "oh, it’s obvious who owns or cares about a particular app/service" but in enterprise situations or other complex organizations, this can be much harder than it sounds. But the sad truth is we’re not going to be able to make much headway on the reliability of a system without that information for reasons that will become clear later when we discuss SLIs and SLOs. 
+And finally, it will be useful for us to gain some contextual knowledge around a system. Context can fall into a wide variety of buckets, much of it socio-technical. For example, and the socio- side we’ll want to gather good information about the stakeholders associated with a service or an application. You would think "oh, it’s obvious who owns or cares about a particular app/service" but in enterprise situations or other complex organizations, this can be much harder than it sounds. But the sad truth is we’re not going to be able to make much headway on the reliability of a system without that information for reasons that will become clear later when we discuss SLIs and SLOs. 
 
 On the technical side of the context question, it will be really helpful for us to pay attention to technical questions like "just how did this application get in production?". Was it deployed by hand via an epic deployment as we’ll talk about in OPS40 or was it deployed via an automated CI/CD pipeline with a great set of unit tests, also discussed in that session? This information can have many ramifications including how easy it will be to iterate if and when we have reliability-improving updates to make. It can also be a really useful pointer to places we can make a real difference with our work.
 
 Ok, so let’s stop talking abstractly about this idea and see a demonstration of two of the Azure features than can help improve operational awareness for you.
 
-{switch to demo}
+{demo 1}
 
 Time for a demo. I’d like to show you two Azure offerings that can help you with this operational awareness. There are a number of components of operational awareness, but let’s focus on the deceptively simple question for the tailwind traders app: what’s actually running and how well is it doing?
 
@@ -184,31 +184,29 @@ For the first part of the demo, I’d like to show you one of my very favorite s
 
 Tailwind traders has added these stubs in their app (by the way, did I mention their entire app is available on Github if you want to take a peek? There’s a pointer to this codebase in the resources available for this session). Let’s see just what using app insights gets us.
 
-1. Resource Group -> tt-app-insights -> Application Map
+1. Resource Group -> tt-app-insights -> Application Map.
 1. show various components of app. 
-1. point out stats on components
-1. Point out stats on arrow labels
-1. Click on connector, talk about stats. Note Log Analytics link
-1. Close panel, click on component
-1. talk about stats panel
-1. go to details on failed requests
-1. (breadcrumbs)
+1. point out stats on components.
+1. Point out stats on arrow labels.
+1. Click on connector, talk about stats. 
 
-So hopefully you can see why this Azure monitor feature excites me so much. It makes it really easy for me to understand just what components are in play, how they talk to each other, their performance, error rates, and so on. All from one screen. Just fabulous. I do want to give you one quick piece of advice about Application Map before we move on to the second part of the demo: instrument your code and go look at this screen now. Get very familiar with it and all of the data it can offer you. Don’t wait until your next downtime and say "wait, what was that thing PRESENTER NAME HERE was talking about on stage back in CURRENT MONTH HERE? Where is it again in the portal?"
+So hopefully you can see why this Azure monitor feature excites me so much. It makes it really easy for me to understand just what components are in play, how they talk to each other, their performance, error rates, and so on. All from one screen. Just fabulous. We'll go into further detail about the application map in OPS20. I do want to give you one quick piece of advice about the Application Map before we move on to the second part of the demo: instrument your code and go look at this screen now. Get very familiar with it and all of the data it can offer you. Don’t wait until your next downtime and say "wait, what was that thing PRESENTER NAME HERE was talking about on stage back in CURRENT MONTH HERE? Where is it again in the portal?"
 
-Ok, so let’s look at a second, slightly more traditional way people gain operational awareness. This tool is more closely aligned with answering the questions about how something is performing in production at this moment. But for this demo, I promise to show you an aspect of Azure you may not have seen before.
+Ok, so let’s look at a second, slightly more traditional way people gain operational awareness. You're probably much more familiar with dashboards for answering the questions about how something is performing in production at this moment. But for this demo, I promise to show you something cool you can do with dashboards you may not have seen before.
 
-There’s been a hint of this demo on the screen prior to this. Let’s go back to the App Insights home screen again. On this screen, you can see these icons all over the place (point to pin icons). If I hover over any of them, they say things like "Pin this chart to the dashboard". Dashboards in Azure offer the ability to collect together on one screen all of the metrics, graphs, listings, etc. that you decide are important to you for operational awareness. There are at least four ways I know of to add the information you consider important to a dashboard. The first one is through these pins. Clicking on these pins will save that item to the current dashboard, which is the last dashboard you used. 
+Creating the dashboards you need are pretty simple. We can click on the pins you find on the interface, like these {click pins on graphs on Application Insights}. And then go to dashboards {navigate to dashboards} and they are added here at the bottom. There's also an edit button at the top {click edit} that gives me a tile like interface where I can drag stuff on to the dashboard I think will be useful. {drag the clock over}, and so on. Once I am done {click done}. I can then save the dashboard {click done customizing}. 
 
-So, if I click these two pins, {click pins}, I add the graphs to my dashboard. {navigate to dashboard}
+If I want to share this amazing dashboard I have  made with a colleague, there are two ways I can do it. First, I can click on the Share icon, and publish it. That's not the interesting one. The interesting one has to do with these two button here: download and upload. 
 
-The second method for creating a dashboard starts on the dashboard screen itself. If I click edit, {click edit} I get this really cool tile editor which lets me move the items on the dashboard around {move one next to the other}, add new ones by dragging them over {drag the clock over}, and so on. Once I am done {click done}. I can then save the dashboard {click save}.
+If I click download, the dashboard is exported as a JSON file and downloaded to my local machine. Why is this cool? Well, now I have something I can treat almost as code. I can check it into a source control system where I can version control it. If I'm handy with scripting, I can write a script to customize it, and so on. Kind of "operational awareness as code". 
 
-Once I have a dashboard I like, I can do something which leads to a third way to get a dashboard. I can click on share, here at the top, and now I have published a dashboard that others can open to use. {open dashboard name, browse published dashboards}. 
+But I see you aren't impressed yet. Let me show you something you may not have seen before and then tie back into this idea. 
 
-And for the final way I will mention to create dashboards, I want to draw your attention to the Download and Upload buttons. If I click Download, this will export this dashboard to a file in JSON format and then download it to my local machine. Similarly, if someone sends me a dashboard JSON file, I can import it in as a new dashboard using the Upload button. I’ll demo that in a few seconds, but first let me digress to show you the feature I promised and then you will see how this all comes together.
+One aspect of Azure you may not have encountered before is the Azure Resource Graph. The Azure Resource Graph is a data representation of all of the resources in Azure that you are using. In the past, if you wanted to get a handle on this, you would have to write a bunch of code that would query our APIs and then maybe generate some reports. With Azure Resource Graph, we can almost instantaneously query for the information we desire via the Azure Resource Graph Explorer. I find it easiest to use the top search bar to find it 
 
-One aspect of Azure you may not have encountered before is the Azure Resource Graph. The Azure Resource Graph is a data representation of all of the resources in Azure that you are using. In the past, if you wanted to get a handle on this, you would have to write a bunch of code that would query our APIs and then maybe generate some reports. With Azure Resource Graph, we can almost instantaneously query for the information we desire. That gets done using the Azure Resource Graph Explorer. I find it easiest to use the top search bar {search for resource graph explorer}. This provides a query environment which allow you to {open resource item} run queries over the dataset of the current set of resources you have in use. If you think of them as database queries where the database stores a magically updated list of all of your resources, you get the right idea. 
+{search for resource graph explorer}. 
+
+This provides a query environment which allow you to {open resource item} run queries over the dataset of the current set of resources you have in use. If you think of them as database queries where the database stores a magically updated list of all of your resources in play, you get the right idea. 
 
 So for example, if I wanted info on all of the disks I’m using on all of the compute notes I’m running, I could do something like this: 
 
@@ -216,7 +214,7 @@ So for example, if I wanted info on all of the disks I’m using on all of the c
 
 {click run query}
 
-Now I have a list of all of the (read the number) disks in use, complete with what kind they are, what region they are in, and lots of other great stuff.
+Now I have a list of all of the (read the number) disks in use, {scroll window} complete with what kind they are, what region they are in, and lots of other great stuff. 
 
 I don’t want to dwell on this screen or even really explain it much because it is the same interface as the one we’ll be explore in more depth when we talk about log analytics later in the talk and I don’t want to steal its thunder. What I _do_ want to do is tie this back in to dashboards.
 
@@ -224,7 +222,9 @@ If we go back to dashboard, {click dashboard} and click on the Upload button we 
 
 {click upload, upload AzureInventoryDashboard.json}
 
-Here’s a spiffy new dashboard that shows you a pretty dashboard of all of your resources currently in play for all of your subscriptions. {show items on dashboard}. You can see that the tiles are Resource Graph queries (in teeny tiny type), and just to prove this, if I click on a tile {click on Sum of all Disk sizes} you can see the actual query being run. In this case, it says for all disk resources, take the diskSizeGB property, convert that to a long (signed 64-bit) number representation, then the final line sums that up). I promise we’ll come back to this very powerful query interface later. Now back to the presentation.
+Here’s a spiffy new dashboard that shows you a pretty dashboard of all of your resources currently in play for all of your subscriptions. {show items on dashboard}. 
+
+You can see that the tiles are Resource Graph queries (in teeny tiny type), and just to prove this, if I click on a tile {click on Sum of all Disk sizes} you can see the actual query being run. In this case, it says for all disk resources, take the diskSizeGB property, convert that to a long (signed 64-bit) number representation, then the final line sums that up). I promise we’ll come back to this very powerful query interface later. Now back to the presentation.
 
 {back to slides}
 
@@ -260,11 +260,7 @@ One aspect of reliability that doesn’t get enough attention (in my opinion) is
 
 ----
 
-Fidelity is a strange word at first to hear in this context, but usually makes immediate sense when an example is provided. Let’s say you visit the website of a subscription streaming video company of some sort. When you visit their home page, most of the time you see a few different parts. At the top might be a listing of new movies available. That might be followed by a listing of personalized recommendations customized for you based on your view habits they feel you might want to watch. Under this might be listing of the top viewed movies that week. 
-
-Each of these sections are likely produced by a different backend microservice. Now what happens if one of those services is down for some reason? Does the website show new visitors a completely blank page, does the website "error out"? Hopefully, not. Instead, they show you a "degraded" experience where the recommendations part of the page gets either omitted or replaced by something else, perhaps a "coming soon" section. 
-
-Fidelity in this context refers to how often the service shows customers the complete web page, the version where everything is working fine, the page or experience with "full fidelity" vs. how often a "degraded" experience is served instead. This is worth measuring in cases where it is possible to back down to a degraded version 
+Fidelity in this context comes up in cases where it is possible for your service to continue to provide some sort of reduced or degraded experience when somthing goes wrong. For example, take a website where the different parts of the home page are provided by different microservices--ideally if one microservice goes down, you can still serve the home page just with that section missing or replaced with some static content. Fidelity would be the measurement of how often you showed a "degraded" experience vs. the complete page as intended with full fidelity.
 
 ----
 
@@ -282,7 +278,7 @@ Reliability has to measured from the customer’s perspective, not the component
 
 ----
 
-Let’s drive this home with an example. Let's say we are in charge of running an e-commerce site that runs a web farm with 100 server instances. Something bad happens, maybe a bad OS or software update, a power fluctuation, whatever, and 14 of these 100 instances stop working. They hopefully didn’t burst into flame like this graphic suggests, but you get the idea.
+Let’s drive this home with an example. Let's say we are in charge of running a e-commerce site that runs a web farm with 100 server instances. Something bad happens, maybe a bad OS or software update, a power fluctuation, whatever, and 14 of these 100 instances stop working. They hopefully didn’t burst into flame like this graphic suggests, but you get the idea.
 
 Quiz time. Now remember, 14 out of the 100 instances are now totally out commission. Is the situation:
 - A: no big deal? We should get to dealing with the problem at some point when we can get around it. At worst maybe we’re spending money for some broken VMs we aren’t using so we should take care of them.
@@ -433,8 +429,6 @@ If say the ratio was 0.5, we multiply that by 100, and now we come to the conclu
 
 Let’s try another one. This time let’s specify a measurement associated with the latency of the web service. We might be interested in knowing the ratio of number of operations that completed in less than 10 milliseconds against the number of total operations. If we have a ratio of 0.8, we’ve been 80% successful by this measurement.
 
-The same math can apply to the fidelity quality we discussed before. In this case, we can say we’ve served web pages with 80% fidelity. 
-
 Just to be clear this is not just a web site thing, if we had a pipeline service that processed data, we could say we need to measure coverage, i.e. how much of the data did we process. Very different system, same basic math.
 
 ----
@@ -475,15 +469,15 @@ This might lead you to ask "Ok, so where’s the best place to measure SLIs?". T
 
 Enough talk, let’s see a demo.
 
-{switch to demo}
+{demo 2}
 
 For this demo, tailwind traders app back into the picture. We’ll bring in all of that log analytics knowledge we now have and all of the SLI info and see how we actually measure one.
 
-1. Resource Group -> tt-app-insights -> Logs (Analytics)
+1. Resource Group -> tt-app-insights -> Logs (Analytics) (or have a tab open with query in it)
 
 Here we are back in the query editor. Allow me to drop a pre-made query into this editor and we’ll examine it one line at a time.
 
-{Paste in:}
+{Paste in the following}
 
 ```
 requests
@@ -526,24 +520,20 @@ second, we’ll need the desired proportion. successful 50% of the time, can rea
 
 and finally, we’ll need some statement of time to make sure we’re all talking about the same window of data. 
 
-So, if we put this all together, using the previous web server SLI, an example SLO might be " 90% of HTTP requests as reported by the load balancer succeeded in the last 30 day window."
-
-----
-
-Just to show you this recipe works for the other aspects of reliability, here’s one for the latency example. We switch this, and you can see it doesn't change very much. "90% of HTTP requests as reported by the client returned in less than 20ms in the last 30 day window."
-
-----
-
-This may seem really simple, but the good news is basic SLIs and SLOs can be this simple. If we want to make them more complex, perhaps to better model the behavior we expect out of a system there are at least two ways we can construct a more complex SLO. One way is to create a compound SLO which has multiple conditions. Another way is to use percentiles. Both are used commonly in the field, but the good news is you can and should start simple when you begin your attempts at bringing this practice into your organization.
+So, if we put this all together, using the previous web server SLI, an example SLO might be " 90% of HTTP requests as reported by the load balancer succeeded in the last 30 day window." That's a reasonable SLO. This may seem really simple, but the good news is basic SLIs and SLOs can be this simple. If we want to make them more complex, perhaps to better model the behavior we expect out of a system there are ways to do about it but we won't talk about them here. The good news is you can and should start simple when you begin your attempts at bringing this practice into your organization.
 
 ----
 
 Let me show you the quickest of demos for SLOs. 
 
-{switch to demo}
+{demo 3}
+
+1. Resource Group -> tt-app-insights -> Logs (Analytics) (or have a tab open with query in it)
+
+
 Here’s a very slightly modified version of our previous query. 
 
-Paste in:
+{Paste in the following}
 
 ```
 requests
@@ -555,7 +545,7 @@ requests
 | render timechart 
 ```
 
-When I say slightly, I mean we’ve added a single line that represents our SLO. That’s this line here that says our objective is 75% availability. 
+When I say slightly, I mean we’ve changed two lines to add line representing our SLO. That’s this new line here that says our objective is 75% availability and the change to the line after it to include that SLO.
 
 When we run this, we get a graph that looks like this. Here’s the 75% mark. A quick visual inspection can show you how well we did in relationship to this objective.
 
@@ -593,19 +583,12 @@ Because here’s the thing. Alerts are not supposed to be:
 
 ----
 
-So, for those communications, how do we make sure they are maximally useful, that make this situation where we have interrupted a human as useful as possible? For that to be true, an alert has to have a few qualities:
-- first off, it needs to be simple. Think of the person on call who gets woken up at 2a. The information they receive at that time has to be as simple as possible so the foggy brain can immediately understand what is going on. If the alert doesn’t make sense because it is too complex, the response is going to be delayed at least as long as it takes to puzzle out what exactly the page is about.
-- second, it is quite important to be able to understand the scope of the problem right off the bat. This is one way a human is going t be able to determine both the urgency of the situation and who else might need to be part of the response. Is the whole system down? Just one geo region? Just for one kind of device? 
-- and finally, an alert needs to have context. This is part of helping the human immediately comprehend what is going on. The scope is part of that process, but there’s more to context so I wanted to break that out into a separate slide.
-
-----
-
-To understand context, let’s talk about information every alert should have. And if any of these things don’t make immediate sense to you, please consider the poor, sleep deprived human whose phone has woken them up at 2am with a page.
+So how do we make sure alerts are actionable and useful? Besides keeping them simple enough to understand if you are reading them at 2a afrer being woken up, there are four things every alert should contain. If you include these things to provide context to the responder, your alerts will be much more actionable.
 
 Every alert should include:
-- information about where the alert is coming from. Many companies have several monitoring systems in use at any one time and a larger number of interconnected systems. You can save someone a tremendous amount of time if you say "This alert for payroll system thx-1138 is coming from Azure monitor subscription <blah>."
+- information about where the alert is coming from. Many companies have several monitoring systems in use at any one time and a larger number of interconnected systems. You can save someone a tremendous amount of time if you say "This alert for payroll system thx-1138 is coming from Azure monitor subscription prod."
 - information about what expectation has been violated. So for example, "This server has been returning an error 30% of the time when it should have been returning errors less than 1% of the time"
-- information about impact, what impact does the situation you are being alerted about have (ideally stated from the customer’s point of view)
+- information about impact and scope, what impact does the situation you are being alerted about have (ideally stated from the customer’s point of view)
 - and finally, if possible, what should the person responding do next, even if that is a pointer to a troubleshooting guide or some other documentation where they can find help for how to diagnose and remediate this problem.
 
 If you include this sort of helpful context, I pretty much guarantee you will improve the life of anyone who receives alerts in your organization and help make your operations practices more sustainable, especially around monitoring.
