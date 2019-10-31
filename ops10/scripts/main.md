@@ -192,6 +192,8 @@ Tailwind traders has added these stubs in their app (by the way, did I mention t
 
 So hopefully you can see why this Azure monitor feature excites me so much. It makes it really easy for me to understand just what components are in play, how they talk to each other, their performance, error rates, and so on. All from one screen. Just fabulous. We'll go into further detail about the application map in OPS20. I do want to give you one quick piece of advice about the Application Map before we move on to the second part of the demo: instrument your code and go look at this screen now. Get very familiar with it and all of the data it can offer you. Don’t wait until your next downtime and say "wait, what was that thing PRESENTER NAME HERE was talking about on stage back in CURRENT MONTH HERE? Where is it again in the portal?"
 
+{demo 2}
+
 Ok, so let’s look at a second, slightly more traditional way people gain operational awareness. You're probably much more familiar with dashboards for answering the questions about how something is performing in production at this moment. But for this demo, I promise to show you something cool you can do with dashboards you may not have seen before.
 
 Creating the dashboards you need are pretty simple. We can click on the pins you find on the interface, like these {click pins on graphs on Application Insights}. And then go to dashboards {navigate to dashboards} and they are added here at the bottom. There's also an edit button at the top {click edit} that gives me a tile like interface where I can drag stuff on to the dashboard I think will be useful. {drag the clock over}, and so on. Once I am done {click done}. I can then save the dashboard {click done customizing}. 
@@ -469,7 +471,7 @@ This might lead you to ask "Ok, so where’s the best place to measure SLIs?". T
 
 Enough talk, let’s see a demo.
 
-{demo 2}
+{demo 3}
 
 For this demo, tailwind traders app back into the picture. We’ll bring in all of that log analytics knowledge we now have and all of the SLI info and see how we actually measure one.
 
@@ -526,7 +528,7 @@ So, if we put this all together, using the previous web server SLI, an example S
 
 Let me show you the quickest of demos for SLOs. 
 
-{demo 3}
+{demo 4}
 
 1. Resource Group -> tt-app-insights -> Logs (Analytics) (or have a tab open with query in it)
 
