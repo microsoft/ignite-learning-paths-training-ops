@@ -10,18 +10,18 @@ variables:
   azureSubscription: azure-service-connection
 
   # Container Registry
-  containerRegistryName: ttacrr5rtk2knlhwae
-  containerRegistryFqdn: ttacrr5rtk2knlhwae.azurecr.io
+  containerRegistryName: ttacrkkzzoi7tmdh42
+  containerRegistryFqdn: ttacrkkzzoi7tmdh42.azurecr.io
 
   # AKS Pre-Production
-  aks-cluster-rg-pre-prod: twt-930-test-001
-  aks-cluster-pre-prod: tailwindtradersaksr5rtk2knlhwae
-  ingress-pre-prod: 56406df4234a4a64b952.eastus2.aksapp.io
+  aks-cluster-rg-pre-prod: ops40-ignite-orlando
+  aks-cluster-pre-prod: tailwindtradersakskkzzoi7tmdh42
+  ingress-pre-prod: aed5cca90eb04a48b614.eastus2.aksapp.io
 
   # Production
-  aks-cluster-rg: twt-930-test-001
-  aks-cluster: tailwindtradersaksr5rtk2knlhwae
-  ingress: 56406df4234a4a64b952.eastus2.aksapp.io
+  aks-cluster-rg: ops40-ignite-orlando
+  aks-cluster: tailwindtradersakskkzzoi7tmdh42
+  ingress: aed5cca90eb04a48b614.eastus2.aksapp.io
 
 # Stages - a collection of related jobs. Stages can be controlled by conditions and approval checks.
 stages:

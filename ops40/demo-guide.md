@@ -190,7 +190,7 @@ Containers:
   - job: tests
 
     variables:
-      hostDB: https://ttshoppingdbr5rtk2knlhwae.documents.azure.com:443/
+      hostDB: https://ttshoppingdbkkzzoi7tmdh42.documents.azure.com:443/
 
     pool:
       name: Hosted Ubuntu 1604
