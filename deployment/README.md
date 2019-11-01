@@ -20,7 +20,11 @@ az provider register --namespace Microsoft.ContainerRegistry
 
 ## Service Principal
 
-You need to provide service principal credentials to the deployment for the Azure Kubernetes Service cluster creation. For information on creating an Azure Service Principal, see the following documentation:
+You need to provide service principal credentials to the deployment for the Azure Kubernetes Service cluster creation. 
+
+*IMPORTANT*: when you create a service principal and provide this information, it is important to be aware that you are creating privledged access in this environment and need to treat that access and the credentials accordingly (more info can be found in the doc below). 
+
+For information on creating an Azure Service Principal, see the following documentation:
 
 [Create an Azure Service Principal with Azure CLI](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest)
 
