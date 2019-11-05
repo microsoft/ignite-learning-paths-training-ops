@@ -83,10 +83,9 @@ Detailed explanations of each demonstration associated with this presentation ca
 
 | Demo  | Minutes | Video |
 |----------|----------|-------|
-|[1 - Creating An Incident Response Plan](demos/01/README.md)|?  |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/OPS20_Final_Full.mp4)
-|[2 - Remediation Improvements (Context & Guidance)](demos/02/README.md)|?   |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/OPS20_Final_Full.mp4)
-|[3 - Tools to Reduce the Time To Recover ](demos/03/README.md)|?    |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/OPS20_Final_Full.mp4)
-
+|[1 - Creating An Incident Response Plan](demos/01/README.md)| *7*   |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4)
+|[2 - Remediation Improvements (Context & Guidance)](demos/02/README.md)| *5* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_2_full.mp4)
+|[3 - Tools to Reduce the Time To Recover](demos/03/README.md)| *7*   |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_3_full.mp4)
 
 [Take me there ...](demos/README.md)
 
