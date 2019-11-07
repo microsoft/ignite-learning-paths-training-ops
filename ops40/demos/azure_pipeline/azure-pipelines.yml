@@ -23,14 +23,14 @@ variables:
   aks-cluster: tailwindtradersaksfqkz63c47hsxc
   ingress: 0308a1246be6400d8ba5.eastus2.aksapp.io
 
+  # Production Database
+  hostDB: https://ttshoppingdbfqkz63c47hsxc.documents.azure.com:443/
+
 stages:
 
 - stage: test
   jobs:
   - job: tests
-
-    variables:
-      hostDB: https://ttshoppingdbkkzzoi7tmdh42.documents.azure.com:443/
 
     pool:
       name: Hosted Ubuntu 1604
