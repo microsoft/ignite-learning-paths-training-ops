@@ -40,4 +40,4 @@ When your growth or the demand for your systems exceeds, or is projected to exce
 
 In this session, dive into capacity planning and cost estimation basics, including the tools Azure provides to help with both. We wrap up with a discussion and demonstration of how Tailwind Traders judiciously applied Azure scaling features. Learn how to satisfy your customers and a growing demand, even when “challenged” by success.
 
-### New Comment
+# Demo PR
