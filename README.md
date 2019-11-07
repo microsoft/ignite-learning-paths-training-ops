@@ -1,6 +1,6 @@
 # Improving Your Reliability through Modern Operations Practices
 
-[![Build Status](https://ops40-demo-update-002.visualstudio.com/ops40-demo-update-002/_apis/build/status/neilpeterson.ignite-learning-paths-training-ops?branchName=master)](https://ops40-demo-update-002.visualstudio.com/ops40-demo-update-002/_build/latest?definitionId=1&branchName=master)
+[![Build Status](https://ops40-demo-update-002.visualstudio.com/ops40-demo-update-002/_apis/build/status/neilpeterson.ignite-learning-paths-training-ops?branchName=master)](https://ops40-demo-update-002.visualstudio.com/ops40-demo-update-002/_build/latest?definitionId=2&branchName=master)
 
 ## [OPS10: Building the Foundation for Modern Ops: Monitoring ](/ops10/README.md)
 
@@ -39,3 +39,5 @@ In this session, we will see how continuous delivery pipelines have helped Tailw
 When your growth or the demand for your systems exceeds, or is projected to exceed, your current capacity – that’s a “good” problem to have. However, this can be just as much of a threat to your system’s reliability as any other factor.
 
 In this session, dive into capacity planning and cost estimation basics, including the tools Azure provides to help with both. We wrap up with a discussion and demonstration of how Tailwind Traders judiciously applied Azure scaling features. Learn how to satisfy your customers and a growing demand, even when “challenged” by success.
+
+# Demo PR
