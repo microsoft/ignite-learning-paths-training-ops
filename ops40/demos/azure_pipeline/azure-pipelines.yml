@@ -176,12 +176,16 @@ stages:
             artifact: drop
             patterns: '**/*'
 
-          - task: HelmDeploy@0
-            displayName: 'helm init --client-only'
+          # - task: HelmDeploy@0
+          #   displayName: 'helm init --client-only'
+          #   inputs:
+          #     connectionType: None
+          #     command: init
+          #     arguments: '--client-only'
+          
+          - task: HelmInstaller@1
             inputs:
-              connectionType: None
-              command: init
-              arguments: '--client-only'
+              helmVersionToInstall: '2.14.3'
 
           - task: AzureCLI@1
             displayName: Deploy Pre-Production
@@ -216,12 +220,16 @@ stages:
             artifact: drop
             patterns: '**/*'
 
-          - task: HelmDeploy@0
-            displayName: 'helm init --client-only'
+          # - task: HelmDeploy@0
+          #   displayName: 'helm init --client-only'
+          #   inputs:
+          #     connectionType: None
+          #     command: init
+          #     arguments: '--client-only'
+
+          - task: HelmInstaller@1
             inputs:
-              connectionType: None
-              command: init
-              arguments: '--client-only'
+              helmVersionToInstall: '2.14.3'
 
           - task: AzureCLI@1
             displayName: Deploy Production
