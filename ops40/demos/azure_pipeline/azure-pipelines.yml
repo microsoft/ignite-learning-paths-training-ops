@@ -10,26 +10,72 @@ variables:
   azureSubscription: azure-service-connection
 
   # Container Registry
-  containerRegistryName: ttacrkkzzoi7tmdh42
-  containerRegistryFqdn: ttacrkkzzoi7tmdh42.azurecr.io
+  containerRegistryName: ttacrfqkz63c47hsxc
+  containerRegistryFqdn: ttacrfqkz63c47hsxc.azurecr.io
 
   # AKS Pre-Production
-  aks-cluster-rg-pre-prod: ops40-ignite-orlando
-  aks-cluster-pre-prod: tailwindtradersakskkzzoi7tmdh42
-  ingress-pre-prod: aed5cca90eb04a48b614.eastus2.aksapp.io
+  aks-cluster-rg-pre-prod: ops40-demo-update-002
+  aks-cluster-pre-prod: tailwindtradersaksfqkz63c47hsxc
+  ingress-pre-prod: 0308a1246be6400d8ba5.eastus2.aksapp.io
 
   # Production
-  aks-cluster-rg: ops40-ignite-orlando
-  aks-cluster: tailwindtradersakskkzzoi7tmdh42
-  ingress: aed5cca90eb04a48b614.eastus2.aksapp.io
+  aks-cluster-rg: ops40-demo-update-002
+  aks-cluster: tailwindtradersaksfqkz63c47hsxc
+  ingress: 0308a1246be6400d8ba5.eastus2.aksapp.io
 
-# Stages - a collection of related jobs. Stages can be controlled by conditions and approval checks.
 stages:
+
+- stage: test
+  jobs:
+  - job: tests
+
+    variables:
+      hostDB: https://ttshoppingdbkkzzoi7tmdh42.documents.azure.com:443/
+
+    pool:
+      name: Hosted Ubuntu 1604
+
+    steps:
+
+    - task: PowerShell@2
+      displayName: Install Pester
+      inputs:
+        targetType: 'inline'
+        script: |
+          Find-Module pester | Install-Module -Force
+
+    - task: AzureCLI@1
+      displayName: Generate values file for test
+      inputs:
+        azureSubscription: $(azureSubscription)
+        scriptLocation: 'inlineScript'
+        inlineScript: |
+          pwsh ./deployment/helm-values/generate-config.ps1 -resourceGroup $(aks-cluster-rg-pre-prod) -sqlPwd Password2020! -gvaluesTemplate deployment/helm-values/gvalues.template -outputFile ./values.yaml
+
+    - task: PowerShell@2
+      displayName: Parse host name
+      inputs:
+        targetType: 'inline'
+        script: |
+          $content = Get-Content values.yaml
+          $hostName = $content[37].split(" ")[7]
+
+    - task: PowerShell@2
+      displayName: Run Pester tests
+      inputs:
+        targetType: 'inline'
+        script: 'invoke-pester -Script @{ Path = ''./ops40/demos/azure_pipeline/tests/''; Parameters = @{ hostName = ''$(hostDB)'' }} -OutputFile "./test-results.xml" -OutputFormat ''NUnitXML'''
+
+    - task: PublishTestResults@2
+      displayName: Publish test results
+      inputs:
+        testResultsFormat: 'NUnit'
+        testResultsFiles: '**/test-results.xml'
+        failTaskOnFailedTests: true
 
 - stage: build
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-  # Jobs - a collection of steps to be run on an agent. Jobs can depend on other jobs or be run conditionally.
   jobs:
   - job: helm
 
