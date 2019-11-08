@@ -5,7 +5,7 @@ stages:
   jobs:  
   - deployment: Deploy
     displayName: Deploy job
-    pool: default
+    pool: Hosted Ubuntu 1604
     environment: NehaliEnvironment01
     strategy:
       runOnce:
