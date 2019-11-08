@@ -176,13 +176,8 @@ stages:
       
         preDeploy:
           steps:
-          - task: AzureCLI@1
-            displayName: pre-deploy-hook
-            inputs:
-              azureSubscription: $(azureSubscription)
-              scriptLocation: 'inlineScript'
-              inlineScript: |
-                kubectl delete configmap -l release=my-tt-cart
+            - script: echo Hello, world! This is pre-deploy
+              displayName: 'Run a one-line script'
 
         deploy:
           steps:
