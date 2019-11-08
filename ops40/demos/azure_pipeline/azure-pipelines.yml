@@ -163,7 +163,6 @@ stages:
     pool: Hosted Ubuntu 1604
     continueOnError: false
     timeoutInMinutes: 20
-
     environment: pre-production
 
     strategy:
@@ -199,10 +198,6 @@ stages:
     pool: Hosted Ubuntu 1604
     continueOnError: false
     timeoutInMinutes: 20
-
-    pool:
-      name: Hosted Ubuntu 1604
-
     environment: production
 
     strategy:
