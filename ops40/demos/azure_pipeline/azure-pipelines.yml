@@ -172,6 +172,7 @@ stages:
     # strategy influences life-cycle hooks
     strategy:
       runOnce:
+      
         preDeploy:
           pool: Hosted Ubuntu 1604         
           steps:
