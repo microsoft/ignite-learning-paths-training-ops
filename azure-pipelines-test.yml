@@ -1,0 +1,40 @@
+trigger: none
+stages:
+- stage: Deploy
+  displayName: Deploy stage
+  jobs:  
+  - deployment: Deploy
+    displayName: Deploy job
+    pool: default
+    environment: NehaliEnvironment01
+    strategy:
+      runOnce:
+        preDeploy:
+          steps:
+            - script: echo Hello, world! This is pre-deploy
+              displayName: 'Run a one-line script'
+        deploy:
+          steps:
+            - script: echo Hello, world! This is deploy
+              displayName: 'Run a one-line script'
+
+        routeTraffic:
+          steps:
+            - script: echo Hello, world! This is routeTraffic
+              displayName: 'Run a one-line script'
+
+        postRouteTraffic:
+          steps:
+            - script: echo Hello, world! This is postRouteTraffic
+              displayName: 'Run a one-line script'
+
+        on:
+          failure:
+            steps:
+            - script: echo Hello, world! This is on failure
+              displayName: 'Run a one-line script'
+
+          success:
+            steps:
+            - script: echo Hello, world! This is on success
+              displayName: 'Run a one-line script'
