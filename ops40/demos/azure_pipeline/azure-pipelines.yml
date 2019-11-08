@@ -29,6 +29,8 @@ variables:
 stages:
 
 - stage: test
+  dependsOn: []
+  
   jobs:
   - job: tests
     pool: Hosted Ubuntu 1604
@@ -74,6 +76,7 @@ stages:
         failTaskOnFailedTests: true
 
 - stage: build
+  dependsOn: test
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
   jobs:
@@ -156,6 +159,7 @@ stages:
         artifactName: 'drop'
 
 - stage: release_pre_production
+  dependsOn: build
 
   # Deployment job - special type of job that runs against an environment (run once, matrix, parallel)
   jobs:
@@ -193,6 +197,8 @@ stages:
                 helm upgrade my-tt-cart $(containerRegistryName)/cart-api --install -f values.yaml --set ingress.hosts={$(ingress-pre-prod)} --set image.repository=$(containerRegistryFqdn)/cart.api --set image.tag=$(Build.BuildId)
 
 - stage: release_production
+  dependsOn: release_pre_production
+
   jobs:
   - deployment: release_production
     pool: Hosted Ubuntu 1604
