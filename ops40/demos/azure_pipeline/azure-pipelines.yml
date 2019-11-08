@@ -31,9 +31,9 @@ stages:
 - stage: test
   jobs:
   - job: tests
-
-    pool:
-      name: Hosted Ubuntu 1604
+    pool: Hosted Ubuntu 1604
+    continueOnError: false
+    timeoutInMinutes: 20
 
     steps:
 
@@ -113,9 +113,9 @@ stages:
         inlineScript: 'az acr helm push -n $(containerRegistryName) /home/vsts/work/1/a/cart-api-$(Build.BuildId).tgz'
 
   - job: docker
-
-    pool:
-      name: Hosted Ubuntu 1604
+    pool: Hosted Ubuntu 1604
+    continueOnError: false
+    timeoutInMinutes: 20
 
     steps:
 
@@ -160,10 +160,9 @@ stages:
   # Deployment job - special type of job that runs against an environment (run once, matrix, parallel)
   jobs:
   - deployment: release_pre_production
-    displayName: Release Pre-Production
-
-    pool:
-      name: Hosted Ubuntu 1604
+    pool: Hosted Ubuntu 1604
+    continueOnError: false
+    timeoutInMinutes: 20
 
     environment: pre-production
 
@@ -175,13 +174,6 @@ stages:
           - download: current
             artifact: drop
             patterns: '**/*'
-
-          # - task: HelmDeploy@0
-          #   displayName: 'helm init --client-only'
-          #   inputs:
-          #     connectionType: None
-          #     command: init
-          #     arguments: '--client-only'
           
           - task: HelmInstaller@1
             inputs:
@@ -204,7 +196,9 @@ stages:
 - stage: release_production
   jobs:
   - deployment: release_production
-    displayName: Release Production
+    pool: Hosted Ubuntu 1604
+    continueOnError: false
+    timeoutInMinutes: 20
 
     pool:
       name: Hosted Ubuntu 1604
@@ -219,13 +213,6 @@ stages:
           - download: current
             artifact: drop
             patterns: '**/*'
-
-          # - task: HelmDeploy@0
-          #   displayName: 'helm init --client-only'
-          #   inputs:
-          #     connectionType: None
-          #     command: init
-          #     arguments: '--client-only'
 
           - task: HelmInstaller@1
             inputs:
