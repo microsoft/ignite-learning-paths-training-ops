@@ -76,7 +76,8 @@ stages:
         failTaskOnFailedTests: true
 
 - stage: build
-  dependsOn: test
+  # dependsOn: test
+  dependsOn: []
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
   jobs:
@@ -159,7 +160,8 @@ stages:
         artifactName: 'drop'
 
 - stage: release_pre_production
-  dependsOn: build
+  # dependsOn: build
+  dependsOn: []
 
   jobs:
   - deployment: release_pre_production
@@ -174,10 +176,9 @@ stages:
       runOnce:
       
         preDeploy:
-          pool: Hosted Ubuntu 1604         
           steps:
           - task: AzureCLI@1
-            displayName: Deploy Pre-Production
+            displayName: pre-deploy-hook
             inputs:
               azureSubscription: $(azureSubscription)
               scriptLocation: 'inlineScript'
