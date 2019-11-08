@@ -78,10 +78,10 @@ stages:
 
   jobs:
   - job: helm
-
-    pool:
-      name: Hosted Ubuntu 1604
-
+    pool: Hosted Ubuntu 1604
+    continueOnError: false
+    timeoutInMinutes: 20
+    
     steps:
 
     - task: AzureCLI@1
