@@ -160,8 +160,7 @@ stages:
         artifactName: 'drop'
 
 - stage: release_pre_production
-  # dependsOn: build
-  dependsOn: []
+  dependsOn: build
 
   jobs:
   - deployment: release_pre_production
