@@ -27,6 +27,26 @@ This step was originally part of the demo however can take a few minutes to comp
 
 3. Enter a connection name of `azure-service-connection`, select the appropriate Azure subscription, and select **OK**.
 
+### Import and run the pipeline
+
+1. Select **Pipelines** from the left hand Azure DevOps menu.
+
+2. If prompted, select **Try it!** to enable the new unified YAML pipeline experience.
+
+![Pipeline Run URL with Build ID](./images/multistage.png)
+
+3. Select **Create Pipeline**.
+
+4. Select **GitHub YAML** and then select the **ignite-learning-paths-training-ops** repo fork. You should have created this repo during set up.
+
+5. Select **Existing Azure Pipelines YAML file** for the project type.
+
+6. Browse the repository and select the **azure-pipelines.yml** file.
+
+7. Select **Continue** to create the pipeline.
+
+8. Click **Run** to save and run the pipeline.
+
 ### Optional: Break Tailwind Traders
 
 If you would like to break the Tailwind app and show remediation using an Azure DevOps pipeline, here is a quick way to do so.
@@ -86,23 +106,7 @@ Browse to the `HOSTS` address and click on the tailwind cart icon.
 
 ### Create Pipeline
 
-1. Select **Pipelines** from the left hand Azure DevOps menu.
 
-2. If prompted, select **Try it!** to enable the new unified YAML pipeline experience.
-
-![Pipeline Run URL with Build ID](./images/multistage.png)
-
-3. Select **Create Pipeline**.
-
-4. Select **GitHub YAML** and then select the **ignite-learning-paths-training-ops** repo fork. You should have created this repo during set up.
-
-5. Select **Existing Azure Pipelines YAML file** for the project type.
-
-6. Browse the repository and select the **azure-pipelines.yml** file.
-
-7. Select **Continue** to create the pipeline.
-
-8. Click **Run** to save and run the pipeline.
 
 ### Pipeline Overview
 
