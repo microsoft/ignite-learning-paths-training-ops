@@ -104,28 +104,37 @@ my-tt-cart                                 d4aa3f5a552742c8be0f.eastus.aksapp.io
 
 Browse to the `HOSTS` address and click on the tailwind cart icon.
 
-### Create Pipeline
+### Create pull request
+
+### Demo 1 - while on the test stage
+
+- Detail stages and jobs
+- Show tests results and logging
+- Back in Github show test results
+- Merge Pull Request
+
+### Demo 2 - Between tests and build
+
+- Conditions
+- Start with concurency on stages
+- Concurency on jobs
+- Triggers, tasks
+- Variables
+
+### Demo 3 - while on release pre production
+
+- Deployment Job
+- Environment logging
+- Environment checks
+- Deployment strategy
+
+### Demo 4 - between pre-prduction and production
+
+- Build ID Variabe in YAML
+- Show ACR contianer image
+- Show running container in Kubernetes
 
 
-
-### Pipeline Overview
-
-While the pipeline is running, explain stages and jobs while looking at the pipeline overview.
-
-![Pipeline Run URL with Build ID](./images/stages.png)
-
-Open up the pipeline YAML, and detail the following items:
-
-- [Stages](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/stages?view=azure-devops&tabs=yaml)
-- [Jobs](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/phases?view=azure-devops&tabs=yaml)
-- [Trigger](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/triggers?view=azure-devops&tabs=yaml)
-- [Path filter](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/triggers?view=azure-devops&tabs=yaml#paths)
-- [Pull request trigger](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/triggers?view=azure-devops&tabs=yaml#pr-triggers)
-- [Variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch)
-- [Variable groups](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml)
-- [Conditions](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/conditions?view=azure-devops&tabs=yaml)
-- [Tasks](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/tasks?view=azure-devops&tabs=yaml)
-- [environments](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/environments?view=azure-devops)
 
 ### Production Reconciliation
 
