@@ -76,7 +76,7 @@ stages:
         failTaskOnFailedTests: true
 
 - stage: build
-  dependsOn: test
+  # dependsOn: test
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
   jobs:
