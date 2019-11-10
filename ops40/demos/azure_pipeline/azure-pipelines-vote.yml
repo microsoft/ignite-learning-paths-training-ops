@@ -36,5 +36,5 @@ stages:
                   inputs:
                     action: 'deploy'
                     namespace: 'pre-production'
-                    kubernetesServiceConnection: 'pre-production-tailwindtradersaksnjrrmmx4aqaso-pre-production-1573340652391'
-                    manifests: './ops40/demos/manifest/azure-vote.yaml'
+                    kubernetesServiceConnection: 'kubernetes-pre-production-tailwindtradersaksnjrrmmx4aqaso-pre-production-two-1573370579001'
+
