@@ -1,8 +1,8 @@
-trigger:
-- master
+# trigger:
+# - master
 
-pr:
-- master
+# pr:
+# - master
 
 variables:
 
@@ -76,7 +76,7 @@ stages:
         failTaskOnFailedTests: true
 
 - stage: build
-  dependsOn: []
+  dependsOn: test
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
   jobs:
