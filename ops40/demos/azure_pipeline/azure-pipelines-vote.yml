@@ -17,6 +17,8 @@ stages:
 
               deploy:
                 steps:
+
+                - checkout: self
                 
                 - task: Bash@3
                   inputs:
