@@ -256,3 +256,5 @@ Containers:
 3. Once the testing stage has completed, show the test results.
 
 ![Azure Pipeline test results](./images/tests.png)
+
+# Demo Ready
