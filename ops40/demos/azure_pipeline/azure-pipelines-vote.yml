@@ -1,0 +1,40 @@
+trigger:
+- master
+
+stages:
+  
+  - stage: pre_production
+
+    jobs:
+    - deployment: pre_production
+      pool: Hosted Ubuntu 1604
+      continueOnError: false
+      timeoutInMinutes: 20
+      environment: pre-production
+
+      strategy:
+            runOnce:
+
+              deploy:
+                steps:
+                
+                - task: Bash@3
+                  inputs:
+                    targetType: 'inline'
+                    script: |
+                      echo "----"
+                      
+                      pwd
+                      
+                      echo "----"
+                      
+                      ls
+                      
+                      echo "----"
+
+                - task: KubernetesManifest@0
+                  inputs:
+                    action: 'deploy'
+                    namespace: 'pre-production'
+                    kubernetesServiceConnection: 'pre-production-tailwindtradersaksnjrrmmx4aqaso-pre-production-1573340652391'
+                    manifests: 'azure-vote.yaml'
