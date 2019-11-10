@@ -10,7 +10,7 @@ stages:
       pool: Hosted Ubuntu 1604
       continueOnError: false
       timeoutInMinutes: 20
-      environment: pre-production
+      environment: test-kubernetes
 
       strategy:
             runOnce:
