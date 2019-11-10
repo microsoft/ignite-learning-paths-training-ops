@@ -17,27 +17,13 @@ stages:
 
               deploy:
                 steps:
-
-                - checkout: self
                 
-                - task: Bash@3
-                  inputs:
-                    targetType: 'inline'
-                    script: |
-                      echo "----"
-                      
-                      pwd
-                      
-                      echo "----"
-                      
-                      ls
-                      
-                      echo "----"
-
+                - checkout: self
+              
                 - task: KubernetesManifest@0
                   inputs:
                     action: 'deploy'
-                    kubernetesServiceConnection: 'kubernetes-pre-production-tailwindtradersaksnjrrmmx4aqaso-pre-production-two-1573370579001'
-                    namespace: 'pre-production'
+                    kubernetesServiceConnection: 'test-kubernetes-tailwindtradersaksnjrrmmx4aqaso-test-kubernetes-1573429988669'
+                    namespace: 'test-kubernetes'
                     manifests: 'ops40/demos/manifest/azurevote.yml'
 
