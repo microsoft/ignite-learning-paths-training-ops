@@ -5,26 +5,37 @@
 # - master
 
 variables:
+# - group: my-variable-group
 
   # Azure
-  azureSubscription: azure-service-connection
+- name: azureSubscription
+  value: 'azure-service-connection'
 
   # Container Registry
-  containerRegistryName: ttacrfqkz63c47hsxc
-  containerRegistryFqdn: ttacrfqkz63c47hsxc.azurecr.io
+- name: containerRegistryName
+  value: ttacrfqkz63c47hsxc
+- name: containerRegistryFqdn
+  value: ttacrfqkz63c47hsxc.azurecr.io
 
   # AKS Pre-Production
-  aks-cluster-rg-pre-prod: ops40-demo-update-002
-  aks-cluster-pre-prod: tailwindtradersaksfqkz63c47hsxc
-  ingress-pre-prod: 0308a1246be6400d8ba5.eastus2.aksapp.io
+- name: aks-cluster-rg-pre-prod
+  value: ops40-demo-update-002
+- name: aks-cluster-pre-prod
+  value: tailwindtradersaksfqkz63c47hsxc
+- name: ingress-pre-prod
+  value: 0308a1246be6400d8ba5.eastus2.aksapp.io
 
   # Production
-  aks-cluster-rg: ops40-demo-update-002
-  aks-cluster: tailwindtradersaksfqkz63c47hsxc
-  ingress: 0308a1246be6400d8ba5.eastus2.aksapp.io
+- name: aks-cluster-rg
+  value: ops40-demo-update-002
+- name: aks-cluster
+  value: tailwindtradersaksfqkz63c47hsxc
+- name: ingress
+  value: 0308a1246be6400d8ba5.eastus2.aksapp.io
 
   # Production Database
-  hostDB: https://ttshoppingdbfqkz63c47hsxc.documents.azure.com:443/
+- name: hostDB
+  value: https://ttshoppingdbfqkz63c47hsxc.documents.azure.com:443/
 
 stages:
 
