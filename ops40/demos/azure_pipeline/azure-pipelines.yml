@@ -5,7 +5,7 @@
 # - master
 
 variables:
-- group: test
+# - group: test
 
   # Azure
 - name: azureSubscription
