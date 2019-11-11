@@ -106,20 +106,22 @@ Browse to the `HOSTS` address and click on the tailwind cart icon.
 
 ### Create pull request
 
+Create a pull request against the GitHub fork that contains the pipeline. Once created, show that tests from the pipeline are reflected in the PR.
+
 ### Demo 1 - while on the test stage
 
-- Detail stages and jobs
+- Quick overview on stages and jobs
 - Show tests results and logging
-- Back in Github show test results
+- Show test results in GitHub
 - Merge Pull Request
+- Show that a new instance of the pipeline has started
 
 ### Demo 2 - Between tests and build
 
-- Conditions
-- Start with concurency on stages
-- Concurency on jobs
-- Triggers, tasks
+- Triggers
 - Variables
+- Stage conditions, dependencies, and concurency
+- Jobs and concurency 
 
 ### Demo 3 - while on release pre production
 
@@ -192,69 +194,3 @@ Containers:
     Container ID:   docker://9438c601b838855659abef2f68ab19c281bd172525ce09aedbbcf65dc0940580
     Image:          ttacr5iny4v2wygm3k.azurecr.io/cart.api:1818
 ```
-
-### Add Unit Test
-
-1. Add the following stage to the pipeline, click **Save**, which will start a new run.
-
-```
-- stage: test
-  jobs:
-  - job: tests
-
-    variables:
-      hostDB: https://ttshoppingdbkkzzoi7tmdh42.documents.azure.com:443/
-
-    pool:
-      name: Hosted Ubuntu 1604
-
-    steps:
-
-    - task: PowerShell@2
-      displayName: Install Pester
-      inputs:
-        targetType: 'inline'
-        script: |
-          Find-Module pester | Install-Module -Force
-
-    - task: AzureCLI@1
-      displayName: Generate values file for test
-      inputs:
-        azureSubscription: $(azureSubscription)
-        scriptLocation: 'inlineScript'
-        inlineScript: |
-          pwsh ./deployment/helm-values/generate-config.ps1 -resourceGroup $(aks-cluster-rg-pre-prod) -sqlPwd Password2020! -gvaluesTemplate deployment/helm-values/gvalues.template -outputFile ./values.yaml
-
-    - task: PowerShell@2
-      displayName: Parse host name
-      inputs:
-        targetType: 'inline'
-        script: |
-          $content = Get-Content values.yaml
-          $hostName = $content[37].split(" ")[7]
-
-    - task: PowerShell@2
-      displayName: Run Pester tests
-      inputs:
-        targetType: 'inline'
-        script: 'invoke-pester -Script @{ Path = ''./ops40/demos/azure_pipeline/tests/''; Parameters = @{ hostName = ''$(hostDB)'' }} -OutputFile "./test-results.xml" -OutputFormat ''NUnitXML'''
-
-    - task: PublishTestResults@2
-      displayName: Publish test results
-      inputs:
-        testResultsFormat: 'NUnit'
-        testResultsFiles: '**/test-results.xml'
-        failTaskOnFailedTests: true
-```
-
-2. The test takes a few minutes to run. Use this time to show off these other features and things.
-
-- [Environments and manual approvals](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/environments?view=azure-devops)
-- Pipeline logs
-- [Azure Pipeline YAML reference](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema)
-
-3. Once the testing stage has completed, show the test results.
-
-![Azure Pipeline test results](./images/tests.png)
-
-# Demo Ready
