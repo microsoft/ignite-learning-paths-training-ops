@@ -2,6 +2,13 @@
   "version": "Notebook/1.0",
   "items": [
     {
+      "type": 1,
+      "content": {
+        "json": "![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/screenshots/TailwindLogo.JPG) \r\n## Troubleshooting Guide\r\n\r\nThis troubleshooting guide provides you with shortcuts to helpful tools during remediation efforts.\r\n\r\n---\r\n\r\n"
+      },
+      "name": "text - 11"
+    },
+    {
       "type": 11,
       "content": {
         "version": "LinkItem/1.0",
@@ -43,12 +50,6 @@
             "linkTarget": "Url",
             "linkLabel": "Cloud Shell",
             "style": "link"
-          },
-          {
-            "cellValue": "https://ms.portal.azure.com/#@microsoft.onmicrosoft.com/resource/subscriptions/cd400f31-6f94-40ab-863a-673192a3c0d0/resourceGroups/op20jhand826/providers/Microsoft.Storage/storageAccounts/ops20jhand826/storageexplorer",
-            "linkTarget": "Url",
-            "linkLabel": "Who's On-call",
-            "style": "link"
           }
         ]
       },
@@ -57,7 +58,7 @@
     {
       "type": 1,
       "content": {
-        "json": "Set the parameters below to tune your analysis set. Use the `Show` parameter above to see only existing or new failures. The comparision `UseComparisionTimeRange` parameter sets the window of time to look for existing failures. `Requests` and `ResultCodes` parameters allow you to filter down to a smaller set of issues."
+        "json": "## Remediation\r\n\r\n- Create Incident Ticket (if one doesn't exist)\r\n- Update Status Page\r\n- Check Azure Service Health, Application Map, Log Analytics, and quick metrics/logs below\r\n\r\nSet the parameters below to tune your analysis set. Use the `Show` parameter above to see only existing or new failures. The comparision `UseComparisionTimeRange` parameter sets the window of time to look for existing failures. `Requests` and `ResultCodes` parameters allow you to filter down to a smaller set of issues."
       },
       "name": "text - 2"
     },
@@ -65,8 +66,6 @@
       "type": 9,
       "content": {
         "version": "KqlParameterItem/1.0",
-        "query": "",
-        "crossComponentResources": [],
         "parameters": [
           {
             "id": "eac9cbf1-6364-4f28-9c61-a9b038c035d7",
@@ -248,11 +247,11 @@
         "version": "KqlItem/1.0",
         "query": "// failed request count by name\nlet start=datetime(\"2019-09-18T20:46:00.000Z\");\nlet end=datetime(\"2019-09-18T22:22:00.000Z\");\nlet timeGrain=1m;\nlet dataset=requests\n// additional filters can be applied here\n| where timestamp > start and timestamp < end\n| where client_Type != \"Browser\" ;\n// calculate failed request count for all requests\ndataset\n| summarize failedCount=sumif(itemCount, success == false) by bin(timestamp, timeGrain)\n| extend request='Overall'\n// render result in a chart\n| render timechart",
         "size": 0,
-        "exportToExcelOptions": "visible",
         "timeContext": {
           "durationMs": 0
         },
         "timeContextFromParameter": "TimeRange",
+        "exportToExcelOptions": "visible",
         "queryType": 0,
         "resourceType": "microsoft.insights/components"
       },
@@ -298,8 +297,7 @@
                 "palette": "greenRed"
               }
             }
-          ],
-          "labelSettings": []
+          ]
         }
       },
       "name": "query - 7"
@@ -321,34 +319,9 @@
     {
       "type": 1,
       "content": {
-        "json": "## Mitigation\n\n- Create Incident Ticket (if one doesn't exist)\n- Update Status Page\n- Check relevant logs below for HTTP errors"
-      },
-      "name": "text - 8"
-    },
-    {
-      "type": 1,
-      "content": {
         "json": "## Once the Incident has been resolved\n\n- [Close the ticket](https://dev.azure.com/icm-poc/Serverless%20Incident%20Management/_workitems/recentlyupdated/)\n- Update the status page (see instructions above - use `close` instead of `open`)\n- Collect evidence and data for the post-incident review\n- Schedule post-incident review. [Action Item](https://dev.azure.com)"
       },
       "name": "text - 9"
-    },
-    {
-      "type": 3,
-      "content": {
-        "version": "KqlItem/1.0",
-        "query": "ContainerLog | where Image contains \"webapigw\"",
-        "size": 0,
-        "exportToExcelOptions": "visible",
-        "timeContext": {
-          "durationMs": 14400000
-        },
-        "queryType": 0,
-        "resourceType": "microsoft.operationalinsights/workspaces",
-        "crossComponentResources": [
-          "/subscriptions/cd400f31-6f94-40ab-863a-673192a3c0d0/resourceGroups/ops20jhand0102/providers/Microsoft.OperationalInsights/workspaces/ttomspealxdj4vogcc"
-        ]
-      },
-      "name": "query - 10"
     }
   ],
   "styleSettings": {},

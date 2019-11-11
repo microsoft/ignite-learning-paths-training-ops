@@ -21,7 +21,7 @@ The Powerpoint slide deck is divided up in to four (4) sections.
 [View all slides and a transcript](script/OPS20_Speaking_Script.md)
 
 
-[Download the master Powerpoint file](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slides/OPS20_Responding_to_incidents_master.pptx)
+[Download the master Powerpoint file](../presentations.md)
 
 [Presentation thumbnails and a speaking script can be found here](script/OPS20_Speaking_Script.md)
 
