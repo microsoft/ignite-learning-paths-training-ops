@@ -1,98 +1,6 @@
 # OPS40 Demo Guide
 
-First, deploy the Tailwind Traders application onto a Kubernetes cluster. Deployment steps and automation can be found here:
-
-https://github.com/microsoft/ignite-learning-paths-training-ops/tree/master/deployment
-
-Once completed, fork this repo into your own GitHub account and clone to your development system.
-
-https://github.com/microsoft/ignite-learning-paths-training-ops.git
-
-Update the values in the `/ops40/demos/azure_pipeline/azure-pipelines.yaml` file to match the AKS and ACR deployments. The following commands can be used to find these values.
-
-```
-az acr list -o table
-az aks list -o table
-```
-
-Once done, push the updates back to GitHub. This file is used in demo 1 when creating an Azure Pipeline.
-
-### Create Azure Pipeline Service Connection
-
-This step was originally part of the demo however can take a few minutes to complete. To expedite the process I recommend configuring the service connection before starting the demo.
-
-1. Navigate to the new Azure DevOps organization, and then the new DevOps project.
-
-2. Select **Project settings** > **Service connections** > **New service connection** > **Azure Resource Manager**.
-
-3. Enter a connection name of `azure-service-connection`, select the appropriate Azure subscription, and select **OK**.
-
-### Import and run the pipeline
-
-1. Select **Pipelines** from the left hand Azure DevOps menu.
-
-2. If prompted, select **Try it!** to enable the new unified YAML pipeline experience.
-
-![Pipeline Run URL with Build ID](./images/multistage.png)
-
-3. Select **Create Pipeline**.
-
-4. Select **GitHub YAML** and then select the **ignite-learning-paths-training-ops** repo fork. You should have created this repo during set up.
-
-5. Select **Existing Azure Pipelines YAML file** for the project type.
-
-6. Browse the repository and select the **azure-pipelines.yml** file.
-
-7. Select **Continue** to create the pipeline.
-
-8. Click **Run** to save and run the pipeline.
-
-### Optional: Break Tailwind Traders
-
-If you would like to break the Tailwind app and show remediation using an Azure DevOps pipeline, here is a quick way to do so.
-
-Edit the configmap for the TWT cart api:
-
-```
-kubectl edit configmap cfg-my-tt-cart
-```
-
-Update the `HOST` value so that it is not valid. In the following example, I have removed `https` from the URL. Once done save the configmap.
-
-```
-HOST: ://ttshoppingdbt6grppp3eluvk.documents.azure.com:443/
-```
-
-Next, the cart pod needs to be restarted, which will take in the new value and effectively break the Tailwind cart.
-
-Return a list of pods
-
-```
-$ kubectl get pods
-
-NAME                                                        READY   STATUS    RESTARTS   AGE
-my-tt-cart-7cd4cbd744-j6ngl                                 1/1     Running   0          18m
-my-tt-coupon-tt-coupons-85c96964fc-4r9zn                    1/1     Running   0          19m
-my-tt-image-classifier-7d6d97875f-f8sjp                     1/1     Running   0          18m
-my-tt-login-7f88cff49-5d876                                 1/1     Running   0          19m
-my-tt-mobilebff-67dcb9f988-w6xjr                            1/1     Running   0          18m
-my-tt-popular-product-tt-popularproducts-67dfcc8b67-qx5fg   1/1     Running   0          19m
-my-tt-product-tt-products-d9c54d955-z8nf4                   1/1     Running   0          19m
-my-tt-profile-5c57bf89b4-zjqdf                              1/1     Running   0          19m
-my-tt-stock-6b969dd459-zptrz                                1/1     Running   0          19m
-my-tt-webbff-67849c78b7-bjd5n                               1/1     Running   0          18m
-web-6b56cc7d7c-ws7v4                                        1/1     Running   0          18m
-```
-
-Delete the `my-tt-cart` pod:
-
-```
-kubectl delete pod my-tt-cart-7cd4cbd744-j6ngl
-```
-
-## Demo 1 - Azure DevOps
-
-### Demo broken application
+## Demo 1 - Tailwind Traders
 
 If you have elected to break the Tailwind Traders app, you can demo the break here. To get the address of the application run the following command.
 
@@ -104,39 +12,36 @@ my-tt-cart                                 d4aa3f5a552742c8be0f.eastus.aksapp.io
 
 Browse to the `HOSTS` address and click on the tailwind cart icon.
 
-### Create pull request
+## Demo 1 - Pipeline overview (stages, jobs, concurency)
 
-### Demo 1 - while on the test stage
-
-- Detail stages and jobs
-- Show tests results and logging
-- Back in Github show test results
-- Merge Pull Request
-
-### Demo 2 - Between tests and build
-
-- Conditions
-- Start with concurency on stages
-- Concurency on jobs
-- Triggers, tasks
+- Create pull request
+- Show that a new instance of the pipeline has started 
 - Variables
+- Stage conditions, dependencies, and concurency
+- Jobs and concurency
+- Tests
+- Show tests in VSCode
 
-### Demo 3 - while on release pre production
+## Demo 2 - Tests
+
+- Show tests results and logging
+- Show dashboarding
+- Show test results in GitHub
+- Merge pull request
+
+## Demo 3 - while on release pre production
 
 - Deployment Job
 - Environment logging
 - Environment checks
-- Deployment strategy
 
-### Demo 4 - between pre-prduction and production
+## Demo 4 - between pre-prduction and production
 
 - Build ID Variabe in YAML
 - Show ACR contianer image
 - Show running container in Kubernetes
 
-
-
-### Production Reconciliation
+## Demo 5 - Production Reconciliation
 
 At this point, hopefully, the pre-production deployment has completed. Show how production can be reconciled .via build ID (helm release version and container image version).
 
@@ -192,69 +97,3 @@ Containers:
     Container ID:   docker://9438c601b838855659abef2f68ab19c281bd172525ce09aedbbcf65dc0940580
     Image:          ttacr5iny4v2wygm3k.azurecr.io/cart.api:1818
 ```
-
-### Add Unit Test
-
-1. Add the following stage to the pipeline, click **Save**, which will start a new run.
-
-```
-- stage: test
-  jobs:
-  - job: tests
-
-    variables:
-      hostDB: https://ttshoppingdbkkzzoi7tmdh42.documents.azure.com:443/
-
-    pool:
-      name: Hosted Ubuntu 1604
-
-    steps:
-
-    - task: PowerShell@2
-      displayName: Install Pester
-      inputs:
-        targetType: 'inline'
-        script: |
-          Find-Module pester | Install-Module -Force
-
-    - task: AzureCLI@1
-      displayName: Generate values file for test
-      inputs:
-        azureSubscription: $(azureSubscription)
-        scriptLocation: 'inlineScript'
-        inlineScript: |
-          pwsh ./deployment/helm-values/generate-config.ps1 -resourceGroup $(aks-cluster-rg-pre-prod) -sqlPwd Password2020! -gvaluesTemplate deployment/helm-values/gvalues.template -outputFile ./values.yaml
-
-    - task: PowerShell@2
-      displayName: Parse host name
-      inputs:
-        targetType: 'inline'
-        script: |
-          $content = Get-Content values.yaml
-          $hostName = $content[37].split(" ")[7]
-
-    - task: PowerShell@2
-      displayName: Run Pester tests
-      inputs:
-        targetType: 'inline'
-        script: 'invoke-pester -Script @{ Path = ''./ops40/demos/azure_pipeline/tests/''; Parameters = @{ hostName = ''$(hostDB)'' }} -OutputFile "./test-results.xml" -OutputFormat ''NUnitXML'''
-
-    - task: PublishTestResults@2
-      displayName: Publish test results
-      inputs:
-        testResultsFormat: 'NUnit'
-        testResultsFiles: '**/test-results.xml'
-        failTaskOnFailedTests: true
-```
-
-2. The test takes a few minutes to run. Use this time to show off these other features and things.
-
-- [Environments and manual approvals](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/environments?view=azure-devops)
-- Pipeline logs
-- [Azure Pipeline YAML reference](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema)
-
-3. Once the testing stage has completed, show the test results.
-
-![Azure Pipeline test results](./images/tests.png)
-
-# Demo Ready
