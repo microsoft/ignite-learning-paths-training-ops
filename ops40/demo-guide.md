@@ -12,32 +12,28 @@ my-tt-cart                                 d4aa3f5a552742c8be0f.eastus.aksapp.io
 
 Browse to the `HOSTS` address and click on the tailwind cart icon.
 
-### Create pull request
+## Demo 1 - Pipeline overview (stages, jobs, concurency)
 
-Create a pull request against the GitHub fork that contains the pipeline. Once created, show that an instance of the pipeline has started.
-
-## Demo 2 - Pipeline overview (stages, jobs, and tests)
-
-- Show test in VSCode
-- Merge Pull Request
+- Create pull request
 - Show that a new instance of the pipeline has started 
-- Quick overview on stages and jobs
-- Show tests results and logging
-- Show test results in GitHub
-- Show dashboarding
-
-## Demo 2 - Between tests and build
-
 - Variables
 - Stage conditions, dependencies, and concurency
-- Jobs and concurency 
+- Jobs and concurency
+- Tests
+- Show tests in VSCode
+
+## Demo 2 - Tests
+
+- Show tests results and logging
+- Show dashboarding
+- Show test results in GitHub
+- Merge pull request
 
 ## Demo 3 - while on release pre production
 
 - Deployment Job
 - Environment logging
 - Environment checks
-- Deployment strategy
 
 ## Demo 4 - between pre-prduction and production
 
@@ -45,7 +41,7 @@ Create a pull request against the GitHub fork that contains the pipeline. Once c
 - Show ACR contianer image
 - Show running container in Kubernetes
 
-### Production Reconciliation
+## Demo 5 - Production Reconciliation
 
 At this point, hopefully, the pre-production deployment has completed. Show how production can be reconciled .via build ID (helm release version and container image version).
 
