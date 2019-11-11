@@ -7,7 +7,7 @@
 
 |  | Video | Description
 |--------|-------|-----|
-| [Part 1: Troubleshooting Guide](#part-1-azure-troubleshooting-guide) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_2_full.mp4) | Deploy the Troubleshooting Guide via [ARM template found here](TroubleshootingGuide_ARM_Template.json) and discuss features
+| [Part 1: Troubleshooting Guide](#part-1-azure-troubleshooting-guide) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_2_full.mp4) | Deploy the Troubleshooting Guide via [Gallery template found here](TroubleshootingGuide_Gallery_Template.json) and discuss features
 | [Part 2: Update Status Page](#part-2-update-status-page-from-microsoft-teams) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_2_full.mp4) | Demonstrate opening, updating, and closing a status announcement
 
 ---
@@ -34,12 +34,11 @@ Additionally, we want to highlight the importance of sharing what information we
 
 As of Thursday October 10th the Troubleshooting Guide has not been added to the automated deployment. So, we are going to use this as an opportunity to demonstrate how to create a new one using a template. 
 
-There are two (2) template files in this repository.
+The troubleshooting guide web gallery template file (JSON) is found in this repository.
 
-- [ARM](demos/01/troubleshooting_guide_template/TroubleshootingARMTemplate.json)
 - [Gallery](demos/02/troubleshooting_guide_template/TroubleshootingGuideGalleryTemplate.json)
 
-We are using the gallery method as it seems to be more responsive for on-stage demos and much of the rest of the deployment is done using ARM templates.
+We are using the gallery method as it seems to be more responsive for on-stage demos and much of the rest of the deployment is done using Gallery templates.
 
 Once the Troubleshooting Guide has been created, begin exploring it.
 
