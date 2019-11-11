@@ -32,20 +32,18 @@ Create a pull request against the GitHub fork that contains the pipeline. Once c
 - Stage conditions, dependencies, and concurency
 - Jobs and concurency 
 
-### Demo 3 - while on release pre production
+## Demo 3 - while on release pre production
 
 - Deployment Job
 - Environment logging
 - Environment checks
 - Deployment strategy
 
-### Demo 4 - between pre-prduction and production
+## Demo 4 - between pre-prduction and production
 
 - Build ID Variabe in YAML
 - Show ACR contianer image
 - Show running container in Kubernetes
-
-
 
 ### Production Reconciliation
 
