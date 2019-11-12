@@ -7,7 +7,10 @@ $hostObjct = Get-Content $valuesFile
 $host = $hostObjct[37].split(" ")[7]
 
 Describe 'Cart Host' {
-  It 'A test that should be true' {
-    $host  | Should -Be $hostName
+  $hostObjct = Get-Content $valuesFile
+  $host = $hostObjct[37].split(" ")[7]
+
+    It 'A test that should be true' {
+      $a[37].split(" ")[7] | Should -Be $hostName
+    }
   }
-}
