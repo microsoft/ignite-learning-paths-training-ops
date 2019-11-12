@@ -4,10 +4,11 @@ param (
 )
 
 $valuesFile='values.yaml'
-$hostName = Get-Content $valuesFile[37].split(" ")[7]
-# $hostName = $hostObject[37].split(" ")[7]
 
 Describe 'Cart Host' {
+  $hostObject = Get-Content $valuesFile
+  $hostName = $hostObject[37].split(" ")[7]
+
   It 'A test that should be true' {
     $hostName | Should -Be $hostName
   }
