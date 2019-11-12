@@ -2,7 +2,7 @@ param (
     [string]$hostName
 )
 
-$valuesFile="values.yaml"
+$valuesFile='values.yaml'
 
 Describe 'Cart Host' {
     $a = Get-Content $valuesFile
