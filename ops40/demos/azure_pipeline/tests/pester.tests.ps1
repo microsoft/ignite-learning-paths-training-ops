@@ -3,12 +3,12 @@ param (
 )
 
 $valuesFile='values.yaml'
+$hostObject = Get-Content $valuesFile
+$DBName = $hostObject[37].split(" ")[7]
 
 Describe 'Cart Host' {
-    $a = Get-Content $valuesFile
-    write-output $a[37].split(" ")[7]
 
-    It 'A test that should be true' {
-      $a[37].split(" ")[7] | Should -Be $hostName
-    }
+  It 'A test that should be true' {
+    $DBName | Should -Be $hostName
   }
+}
