@@ -89,7 +89,7 @@
 				},
 				"agentPoolProfiles": [{
 					"name": "agentpool",
-					"count": 2,
+					"count": 3,
 					"vmSize": "Standard_DS2_v2",
 					"osType": "Linux",
 					"osDiskSizeGB": 0,
