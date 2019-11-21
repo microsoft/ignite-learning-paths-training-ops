@@ -1,4 +1,24 @@
-# Improving Your Reliability through Modern Operations Practices
+# Ignite Learning Paths - Improving Your Reliability through Modern Operations Practices
+
+![Learning Path](https://img.shields.io/badge/Learning%20Path-OPS-fe5e00?logo=microsoft)  ![Session](https://img.shields.io/badge/🗣️Sessions-5-31c754)
+
+Welcome!
+
+The content of this repository is available for you so you can reproduce any demo or learn how to present any session of the Learning Path presented at [Migrosoft Ignite](https://www.microsoft.com/en-us/ignite) and during [Microsoft Ignite The Tour](https://www.microsoft.com/en-ca/ignite-the-tour/), in your local field office, a community user group, or even as a lunch-and-learn event for your company.
+
+## Do the Demos
+
+If you are here to reproduce a demo in the comfort of your home/office, go in in the section [Sessions](#sessions). In each session you will find deployment instructions, to create the environment you need, and a tutorial to do the demo step by step.
+
+## Presenting the content
+
+We're glad you are here and look forward to your delivery of this amazing content. As an experienced presenter, we know you know HOW to present so this guide will focus on WHAT you need to present. It will provide you a full run-through of the presentation created by the presentation design team.
+
+Along with the video of the presentation, this repository will link to all the assets you need to successfully present including PowerPoint slides and demo instructions & code.
+
+## Sessions
+
+Here all the sessions available in the learning path **Improving Your Reliability through Modern Operations Practices** (aka: **OPS**)
 
 ## [OPS10: Building the Foundation for Modern Ops: Monitoring ](/ops10/README.md)
 
@@ -37,3 +57,30 @@ In this session, we will see how continuous delivery pipelines have helped Tailw
 When your growth or the demand for your systems exceeds, or is projected to exceed, your current capacity – that’s a “good” problem to have. However, this can be just as much of a threat to your system’s reliability as any other factor.
 
 In this session, dive into capacity planning and cost estimation basics, including the tools Azure provides to help with both. We wrap up with a discussion and demonstration of how Tailwind Traders judiciously applied Azure scaling features. Learn how to satisfy your customers and a growing demand, even when “challenged” by success.
+
+
+## Contributing
+
+To know more about about to contribute to this project please refer to the [Code of Conduct](CODE_OF_CONDUCT.md) and [Contributing](CONTRIBUTING.md) page.
+
+
+## Become a Trained Presenter
+
+You don't need anything to present this content, it's all there to be used. However, by becoming a *Trained Presenter* the scalable content team will recognize you as well. *Trained Presenter* see their contact information (name, picture, website) in the bottom of each session.  
+ 
+To become a *Trained Presenter*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+
+- Complete name:
+- The code of this presentation: \<Session Code (ex:APPS10)\>
+- Link to an unlisted YouTube video of you presenting around 10 minutes of the content for this specific session.
+
+
+## Legal Notices
+
+Microsoft and any contributors grant you a license to the Microsoft documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode), see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the [LICENSE-CODE](LICENSE-CODE)
+
+Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries. The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks. Microsoft's general trademark guidelines can be found at http://go.microsoft.com/fwlink/?LinkID=254653.
+
+Privacy information can be found at https://privacy.microsoft.com/en-us/
+
+Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents, or trademarks, whether by implication, estoppel or otherwise.
