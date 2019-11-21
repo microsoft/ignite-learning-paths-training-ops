@@ -1,4 +1,6 @@
-# OPS 10 Building the Foundation for Modern Ops: Monitoring
+# OPS10: Building the Foundation for Modern Ops: Monitoring
+
+![Learning Path](https://img.shields.io/badge/Learning%20Path-OPS-fe5e00?logo=microsoft) 
 
 ## Session Abstract
 

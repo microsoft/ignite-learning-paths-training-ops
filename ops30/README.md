@@ -1,4 +1,6 @@
-# OPS30 Learning From Failure - Train the trainer
+# OPS30: Learning From Failure
+
+![Learning Path](https://img.shields.io/badge/Learning%20Path-OPS-fe5e00?logo=microsoft) 
 
 ## Session Abstract
 

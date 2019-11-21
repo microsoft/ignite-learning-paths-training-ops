@@ -1,4 +1,6 @@
-# OPS50 - Preparing for Growth: Capacity Planning and Scaling
+# OPS50: Preparing for Growth: Capacity Planning and Scaling
+
+![Learning Path](https://img.shields.io/badge/Learning%20Path-OPS-fe5e00?logo=microsoft) 
 
 ## Session Abstract
 

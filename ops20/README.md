@@ -1,4 +1,6 @@
-# OPS20 - Responding To Incidents
+# OPS20: Responding To Incidents
+
+![Learning Path](https://img.shields.io/badge/Learning%20Path-OPS-fe5e00?logo=microsoft) 
 
 ## Session Abstract
 
