@@ -1,55 +1,39 @@
-# OPS40 Demo Guide
+## Demo 1
 
-## Demo 1 - Tailwind Traders
+### Browser Tab 1: Tailwind Traders
 
-If you have elected to break the Tailwind Traders app, you can demo the break here. To get the address of the application run the following command.
+Show the Tailwind Traders application and non-functioning cart.
 
-```
-$ k get ingress
-NAME HOSTS ADDRESS PORTS AGE
-my-tt-cart d4aa3f5a552742c8be0f.eastus.aksapp.io 40.71.39.243 80 30h
-```
+### Browser Tab 2: GitHub Repository
 
-Browse to the `HOSTS` address and click on the tailwind cart icon.
+- Create a pull request from branch < a > to the master branch. 
+- Once the pull request has been created, stay on the pull request and show that the unit tests are passed through to source control.
 
-## Demo 1 - Pipeline overview (stages, jobs, concurrency, tasks)
+### Browser Tab 3: Azure Pipeline Overview
 
-- Create a pull request
-- Show that a new instance of the pipeline has started 
-- Variables
-- Stage conditions, dependencies, and concurrency
-- Jobs and concurrency
-- Tasks
+- Expand each stage of the pipeline, give an overview of stages and jobs
+- x
+- y
 
-## Demo 2 - Tests
+### Browser Tab 4: YAML Pipeline
 
-- Show tests in VSCode
-- Show tests results and logging
-- Show dashboarding
-- Show test results in GitHub
-- Merge pull request
+- a
+- b
+- c
 
-## Demo 3 - Deployment Jobs and Environments
-
-- Deployment Job
-- Environment logging
-- Environment checks
-
-## Demo 4 - Production Reconciliation
-
-- Build ID Variable in YAML
-- Show ACR container image
-- Show running container in Kubernetes
-
-## Demo 5 - Production Reconciliation
+## Demo 2
 
 At this point, hopefully, the pre-production deployment has completed. Show how production can be reconciled .via build ID (helm release version and container image version).
 
-1. Get the latest build id, this can be seen in the last runs URL.
+### Browser Tab 3: Azure Pipeline Overview
+
+Get the latest build id, this can be seen in the last runs URL.
 
 ![Pipeline Run URL with Build ID](./images/buildid.png)
 
-2. Navigate back to the pipeline YAML and show how the built-in `Build.BuildId` variable can be used as a task value.
+### Browser Tab 4: YAML Pipeline
+
+Navigate back to the pipeline YAML and show how the built-in `Build.BuildId` variable can be used as a task value.
 
 ```
 - task: HelmDeploy@0
@@ -60,16 +44,13 @@ At this point, hopefully, the pre-production deployment has completed. Show how 
  arguments: '--version $(Build.BuildId)'
 ```
 
-3. Return a list of helm release, and show that the chart used to release the `CHART` has a version that matches the build-id.
+### Browser Tab 5: Azure Container Registry 
 
-```
-$ helm list
+Show that a container image has been created with a version that matches the pipeline build ID.
 
-NAME REVISION UPDATED STATUS CHART NAMESPACE
-my-tt-cart 3 Mon Oct 14 13:14:25 2019 DEPLOYED cart-api-1 default
-```
+### Terminal
 
-4. Return a list of pods to get the name of the cart pod.
+Return a list of pods to get the name of the cart pod.
 
 ```
 $ kubectl get pods
@@ -87,7 +68,7 @@ my-tt-webbff-67849c78b7-qhvlg 1/1 Running 0 15h
 web-6b56cc7d7c-w7t9x 1/1 Running 0 15h
 ```
 
-5. Describe the cart pod to see the Docker image used to start it. Note that the image version matches the Build ID.
+Describe the cart pod to see the Docker image used to start it. Note that the image version matches the Build ID.
 
 ```
 $ kubectl describe pod my-tt-cart-cart-api-77db6f9f58-wqs7p
@@ -97,5 +78,3 @@ Containers:
  Container ID: docker://9438c601b838855659abef2f68ab19c281bd172525ce09aedbbcf65dc0940580
  Image: ttacr5iny4v2wygm3k.azurecr.io/cart.api:1818
 ```
-
-# Comment
