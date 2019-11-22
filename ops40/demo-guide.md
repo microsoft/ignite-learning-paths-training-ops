@@ -1,4 +1,4 @@
-## Demo 1
+# OPS40 Demo Guide
 
 ### Browser Tab 1: Tailwind Traders
 
