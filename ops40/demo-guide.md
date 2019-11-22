@@ -65,17 +65,18 @@ Return a list of pods to get the name of the cart pod.
 ```
 $ kubectl get pods
 
-my-tt-cart-cart-api-77db6f9f58-wqs7p 1/1 Running 0 11h
-my-tt-coupon-tt-coupons-85c96964fc-z7tc7 1/1 Running 0 15h
-my-tt-image-classifier-7d6d97875f-4z66s 1/1 Running 0 15h
-my-tt-login-7f88cff49-fqk95 1/1 Running 0 15h
-my-tt-mobilebff-67dcb9f988-7vgc9 1/1 Running 0 15h
-my-tt-popular-product-tt-popularproducts-67dfcc8b67-f7knj 1/1 Running 0 15h
-my-tt-product-tt-products-d9c54d955-6fmd8 1/1 Running 0 15h
-my-tt-profile-5c57bf89b4-5z79c 1/1 Running 0 15h
-my-tt-stock-6b969dd459-hw559 1/1 Running 0 15h
-my-tt-webbff-67849c78b7-qhvlg 1/1 Running 0 15h
-web-6b56cc7d7c-w7t9x 1/1 Running 0 15h
+NAME                                                        READY   STATUS    RESTARTS   AGE
+my-tt-cart-cart-api-7d964dbffc-749lt                        1/1     Running   0          24m
+my-tt-coupon-tt-coupons-85c96964fc-lhvl7                    1/1     Running   0          16d
+my-tt-image-classifier-7d6d97875f-6xhmz                     1/1     Running   0          16d
+my-tt-login-7f88cff49-j6k6f                                 1/1     Running   0          16d
+my-tt-mobilebff-67dcb9f988-mf5xn                            1/1     Running   0          16d
+my-tt-popular-product-tt-popularproducts-67dfcc8b67-bw8dq   1/1     Running   0          16d
+my-tt-product-tt-products-d9c54d955-97b8n                   1/1     Running   0          16d
+my-tt-profile-5c57bf89b4-fdzfc                              1/1     Running   0          16d
+my-tt-stock-6b969dd459-2mm6g                                1/1     Running   0          16d
+my-tt-webbff-67849c78b7-n4t22                               1/1     Running   0          16d
+web-6b56cc7d7c-xnhvz                                        1/1     Running   0          16d
 ```
 
 Describe the cart pod to see the Docker image used to start it. Note that the image version matches the Build ID.
