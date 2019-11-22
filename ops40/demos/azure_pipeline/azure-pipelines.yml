@@ -10,32 +10,81 @@ variables:
   azureSubscription: azure-service-connection
 
   # Container Registry
-  containerRegistryName: ttacrbs7vnmucf2unc
-  containerRegistryFqdn: ttacrbs7vnmucf2unc.azurecr.io
+  containerRegistryName: ttacrfqkz63c47hsxc
+  containerRegistryFqdn: ttacrfqkz63c47hsxc.azurecr.io
 
   # AKS Pre-Production
-  aks-cluster-rg-pre-prod: new-repo-test-002
-  aks-cluster-pre-prod: tailwindtradersaksbs7vnmucf2unc
-  ingress-pre-prod: 3777c2b6d77e4f1bb05c.eastus.aksapp.io
+  aks-cluster-rg-pre-prod: ops40-demo-update-002
+  aks-cluster-pre-prod: tailwindtradersaksfqkz63c47hsxc
+  ingress-pre-prod: 0308a1246be6400d8ba5.eastus2.aksapp.io
 
   # Production
-  aks-cluster-rg: new-repo-test-002
-  aks-cluster: tailwindtradersaksbs7vnmucf2unc
-  ingress: 3777c2b6d77e4f1bb05c.eastus.aksapp.io
+  aks-cluster-rg: ops40-demo-update-002
+  aks-cluster: tailwindtradersaksfqkz63c47hsxc
+  ingress: 0308a1246be6400d8ba5.eastus2.aksapp.io
 
-# Stages - a collection of related jobs. Stages can be controlled by conditions and approval checks.
+  # Production Database
+  hostDB: https://ttshoppingdbfqkz63c47hsxc.documents.azure.com:443/
+
 stages:
 
+- stage: test
+  dependsOn: []
+  
+  jobs:
+  - job: tests
+    pool: Hosted Ubuntu 1604
+    continueOnError: false
+    timeoutInMinutes: 20
+
+    steps:
+
+    - task: PowerShell@2
+      displayName: Install Pester
+      inputs:
+        targetType: 'inline'
+        script: |
+          Find-Module pester | Install-Module -Force
+
+    - task: AzureCLI@1
+      displayName: Generate values file for test
+      inputs:
+        azureSubscription: $(azureSubscription)
+        scriptLocation: 'inlineScript'
+        inlineScript: |
+          pwsh ./deployment/helm-values/generate-config.ps1 -resourceGroup $(aks-cluster-rg-pre-prod) -sqlPwd Password2020! -gvaluesTemplate deployment/helm-values/gvalues.template -outputFile ./values.yaml
+
+    - task: PowerShell@2
+      displayName: Parse host name
+      inputs:
+        targetType: 'inline'
+        script: |
+          $content = Get-Content values.yaml
+          $hostName = $content[37].split(" ")[7]
+
+    - task: PowerShell@2
+      displayName: Run Pester tests
+      inputs:
+        targetType: 'inline'
+        script: 'invoke-pester -Script @{ Path = ''./ops40/demos/azure_pipeline/tests/''; Parameters = @{ hostName = ''$(hostDB)'' }} -OutputFile "./test-results.xml" -OutputFormat ''NUnitXML'''
+
+    - task: PublishTestResults@2
+      displayName: Publish test results
+      inputs:
+        testResultsFormat: 'NUnit'
+        testResultsFiles: '**/test-results.xml'
+        failTaskOnFailedTests: true
+
 - stage: build
+  dependsOn: test
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-  # Jobs - a collection of steps to be run on an agent. Jobs can depend on other jobs or be run conditionally.
   jobs:
   - job: helm
-
-    pool:
-      name: Hosted Ubuntu 1604
-
+    pool: Hosted Ubuntu 1604
+    continueOnError: false
+    timeoutInMinutes: 20
+    
     steps:
 
     - task: AzureCLI@1
@@ -67,9 +116,9 @@ stages:
         inlineScript: 'az acr helm push -n $(containerRegistryName) /home/vsts/work/1/a/cart-api-$(Build.BuildId).tgz'
 
   - job: docker
-
-    pool:
-      name: Hosted Ubuntu 1604
+    pool: Hosted Ubuntu 1604
+    continueOnError: false
+    timeoutInMinutes: 20
 
     steps:
 
@@ -110,32 +159,30 @@ stages:
         artifactName: 'drop'
 
 - stage: release_pre_production
+  dependsOn: build
 
-  # Deployment job - special type of job that runs against an environment (run once, matrix, parallel)
   jobs:
   - deployment: release_pre_production
-    displayName: Release Pre-Production
-
-    pool:
-      name: Hosted Ubuntu 1604
-
+    pool: Hosted Ubuntu 1604
+    continueOnError: false
+    timeoutInMinutes: 20
     environment: pre-production
 
+    # strategy can be runonce and canary (blue green on roadmap)
+    # strategy influences life-cycle hooks
     strategy:
       runOnce:
+
         deploy:
           steps:
 
           - download: current
             artifact: drop
             patterns: '**/*'
-
-          - task: HelmDeploy@0
-            displayName: 'helm init --client-only'
+          
+          - task: HelmInstaller@1
             inputs:
-              connectionType: None
-              command: init
-              arguments: '--client-only'
+              helmVersionToInstall: '2.14.3'
 
           - task: AzureCLI@1
             displayName: Deploy Pre-Production
@@ -152,13 +199,13 @@ stages:
                 helm upgrade my-tt-cart $(containerRegistryName)/cart-api --install -f values.yaml --set ingress.hosts={$(ingress-pre-prod)} --set image.repository=$(containerRegistryFqdn)/cart.api --set image.tag=$(Build.BuildId)
 
 - stage: release_production
+  dependsOn: release_pre_production
+
   jobs:
   - deployment: release_production
-    displayName: Release Production
-
-    pool:
-      name: Hosted Ubuntu 1604
-
+    pool: Hosted Ubuntu 1604
+    continueOnError: false
+    timeoutInMinutes: 20
     environment: production
 
     strategy:
@@ -170,12 +217,9 @@ stages:
             artifact: drop
             patterns: '**/*'
 
-          - task: HelmDeploy@0
-            displayName: 'helm init --client-only'
+          - task: HelmInstaller@1
             inputs:
-              connectionType: None
-              command: init
-              arguments: '--client-only'
+              helmVersionToInstall: '2.14.3'
 
           - task: AzureCLI@1
             displayName: Deploy Production

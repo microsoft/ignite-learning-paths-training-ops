@@ -24,6 +24,7 @@ code.
 ## Assets in Train-The-Trainer kit
 
 - PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/PPT/OPS40_Deployment_Practices_for_Greater_Reliability.pptx)
+- Demo Setup [here](./demo-setup.md)
 - Demo Guide [here](./demo-guide.md)
 - Full-length recording of presentation [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/dry-run/ops40-final.mp4)
 - Director Cut Full-length recording of presentation [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/directors-cut/ops40-directors-cut.mp4)
