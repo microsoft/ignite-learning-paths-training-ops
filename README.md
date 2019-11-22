@@ -1,7 +1,5 @@
 # Improving Your Reliability through Modern Operations Practices
 
-[![Build Status](https://ops40-demo-update-002.visualstudio.com/ops40-demo-update-002/_apis/build/status/neilpeterson.ignite-learning-paths-training-ops?branchName=master)](https://ops40-demo-update-002.visualstudio.com/ops40-demo-update-002/_build/latest?definitionId=2&branchName=master)
-
 ## [OPS10: Building the Foundation for Modern Ops: Monitoring ](/ops10/README.md)
 
 You are concerned about the reliability of your systems, services, and products. Where should you start?
