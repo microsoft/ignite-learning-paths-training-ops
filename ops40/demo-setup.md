@@ -10,16 +10,6 @@ https://github.com/microsoft/ignite-learning-paths-training-ops.git
 
 Update the values in the `/ops40/demos/azure_pipeline/azure-pipelines.yaml` file to match the AKS and ACR deployments. Th# OPS40 Demo Setup
 
-First, deploy the Tailwind Traders application onto a Kubernetes cluster. Deployment steps and automation can be found here:
-
-https://github.com/microsoft/ignite-learning-paths-training-ops/tree/master/deployment
-
-Once completed, fork this repo into your own GitHub account and clone to your development system.
-
-https://github.com/microsoft/ignite-learning-paths-training-ops.git
-
-Update the values in the `/ops40/demos/azure_pipeline/azure-pipelines.yaml` file to match the AKS and ACR deployments. The following commands can be used to find these values.
-
 ```
 az acr list -o table
 az aks list -o table
