@@ -55,6 +55,8 @@ Once done, push the updates back to GitHub. This repository is used in the next 
 
 If the pipeline runs successfully, move onto the next step. If not, you will need to troubleshoot.
 
+## Create manual check
+
 ## Break Tailwind Traders
 
 Edit the configmap for the TWT cart api:
@@ -140,6 +142,16 @@ Once done, push the updates back to GitHub. This repository is used in the next 
 8. Click **Run** to save and run the pipeline.
 
 If the pipeline runs successfully, move onto the next step. If not, you will need to troubleshoot.
+
+## Create 
+
+1. Select **Environments** > **production** > the **three dots** and **Approvals and checks**.
+
+2. Select **Approvals** and add yourself as the approver.
+
+3. Select **Create**.
+
+Now, if you run the pipeline again, approval is needed before deploying to the production environment.
 
 ## Break Tailwind Traders
 

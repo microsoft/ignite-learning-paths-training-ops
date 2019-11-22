@@ -6,20 +6,30 @@ Show the Tailwind Traders application and non-functioning cart.
 
 ### Browser Tab 2: GitHub Repository
 
-- Create a pull request from branch < a > to the master branch. 
+The goal of this section of the demo is to demonstrate the almost instant testing feedback when integration Azure Pipelines with GithHub.
+
+- Create a pull request from branch < insert branch here > to the master branch of the same repository. 
 - Once the pull request has been created, stay on the pull request and show that the unit tests are passed through to source control.
 
 ### Browser Tab 3: Azure Pipeline Overview
 
 - Expand each stage of the pipeline, give an overview of stages and jobs
-- x
-- y
+- Menton that uniqueness to stages is that we can build gates or checks between them
+- Mention that uniqueness to jobs is that all steps of a job run on the same build agent
+- Give a general overview of what all stages do
+
+Once the test stage completes
+
+- Click on the test tab to show test results
+- Point out that only the test stage ran (which we will explain in the next section of the demo)
 
 ### Browser Tab 4: YAML Pipeline
 
-- a
-- b
-- c
+- Collapse all stages so that the pipeline is easier to visualize/relate back to the overview
+- provide high-level overview
+- Expand the test stage a demonstrate that there is no condition
+- Expand the build stage an demonstrate the condition
+- Feel free to demonstrate anything else that you have time for etc.
 
 ## Demo 2
 
