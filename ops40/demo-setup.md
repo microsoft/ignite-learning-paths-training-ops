@@ -53,6 +53,18 @@ my-tt-webbff 0308a1246be6400d8ba5.eastus2.aksapp.io 20.186.2.74 80 16d
 web 0308a1246be6400d8ba5.eastus2.aksapp.io 20.186.2.74 80 16d
 ```
 
+**Cosmos DB**
+
+Line 27, replace the Cosmos DB name with shopping cart Cosmos DB endpoint. You can get this value with the following AZ command. Select the `DocumentEndpoint` for the instance with a prefix of `https://ttshoppingdb`.
+
+```
+$ az cosmosdb list -o table
+DatabaseAccountOfferType    DocumentEndpoint                                            EnableAutomaticFailover    EnableMultipleWriteLocations    IpRangeFilter    IsVirtualNetworkFilterEnabled    Kind              Location    Name                       ProvisioningState    ResourceGroup
+--------------------------  ----------------------------------------------------------  -------------------------  ------------------------------  ---------------  -------------------------------  ----------------  ----------  -------------------------  -------------------  ---------------------
+Standard                    https://ttcuoponsdbfqkz63c47hsxc.documents.azure.com:443/   False                      True                                             False                            MongoDB           East US 2   ttcuoponsdbfqkz63c47hsxc   Succeeded            ops40-demo-update-002
+Standard                    https://ttshoppingdbfqkz63c47hsxc.documents.azure.com:443/  False                      True                                             False                            GlobalDocumentDB  East US 2   ttshoppingdbfqkz63c47hsxc  Succeeded            ops40-demo-update-002
+```
+
 Once done, push the updates back to GitHub. This repository is used in the next two steps for creating an Azure Pipeline.
 
 ## Create Azure Pipeline Service Connection
