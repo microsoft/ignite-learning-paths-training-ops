@@ -39,7 +39,7 @@ Navigate back to the GitHub and merge the pull request.
 - Expand the build stage and demonstrate the condition
 - Feel free to demonstrate anything else that you have time for etc.
 
-At this point, move back into the slide deck while the pipeline runs.
+Move back into the slide deck while the pipeline runs.
 
 ## Demo 2
 
@@ -101,5 +101,5 @@ $ kubectl describe pod my-tt-cart-cart-api-77db6f9f58-wqs7p
 Containers:
  cart-api:
  Container ID: docker://9438c601b838855659abef2f68ab19c281bd172525ce09aedbbcf65dc0940580
- Image: ttacr5iny4v2wygm3k.azurecr.io/cart.api:1818
+ Image: ttacr5iny4v2wygm3k.azurecr.io/cart.api:2183
 ```
