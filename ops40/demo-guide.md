@@ -23,17 +23,31 @@ Once the test stage completes
 - Click on the test tab to show test results
 - Point out that only the test stage ran (which we will explain in the next section of the demo)
 
+### Browser Tab 2: GitHub Repository
+
+Navigate back to the GitHub and merge the pull request.
+
+### Browser Tab 3: Azure Pipeline Overview
+
+- Show that a new instance of the pipeline has started, while it runs move onto the next step.
+
 ### Browser Tab 4: YAML Pipeline
 
-- Collapse all stages so that the pipeline is easier to visualize/relate back to the overview
+- Collapse all stages so that the pipeline is easier to visualize/relate to the overview
 - provide high-level overview
 - Expand the test stage a demonstrate that there is no condition
-- Expand the build stage an demonstrate the condition
+- Expand the build stage and demonstrate the condition
 - Feel free to demonstrate anything else that you have time for etc.
+
+Move back into the slide deck while the pipeline runs.
 
 ## Demo 2
 
 At this point, hopefully, the pre-production deployment has completed. Show how production can be reconciled .via build ID (helm release version and container image version).
+
+### Browser Tab 1: Tailwind Traders
+
+Show the Tailwind Traders application and now fixed cart.
 
 ### Browser Tab 3: Azure Pipeline Overview
 
@@ -87,5 +101,5 @@ $ kubectl describe pod my-tt-cart-cart-api-77db6f9f58-wqs7p
 Containers:
  cart-api:
  Container ID: docker://9438c601b838855659abef2f68ab19c281bd172525ce09aedbbcf65dc0940580
- Image: ttacr5iny4v2wygm3k.azurecr.io/cart.api:1818
+ Image: ttacr5iny4v2wygm3k.azurecr.io/cart.api:2183
 ```
