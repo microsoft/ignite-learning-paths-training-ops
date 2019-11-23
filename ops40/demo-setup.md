@@ -24,9 +24,9 @@ ttacrfqkz63c47hsxc  ops40-demo-update-002  eastus2     Standard  ttacrfqkz63c47h
 
 **Azure Kubernetes Service (AKS)**
 
-On line 17, 18, 19, replace the aks cluster, resource group name, and ingress controller FQDN for the pre-production cluster. 
+On line 17, 18, 19, replace the aks cluster, resource group name, and ingress controller FQDN for the **pre-production** cluster. 
 
-On line 22, 23, 25 replace the aks cluster, resource group name, and ingress controller FQDN for the pre-production cluster. 
+On line 22, 23, 25 replace the aks cluster, resource group name, and ingress controller FQDN for the **production** cluster. 
 
 For the sake of this demo, it is ok to use the same cluster for both pre-production and production. If doing so, the values will be identical.
 
@@ -62,7 +62,7 @@ web                                        0308a1246be6400d8ba5.eastus2.aksapp.i
 
 **Cosmos DB**
 
-Line 27, replace the Cosmos DB name with shopping cart Cosmos DB endpoint. You can get this value with the following AZ command. Select the `DocumentEndpoint` for the instance with a prefix of `https://ttshoppingdb`.
+On line 27, replace the Cosmos DB name with shopping cart Cosmos DB endpoint. You can get this value with the following AZ command. Select the `DocumentEndpoint` for the instance with a prefix of `https://ttshoppingdb`.
 
 ```
 $ az cosmosdb list -o table
@@ -72,9 +72,9 @@ DatabaseAccountOfferType    DocumentEndpoint                                    
 Standard                    https://ttshoppingdbfqkz63c47hsxc.documents.azure.com:443/  False                      True                                             False                            GlobalDocumentDB  East US 2   ttshoppingdbfqkz63c47hsxc  Succeeded            ops40-demo-update-002
 ```
 
-OOnce done, push the updates back to GitHub. This repository is used in the next two steps for creating an Azure Pipeline.
+Once done, push the updates back to GitHub. This repository is used in the next two steps for creating an Azure Pipeline.
 
-## Create Azure Pipeline Service Connection
+## Create Azure Pipeline service connection
 
 1. Navigate to the new Azure DevOps organization, and then the new DevOps project.
 
