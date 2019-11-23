@@ -8,11 +8,49 @@ Once completed, fork this repo into your own GitHub account and clone to your de
 
 https://github.com/microsoft/ignite-learning-paths-training-ops.git
 
-Update the values in the `/ops40/demos/azure_pipeline/azure-pipelines.yaml` file to match the AKS and ACR deployments. Th# OPS40 Demo Setup
+Update the variable values in the `/ops40/demos/azure_pipeline/azure-pipelines.yaml` file to match the new AKS, ACR, and CosmosDB deployments.
+
+**Azure Container Registry**
+
+Line 13 and 14, replace the container registry name and fqdn. You can get these values with the following Azure CLI command.
 
 ```
-az acr list -o table
-az aks list -o table
+$ az acr list -o table
+
+NAME RESOURCE GROUP LOCATION SKU LOGIN SERVER CREATION DATE ADMIN ENABLED
+------------------ --------------------- ---------- -------- ----------------------------- -------------------- ---------------
+ttacrfqkz63c47hsxc ops40-demo-update-002 eastus2 Standard ttacrfqkz63c47hsxc.azurecr.io 2019-11-06T23:00:52Z True
+```
+
+**Azure Kubernetes Service**
+
+Line 17, 18, 19, replace the aks cluster, resource group name, and ingress controller fqdn for the pre-production cluster. Line 22, 23, 25 replace the aks cluster, resource group name, and ingress controller fqdn for the pre-production cluster. For the sake of this demo, it is ok to use the same cluster for both pre-production and production. If doing so, the values will be identical.
+
+You can get the AKS cluster name and resource group name with the following Azure CLI command.
+
+```
+$ az aks list -o table
+Name Location ResourceGroup KubernetesVersion ProvisioningState Fqdn
+------------------------------- ---------- --------------------- ------------------- ------------------- --------------------------------------------------------------
+tailwindtradersaksfqkz63c47hsxc eastus2 ops40-demo-update-002 1.14.7 Succeeded tailwindtradersaksfqkz63c47hsxc-e4b70ded.hcp.eastus2.azmk8s.io
+```
+
+Run the following `kubectl` command to get the ingress controller fqdn (host).
+
+```
+kubectl get ingress
+NAME HOSTS ADDRESS PORTS AGE
+my-tt-cart-cart-api 0308a1246be6400d8ba5.eastus2.aksapp.io 20.186.2.74 80 15d
+my-tt-coupon-tt-coupons 0308a1246be6400d8ba5.eastus2.aksapp.io 20.186.2.74 80 16d
+my-tt-image-classifier 0308a1246be6400d8ba5.eastus2.aksapp.io 20.186.2.74 80 16d
+my-tt-login 0308a1246be6400d8ba5.eastus2.aksapp.io 20.186.2.74 80 16d
+my-tt-mobilebff 0308a1246be6400d8ba5.eastus2.aksapp.io 20.186.2.74 80 16d
+my-tt-popular-product-tt-popularproducts 0308a1246be6400d8ba5.eastus2.aksapp.io 20.186.2.74 80 16d
+my-tt-product-tt-products 0308a1246be6400d8ba5.eastus2.aksapp.io 20.186.2.74 80 16d
+my-tt-profile 0308a1246be6400d8ba5.eastus2.aksapp.io 20.186.2.74 80 16d
+my-tt-stock 0308a1246be6400d8ba5.eastus2.aksapp.io 20.186.2.74 80 16d
+my-tt-webbff 0308a1246be6400d8ba5.eastus2.aksapp.io 20.186.2.74 80 16d
+web 0308a1246be6400d8ba5.eastus2.aksapp.io 20.186.2.74 80 16d
 ```
 
 Once done, push the updates back to GitHub. This repository is used in the next two steps for creating an Azure Pipeline.
@@ -68,18 +106,18 @@ Return a list of pods
 ```
 $ kubectl get pods
 
-NAME                                                        READY   STATUS    RESTARTS   AGE
-my-tt-cart-cart-api-7d964dbffc-749lt                        1/1     Running   0          24m
-my-tt-coupon-tt-coupons-85c96964fc-lhvl7                    1/1     Running   0          16d
-my-tt-image-classifier-7d6d97875f-6xhmz                     1/1     Running   0          16d
-my-tt-login-7f88cff49-j6k6f                                 1/1     Running   0          16d
-my-tt-mobilebff-67dcb9f988-mf5xn                            1/1     Running   0          16d
-my-tt-popular-product-tt-popularproducts-67dfcc8b67-bw8dq   1/1     Running   0          16d
-my-tt-product-tt-products-d9c54d955-97b8n                   1/1     Running   0          16d
-my-tt-profile-5c57bf89b4-fdzfc                              1/1     Running   0          16d
-my-tt-stock-6b969dd459-2mm6g                                1/1     Running   0          16d
-my-tt-webbff-67849c78b7-n4t22                               1/1     Running   0          16d
-web-6b56cc7d7c-xnhvz                                        1/1     Running   0          16d
+NAME READY STATUS RESTARTS AGE
+my-tt-cart-cart-api-7d964dbffc-749lt 1/1 Running 0 24m
+my-tt-coupon-tt-coupons-85c96964fc-lhvl7 1/1 Running 0 16d
+my-tt-image-classifier-7d6d97875f-6xhmz 1/1 Running 0 16d
+my-tt-login-7f88cff49-j6k6f 1/1 Running 0 16d
+my-tt-mobilebff-67dcb9f988-mf5xn 1/1 Running 0 16d
+my-tt-popular-product-tt-popularproducts-67dfcc8b67-bw8dq 1/1 Running 0 16d
+my-tt-product-tt-products-d9c54d955-97b8n 1/1 Running 0 16d
+my-tt-profile-5c57bf89b4-fdzfc 1/1 Running 0 16d
+my-tt-stock-6b969dd459-2mm6g 1/1 Running 0 16d
+my-tt-webbff-67849c78b7-n4t22 1/1 Running 0 16d
+web-6b56cc7d7c-xnhvz 1/1 Running 0 16d
 ```
 
 Delete the `my-tt-cart` pod:
