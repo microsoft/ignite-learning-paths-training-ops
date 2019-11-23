@@ -12,7 +12,7 @@ Update the variable values in the `/ops40/demos/azure_pipeline/azure-pipelines.y
 
 **Azure Container Registry (ACR)**
 
-On line 13 and 14, replace the container registry name and fqdn. You can get these values with the following Azure CLI command.
+On lines 13 and 14, replace the container registry name and FQDN. You can get these values with the following Azure CLI command.
 
 ```
 $ az acr list -o table
@@ -24,13 +24,14 @@ ttacrfqkz63c47hsxc  ops40-demo-update-002  eastus2     Standard  ttacrfqkz63c47h
 
 **Azure Kubernetes Service (AKS)**
 
-On line 17, 18, 19, replace the aks cluster, resource group name, and ingress controller fqdn for the pre-production cluster. 
+On line 17, 18, 19, replace the aks cluster, resource group name, and ingress controller FQDN for the pre-production cluster. 
 
-On line 22, 23, 25 replace the aks cluster, resource group name, and ingress controller fqdn for the pre-production cluster. 
+On line 22, 23, 25 replace the aks cluster, resource group name, and ingress controller FQDN for the pre-production cluster. 
 
 For the sake of this demo, it is ok to use the same cluster for both pre-production and production. If doing so, the values will be identical.
 
 You can get the AKS cluster name and resource group name with the following Azure CLI command.
+
 
 ```
 $ az aks list -o table
@@ -71,7 +72,7 @@ DatabaseAccountOfferType    DocumentEndpoint                                    
 Standard                    https://ttshoppingdbfqkz63c47hsxc.documents.azure.com:443/  False                      True                                             False                            GlobalDocumentDB  East US 2   ttshoppingdbfqkz63c47hsxc  Succeeded            ops40-demo-update-002
 ```
 
-Once done, push the updates back to GitHub. This repository is used in the next two steps for creating an Azure Pipeline.
+OOnce done, push the updates back to GitHub. This repository is used in the next two steps for creating an Azure Pipeline.
 
 ## Create Azure Pipeline Service Connection
 
@@ -83,7 +84,7 @@ Once done, push the updates back to GitHub. This repository is used in the next 
 
 ## Import and run the pipeline
 
-1. Select **Pipelines** from the left hand Azure DevOps menu.
+1. Select **Pipelines** on the left hand Azure DevOps menu.
 
 2. If prompted, select **Try it!** to enable the new unified YAML pipeline experience.
 
@@ -101,25 +102,35 @@ Once done, push the updates back to GitHub. This repository is used in the next 
 
 If the pipeline runs successfully, move onto the next step. If not, you will need to troubleshoot.
 
-## Create manual check
+
+## Create a manual check
+
+1. Click on **Environments** on the left hand Azure DevOps menu.
+
+2. Select the **Production** environment.
+
+3. Select the **...** menu > **Approvals and Checks** > **Approvals**.
+
+4. Add yourself as an approver and select **create**.
+
 
 ## Break Tailwind Traders
 
-Edit the configmap for the TWT cart api:
+This step is optional. All demos work fine without this step, it is cool to include for effect.
+
+1. Edit the configmap for the TWT cart api:
 
 ```
 kubectl edit configmap cfg-my-tt-cart
 ```
 
-Update the `HOST` value so that it is not valid. In the following example, I have removed `https` from the URL. Once done save the configmap.
+2. Update the `HOST` value so that it is not valid. In the following example, I have removed `https` from the URL. Once done save the configmap.
 
 ```
 HOST: ://ttshoppingdbt6grppp3eluvk.documents.azure.com:443/
 ```
 
-Next, the cart pod needs to be restarted, which will take in the new value and effectively break the Tailwind cart.
-
-Return a list of pods
+3. The cart pod needs to be recreated, which will take in the new value and effectively break the Tailwind cart. Return a list of pods
 
 ```
 $ kubectl get pods
@@ -138,7 +149,7 @@ my-tt-webbff-67849c78b7-n4t22                               1/1     Running   0 
 web-6b56cc7d7c-xnhvz                                        1/1     Running   0          16d
 ```
 
-Delete the `my-tt-cart` pod:
+4. Delete the `my-tt-cart` pod:
 
 ```
 kubectl delete pod my-tt-cart-cart-api-7d964dbffc-749lt
