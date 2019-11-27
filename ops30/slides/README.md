@@ -20,7 +20,7 @@ The Powerpoint slide deck is divided up in to four (4) sections.
 ---
 [View all slides and a transcript](script/OPS30_Speaking_Script.md)
 
-[Download the master Powerpoint file](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/slides/OPS30_Learning_From_Incidents_Master.pptx)
+[Download the master Powerpoint file](https://medius.studios.ms/video/asset/PPT/IG19-OPS30)
 
 [Presentation thumbnails and a speaking script can be found here](script/OPS30_Speaking_Script.md)
 
