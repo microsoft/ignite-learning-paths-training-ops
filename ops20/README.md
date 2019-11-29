@@ -1,6 +1,6 @@
 # OPS20: Responding To Incidents
 
-![Learning Path](https://img.shields.io/badge/Learning%20Path-OPS-fe5e00?logo=microsoft) 
+![Learning Path](https://img.shields.io/badge/Learning%20Path-OPS-fe5e00?logo=microsoft)
 
 ## Session Abstract
 
@@ -41,26 +41,25 @@ Ask questions of the Lead Presented and trained speakers (list below).
 
 This training repository is divided in to the following sections:
 
-| [Slides](slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+| [Slides](slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) |
 |--------|-------|------------|
 | 73 slides - 25 minutes, | 3 demos - 20 minutes, | 1 automated deployment
 
  [Full-length video can be viewed here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/OPS20_Final_Full.mp4).
-
 
 ### **Slides**
 
 >**What's Here?** Stage ready videos, a speaking script, numbered slide thumbnails, and the master Powerpoint slide deck.
 
 Begin by familiarizing yourself with the presentation. Videos, speaking scripts, and the master Powerpoint slide deck can be found in the [slides](slides/README.md) section.
- 
+
 The Powerpoint slide deck is divided up in to four (4) sections. There are also three (3) technical demonstrations as part of the 45-minute presentation.
 
-| Section  | Minutes | Slides | Video | 
+| Section  | Minutes | Slides | Video |
 |----------|----------|-------|-----|
-|[1 - Intro & Foundations of Incident Response ](slides/section/01/README.md)|16 | *1 - 46* | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_One.mp4)
+|[1 - Intro & Foundations of Incident Response](slides/section/01/README.md)|16 | *1 - 46* | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_One.mp4)
 |[2 - Remediation Improvements (Context & Guidance)](slides/section/02/README.md)|6 | *48 - 57* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_Two.mp4)
-|[3 - Tools to Reduce the Time To Recover ](slides/section/03/README.md)|1 | *59* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_Three.mp4)
+|[3 - Tools to Reduce the Time To Recover](slides/section/03/README.md)|1 | *59* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_Three.mp4)
 |[4 - Summary & Closing](slides/section/04/README.md)|2 | *66 - 73* |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_Four.mp4)
 |Total       |25 | |[Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/OPS20_Final_Full.mp4)
 |[Presentation thumbnails and a speaking script can be found here](slides/script/OPS20_Speaking_Script.md)|  |  |
@@ -71,12 +70,12 @@ The Powerpoint slide deck is divided up in to four (4) sections. There are also 
 
 >**What's Here?** Deploying the demo environment on Azure - including manual steps to perform after the automation is finished
 
-[Instructions and prerequisites are outlined here](deployment/README.md). 
+[Instructions and prerequisites are outlined here](deployment/README.md).
 
 A "Deploy to Azure" button streamlines the process, but make sure you have created an account on Azure and generated a Service Principal ID and password before you press it.
 
 [Take me there ...](deployment/README.md)
- 
+
 ### **Demos**
 
 >**What's Here?** Pre-delivery preparation, stage ready videos, required files (such as JSON templates), and walk-through videos
@@ -110,7 +109,7 @@ Detailed explanations of each demonstration associated with this presentation ca
 
 ## Become a Trained Presenter
 
-To become a **Trained Presenter**, contact scalablecontent@microsoft.com. 
+To become a **Trained Presenter**, contact scalablecontent@microsoft.com.
 
 In your email please include:
 
