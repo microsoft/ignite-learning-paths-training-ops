@@ -24,10 +24,10 @@ code.
 ## Assets in Train-The-Trainer kit
 
 - This guide
-- PowerPoint presentation including notes for each slide COMING SOON
+- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/OPS10.pptx)
 - Full script for presentation and demos [here](./scripts/main.md)
 - Demo setup information and scripts: ([script 1](./demos/demo1.md), [script 2](./demos/demo2.md), [script 3](./demos/demo3.md) and [script 4](./demos/demo4.md))
-- Full-length recording of presentation COMING SOON
+- Full-length recording of presentation [Ignite Orlando recording](https://myignite.techcommunity.microsoft.com/sessions?q=OPS10&t=%257B%2522from%2522%253A%25222019-11-03T08%253A00%253A00-05%253A00%2522%252C%2522to%2522%253A%25222019-11-08T19%253A00%253A00-05%253A00%2522%257D&g=%255B%2522on-demand%2522%255D)
 - Director Cut Full-length recording of presentation  COMING SOON
 - Individual recordings of stage-ready hands-on demos COMING SOON
 
