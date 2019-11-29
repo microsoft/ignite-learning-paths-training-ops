@@ -1,6 +1,6 @@
 # OPS50: Preparing for Growth: Capacity Planning and Scaling
 
-![Learning Path](https://img.shields.io/badge/Learning%20Path-OPS-fe5e00?logo=microsoft) 
+![Learning Path](https://img.shields.io/badge/Learning%20Path-OPS-fe5e00?logo=microsoft)
 
 ## Session Abstract
 
@@ -17,9 +17,9 @@ We're glad you are here and look forward to your delivery of this amazing conten
 Along with the video of the presentation, this document will link to all the assets you need to successfully present including PowerPoint slides and demo instructions &
 code.
 
-1.  Read document in its entirety.
-2.  Watch the video presentation
-3.  Ask questions of the Lead Presenter
+1. Read document in its entirety.
+2. Watch the video presentation
+3. Ask questions of the Lead Presenter
 
 ## Assets in Train-The-Trainer kit
 
@@ -27,7 +27,7 @@ code.
 - PowerPoint presentation including notes for each slide [here](presentations.md)
 - Full-length recording of presentation [here](https://youtu.be/7SB1bQGwC3s)
 - Full-length script of presentation [here](script.md).
-- Director Cut Full-length recording of presentation [here](). **TO BE COMPLETED**
+- Director Cut Full-length recording of presentation **TO BE COMPLETED**
 - Demo Guide [here](./demo-guide.md)
 
 ## Become a Trained Presenter
