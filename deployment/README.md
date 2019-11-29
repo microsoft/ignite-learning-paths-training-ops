@@ -52,7 +52,7 @@ The output should look similar to this:
 
 There are two ways to kick off a deployment (pick one).
 
-### Deploy via the "Deploy to Azure" button
+### Option 1: deploy via the "Deploy to Azure" button
 
 Use this button to deploy the Tailwind Traders application.
 
@@ -60,7 +60,7 @@ Use this button to deploy the Tailwind Traders application.
  <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
-### Deploy via the az command line tool
+### Option 2: Deploy via the az command line tool
 
 If you'd prefer to deploy using the az command line tool, you can:
 

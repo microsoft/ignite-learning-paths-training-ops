@@ -311,9 +311,13 @@ So let’s look at a diagram of what Log Analytics is from the Azure documentati
 
 All of this information comes in to what Azure Monitor Log Analytics calls tables, though you can think of them as separate databases if that helps. 
 
+----
+
 For our demos an instruction today, we are going to be pulling information from a specific table, that's the request table right here.
 
-To pull information from this table, we will be writing queries. We won't go into these specific queries from the diagram, instead we will start with some other ones in a moment to bring you up to speed, 
+----
+
+To pull information from this table, we will be writing queries. We won't go into these specific queries from the diagram, instead we will start with some other ones in a moment to bring you up to speed. 
 
 ----
 
