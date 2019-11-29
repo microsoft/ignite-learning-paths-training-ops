@@ -1,6 +1,6 @@
 # OPS40: Deployment Practices for Greater Reliability
 
-![Learning Path](https://img.shields.io/badge/Learning%20Path-OPS-fe5e00?logo=microsoft) 
+![Learning Path](https://img.shields.io/badge/Learning%20Path-OPS-fe5e00?logo=microsoft)
 
 ## Session Abstract
 
@@ -16,9 +16,9 @@ We're glad you are here and look forward to your delivery of this amazing conten
 
 Along with the video of the presentation, this document will link to all the assets you need to successfully present including PowerPoint slides and demo instructions and code.
 
-1.  Read document in its entirety.
-2.  Watch the video presentation
-3.  Ask questions of the Lead Presenter
+1. Read document in its entirety.
+2. Watch the video presentation
+3. Ask questions of the Lead Presenter
 
 ## Assets in Train-The-Trainer kit
 
@@ -26,7 +26,7 @@ Along with the video of the presentation, this document will link to all the ass
 - Demo Setup [here](./demo-setup.md)
 - Demo Guide [here](./demo-guide.md)
 - Full-length recording of presentation [Ignite Tour CDN](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/dry-run/ops40.mp4) and [Youtube](https://youtu.be/F66TwS0IniY)
-- Director Cut Full-length recording of presentation [here]() and [Youtube]()
+- Director Cut Full-length recording of presentation COMING SOON and COMING SOON
 - Individual recordings of stage-ready demos:
   - Demo 1 [Ignite Tour CDN](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo1.mp4) and [Youtube](https://youtu.be/kq4sgPmULy8)
   - Demo 2 [Ignite Tour CDN](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo2.mp4) and [Youtube](https://youtu.be/6TSkrODEnE4)
