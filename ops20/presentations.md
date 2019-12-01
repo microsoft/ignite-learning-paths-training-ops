@@ -4,7 +4,6 @@ This is a machine generated file, and should not be edited, as it will be overwr
 
 # OPS20 Presentation Files
 
-- [Thumbs.db](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/Thumbs.db)
 - [ops20.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/ops20.pptx)
 - [ops20-2019-11_Nov-30.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/ops20-2019-11_Nov-30.pptx)
 - [ops20-2019-11_Nov-13.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/ops20-2019-11_Nov-13.pptx)
