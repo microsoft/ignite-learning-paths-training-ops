@@ -47,7 +47,7 @@ This bash script is located in this [repository]().
 1. Navigate to the Azure Portal at https://portal.azure.com
 2. Open up the Azure Cloud Shell
 3. Select a Bash Terminal
-4. Enter the command `git clone https://github.com/microsoft/ignite-learning-paths.git`
+4. Enter the command `git clone https://github.com/microsoft/ignite-learning-paths-training-ops.git`
 5. In the Cloud Shell, open file `ignite-learning-paths-training-ops/ops50/demos/scaling/params.sh`
 6. Update the params.sh file to include the empty variables. All of these values can be found from the resources deployed in the ARM template above.
 7. You now have the script ready in your Cloud Shell storage, for use in Demo 3.
