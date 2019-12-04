@@ -8,6 +8,18 @@ You are concerned about the reliability of your systems, services, and products.
 
 In this session, you’ll get an introduction to modern operations disciplines and a framework for reliability work. We jump into monitoring: the foundational practice you must tackle before you can make any headway with reliability. Using Tailwind Traders as an example, we’ll demonstrate how to monitor your environment, including the right (and wrong) things to monitor – and why. You’ll leave with the crucial tools and knowledge you need to discuss and improve reliability using objective data.
 
+---
+
+## Table of Contents
+
+| Resources          | Links  |
+|-------------------|----------------------------------|
+| PowerPoint        | - [Presentation](presentations.md)  |
+| Videos            | - [Dry Run Rehearsal](coming soon) <br/>- [Microsoft Ignite Orlando Recording](https://myignite.techcommunity.microsoft.com/sessions/82996) <br/> - [Demo 1: App Insights Application Map](coming soon) <br/>- [Demo 2: Dashboards](coming soon) <br/>- [Demo 3:SLIs in Log Analytics](coming soon) <br/>- [Demo 4:SLOs in Log Analytics](coming soon)|
+| Demos             | - [Demo 1 - App Insights Application Map](./demos/demo1.md) <br/> - [Demo 2 - Dashboards](./demos/demo2.md) <br/> - [Demo 3 - SLIs in Log Analytics](./demos/demo3.md) <br/> - [Demo 4 - SLOs in Log Analytics](./demos/demo4.md) <br/>
+
+---
+
 ## How To Use
 
 Welcome, Presenter!
