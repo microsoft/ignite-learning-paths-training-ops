@@ -16,7 +16,7 @@ In this session, you’ll dive into one of the most important topics for improvi
 |-------------------|----------------------------------|
 | PowerPoint        | - [Presentation](presentations.md)  |
 | Videos            | - [Microsoft Ignite Orlando Recording](https://myignite.techcommunity.microsoft.com/sessions/829968) <br/> - [Demo 1: Using Graph API to export a Teams incident discussion](coming soon) <br/>- [Demo 2: Creating dashboards to show an incident (dashboards as code)](coming soon) <br/>- [Demo 3: Querying the activity log via log analytics](coming soon) <br/>|
-| Demos             | - [Demo 1 - Using Graph API to export a Teams incident discussion](./demos/demo1.md) <br/> - [Demo 2 - Creating dashboards to show an incident (dashboards as code)](./demos/demo2.md) <br/> - [Demo 3 -  Querying the activity log via log analytics](./demos/demo3.md) |
+| Demos             | - [Demo 1 - Using Graph API to export a Teams incident discussion](./demos/demo1.md) <br/> - [Demo 2 - Creating dashboards to show an incident (dashboards as code)](./demos/demo2.md) <br/> - [Demo 3 - Querying the activity log via log analytics to determinre what changed](./demos/demo3.md) |
 
 ---
 
