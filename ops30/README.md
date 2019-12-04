@@ -8,6 +8,18 @@ Incidents will happen—there’s no doubt about that. The key question is wheth
 
 In this session, you’ll dive into one of the most important topics for improving reliability: how to learn from failure. We’ll listen in on one of Tailwind Traders post-incident reviews, often called a postmortem so we can see how it is done. You’ll learn how to shape and run this process so it actually yields value from something that would ordinarily be just a failure. After this session, you’ll be able to build a key feedback loop in your organization that turns unplanned outages into opportunities
 
+---
+
+## Table of Contents
+
+| Resources          | Links  |
+|-------------------|----------------------------------|
+| PowerPoint        | - [Presentation](presentations.md)  |
+| Videos            | - [Microsoft Ignite Orlando Recording](https://myignite.techcommunity.microsoft.com/sessions/829968) <br/> - [Demo 1: Using Graph API to export a Teams incident discussion](coming soon) <br/>- [Demo 2: Creating dashboards to show an incident (dashboards as code)](coming soon) <br/>- [Demo 3: Querying the activity log via log analytics](coming soon) <br/>|
+| Demos             | - [Demo 1 - Using Graph API to export a Teams incident discussion](./demos/demo1.md) <br/> - [Demo 2 - Creating dashboards to show an incident (dashboards as code)](./demos/demo2.md) <br/> - [Demo 3 -  Querying the activity log via log analytics](./demos/demo3.md) |
+
+---
+
 ## How To Use
 
 Welcome, Presenter!
