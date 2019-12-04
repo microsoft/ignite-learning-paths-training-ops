@@ -16,7 +16,7 @@ In this session, we will see how continuous delivery pipelines have helped Tailw
 |-------------------|----------------------------------|
 | PowerPoint        | - [Presentation](presentations.md)  |
 | Videos            | - [Dry Run Rehearsal](https://youtu.be/F66TwS0IniY) <br/> - [Demo 1: Azure Pipelines](https://youtu.be/kq4sgPmULy8) <br/>- [Demo 2: Environment Tracing](https://youtu.be/6TSkrODEnE4) |
-| Demos            | - [Demo Setup](demo-guide.md) <br/> - [Demo Steps](demo-guide.md) |
+| Demos            | - [Demo Setup](demo-setup.md) <br/> - [Demo Steps](demo-guide.md) |
 
 ---
 
