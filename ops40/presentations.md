@@ -12,5 +12,6 @@ This is a machine generated file, and should not be edited, as it will be overwr
 - [ops40-2019-11_Nov-04.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/ops40-2019-11_Nov-04.pptx)
 - [ops40-2019-11_Nov-30.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/ops40-2019-11_Nov-30.pptx)
 - [ops40.ja-jp-2019-12_Dec-05.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/ops40.ja-jp-2019-12_Dec-05.pptx)
+- [ops40.ja-jp-2019-12_Dec-06.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/ops40.ja-jp-2019-12_Dec-06.pptx)
 
 
