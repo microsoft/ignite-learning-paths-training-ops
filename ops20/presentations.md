@@ -4,7 +4,7 @@ This is a machine generated file, and should not be edited, as it will be overwr
 
 # OPS20 Presentation Files
 
-- [ops20.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/ops20.pptx)
+- [ops20.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/ops20.pptx) (Updated: Nov 14, 2019)
 ---
 ## Historical Files
 - [ops20-2019-10_Oct-24.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/ops20-2019-10_Oct-24.pptx)
