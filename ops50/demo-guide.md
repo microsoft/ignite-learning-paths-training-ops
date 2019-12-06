@@ -22,11 +22,12 @@ The following asset can be used for delivering this talk:
 
 - [PowerPoint deck with demo videos embedded](https://github.com/microsoft/ignite-learning-paths-training-ops/blob/master/ops50/presentations.md)
 
-## Pre Session Actions
+## Pre-Session Actions
 
 Please complete the below two tasks ahead of the session. I would recommend doing these within the 24 hours before you are due to deliver the session.
 
 ### Generate Load for Azure Front Door Demo
+
 In order to show the caching function in Azure Front Door (Demo 4). You will need to generate some traffic to your Azure Frontdoor endpoint. Here's how to do that.
 
 **Make sure you do this within the 24 hours before your talk, but no less than 60 minutes before your talk, as you wnt to ensure the metrics have flowed through to Azure Monitor for the demonstration.**
@@ -40,11 +41,12 @@ In order to show the caching function in Azure Front Door (Demo 4). You will nee
 Feel free to adapt these figures if need be. I found that 15 minutes was long enough to be very visible on the Azure Monitor graphs.
 
 ### Clone Repo in Azure Cloud Shell
+
 In Demo 3 where you will demonstrate scaling via queues, you will run a bash script to add messages to the queue and trigger a scaling event.
 
-This bash script is located in this [repository]().
+This bash script is located in this [repository](https://github.com/microsoft/ignite-learning-paths-training-ops).
 
-1. Navigate to the Azure Portal at https://portal.azure.com
+1. Navigate to the Azure Portal at [https://portal.azure.com](https://portal.azure.com)
 2. Open up the Azure Cloud Shell
 3. Select a Bash Terminal
 4. Enter the command `git clone https://github.com/microsoft/ignite-learning-paths-training-ops.git`
@@ -52,20 +54,20 @@ This bash script is located in this [repository]().
 6. Update the params.sh file to include the empty variables. All of these values can be found from the resources deployed in the ARM template above.
 7. You now have the script ready in your Cloud Shell storage, for use in Demo 3.
 
-
 ## Demo 1 - Retrieving Capacity Metrics
 
-#### Video of how to deliver this demo
+### Video of how to deliver this demo
+
 [Download mp4 version here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/01_Capacity_Metrics.mp4)
 <br>
 <br>
 ![01_Capacity_Metrics](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/01_Capacity_Metrics.gif)
 
-#### Step by Step Instructions
+### Step by Step Instructions
 
-In this demonstration you will demonstrate how to obtain capacity metrics from your CosmosDB Database. There is a video of this demo available [here]()
+In this demonstration you will demonstrate how to obtain capacity metrics from your CosmosDB Database. There is a video of this demo available [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/01_Capacity_Metrics.mp4)
 
-1. Navigate to the Azure Portal at https://portal.azure.com
+1. Navigate to the Azure Portal at [https://portal.azure.com](https://portal.azure.com)
 2. Navigate to the Azure Monitor Service by typing `Monitor` in the search bar, and selecting it.
 3. Select `Metrics` on the left hand side.
 4. Click `Select a resource` on the metric bar above the empty graph. This will open a blade to the right hand side.
@@ -101,17 +103,18 @@ If you do wish to run this demo within your own account, then the items to demon
   - How to set up a monthly spend budget
   - How to have this alert to an action group if met
 
-
 ## Demo 3 -  Scaling with Queues
 
-#### Video of how to deliver this demo
+### Video of how to deliver this demo
+
 [Download mp4 version here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/03_Scaling.mp4)
 <br>
 <br>
 ![03_Scaling](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/03_Scaling.gif)
 
-#### Step by Step Instructions
-1. Open threee tabs of the Azure Portal at https://portal.azure.com
+### Step by Step Instructions
+
+1. Open threee tabs of the Azure Portal at [https://portal.azure.com](https://portal.azure.com)
 2. In the first tab, type `Scale` in the search bar and select the 'Virtual Machine Scale Sets' service.
 3. Select the scale set for this demo. You can filter on subscription/resource group to make it easier.
 4. Show in the overview pane that the Scale Set is utilising three Availability Zones.
@@ -129,9 +132,8 @@ If you do wish to run this demo within your own account, then the items to demon
 16. The script will show you the current instances, then after a couple of seconds, start adding messages to the queue.
 17. Navigate back to tab two, and refresh the queue to show that there are now messages being added.
 18. Navigate back to tab one, select instances again, and hit refresh. You should see that some new instances have been created based on our scaling rule.
-    1.  **Note - this may take a little longer and they won't be there first time. Fill the time by explaining more about scaling. Maybe how you could add another rule to scale down when the queue length gets smaller.**
+    1. **Note - this may take a little longer and they won't be there first time. Fill the time by explaining more about scaling. Maybe how you could add another rule to scale down when the queue length gets smaller.**
 19. Navigate back to tab three and show the script in the cloudshell completing, and finally showing the new instances in our scale set are being created.
-
 
 ## Demo 4 -  Going Global with Azure Front Door
 
@@ -139,14 +141,16 @@ In this demonstration, you will show how adding Azure Front Door, and simply con
 
 **You should have ran the load test as mentioned in the Pre Session Actions for this to show any useful data**
 
-#### Video of how to deliver this demo
+### Video of how to deliver this demo
+
 [Download mp4 version here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/04_Frontdoor_Caching.mp4)
 <br>
 <br>
 ![04_Frontdoor_Caching](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/04_Frontdoor_Caching.gif)
 
-#### Step by Step Instructions
-1. Navigate to the Azure Portal at https://portal.azure.com.
+### Step by Step Instructions
+
+1. Navigate to the Azure Portal at [https://portal.azure.com](https://portal.azure.com).
 2. Search for `Front Doors` in the Search bar and select the Front Door Service.
 3. Select the front door for this demo. You can filter by Subscription / Resource Group if easier.
 4. Click on 'Front Door Designer' on the left hand side.
@@ -166,7 +170,6 @@ In this demonstration, you will show how adding Azure Front Door, and simply con
 18. To make the graph look more compelling you may wish to reduce the time frame of the data in the top right hand side from 24 hours to something smaller such as 4 hours. This is assuming you ran your load test within the last 4 hours.
 19. Move the cursor over the peak in the graph to demonstrate that the majority of traffic is being served by Azure Front Door as requests are being cached and only minimal traffic is going to the backend.
 20. Finally, show that there is consistent traffic to the backend. This is all of the Azure Front Door edge nodes performing health checks on the backends.
-
 
 ## Teardown instructions
 
