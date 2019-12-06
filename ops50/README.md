@@ -8,6 +8,18 @@ When your growth or the demand for your systems exceeds, or is projected to exce
 
 In this session, dive into capacity planning and cost estimation basics, including the tools Azure provides to help with both. We wrap up with a discussion and demonstration of how Tailwind Traders judiciously applied Azure scaling features. Learn how to satisfy your customers and a growing demand, even when “challenged” by success.
 
+---
+
+## Table of Contents
+
+| Resources          | Links  |
+|-------------------|----------------------------------|
+| PowerPoint        | - [Presentation](presentations.md)  |
+| Videos            | - [Microsoft Ignite Orlando Recording](coming soon) <br/> - [Demo 1: Retrieving Capacity Metrics](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/01_Capacity_Metrics.mp4) <br/>- [Demo 2: Cost Management](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/02_Cost_Management.mp4) [without audio](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/02_Cost_Management_noaudio.mp4)<br/>- [Demo 3: Scaling with Queues](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/03_Scaling.mp4) |
+| Demos             | - [Demo 1 - Retrieving Capacity Metrics](./demo-guide.md) <br/> - [Demo 2 - Cost Management](./demo-guide.md) <br/> - [Demo 3 - Scaling with Queues](./demo-guide.md)
+
+---
+
 ## How To Use
 
 Welcome, Presenter!
