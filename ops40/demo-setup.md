@@ -2,11 +2,11 @@
 
 First, deploy the Tailwind Traders application onto a Kubernetes cluster. Deployment steps and automation can be found here:
 
-https://github.com/microsoft/ignite-learning-paths-training-ops/tree/master/deployment
+[https://github.com/microsoft/ignite-learning-paths-training-ops/tree/master/deployment](https://github.com/microsoft/ignite-learning-paths-training-ops/tree/master/deployment)
 
 Once completed, fork this repo into your own GitHub account and clone to your development system.
 
-https://github.com/microsoft/ignite-learning-paths-training-ops.git
+[https://github.com/microsoft/ignite-learning-paths-training-ops.git](https://github.com/microsoft/ignite-learning-paths-training-ops.git)
 
 Update the variable values in the `/ops40/demos/azure_pipeline/azure-pipelines.yaml` file to match the new Azure Container Registry, Azure Kubernetes Service, and Cosmos DB deployments.
 
@@ -24,14 +24,13 @@ ttacrfqkz63c47hsxc  ops40-demo-update-002  eastus2     Standard  ttacrfqkz63c47h
 
 **Azure Kubernetes Service (AKS)**
 
-On line 17, 18, 19, replace the aks cluster, resource group name, and ingress controller FQDN for the **pre-production** cluster. 
+On line 17, 18, 19, replace the aks cluster, resource group name, and ingress controller FQDN for the **pre-production** cluster.
 
-On line 22, 23, 25 replace the aks cluster, resource group name, and ingress controller FQDN for the **production** cluster. 
+On line 22, 23, 25 replace the aks cluster, resource group name, and ingress controller FQDN for the **production** cluster.
 
 For the sake of this demo, it is ok to use the same cluster for both pre-production and production. If doing so, the values will be identical.
 
 You can get the AKS cluster name and resource group name with the following Azure CLI command.
-
 
 ```
 $ az aks list -o table
@@ -66,7 +65,7 @@ On line 27, replace the Cosmos DB name with shopping cart Cosmos DB endpoint. Yo
 
 ```
 $ az cosmosdb list -o table
- 
+
 DatabaseAccountOfferType    DocumentEndpoint                                            EnableAutomaticFailover    EnableMultipleWriteLocations    IpRangeFilter    IsVirtualNetworkFilterEnabled    Kind              Location    Name                       ProvisioningState    ResourceGroup
 --------------------------  ----------------------------------------------------------  -------------------------  ------------------------------  ---------------  -------------------------------  ----------------  ----------  -------------------------  -------------------  ---------------------
 Standard                    https://ttshoppingdbfqkz63c47hsxc.documents.azure.com:443/  False                      True                                             False                            GlobalDocumentDB  East US 2   ttshoppingdbfqkz63c47hsxc  Succeeded            ops40-demo-update-002
@@ -102,7 +101,6 @@ Once done, push the updates back to GitHub. This repository is used in the next 
 
 If the pipeline runs successfully, move onto the next step. If not, you will need to troubleshoot.
 
-
 ## Create a manual check
 
 1. Click on **Environments** on the left hand Azure DevOps menu.
@@ -112,7 +110,6 @@ If the pipeline runs successfully, move onto the next step. If not, you will nee
 3. Select the **...** menu > **Approvals and Checks** > **Approvals**.
 
 4. Add yourself as an approver and select **create**.
-
 
 ## Break Tailwind Traders
 

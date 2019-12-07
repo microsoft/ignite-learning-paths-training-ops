@@ -23,8 +23,7 @@ We will navigate through a number of tools beginning with the Application Dashbo
 
 >**Presenter Setup Checklist:**
 
-- [ ] Dashboard created open in own tab.    
-
+- [ ] Dashboard created open in own tab.
 
 ## Part 1: Azure Dashboard
 

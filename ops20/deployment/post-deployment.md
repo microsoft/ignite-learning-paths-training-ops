@@ -7,7 +7,7 @@
 3. Select the container named `Logs` by clicking it once and then select "Logs" from the list of options (Events, Properties, **Logs**, Connect)
 4. Scroll to the very botoom of the log to see **Connection Information**.
 
-You should see something like: 
+You should see something like:
 
 ```
 *************** Connection Information ***************
@@ -19,7 +19,7 @@ az aks get-credentials --name tailwindtradersakswj2fmlar6aphy --resource-group o
 ******************************************************
 ```
 
-Using the URL provided, browse to the frontend of the Tailwind Traders site. 
+Using the URL provided, browse to the frontend of the Tailwind Traders site.
 
 Once you have verified the system is running, we next  need to "break" the shopping cart so that we have data to view in the demonstration.
 
@@ -29,7 +29,7 @@ Using the AKS cluster information found in the **Connection Information** at the
 
 1. From Cloud Shell, run the command specific to your demo environment
 
-It should look something like: 
+It should look something like:
 
 ``` az cli
 az aks get-credentials --name tailwindtradersakswj2fmlar6aphy --resource-group ops20jahand1030a --admin
@@ -37,7 +37,7 @@ az aks get-credentials --name tailwindtradersakswj2fmlar6aphy --resource-group o
 
 .. where `tailwindtradersakswj2fmlar6aphy` and `ops20jahand1030a` are replaced with your own information.
 
-Once successfully connected you should see a message like: 
+Once successfully connected you should see a message like:
 
 ```
 Merged "tailwindtradersakswj2fmlar6aphy-admin" as current context in /home/jason/.kube/config
@@ -49,7 +49,7 @@ Merged "tailwindtradersakswj2fmlar6aphy-admin" as current context in /home/jason
 kubectl edit configmap cfg-my-tt-cart
 ```
 
-This will bring up the configmap in a `vi` editor. 
+This will bring up the configmap in a `vi` editor.
 
 3. Using your arrow keys, move the cursor down eight (8) rows to the `HOST`
 4. Using the arrow keys, move the curosor over the digit (3) near the end of the URL
@@ -73,6 +73,7 @@ my-tt-stock-6b969dd459-r2wcp                                1/1     Running   0 
 my-tt-webbff-67849c78b7-bfprn                               1/1     Running   0          3h3m
 web-6b56cc7d7c-sqpkm                                        1/1     Running   0          3h3m
 ```
+
 Find the name of the pod associated with the shopping cart at the top of the list and copy it.
 
 8. Run the following command to delete the pod
@@ -87,12 +88,11 @@ The system is now operating in a degraded state with the `Shopping Cart` functio
 
 To verify this, we need to log in to the system and take a look at the shopping cart.
 
-9. Browse to the front end site using the URL found in the *Connection Information** found above. 
+9. Browse to the front end site using the URL found in the *Connection Information** found above.
 10. Login using any fake credentials.
 11. Click on the shopping cart and you should see errors.
 
-
-Congratulations, the site is now broken and Log Analytics has begun collected data we will use in the demonstration. 
+Congratulations, the site is now broken and Log Analytics has begun collected data we will use in the demonstration.
 
 It is recommended to break the shopping cart within 24 hours of the presentation.
 
@@ -105,6 +105,7 @@ This demo uses Logic Apps, Azure Devops (Boards), and Microsoft Teams. Follow th
 The Logic App should be deployed ready to go with the exception of authenticating a two of the connectors. The easiest way to do this is to authenticate the API Connections (found in the resource group).
 
 **Authenticate Microsoft Teams and Azure Devops for use in the Logic App**
+
 1. Browse back to the Resource Group, click on the "API Connection" named `teams`
 2. Click the banner stating `This connection is not authenticated`
 3. Press the "Authorize" button
@@ -115,6 +116,7 @@ The Logic App should be deployed ready to go with the exception of authenticatin
 Now we need to grab the URL for the Logic App's endpoint so we can send and a JSON file (alert) to begin the automation.
 
 **Find and copy the Logic App Endpoint URL**
+
 1. Browse back to the Resource Group, click on the "Logic App" named `ops20main`
 2. Click the "View in Logic Apps designer" link or the "Edit" icon near the top
 
@@ -141,7 +143,7 @@ Now we need to grab the URL for the Logic App's endpoint so we can send and a JS
 1. Browse back to the Resource Group, click on the "Devops Project" with the name you chose during the deployment step
 2. Click the blue banner that states "Click here to access your project in Azure DevOps portal -->"
 3. From inside Azure Boards (in the new tab that just opened) browse to "Boards -> Boards" so that you are viewing the "Issues" Kanban board (**NOTE:** *You will need to exit out of the popup modal*)
-   
+
 Now we are ready to test our alert with Postman
 
 4. Using Postman, "Send" the JSON data
@@ -219,11 +221,11 @@ ContainerLog | where LogEntry contains "cart"
 
 ### Kubernetes
 
-While preparing demo 1, we used Kubernetes to "break" the shopping cart. We will be reversing those changes in the final demonstration. The steps are nearly identical to what you did when we started creating errors. 
+While preparing demo 1, we used Kubernetes to "break" the shopping cart. We will be reversing those changes in the final demonstration. The steps are nearly identical to what you did when we started creating errors.
 
 1. From tab with Cloud Shell (used to break the system), run the command specific to your demo environment just to verify it is connected to the AKS cluster.
 
-It should look something like: 
+It should look something like:
 
 ``` az cli
 az aks get-credentials --name tailwindtradersakswj2fmlar6aphy --resource-group ops20jahand1030a --admin
@@ -240,7 +242,7 @@ You should have the following tabs open and ready prior to the demo
 - [ ] Logic App (ops20Main) in design view
 - [ ] Azure Boards in the "Issues" Kanban screen
 - [ ] Azure Function for status page overview
-- [ ] Troubleshooting Guide Gallery Template in GitHub 
+- [ ] Troubleshooting Guide Gallery Template in GitHub
 - [ ] Log Analytics
 - [ ] Application Map
 - [ ] TailwindTraders Frontend in the shopping cart w/errors

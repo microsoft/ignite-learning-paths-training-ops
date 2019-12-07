@@ -1,6 +1,6 @@
 # Technical Demonstrations
 
-| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) |
 |--------|-------|------------|-----------|
 
 ## [Demo 1: Creating An Incident Response Plan](01/README.md)
@@ -43,7 +43,7 @@ We are demonstrating several tools within the Azure ecosystem that can help redu
 
 This demo touches on seven (7) unique products within the Azure ecosystem we will use to "respond" & "remediate" an active "incident".
 
-We will navigate through a number of tools beginning with the Application Dashboard. 
+We will navigate through a number of tools beginning with the Application Dashboard.
 
 [Look here for instructions on how to create the dashboard](../deployment/dashboard/README.md) prior to the demo.
 

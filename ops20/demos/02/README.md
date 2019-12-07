@@ -1,6 +1,6 @@
 # Demo 2: Troubleshooting Guides & Status Page
 
-| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) |
 |--------|-------|------------|-----------|
 
 >**Do you need to show videos instead of doing the demo live?:** Below, you'll find "stage-ready" videos that may be used in the event this presentation should be delivered offline.
@@ -27,12 +27,12 @@ Additionally, we want to highlight the importance of sharing what information we
 - [ ] Postman is open and ready to send the alert.
 
 > Be sure all above are complete before beginning demo
-
+>
 > **NOTE:** The JSON representing the Troubleshooting Guide in this demonstration [is found here](demos/two/troubleshooting_guide_template/TroubleshootingGuideGalleryTemplate.json).
 
 ## Part 1: Azure Troubleshooting Guide
 
-As of Thursday October 10th the Troubleshooting Guide has not been added to the automated deployment. So, we are going to use this as an opportunity to demonstrate how to create a new one using a template. 
+As of Thursday October 10th the Troubleshooting Guide has not been added to the automated deployment. So, we are going to use this as an opportunity to demonstrate how to create a new one using a template.
 
 The troubleshooting guide web gallery template file (JSON) is found in this repository.
 

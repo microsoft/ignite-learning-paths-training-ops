@@ -1,17 +1,18 @@
 # OPS 10 Demo 4 Script - SLOs in Log Analytics
 
 ## Background
+
 * Note: This is the same script as found embedded in the [main](../scripts/main.md) file, just broken out for convenience.
 
 ## Before you Demo
+
 1. Be sure to deploy the app and send traffic to it as per the [demo 1 script](demo1.md)
 
 ## Script
 
 1. Resource Group -> tt-app-insights -> Logs (Analytics) (or have a tab open with query in it)
 
-
-Here’s a very slightly modified version of our previous query. 
+Here’s a very slightly modified version of our previous query.
 
 {Paste in the following}
 
@@ -19,10 +20,10 @@ Here’s a very slightly modified version of our previous query.
 requests
 | where timestamp > ago(5h)
 | summarize succeed = count (success == true), failed = count (success == false), total = count() by bin(timestamp, 5m)
-| extend SLI = succeed * 100.00 / total 
+| extend SLI = succeed * 100.00 / total
 | extend SLO = 75.0
-| project SLI, timestamp, SLO 
-| render timechart 
+| project SLI, timestamp, SLO
+| render timechart
 ```
 
 When I say slightly, I mean we’ve changed two lines to add line representing our SLO. That’s this new line here that says our objective is 75% availability and the change to the line after it to include that SLO.

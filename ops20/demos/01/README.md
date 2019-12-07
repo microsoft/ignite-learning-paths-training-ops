@@ -1,6 +1,6 @@
 # Demo 1: Creating An Incident Response Plan
 
-| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) | 
+| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) |
 |--------|-------|------------|-----------|
 
 >**Do you need to show videos instead of doing the demo live?:** Below, you'll find "stage-ready" videos that may be used in the event this presentation should be delivered offline.
@@ -16,7 +16,7 @@
 **Question:** *What are we trying to demonstrate?*
 
 **Answer:**
-This is the first on-stage technical demonstration for **OPS20 - Responding to Incidents**. 
+This is the first on-stage technical demonstration for **OPS20 - Responding to Incidents**.
 
 In this demo, we want to help the audience connect principles and practices of modern incident management (discussed in [Section 1 of the presentation](../../slides/section/01/README.md)) with concrete "hands on" examples.
 
@@ -43,7 +43,6 @@ However, from stage, we'll only be showing the logic app that manages the creati
 The supporting Logic Apps will populate the "Assigned To" field of the work item and set the "State" to **Doing**. A link to a troubleshooting guide will populate in to the new chat channel as well.
 
 We will be guiding the audience through the technical details of only one Logic App during this demonstration.
-
 
 >**NOTE:** the JSON representing this Logic App [can be found here](deployment/azuredeploy-la-main.json).
 
