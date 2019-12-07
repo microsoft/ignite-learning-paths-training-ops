@@ -1,5 +1,7 @@
 # OPS40 Demo Guide
 
+## Demo 1
+
 ### Browser Tab 1: Tailwind Traders
 
 Show the Tailwind Traders application and non-functioning cart.
@@ -8,7 +10,7 @@ Show the Tailwind Traders application and non-functioning cart.
 
 The goal of this section of the demo is to demonstrate the almost instant testing feedback when integration Azure Pipelines with GithHub.
 
-- Create a pull request from branch < insert branch here > to the master branch of the same repository. 
+- Create a pull request from branch < insert branch here > to the master branch of the same repository.
 - Once the pull request has been created, stay on the pull request and show that the unit tests are passed through to source control.
 
 ### Browser Tab 3: Azure Pipeline Overview
@@ -68,7 +70,7 @@ Navigate back to the pipeline YAML and show how the built-in `Build.BuildId` var
  arguments: '--version $(Build.BuildId)'
 ```
 
-### Browser Tab 5: Azure Container Registry 
+### Browser Tab 5: Azure Container Registry
 
 Show that a container image has been created with a version that matches the pipeline build ID.
 

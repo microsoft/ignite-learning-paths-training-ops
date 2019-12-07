@@ -20,9 +20,9 @@ az provider register --namespace Microsoft.ContainerRegistry
 
 ## Service Principal
 
-You need to provide service principal credentials to the deployment for the Azure Kubernetes Service cluster creation. 
+You need to provide service principal credentials to the deployment for the Azure Kubernetes Service cluster creation.
 
-*IMPORTANT*: when you create a service principal and provide this information, it is important to be aware that you are creating privledged access in this environment and need to treat that access and the credentials accordingly (more info can be found in the doc below). 
+*IMPORTANT*: when you create a service principal and provide this information, it is important to be aware that you are creating privledged access in this environment and need to treat that access and the credentials accordingly (more info can be found in the doc below).
 
 For information on creating an Azure Service Principal, see the following documentation:
 
@@ -65,6 +65,7 @@ Use this button to deploy the Tailwind Traders application.
 If you'd prefer to deploy using the az command line tool, you can:
 
 1) create a ```params.json``` file whose contents look like this:
+
 ```
 {
   "servicePrincipalId": {
@@ -77,10 +78,11 @@ If you'd prefer to deploy using the az command line tool, you can:
           "value": "NEW_AZDEVOPS_ORG_NAME"
   },
   "emailAddress": {
-          "value": "YOUR EMAIL ADDRESS"	  
+          "value": "YOUR EMAIL ADDRESS"
   }
 }
 ```
+
 (The servicePrincipal values will be those created in the earlier step in this doc. The azureDevOpsOrgName is the name of a new Azure DevOps organization that will be created to be used in the demo. Do not use an existing Azure DevOps organization name).
 
 2) Create the resource group (choose a new resource group name to put the demo resources in and also which Azure region and subscription you'd like them to run in):
@@ -90,6 +92,7 @@ az group create --name RESOURCE_GROUP_NAME --location PREFERRED_AZURE_LOCATION -
 ```
 
 3) Kick off the deploy:
+
 ```
 az group deployment create --resource-group RESOURCE_GROUP_NAME --template-uri https://raw.githubusercontent.com/microsoft/ignite-learning-paths-training-ops/master/deployment/azuredeploy.json  --parameters @params.json --subscription YOUR_SUBSCRIPTION_NAME
 ```
@@ -113,6 +116,7 @@ Scroll to the bottom of the logs to retrieve both the application URL and the co
 Be sure to delete the resources when you have completed the presentation.
 
 Run the following command from [Cloud Shell](https://shell.azure.com) to delete the entire resource group:
+
 ```
 az group delete --name <resource group name> --yes --no-wait
 ```
@@ -125,4 +129,4 @@ The Azure DevOps organization also needs to be deleted. This can be done from th
 
 For a deeper understanding of the infrastructure and applications this presentations uses as a demo environment, please reference the following repositories and documentation.
 
-https://github.com/microsoft/TailwindTraders
+[https://github.com/microsoft/TailwindTraders](https://github.com/microsoft/TailwindTraders)
