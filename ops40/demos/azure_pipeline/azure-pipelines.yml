@@ -7,7 +7,7 @@ pr:
 variables:
 
   # Azure
-  azureSubscription: azure-service-connection
+  azureSubscription: azure-demo
 
   # Container Registry
   containerRegistryName: ttacrm2hpp44pff2jk
