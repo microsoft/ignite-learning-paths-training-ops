@@ -73,7 +73,7 @@ stages:
       inputs:
         testResultsFormat: 'NUnit'
         testResultsFiles: '**/test-results.xml'
-        failTaskOnFailedTests: true
+        failTaskOnFailedTests: false
 
 - stage: build
   dependsOn: test
