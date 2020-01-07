@@ -34,7 +34,7 @@ Along with the video of the presentation, this document will link to all the ass
 
 ## Assets in Train-The-Trainer kit
 
-- PowerPoint presentation including notes for each slide [here](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/OPS40.pptx)
+- PowerPoint presentation including notes for each slide [here](./presentations.md)
 - Demo Setup [here](./demo-setup.md)
 - Demo Guide [here](./demo-guide.md)
 - Full-length recording of presentation [Ignite Tour CDN](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/dry-run/ops40.mp4) and [Youtube](https://youtu.be/F66TwS0IniY)
