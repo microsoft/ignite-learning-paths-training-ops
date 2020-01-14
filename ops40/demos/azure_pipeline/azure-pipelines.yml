@@ -14,12 +14,12 @@ variables:
   containerRegistryFqdn: ttacrf563iwkfkckwa.azurecr.io
 
   # AKS Pre-Production
-  aks-cluster-rg-pre-prod: ops400113
+  aks-cluster-rg-pre-prod: opsjan09a
   aks-cluster-pre-prod: tailwindtradersaksf563iwkfkckwa
   ingress-pre-prod: 0bea0f9231c34fa08624.eastus.aksapp.io
 
   # Production
-  aks-cluster-rg: ops400113
+  aks-cluster-rg: opsjan09a
   aks-cluster: tailwindtradersaksf563iwkfkckwa
   ingress: 0bea0f9231c34fa08624.eastus.aksapp.io
 
