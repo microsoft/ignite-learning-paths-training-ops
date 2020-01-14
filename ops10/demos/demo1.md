@@ -22,6 +22,10 @@ Notes:
 
 First, we will send some "good" traffic to the web frontend using the Apache Bench tool (ab).
 
+* Apache bench is included with later versions of OSX. No installation is is necessary.
+* Windows users can download it either as part of the main Apache http distribution in the bin directory (for example at [Apache Lounge](https://www.apachelounge.com/download/)) or as part of the [XAMPP distribution](https://www.apachefriends.org/index.html)).
+* Linux users can install it as part of the apache2-utils, httpd-tools, apr-util or similar Apache utils package depending on their distribution.
+
 ```
 ab -n 500 http://URL_TO_YOUR_DEPLOYED_APP
 ```
@@ -50,13 +54,13 @@ Here's one way to get a valid bearer token:
 1. now we can use ab to send the shopping cart "good" traffic:
 
 ```
-ab -n 200 -c 10 -H 'Authorization: Token BEARERTOKENHERE' URL_TO_YOUR_DEPLOYED_APP/cart-api/shoppingcart
+ab -n 200 -c 10 -H "Authorization: Token BEARERTOKENHERE" URL_TO_YOUR_DEPLOYED_APP/cart-api/shoppingcart
 ````
 
 For example:
 
 ```
-ab -n 200 -c 10 -H 'Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2Rmc2RAc2Rmc2YuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvc2lkIjoiYzdjMGYyZDctODA4My00MGU3LTkxNmEtOWYzZDFhNTNhOGVmIiwiZXhwIjoxNTcxNzYzMDQ2LCJpc3MiOiJUVEZha2VMb2dpbiJ9.x-SrTAGZi42g9mQ7NxjSIzhSjrJUvxn6cJosV9kXzXk' http://3a1d8c473f62432b88cb.southeastasia.aksapp.io/cart-api/shoppingcart
+ab -n 200 -c 10 -H "Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2Rmc2RAc2Rmc2YuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvc2lkIjoiYzdjMGYyZDctODA4My00MGU3LTkxNmEtOWYzZDFhNTNhOGVmIiwiZXhwIjoxNTcxNzYzMDQ2LCJpc3MiOiJUVEZha2VMb2dpbiJ9.x-SrTAGZi42g9mQ7NxjSIzhSjrJUvxn6cJosV9kXzXk" http://3a1d8c473f62432b88cb.southeastasia.aksapp.io/cart-api/shoppingcart
 ```
 
 Next, we will want to send the service some "bad" or "error" traffic. We can do this in two ways to generate two different kinds of errors.
@@ -66,14 +70,17 @@ First, generate HTTP 401 (non-authorized traffic) by removing the authorization 
 ```
 ab -n 50 -c 10 URL_TO_YOUR_DEPLOYED_APP/cart-api/shoppingcart
 ```
+
 Second, generate HTTP 404 errors (bad page request) by removing the 's' in "shoppingcart" in the URL:
 
 ```
-ab -n 200 -c 10 -H 'Authorization: Token BEARERTOKENHERE' URL_TO_YOUR_DEPLOYED_APP/cart-api/hoppingcart
+ab -n 200 -c 10 -H "Authorization: Token BEARERTOKENHERE" URL_TO_YOUR_DEPLOYED_APP/cart-api/hoppingcart
 ```
+
 For example:
+
 ```
-ab -n 50 -c 10 -H 'Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2Rmc2RAc2Rmc2YuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvc2lkIjoiYzdjMGYyZDctODA4My00MGU3LTkxNmEtOWYzZDFhNTNhOGVmIiwiZXhwIjoxNTcxNzYzMDQ2LCJpc3MiOiJUVEZha2VMb2dpbiJ9.x-SrTAGZi42g9mQ7NxjSIzhSjrJUvxn6cJosV9kXzXk' http://3a1d8c473f62432b88cb.southeastasia.aksapp.io/cart-api/hoppingcart
+ab -n 50 -c 10 -H "Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2Rmc2RAc2Rmc2YuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvc2lkIjoiYzdjMGYyZDctODA4My00MGU3LTkxNmEtOWYzZDFhNTNhOGVmIiwiZXhwIjoxNTcxNzYzMDQ2LCJpc3MiOiJUVEZha2VMb2dpbiJ9.x-SrTAGZi42g9mQ7NxjSIzhSjrJUvxn6cJosV9kXzXk" http://3a1d8c473f62432b88cb.southeastasia.aksapp.io/cart-api/hoppingcart
 ```
 
 ## Script
