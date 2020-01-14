@@ -10,6 +10,8 @@ In this session, we will see how continuous delivery pipelines have helped Tailw
 
 This is a change for a PR
 
+- Jason Hand
+  
 ---
 
 ## Table of Contents
