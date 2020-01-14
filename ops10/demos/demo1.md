@@ -23,7 +23,7 @@ Notes:
 First, we will send some "good" traffic to the web frontend using the Apache Bench tool (ab).
 
 * Apache bench is included with later versions of OSX. No installation is is necessary.
-* Windows users can download it either as part of the main Apache http distribution in the bin directory (for example at [Apache Lounge](https://www.apachelounge.com/download/)) or as part of the [XAMPP distributioon](https://www.apachefriends.org/index.html)).
+* Windows users can download it either as part of the main Apache http distribution in the bin directory (for example at [Apache Lounge](https://www.apachelounge.com/download/)) or as part of the [XAMPP distribution](https://www.apachefriends.org/index.html)).
 * Linux users can install it as part of the apache2-utils, httpd-tools, apr-util or similar Apache utils package depending on their distribution.
 
 ```
