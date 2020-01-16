@@ -62,7 +62,7 @@ Coming soon ..
 
 Postman is a tool (available on Windows and Mac) that allows you to send data to a URL with JSON in the body of the message. This is what is used to trigger the Logic App.
 
-The sample [JSON is available here](ops20/demos/01/alert_body.json). This is what is used in the on-stage demo when the presenter "triggers the alert". Be sure to download and familiarize yourself with Postman prior to the presentation.
+The sample [JSON is available here](https://github.com/microsoft/ignite-learning-paths-training-ops/blob/master/ops20/demos/01/alert_body.json). This is what is used in the on-stage demo when the presenter "triggers the alert". Be sure to download and familiarize yourself with Postman prior to the presentation.
 
 ---
 >**Presenter Setup Checklist:**
