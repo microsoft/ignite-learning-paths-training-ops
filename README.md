@@ -52,7 +52,7 @@ Infrastructure and software delivery methods have a direct and material impact o
 
 In this session, we will see how continuous delivery pipelines have helped Tailwind Traders and the rest of the industry deploy tested software to production environments to increase reliability. We’ll also explore modern methods for environment provisioning using infrastructure as code. As a result of attending this session, you will gain practical information on automated deployment and provisioning solutions using Azure-based technology.
 
-## [OPS50: Preparing for Growth: Capacity Planning and Scalin](./ops50)
+## [OPS50: Preparing for Growth: Capacity Planning and Scaling](./ops50)
 
 When your growth or the demand for your systems exceeds, or is projected to exceed, your current capacity – that’s a “good” problem to have. However, this can be just as much of a threat to your system’s reliability as any other factor.
 
