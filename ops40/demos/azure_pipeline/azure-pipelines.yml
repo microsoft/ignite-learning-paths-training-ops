@@ -10,7 +10,7 @@ variables:
   azureSubscription: azure-service-connection
 
   # Container Registry
-  containerRegistryName: ttacrfqkz63c47hsxc
+  containerRegistryName: ttacrkftgvd4dvhmic
   containerRegistryFqdn: ttacrkftgvd4dvhmic.azurecr.io
 
   # AKS Pre-Production
