@@ -16,12 +16,12 @@ variables:
   # AKS Pre-Production
   aks-cluster-rg-pre-prod: Ops40DemoRG
   aks-cluster-pre-prod: tailwindtradersakskftgvd4dvhmic
-  ingress-pre-prod: tailwindtradersakskftgvd4dvhmic-2d0edab7.hcp.westeurope.azmk8s.io
+  ingress-pre-prod: a7cb7636b3c7481da297.westeurope.aksapp.io
 
   # Production
   aks-cluster-rg: Ops40DemoRG
   aks-cluster: tailwindtradersakskftgvd4dvhmic
-  ingress: tailwindtradersakskftgvd4dvhmic-2d0edab7.hcp.westeurope.azmk8s.io
+  ingress: a7cb7636b3c7481da297.westeurope.aksapp.io
 
   # Production Database
   hostDB: https://ttshoppingdbkftgvd4dvhmic.documents.azure.com:443/
