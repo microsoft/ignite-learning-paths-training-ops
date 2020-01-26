@@ -16,7 +16,7 @@ variables:
   # AKS Pre-Production
   aks-cluster-rg-pre-prod: IgniteOps40
   aks-cluster-pre-prod: tailwindtradersaksorlthhh3vdkwa
-  ingress-pre-prod: bb4b197a24c54b10af5c.westeurope.aksapp.io
+  ingress-pre-prod: fcc76d0bd6fe4f5c99fd.westeurope.aksapp.io
 
   # Production
   aks-cluster-rg: IgniteOps40
