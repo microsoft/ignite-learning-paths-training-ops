@@ -10,21 +10,21 @@ variables:
   azureSubscription: azure-service-connection
 
   # Container Registry
-  containerRegistryName: ttacrorlthhh3vdkwa
-  containerRegistryFqdn: ttacrorlthhh3vdkwa.azurecr.io
+  containerRegistryName: ttacrf7sdxxvjqddj2
+  containerRegistryFqdn: ttacrf7sdxxvjqddj2.azurecr.io
 
   # AKS Pre-Production
-  aks-cluster-rg-pre-prod: IgniteOps40
-  aks-cluster-pre-prod: tailwindtradersaksorlthhh3vdkwa
-  ingress-pre-prod: fcc76d0bd6fe4f5c99fd.westeurope.aksapp.io
+  aks-cluster-rg-pre-prod: IgniteZurichDemoRG
+  aks-cluster-pre-prod: tailwindtradersaksf7sdxxvjqddj2
+  ingress-pre-prod: b2d2f0816f464b8393e5.westeurope.aksapp.io
 
   # Production
-  aks-cluster-rg: IgniteOps40
-  aks-cluster: tailwindtradersaksorlthhh3vdkwa
-  ingress: fcc76d0bd6fe4f5c99fd.westeurope.aksapp.io
+  aks-cluster-rg: IgniteZurichDemoRG
+  aks-cluster: tailwindtradersaksf7sdxxvjqddj2
+  ingress: b2d2f0816f464b8393e5.westeurope.aksapp.io
 
   # Production Database
-  hostDB: https://ttshoppingdborlthhh3vdkwa.documents.azure.com:443/
+  hostDB: https://ttshoppingdbf7sdxxvjqddj2.documents.azure.com:443/
 
 stages:
 
