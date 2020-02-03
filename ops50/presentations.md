@@ -7,7 +7,7 @@ If you have questions around this process
 please contact Scott Cate
 -->
 
-# OPS50 Presentation Files
+# OPS50 Current Presentation Files
 
 - [ops50.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/ops50.pptx) (Updated: Nov 20, 2019)
 ---
