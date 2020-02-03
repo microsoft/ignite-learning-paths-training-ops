@@ -9,8 +9,8 @@ please contact Scott Cate
 
 # OPS30 Current Presentation Files
 
-- [ops30.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/ops30.pptx) (Updated: Dec 02, 2019)
-- [ops30.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/ops30.ja-jp.pptx) (Updated: Jan 21, 2020)
+- [ops30.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/ops30.pptx)
+- [ops30.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/ops30.ja-jp.pptx)
 ---
 ## Historical Files
 - [ops30-2019-10_Oct-24.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops30/ops30-2019-10_Oct-24.pptx)

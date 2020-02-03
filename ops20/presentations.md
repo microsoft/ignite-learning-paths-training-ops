@@ -9,8 +9,8 @@ please contact Scott Cate
 
 # OPS20 Current Presentation Files
 
-- [ops20.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/ops20.pptx) (Updated: Jan 02, 2020)
-- [ops20.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/ops20.ja-jp.pptx) (Updated: Jan 21, 2020)
+- [ops20.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/ops20.pptx)
+- [ops20.ja-jp.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/ops20.ja-jp.pptx)
 ---
 ## Historical Files
 - [ops20-2019-10_Oct-24.pptx](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/ops20-2019-10_Oct-24.pptx)
