@@ -34,3 +34,5 @@ Next, we are going to count of the number of successful requests, the number of 
 The next line computes the ratio of successful calls to total calls and multiples it by 100 to yield a percentage we can graph. The subsequent line tells KQL we should output this calculated SLI metric and timestamp for our graph.
 
 If we run this query, here’s what we get… Congratulations you’ve now seen your first SLI with Azure Monitor. Let’s take this one step further
+
+[Next Demo - Service Level Object Query using KQL in Log Analytics](demo4.md)

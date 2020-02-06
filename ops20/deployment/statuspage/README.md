@@ -4,7 +4,7 @@ The Status Page portion of the demo utilizes a webhook in Microsoft Teams to tri
 
 The Azure Function and associated storage files are part of the automated deployment.
 
-![](https://github.com/Azure-Samples/functions-teams-incident-status-page-bot/raw/master/tailwind-incident-bot.gif)
+![incident bot](https://github.com/Azure-Samples/functions-teams-incident-status-page-bot/raw/master/tailwind-incident-bot.gif)
 
 ## Post-Deployment Instructions
 
@@ -18,7 +18,7 @@ Click "**Get Function URL**" and copy the URL.
 
 ![Get Function URL](https://github.com/Azure-Samples/functions-teams-incident-status-page-bot/raw/master/get-func-url.png)
 
-Finally, open Teams and navigate to the "Apps" page of the team in which you want to create the bot.
+Next, open Teams and navigate to the "Apps" page of the team in which you want to create the bot.
 
 Click "**Create outgoing webhook**".
 

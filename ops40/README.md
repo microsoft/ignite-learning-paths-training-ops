@@ -15,7 +15,7 @@ In this session, we will see how continuous delivery pipelines have helped Tailw
 | Resources          | Links  |
 |-------------------|----------------------------------|
 | PowerPoint        | - [Presentation](presentations.md)  |
-| Videos            | - [Dry Run Rehearsal](https://youtu.be/F66TwS0IniY) <br/> - [Demo 1: Azure Pipelines](https://youtu.be/kq4sgPmULy8) <br/>- [Demo 2: Environment Tracing](https://youtu.be/6TSkrODEnE4) |
+| Videos            | - [Dry Run Rehearsal](https://youtu.be/F66TwS0IniY) <br/> - [Demo 1: Azure Pipelines](https://youtu.be/kq4sgPmULy8) <br/>- [Demo 1: Downloadable](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo1.mp4) <br/>- [Demo 2: Environment Tracing](https://youtu.be/6TSkrODEnE4) <br/>- [Demo 2: Downloadable](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo2.mp4)|
 | Demos            | - [Demo Setup](demo-setup.md) <br/> - [Demo Steps](demo-guide.md) |
 
 ---
@@ -38,7 +38,6 @@ Along with the video of the presentation, this document will link to all the ass
 - Demo Setup [here](./demo-setup.md)
 - Demo Guide [here](./demo-guide.md)
 - Full-length recording of presentation [Ignite Tour CDN](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/dry-run/ops40.mp4) and [Youtube](https://youtu.be/F66TwS0IniY)
-- Director Cut Full-length recording of presentation COMING SOON and COMING SOON
 - Individual recordings of stage-ready demos:
   - Demo 1 [Ignite Tour CDN](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo1.mp4) and [Youtube](https://youtu.be/kq4sgPmULy8)
   - Demo 2 [Ignite Tour CDN](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo2.mp4) and [Youtube](https://youtu.be/6TSkrODEnE4)

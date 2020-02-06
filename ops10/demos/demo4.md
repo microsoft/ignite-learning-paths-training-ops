@@ -29,3 +29,5 @@ requests
 When I say slightly, I mean we’ve changed two lines to add line representing our SLO. That’s this new line here that says our objective is 75% availability and the change to the line after it to include that SLO.
 
 When we run this, we get a graph that looks like this. Here’s the 75% mark. A quick visual inspection can show you how well we did in relationship to this objective.
+
+**End of Demos**

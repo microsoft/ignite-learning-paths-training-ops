@@ -1,8 +1,5 @@
 # Demo 1: Creating An Incident Response Plan
 
-| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) |
-|--------|-------|------------|-----------|
-
 >**Do you need to show videos instead of doing the demo live?:** Below, you'll find "stage-ready" videos that may be used in the event this presentation should be delivered offline.
 
 |  | Video | Description
@@ -34,17 +31,7 @@ The Logic App will automatically generate a work item in Azure Boards (a compone
 
 Subsequent steps of the Logic App create a new channel in Microsoft Teams, followed by posting information from the alert in to the new channel. Updates are also made to the work item to append the Microsoft Teams unique Channel ID.
 
-There are in fact three (3) separate Logic Apps used in the demo environment. Two additional exist to fetch the details of the on-call engineer as well as a link to a troubleshooting guide.
-
-The technical details of those Logic Apps can be found [here](https://coming.soon).
-
-However, from stage, we'll only be showing the logic app that manages the creation of an "incident" in the form of a work item, as well as the creation and population of a new chat channel.
-
-The supporting Logic Apps will populate the "Assigned To" field of the work item and set the "State" to **Doing**. A link to a troubleshooting guide will populate in to the new chat channel as well.
-
 We will be guiding the audience through the technical details of only one Logic App during this demonstration.
-
->**NOTE:** the JSON representing this Logic App [can be found here](deployment/azuredeploy-la-main.json).
 
 ---
 
@@ -54,7 +41,11 @@ Although much of the demo environment creation is automated, there are a few man
 
 ### 1. Authenticate Logic App Connectors for Azure Devops and Microsoft Teams
 
-Coming soon ..
+From the resource group overview, find the API connections for Teams and Azure Devops. 
+
+![APIAuth](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/screenshots/APIconnectionauth.png)
+
+Click in to each and authorize your own accounts and then save before exiting. Now each of these services should be connected to your own accounts. This step must be completed before running the Logic App
 
 ---
 
@@ -68,7 +59,7 @@ The sample [JSON is available here](https://github.com/microsoft/ignite-learning
 >**Presenter Setup Checklist:**
 
 - [ ] Logic App open in Design View.
-- [ ] Azure Boards - Query for work items open in tab.
+- [ ] Azure Boards open in tab.
 - [ ] Microsoft Teams open in browser tab (or native).
   
 > Be sure all above are complete before beginning demo
@@ -85,7 +76,7 @@ Expand each step and explain what is happening
 - Update Work Item (Azure Boards)
 - Post to Chat Channel (Microsoft Teams)
 
-[Watch Demo 1: Part 1](https://coming.soon)
+[Watch Demo 1: Part 1](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4)
 
 ---
 
@@ -95,6 +86,8 @@ Switch to the tab containing Azure Boards. You should be looking at your work it
 
 >**Presenter Note:** After confirming there are no current work items, we send the alert using Postman.
 
+[Watch Demo 2: Part 2](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4)
+
 ---
 
 ## Part 3: Microsoft Teams
@@ -103,4 +96,4 @@ Starting in Microsoft Teams, the audience should notice a new chat channel that 
 
 Open the new channel and point out the links that were provided.
 
-[Watch Demo 1: Part 3](https://coming.soon)
+[Watch Demo 1: Part 3](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4)
