@@ -23,7 +23,7 @@
 | Resources          | Links  |
 |-------------------|----------------------------------|
 | PowerPoint        | - [Presentation](presentations.md)  |
-| Videos            | - [Dry Run Rehearsal](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/OPS20_Final_Full.mp4) <br/>- [Microsoft Ignite Orlando Recording](https://myignite.techcommunity.microsoft.com/sessions/82997) <br/>- [Deploying the Demo Environment](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/00_Deployment.mp4) <br/>- [Post-deployment Steps](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/post_deployment.mp4) <br/>- [Director's Cut - Demo Explanations](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/TTT_DirectorsCut.mp4) <br/>- [Breaking the Shopping Cart](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/Break_TT_Cart.mp4) <br/>- [Full Presentation w/out Demo](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/01_Presentation_No_Demo.mp4) <br/>- [Presentation Section 1: Intro & Foundations of Incident Response](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/02_Presentation_Section_One.mp4) <br/>- [Demo 1: Logic Apps, Azure Boards, Microsoft Teams](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4) <br/>- [Presentation Section 2: Remediation Improvements (Context & Guidance)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/03_Presentation_Section_Two.mp4) <br/>- [Demo 2: Troubleshooting Guides & Chatops](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_2_full.mp4) <br/>- [Presentation Section 3: Tools to Reduce the Time To Recover](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/04_Presentation_Section_Three.mp4) <br/>- [Demo 3:Dashboards, Service Health, Log Analytics, KQL, Application Map](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_3_full.mp4) <br/>- [Presentation Section 4: Summary & Closing](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/05_Presentation_Section_Four.mp4) |
+| Videos            | - [Dry Run Rehearsal](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/OPS20_Final_Full.mp4) <br/>- [Microsoft Ignite Orlando Recording](https://myignite.techcommunity.microsoft.com/sessions/82997) <br/>- [Deploying the Demo Environment](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/00_Deployment.mp4) <br/>- [Post-deployment Steps](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/post_deployment.mp4) <br/>- [Director's Cut - Demo Explanations](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/TTT_DirectorsCut.mp4) <br/>- [Breaking the Shopping Cart](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/Break_TT_Cart.mp4) <br/> |
 | Demos             | - [Demo 1 - Creating An Incident Response Plan](https://github.com/microsoft/ignite-learning-paths-training-ops/blob/master/ops20/demos/01/README.md) <br/>- [Demo 2 - Troubleshooting Guides & Status Page](demos/README.md#demo-2---plan-b-paas---webapp) <br/>- [Demo 3 - Remediation of Shopping Cart](demos/README.md#demo-3---securing-the-app-with-azure-key-vault)
 
 ---
@@ -102,6 +102,7 @@ Detailed explanations of each demonstration associated with this presentation ca
 
 ---
 
+
 ## Assets in Train-The-Trainer kit
 
 - Slides
@@ -115,7 +116,8 @@ Detailed explanations of each demonstration associated with this presentation ca
 - Speaker Notes & Transcription
   - [Full speaker transcription from recording](slides/script/OPS20_Speaking_Script.md)
   
-  ---
+---
+
 
 ## Become a Trained Presenter
 
