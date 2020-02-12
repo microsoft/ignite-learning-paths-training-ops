@@ -33,7 +33,7 @@ The troubleshooting guide web gallery template file (JSON) is found in this repo
 
 - [Gallery](TroubleshootingGuideGalleryTemplate.json)
 
-We are using the gallery method as it seems to be more responsive for on-stage demos and much of the rest of the deployment is done using Gallery templates.
+We are using the gallery method as it seems to be more responsive for on-stage demos.
 
 Once the Troubleshooting Guide has been created, begin exploring it.
 
