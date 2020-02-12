@@ -102,6 +102,23 @@ Detailed explanations of each demonstration associated with this presentation ca
 
 ---
 
+
+## Assets in Train-The-Trainer kit
+
+- Slides
+  - [Master PowerPoint file (including notes for each slide)](presentations.md)
+- Videos
+  - [Full-length recording of presentation](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/OPS20_Final_Full.mp4)
+  - ["Director's Cut" Full-length recording of presentation](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/TTT_DirectorsCut.mp4)
+  - [Individual recordings of stage-ready hands-on demos (3 Demos)](demos/README.md)
+  - [Individual recordings of stage-ready Powerpoint presention (4 Sections)](slides/README.md)
+  - [Full-length recording of environment deployment](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/OPS20_Final_Full.mp4)
+- Speaker Notes & Transcription
+  - [Full speaker transcription from recording](slides/script/OPS20_Speaking_Script.md)
+  
+---
+
+
 ## Become a Trained Presenter
 
 To become a **Trained Presenter**, contact scalablecontent@microsoft.com.
