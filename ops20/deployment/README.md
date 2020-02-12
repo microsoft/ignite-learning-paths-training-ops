@@ -1,8 +1,5 @@
 # OPS20 (Tailwind Traders AKS Deployment)
 
-| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md)
-|--------|-------|------------|------|
-
 ## Prerequisites
 
 To present **OPS20 - Responding to Incidents**, you'll need an account with the following services.

@@ -1,8 +1,5 @@
 # Technical Demonstrations
 
-| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) |
-|--------|-------|------------|-----------|
-
 ## [Demo 1: Creating An Incident Response Plan](01/README.md)
 
 **What are we trying to demonstrate?**
@@ -41,11 +38,9 @@ This demo uses the following:
 
 We are demonstrating several tools within the Azure ecosystem that can help reduce the time to recover from a service disruption.
 
-This demo touches on seven (7) unique products within the Azure ecosystem we will use to "respond" & "remediate" an active "incident".
+This demo touches on six (6) unique products within the Azure ecosystem we will use to "respond" & "remediate" an active "incident".
 
 We will navigate through a number of tools beginning with the Application Dashboard.
-
-[Look here for instructions on how to create the dashboard](../deployment/dashboard/README.md) prior to the demo.
 
 This demo uses the following:
 
@@ -55,7 +50,6 @@ This demo uses the following:
 - Azure Workbook
 - Log Analytics
 - KQL
-- Kubernetes
 
 ## Pre-delivery Preparation
 
@@ -65,14 +59,12 @@ Be sure to address each item on the presenter setup checklist below.
 
 >**Presenter Setup Checklist:**
 
-- [ ] Logic App open in Design View.
+- [ ] Logic App open in Design View
 - [ ] Azure Boards in view
-- [ ] Postman is open and ready to send the alert.
-- [ ] Microsoft Teams open in browser tab (or native).
+- [ ] Postman is open and ready to send the alert
+- [ ] Microsoft Teams open in browser tab (or native)
 - [ ] Troubleshooting Guide open in tab
-- [ ] Status page is open in tab.
-- [ ] Dashboard open in own tab.
-- [ ] [AKS connection string](03/README.md) ready to copy and paste.
-- [ ] Cloud shell open in tab (can open from troubleshooting guide).
+- [ ] Status page is open in tab
+- [ ] Dashboard open in own tab
   
 > Be sure all above are complete before beginning demo

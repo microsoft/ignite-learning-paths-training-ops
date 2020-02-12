@@ -362,7 +362,7 @@
 							"type": "ApiConnection",
 							"inputs": {
 								"body": {
-									"messageBody": "[concat('<img src=\"https://thumbs.gfycat.com/DelayedVacantDassie-max-1mb.gif\" alt=\"Alert\" height=\"42\" width=\"42\"> <br />\n\n<a href=\"https://', parameters('azureDevOpsOrgName'), '.visualstudio.com/', parameters('azureDevOpsProject'), '/_workitems/edit/@{body(''Update_a_work_item'')?[''id'']}/\">Incident @{body(''Update_a_work_item'')?[''id'']}</a><br />\n<br />\n\n@{triggerBody()?[''alertContext'']?[''AlertType'']} : @{triggerBody()?[''alertContext'']?[''SeverityDescription'']}<br />\n<br />\n\nTroubleshooting Guide Coming. Please Standby...<br />')]",
+									"messageBody": "[concat('<img src=\"https://thumbs.gfycat.com/DelayedVacantDassie-max-1mb.gif\" alt=\"Alert\" height=\"42\" width=\"42\"> <br />\n\n<a href=\"https://', parameters('azureDevOpsOrgName'), '.visualstudio.com/', parameters('azureDevOpsProject'), '/_workitems/edit/@{body(''Update_a_work_item'')?[''id'']}/\">Incident @{body(''Update_a_work_item'')?[''id'']}</a><br />\n<br />\n\n@{triggerBody()?[''alertContext'']?[''AlertType'']} : @{triggerBody()?[''alertContext'']?[''SeverityDescription'']}<br />\n<br />\n\nPlease update the Status Page with what is known about this incident...<br />')]",
 									"recipient": {
 										"channelId": "@body('Create_a_channel')?['id']"
 									}

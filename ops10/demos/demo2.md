@@ -44,3 +44,5 @@ If we go back to dashboard, {click dashboard} and click on the Upload button we 
 Here’s a spiffy new dashboard that shows you a pretty dashboard of all of your resources currently in play for all of your subscriptions. {show items on dashboard}.
 
 You can see that the tiles are Resource Graph queries (in teeny tiny type), and just to prove this, if I click on a tile {click on Sum of all Disk sizes} you can see the actual query being run. In this case, it says for all disk resources, take the diskSizeGB property, convert that to a long (signed 64-bit) number representation, then the final line sums that up). I promise we’ll come back to this very powerful query interface later. Now back to the presentation.
+
+[Next Demo : Service Level Indicator Query using KQL in Log Analytics](demo3.md)

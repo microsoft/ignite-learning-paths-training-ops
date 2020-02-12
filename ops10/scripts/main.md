@@ -18,15 +18,15 @@ The rest of this document is the full script with lines in between each slide. E
 
 Welcome to OPS10, the first session in the OPS learning path. I’m really delighted you could join us today. I thought we could start out with a brief introduction to the learning path and exactly what you will be able to gain from it even within the first few minutes.
 
-We are here today to talk about this hairy beast of a subject, reliability. It doesn’t matter who you are or what you do for a living in your organization. Whether you are an operations person, someone in IT, whether you consider yourself in devops, sre, it management or perhaps a developer responsible for the creation of software. We all have a sense that the reliability of our systems, services and products are crucial to their success and to the success of our organization.
+We are here today to talk about this hairy beast of a subject, reliability. It doesn’t matter who you are or what you do for a living in your organization. Whether you are an operations person, someone in IT, whether you consider yourself in devops, SRE, IT management or perhaps a developer responsible for the creation of software. We all have a sense that the reliability of our systems, services and products are crucial to their success and to the success of our organization.
 
 ----
 
-As a result reliability becomes the thing that keeps people up worrying at night, keeps them from getting to sleep.
+As a result, reliability becomes the thing that keeps people up worrying at night, keeps them from getting to sleep.
 
 ----
 
-Ironically, it is also the thing wakes people up at night, when they get paged at 2am. When they get a call in the middle of dinner, when they spend part of their vacation on the phone to work, when the business starts to lose money instead of making money due to downtime.
+Ironically, it is also the thing that wakes people up at night when they are paged at 2am. When they get a call in the middle of dinner, when they spend part of their vacation on the phone to work, when the business starts to lose money instead of making money due to downtime.
 
 ----
 
@@ -39,9 +39,9 @@ Or worse, the angry customers on social media.
 ----
 
 When reliability becomes an issue, you can lose
-money
+money,
 time - all of the unplanned work you have to do
-reputation - customers lose patience and switch to your competitor
+reputation - customers lose patience and switch to your competitor,
 health - lack of uniterrupted sleep and an unpleasant job, no chance to get caught up all take a toll
 hiring - we all want to recruit good talent but word gets out an no one wants to work in a constant tire fire
 
@@ -49,7 +49,7 @@ And worst of all, having put in countless amounts of resources into a product or
 
 ----
 
-So the good news is, modern operations practices can help. Maybe you are here because you’ve had a problem in the past with reliability or maybe you are concerned if you don’t nail it now, it will be a problem. In either case, welcome.
+The good news is, modern operations practices can help. Maybe you are here because you’ve had a problem in the past with reliability or maybe you are concerned if you don’t nail it now, it will be a problem. In either case, welcome.
 
 ----
 
@@ -65,17 +65,21 @@ In this learning path, we’re going to give you a map for exactly that. This is
 
 ----
 
-The map for the LP is based on something from the site reliability engineering world called the Dickerson hierarchy of reliability. Mike Dickerson was an SRE who became the founding administrator of the United States Digital Services. He created this hierarchy while he was facing one the largest reliability crisis he had ever been asked to address.
+The map for this Learning Path is based on something from the site reliability engineering world called the Dickerson hierarchy of reliability. Mike Dickerson was an SRE who became the founding administrator of the United States Digital Services. He created this hierarchy while he was facing one the largest reliability crisis he had ever been asked to address.
 
 It is a riff on Maslow’s hierarchy of needs. Like Maslow’s hierarchy, the idea is that there are a set of levels. For us to progress up the pyramid, we need to make sure that each of the lower levels are solid first. Let’s look at the levels in this hierarchy.
 
 ----
 
-The first level, and perhaps the most important and foundational one is monitoring. This is going to be the source of the information that will allow you to have the concrete conversations about reliability in your organization around objective data. This is how we will know what the effect of any changes we make are. In even starker terms, I would say this is how we will know whether things are getting better or not. Until we are solid on our monitoring, we can’t get the rest of the work done. But let’s assume we feel good about our monitoring in our environment, where do we go next?
+The first level, and perhaps the most important and foundational is monitoring. This is going to be the source of the information that will allow you to have the concrete conversations about reliability in your organization around objective data. 
+
+This is how we will know what the effect of any changes we make are. In even starker terms, I would say this is how we will know whether things are getting better or not. Until we are solid on our monitoring, we can’t get the rest of the work done. But let’s assume we feel good about our monitoring in our environment, where do we go next?
 
 ----
 
-The next level is incident response - what do we do when we do have an incident, when our systems are down or not working in a way that is impacting our customers. How effective are we at triaging the problem, getting the right resources engaged to mitigate the issue, communicating with the stakeholders about the problem, bringing things back to a better place.
+The next level is incident response - what do we do when we do have an incident, when our systems are down or not working in a way that is impacting our customers? 
+
+How effective are we at triaging the problem, getting the right resources engaged to mitigate the issue, communicating with the stakeholders about the problem, bringing things back to a better place.
 
 ----
 
@@ -91,13 +95,13 @@ With the in hand, we may then begin to address the idea that success and the gro
 
 ----
 
-And finally, in the Dickerson hierarchy there are two other levels that we won’t be addressing in this learning path: the development process and the work that goes into making a good user experience. Other learning paths at Ignite speak to this more than we will.
+And finally, in the Dickerson hierarchy there are two other levels that we won’t be addressing in this learning path: the development process and the work that goes into making a good user experience. Other learning paths at Ignite The Tour speak to this more than we will.
 
-So, that’s our entire hierarchy.
+This our entire hierarchy of reliability.
 
 ----
 
-And that hierarchy, that map I’ve given you. That’s the basis for the OPS learning path.
+And that hierarchy, that map I’ve given you, is the basis for the Ops learning path.
 
 ----
 
@@ -105,11 +109,13 @@ Let’s start right in with the first level of the hierarchy. The foundation.
 
 ----
 
-Welcome to OPS10 Building the Foundation for Modern Ops: Monitoring. My name is YOURNAMEHERE and I’m a YOURTITLE here at Microsoft.
+Welcome to **OPS10 Building the Foundation for Modern Ops: Monitoring**. 
+
+My name is *{YOURNAMEHERE}*.
 
 ----
 
-For this session, there are a number of resources, all of which will be available to you after the session. I will show this slide again at the end of our time together.
+In this session, there are a number of resources, all of which will be available to you after the session. I will show this slide again at the end of our time together.
 
 ----
 
@@ -133,7 +139,7 @@ There are other parts and technologies at play with this application. But really
 
 ----
 
-And lest you get worried we are going to be diving into something too futuristic for your organization, you don’t even have to pay attention to the Kubernetes part for the purposes of this learning path. You can just focus on the idea that there is a frontend and a set of backend services. If you do indeed want to get into Kubernetes topics, there are other sessions here at the event which talk explicitly about it.
+And should you get worried we are going to be diving into something too futuristic for your organization, you don’t even have to pay attention to the Kubernetes part for the purposes of this learning path. You can just focus on the idea that there is a frontend and a set of backend services. If you do indeed want to get into Kubernetes topics, there are other sessions here at the event which talk explicitly about it.
 
 ----
 
@@ -141,7 +147,9 @@ All of this stuff, you may be surprised to hear, runs in Microsoft Azure.
 
 ----
 
-And given that, they primarily use the Azure Monitor suite of products for their monitoring. Given how important Azure Monitor is to this session, let’s dive into what it entails. I do want to say first that there is so much great stuff in Azure monitor that we could spend the entire session on just a survey of the product. But to make this session maximally useful to you, we’re going to provide some brief introductions to the breadth of the service and then immediately make sure we focus in on just what you need to use it for reliability work.
+And given that, they primarily use the Azure Monitor suite of products for their monitoring. Given how important Azure Monitor is to this session, let’s dive into what it entails. 
+
+I do want to say first that there is so much great stuff in Azure monitor that we could spend the entire session on just a survey of the product. But to make this session maximally useful to you, we’re going to provide some brief introductions to the breadth of the service and then immediately make sure we focus in on just what you need to use it for reliability work.
 
 ----
 
@@ -149,7 +157,9 @@ A look at Azure Monitor starts with the data that comes into the system. Azure M
 
 ----
 
-The data that comes in is of two types. Metrics, which are small numerical pieces of information like counters, gauges, that sort of thing, which are collected on a regular basis. The other kind of data is log data. In this session, we are going to mostly be focusing on the work you can do with logs.
+The data that comes in is of two types. Metrics, which are small numerical pieces of information like counters and gauges, which are collected on a regular basis. 
+
+The other kind of data is log data. In this session, we are going to mostly be focusing on the work you can do with logs.
 
 ----
 
@@ -163,21 +173,33 @@ So let’s get into it.
 
 ----
 
-In order for us begin to work on monitoring for reliability, there is a predecessor step we have to take. First, we need to make sure we have a reasonable level of operational awareness. The simplest way to say this is in order to work towards the reliability of systems in production, we have to have a decent understanding first of those systems and how they are functioning in production.
+In order for us begin to work on monitoring for reliability, there is a predecessor step we have to take. First, we need to make sure we have a reasonable level of operational awareness. 
+
+The simplest way to say this is in order to work towards the reliability of systems in production, we have to have a decent understanding first of those systems and how they are functioning in production.
 
 ----
 
-Though it may sound peculiar, my experience talking with people in the operations world is that often the first question that needs to get answered is "What exactly is running in production?" Our production environments these days and the paths to deploying things to them are sufficiently complex that it is not uncommon to first have to do a bit of discovery first. Given a specific application, what are its component parts? what parts talk to other parts? Once we get that, we move to attempting to get a baseline around performance and "normal" behavior.
+Though it may sound peculiar, my experience talking with people in the operations world is that often the first question that needs to get answered is "**What exactly is running in production?**" 
 
-As part of obtaining that baseline, we’ll want to perhaps dive into looking at past performance. While it is true "Past performance is no guarantee of future results" it can sometimes help us calibrate our expectations. Similarly, if we have access to information about past outages or hiccups with a service, those may give us at least some sense of potential failure modes that we’re going to need to incorporate into our thinking around reliability.
+Our production environments these days, and the paths to deploying things to them, are sufficiently complex that it is not uncommon to first have to do a bit of discovery first. Given a specific application, what are its component parts? what parts talk to other parts? Once we get that, we move to attempting to get a baseline around performance and "normal" behavior.
 
-And finally, it will be useful for us to gain some contextual knowledge around a system. Context can fall into a wide variety of buckets, much of it socio-technical. For example, and the socio- side we’ll want to gather good information about the stakeholders associated with a service or an application. You would think "oh, it’s obvious who owns or cares about a particular app/service" but in enterprise situations or other complex organizations, this can be much harder than it sounds. But the sad truth is we’re not going to be able to make much headway on the reliability of a system without that information for reasons that will become clear later when we discuss SLIs and SLOs.
+As part of obtaining that baseline, we’ll want to dive into looking at past performance. While it is true "Past performance is no guarantee of future results" it can sometimes help us calibrate our expectations.
 
-On the technical side of the context question, it will be really helpful for us to pay attention to technical questions like "just how did this application get in production?". Was it deployed by hand via an epic deployment as we’ll talk about in OPS40 or was it deployed via an automated CI/CD pipeline with a great set of unit tests, also discussed in that session? This information can have many ramifications including how easy it will be to iterate if and when we have reliability-improving updates to make. It can also be a really useful pointer to places we can make a real difference with our work.
+ Similarly, if we have access to information about past outages or hiccups with a service, those may give us at least some sense of potential failure modes that we’re going to need to incorporate into our thinking around reliability.
+
+And finally, it will be useful for us to gain some contextual knowledge around a system. Context can fall into a wide variety of buckets, much of it socio-technical. For example, and the socio- side we’ll want to gather good information about the stakeholders associated with a service or an application. 
+
+You would think "oh, it’s obvious who owns or cares about a particular app/service" but in enterprise situations or other complex organizations, this can be much harder than it sounds. 
+
+The sad truth is we’re not going to be able to make much headway on the reliability of a system without that information for reasons that will become clear later when we discuss SLIs and SLOs.
+
+On the technical side of the context question, it will be really helpful for us to pay attention to technical questions like "just how did this application get in production?". Was it deployed by hand via an epic deployment as we’ll talk about in OPS40 or was it deployed via an automated CI/CD pipeline with a great set of unit tests, also discussed in that session? 
+
+This information can have many ramifications including how easy it will be to iterate if and when we have reliability-improving updates to make. It can also be a really useful pointer to places we can make a real difference with our work.
 
 Ok, so let’s stop talking abstractly about this idea and see a demonstration of two of the Azure features than can help improve operational awareness for you.
 
-{demo 1}
+[Demo 1 - Application Map](../demos/demo1.md)
 
 Time for a demo. I’d like to show you two Azure offerings that can help you with this operational awareness. There are a number of components of operational awareness, but let’s focus on the deceptively simple question for the tailwind traders app: what’s actually running and how well is it doing?
 
@@ -185,17 +207,19 @@ For the first part of the demo, I’d like to show you one of my very favorite s
 
 Tailwind traders has added these stubs in their app (by the way, did I mention their entire app is available on Github if you want to take a peek? There’s a pointer to this codebase in the resources available for this session). Let’s see just what using app insights gets us.
 
+**Demo steps:**
+
 1. Resource Group -> tt-app-insights -> Application Map.
-1. show various components of app.
-1. point out stats on components.
-1. Point out stats on arrow labels.
-1. Click on connector, talk about stats.
+2. show various components of app.
+3. point out stats on components.
+4. Point out stats on arrow labels.
+5. Click on connector, talk about stats.
 
-So hopefully you can see why this Azure monitor feature excites me so much. It makes it really easy for me to understand just what components are in play, how they talk to each other, their performance, error rates, and so on. All from one screen. Just fabulous. We'll go into further detail about the application map in OPS20. I do want to give you one quick piece of advice about the Application Map before we move on to the second part of the demo: instrument your code and go look at this screen now. Get very familiar with it and all of the data it can offer you. Don’t wait until your next downtime and say "wait, what was that thing PRESENTER NAME HERE was talking about on stage back in CURRENT MONTH HERE? Where is it again in the portal?"
+Hopefully you can see why this Azure monitor feature excites me so much. It makes it really easy for me to understand just what components are in play, how they talk to each other, their performance, error rates, and so on. All from one screen. Just fabulous. We'll go into further detail about the application map in OPS20. I do want to give you one quick piece of advice about the Application Map before we move on to the second part of the demo: instrument your code and go look at this screen now. Get very familiar with it and all of the data it can offer you. Don’t wait until your next downtime and say "wait, what was that thing PRESENTER NAME HERE was talking about on stage back in CURRENT MONTH HERE? Where is it again in the portal?"
 
-{demo 2}
+[Demo 2 - Dashboards](../demos/demo2.md)
 
-Ok, so let’s look at a second, slightly more traditional way people gain operational awareness. You're probably much more familiar with dashboards for answering the questions about how something is performing in production at this moment. But for this demo, I promise to show you something cool you can do with dashboards you may not have seen before.
+Now let’s look at a second, slightly more traditional way people gain operational awareness. You're probably much more familiar with dashboards for answering the questions about how something is performing in production at this moment. But for this demo, I promise to show you something cool you can do with dashboards you may not have seen before.
 
 Creating the dashboards you need are pretty simple. We can click on the pins you find on the interface, like these {click pins on graphs on Application Insights}. And then go to dashboards {navigate to dashboards} and they are added here at the bottom. There's also an edit button at the top {click edit} that gives me a tile like interface where I can drag stuff on to the dashboard I think will be useful. {drag the clock over}, and so on. Once I am done {click done}. I can then save the dashboard {click done customizing}.
 
@@ -207,47 +231,55 @@ But I see you aren't impressed yet. Let me show you something you may not have s
 
 One aspect of Azure you may not have encountered before is the Azure Resource Graph. The Azure Resource Graph is a data representation of all of the resources in Azure that you are using. In the past, if you wanted to get a handle on this, you would have to write a bunch of code that would query our APIs and then maybe generate some reports. With Azure Resource Graph, we can almost instantaneously query for the information we desire via the Azure Resource Graph Explorer. I find it easiest to use the top search bar to find it
 
-{search for resource graph explorer}.
+*{search for resource graph explorer}*
 
 This provides a query environment which allow you to {open resource item} run queries over the dataset of the current set of resources you have in use. If you think of them as database queries where the database stores a magically updated list of all of your resources in play, you get the right idea.
 
 So for example, if I wanted info on all of the disks I’m using on all of the compute notes I’m running, I could do something like this:
 
-{open resources, scroll to microsoft.compute.disks, click on it to add 'where type == "microsoft.compute/disks"’}
+*{open resources, scroll to microsoft.compute.disks, click on it to add 'where type == "microsoft.compute/disks"’}*
 
-{click run query}
+*{click run query}*
 
 Now I have a list of all of the (read the number) disks in use, {scroll window} complete with what kind they are, what region they are in, and lots of other great stuff.
 
 I don’t want to dwell on this screen or even really explain it much because it is the same interface as the one we’ll be explore in more depth when we talk about log analytics later in the talk and I don’t want to steal its thunder. What I _do_ want to do is tie this back in to dashboards.
 
-If we go back to dashboard, {click dashboard} and click on the Upload button we mentioned before and feed it an exported JSON dashboard file you will find in the Github repo for this session, I get the following:
+If we go back to dashboard, *{click dashboard}* and click on the Upload button we mentioned before and feed it an exported JSON dashboard file you will find in the Github repo for this session, I get the following:
 
-{click upload, upload AzureInventoryDashboard.json}
+*{click upload, upload AzureInventoryDashboard.json}*
 
 Here’s a spiffy new dashboard that shows you a pretty dashboard of all of your resources currently in play for all of your subscriptions. {show items on dashboard}.
 
 You can see that the tiles are Resource Graph queries (in teeny tiny type), and just to prove this, if I click on a tile {click on Sum of all Disk sizes} you can see the actual query being run. In this case, it says for all disk resources, take the diskSizeGB property, convert that to a long (signed 64-bit) number representation, then the final line sums that up). I promise we’ll come back to this very powerful query interface later. Now back to the presentation.
 
-{back to slides}
+*{back to slides}*
 
 With the operational awareness we’ve gained through the tools we just saw, we can now confidently get into the subject you’ve all been waiting for—Monitoring for Reliability.
 
 ----
 
-While it may be tempting to head to the portal and start clicking on things to add items to a dashboard, I’d like to take a different tack today. I’d like to start out by expanding your conception of reliability first. I have found talking to customers that they really appreciate first getting their head wrapped around what reliability can mean. It’s not uncommon for people to say "oh, I never thought of measuring that" or "hmm, we could really get a handle on this problem if we considered that aspect…". My hope is this discussion will be one of the important takeaways of this session for you.
+While it may be tempting to head to the portal and start clicking on things to add items to a dashboard, I’d like to take a different tack today. I’d like to start out by expanding your conception of reliability first.
+
+I have found talking to customers that they really appreciate first getting their head wrapped around what reliability can mean. It’s not uncommon for people to say "oh, I never thought of measuring that" or "hmm, we could really get a handle on this problem if we considered that aspect…". My hope is this discussion will be one of the important takeaways of this session for you.
 
 ----
 
-So let’s talk about some of the aspects of reliability. In all of these cases we’re trying to understand and work with people’s expectations.
+Now let’s talk about some of the aspects of reliability. In all of these cases we’re trying to understand and work with people’s expectations.
 
 ----
 
-When most people talk about reliability, they tend to start here, with availability. Is the system "up" or is it "down"? Can I reach your website, your service, use the product when I expect to? And just to be clear, even though we usually talk about this expectation of availability from the perspective of an external customer, i.e. "people couldn’t get to our website, it was down", internal customer expectations are equally important and in scope here. If you run a service that something else depends on, even something else wholly internal to your organization, availability and that "customer" is equally important. As a result, availability is a great place to start when we talk about reliability. And if spent most of your time just in this bubble, working on this aspect of reliability, that would be just fine and completely normal.
+When most people talk about reliability, they tend to start here, with availability. Is the system "up" or is it "down"? Can I reach your website, your service, use the product when I expect to? 
+
+And just to be clear, even though we usually talk about this expectation of availability from the perspective of an external customer, i.e. "people couldn’t get to our website, it was down", internal customer expectations are equally important and in scope here. If you run a service that something else depends on, even something else wholly internal to your organization, availability and that "customer" is equally important. 
+
+As a result, availability is a great place to start when we talk about reliability. And if you spent most of your time just in this bubble, working on this aspect of reliability, that would be just fine and completely normal.
 
 ----
 
-But coming up right after availability when we speak of reliability is latency. How much of a delay is there between a request and a response? Not sure if you’ve heard the saying "Slow is the new Down"? Especially for direct external customer interactions where, for example, someone visits your website, having that service respond as quickly as possible can be critical. There’s lots of evidence about how website slowness can drive customers to competitors, so this too becomes a reliability concern.
+But coming up right after availability when we speak of reliability is latency. How much of a delay is there between a request and a response? Not sure if you’ve heard the saying "Slow is the new Down"? 
+
+Especially for direct external customer interactions where, for example, someone visits your website, having that service respond as quickly as possible can be critical. There’s lots of evidence about how website slowness can drive customers to competitors, so this too becomes a reliability concern.
 
 ----
 
@@ -263,7 +295,9 @@ One aspect of reliability that doesn’t get enough attention (in my opinion) is
 
 ----
 
-Fidelity in this context comes up in cases where it is possible for your service to continue to provide some sort of reduced or degraded experience when somthing goes wrong. For example, take a website where the different parts of the home page are provided by different microservices--ideally if one microservice goes down, you can still serve the home page just with that section missing or replaced with some static content. Fidelity would be the measurement of how often you showed a "degraded" experience vs. the complete page as intended with full fidelity.
+Fidelity in this context comes up in cases where it is possible for your service to continue to provide some sort of reduced or degraded experience when somthing goes wrong. 
+
+For example, take a website where the different parts of the home page are provided by different microservices--ideally if one microservice goes down, you can still serve the home page just with that section missing or replaced with some static content. Fidelity would be the measurement of how often you showed a "degraded" experience vs. the complete page as intended with full fidelity.
 
 ----
 
@@ -281,17 +315,23 @@ Reliability has to measured from the customer’s perspective, not the component
 
 ----
 
-Let’s drive this home with an example. Let's say we are in charge of running a e-commerce site that runs a web farm with 100 server instances. Something bad happens, maybe a bad OS or software update, a power fluctuation, whatever, and 14 of these 100 instances stop working. They hopefully didn’t burst into flame like this graphic suggests, but you get the idea.
+Let’s drive this home with an example.
+
+Let's say we are in charge of running a e-commerce site that runs a web farm with 100 server instances. Something bad happens, maybe a bad OS or software update, a power fluctuation, whatever, and 14 of these 100 instances stop working. They hopefully didn’t burst into flame like this graphic suggests, but you get the idea.
 
 Quiz time. Now remember, 14 out of the 100 instances are now totally out commission. Is the situation:
 
-- A: no big deal? We should get to dealing with the problem at some point when we can get around it. At worst maybe we’re spending money for some broken VMs we aren’t using so we should take care of them.
-- B: we should stop whatever we are doing, get to our desk, and get those 14 server instances back into service
-- C: a serious emergency, perhaps an existential crisis that we should be waking up C-level executives and getting them out of bed for. We need to get all hands on deck to deal with this situation, stat!
+- **A:** no big deal? We should get to dealing with the problem at some point when we can get around it. At worst maybe we’re spending money for some broken VMs we aren’t using so we should take care of them.
+- **B:** we should stop whatever we are doing, get to our desk, and get those 14 server instances back into service
+- **C:** a serious emergency, perhaps an existential crisis that we should be waking up C-level executives and getting them out of bed for. We need to get all hands on deck to deal with this situation, stat!
 
 How many people say A? B? and C? [possibly engage w/audience, curious why you say that?]
 
-For those of you who didn’t vote A, B, and C and instead said to yourself "It depends". That’s almost the right answer to this bit of a trick question. The exact right answer is "it depends on how your customers are experiencing this outage". If you have engineered things such that no customers even noticed the backends going down, the other 86 are shouldering the load just fine, then indeed there’s no crisis here. It could be a SEV-3 or SEV-4 incident, possibly even just a support ticket. If your entire business is dead in the water and you are losing serious amounts of money for every minute you are done, yes, that’s probably a good reason to push the big red button and scramble everyone. And you can imagine that there could be a middle ground where the answer will be "B". But again, reliability has to measured from the customer’s perspective, not the component perspective. That’s why the component count of "14 machines down out of 100" is true, but not the most important piece of information from a reliability perspective in this example.
+For those of you who didn’t vote A, B, and C and instead said to yourself "It depends". That’s almost the right answer to this bit of a trick question. The exact right answer is "it depends on how your customers are experiencing this outage". 
+
+If you have engineered things such that no customers even noticed the backends going down, the other 86 are shouldering the load just fine, then indeed there’s no crisis here. It could be a SEV-3 or SEV-4 incident, possibly even just a support ticket. If your entire business is dead in the water and you are losing serious amounts of money for every minute you are done, yes, that’s probably a good reason to push the big red button and scramble everyone. 
+
+And you can imagine that there could be a middle ground where the answer will be "B". But again, reliability has to measured from the customer’s perspective, not the component perspective. That’s why the component count of "14 machines down out of 100" is true, but not the most important piece of information from a reliability perspective in this example.
 
 ----
 
