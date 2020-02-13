@@ -24,10 +24,6 @@ variables:
   aks-cluster: tailwindtradersakstcedwbyyetsym
   ingress: c1a852e86f9548329522.australiaeast.aksapp.io
 
-  aks-cluster-pre-prod: tailwindtradersaksgfhyn4s5xum2i
-  ingress-pre-prod: f2cd9488f0124e49b0e0.australiaeast.aksapp.io
-
-
   # Production Database
   hostDB: https://ttshoppingdbtcedwbyyetsym.documents.azure.com:443/
 
