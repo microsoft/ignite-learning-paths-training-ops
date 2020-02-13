@@ -10,21 +10,21 @@ variables:
   azureSubscription: azure-service-connection
 
   # Container Registry
-  containerRegistryName: ttacrgfhyn4s5xum2i
-  containerRegistryFqdn: ttacrgfhyn4s5xum2i.azurecr.io
+  containerRegistryName: ttacrtcedwbyyetsym
+  containerRegistryFqdn: ttacrtcedwbyyetsym.azurecr.io
 
   # AKS Pre-Production
-  aks-cluster-rg-pre-prod: ops-sydney
-  aks-cluster-pre-prod: tailwindtradersaksgfhyn4s5xum2i
-  ingress-pre-prod: f2cd9488f0124e49b0e0.australiaeast.aksapp.io
+  aks-cluster-rg-pre-prod: sydney-ops
+  aks-cluster-pre-prod: tailwindtradersakstcedwbyyetsym
+  ingress-pre-prod: c1a852e86f9548329522.australiaeast.aksapp.io
 
   # Production
-  aks-cluster-rg: ops-sydney
-  aks-cluster: tailwindtradersaksgfhyn4s5xum2i
-  ingress: f2cd9488f0124e49b0e0.australiaeast.aksapp.io
+  aks-cluster-rg: sydney-ops
+  aks-cluster: tailwindtradersakstcedwbyyetsym
+  ingress: c1a852e86f9548329522.australiaeast.aksapp.io
 
   # Production Database
-  hostDB: https://ttshoppingdbgfhyn4s5xum2i.documents.azure.com:443/
+  hostDB: https://ttshoppingdbtcedwbyyetsym.documents.azure.com:443/
 
 stages:
 
