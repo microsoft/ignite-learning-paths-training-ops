@@ -102,7 +102,13 @@ This demo uses Logic Apps, Azure Devops (Boards), and Microsoft Teams. Follow th
 
 ### Logic Apps
 
-The Logic App should be deployed ready to go with the exception of authenticating a two of the connectors. The easiest way to do this is to authenticate the API Connections (found in the resource group).
+The Logic App should be deployed ready to go with the exception of a few things. The default Teams tenant in the deployed template points to a generic ID (MS Ignite the Tour).
+
+You will need to point the Microsoft Teams connector to a tenant of yours and then authenticate the *Teams* and the *Visual Studio Team Services* connectors.
+
+**Point the Microsoft Teams Connector to a Tenant You are Associated With**
+
+In the design view of the Logic App, change the tenant ID for both "Teams" actions from the default/generic tenant (*MS Ignite The Tour*), to the ID of the Teams tenant you are a part of.
 
 **Authenticate Microsoft Teams and Azure Devops for use in the Logic App**
 
