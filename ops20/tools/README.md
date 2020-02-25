@@ -1,13 +1,5 @@
 # Tools
 
-| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) |
-|--------|-------|------------|-----------|
-
-| [Transcript](../../script/OPS20_Speaking_Script.md) | [Video](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/OPS20_Final_Full.mp4) | [Powerpoint](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/slides/OPS20_Responding_to_incidents_master.pptx) | [Tools](/ops20/tools/README.md) |
-|------------|-------|------------|-------|
-
-## Additional Resources
-
 | Tools | Docs | MS Learn | Demo | Video
 |-------|------|---------|------|-------
 | Logic App |[Doc]() | [Learn]() | [1]() | [Link]()

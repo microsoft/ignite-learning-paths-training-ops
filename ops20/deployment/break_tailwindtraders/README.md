@@ -1,8 +1,5 @@
 # Breaking Tailwind Traders
 
-| [README](/ops20/README.md) | [Slides](/ops20/slides/README.md) | [Demos](/ops20/demos/README.md) | [Deployment](/ops20/deployment/README.md) |
-|--------|-------|------------|-----------|
-
 In order to demonstrate certain aspects of incident management, including the use of observability tools such as Log Analytics, Troubleshooting Guides, KQL, and more, we will need to artificially cause problems in our Tailwind Traders e-commerce site.
 
 For this demonstration we have chosen to put the system in a state where the Kubernetes pod associated with the shopping cart functionality of the site is using a configuration file with a bad URL. The **HOST** address is missing a `3` digit in the port `:443` portion of the URL.
