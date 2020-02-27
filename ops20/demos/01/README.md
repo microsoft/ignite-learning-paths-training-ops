@@ -1,9 +1,9 @@
 # Demo 1: Creating An Incident Response Plan
 
 >**On Stage Demo Video:**<br/>
-[Demo 1: Creating An Incident Response Plan (7:14)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/video/Demo1-ApplicationMap.mp4)
+[Demo 1: Creating An Incident Response Plan (7:14)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4)
 
-[![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/screenshots/ops20-demo1.png)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/video/Demo1-ApplicationMap.mp4)
+[![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/screenshots/ops20-demo1.png)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4)
 
 **Question:** *What are we trying to demonstrate?*
 
