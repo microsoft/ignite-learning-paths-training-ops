@@ -1,14 +1,9 @@
 # Demo 1: Creating An Incident Response Plan
 
->**Do you need to show videos instead of doing the demo live?:** Below, you'll find "stage-ready" videos that may be used in the event this presentation should be delivered offline.
+>**On Stage Demo Video:**<br/>
+[Demo 1: Creating An Incident Response Plan (7:14)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/video/Demo1-ApplicationMap.mp4)
 
-|  | Video | Description
-|--------|-------|-----|
-| [Part 1: Logic App](#part-1-logic-app) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4) | Describe the Logic App
-| [Part 2: Azure Boards](#part-2-azure-boards) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4) | Describe the configuration  and usage of Azure Boards
-| [Part 3: Microsoft Teams](#part-3-microsoft-teams) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4) | Describe what's happening in Microsoft Teams
-
----
+[![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/screenshots/ops20-demo1.png)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/video/Demo1-ApplicationMap.mp4)
 
 **Question:** *What are we trying to demonstrate?*
 

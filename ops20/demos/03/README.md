@@ -1,14 +1,9 @@
 # Demo 3: Remediation of Shopping Cart
 
->**Do you need to show videos instead of doing the demo live?:** Below, you'll find "stage-ready" videos that may be used in the event this presentation should be delivered offline. As of 10/18 all links below point to the full recording of demo 3. This will be broken down further soon.
+>**On Stage Demo Video:**<br/>
+[Demo 3: Remediation of Shopping Cart (7:00)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_3_full.mp4)
 
-|  | Video | Description
-|--------|-------|-----|
-| [Part 1: Azure Dashboard](#part-1-azure-dashboard) | [Link](https://https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_3_full.mp4) | Demonstrate the Azure Dashboard
-| [Part 2: Azure Service Health](#part-2-azure-service-health) | [Link](https://https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_3_full.mp4) | Demonstrate Azure Service Health
-| [Part 3: Log Analytics](#part-5-log-analytics) | [Link](https://https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_3_full.mp4) | Demonstrate Log Analytics
-| [Part 4: KQL (Kusto Query Language)](#part-6-kql-kusto-query-language) | [Link](https://https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_3_full.mp4) | Demonstrate KQL - Kusto Query Language
-| [Part 5: Application Map](#part-3-application-map) | [Link](https://https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_3_full.mp4) | Demonstrate Application Map
+[![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/screenshots/ops20-demo3.png)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_3_full.mp4)
 
 **Question:** *What are we trying to demonstrate?*
 

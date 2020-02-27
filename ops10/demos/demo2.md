@@ -12,7 +12,7 @@
 ## Before you Demo
 
 1. Be sure to deploy the app and send traffic to it as per the [demo 1 script](demo1.md)
-1. IMPORTANT: Download [AzureInventoryDashboard.json|(AzureInventoryDashboard.json)] to your local machine.
+1. IMPORTANT: Download [AzureInventoryDashboard.json](AzureInventoryDashboard.json) to your local machine.
 
 ## Script
 
