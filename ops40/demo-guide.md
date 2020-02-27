@@ -2,6 +2,11 @@
 
 ## Demo 1
 
+>**On Stage Demo Video:**<br/>
+[Demo 1: Azure Pipelines (18:36)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo1.mp4)
+
+[![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/images/ops40demo1.png)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo1.mp4)
+
 ### Browser Tab 1: Tailwind Traders
 
 Show the Tailwind Traders application and non-functioning cart.
@@ -44,6 +49,12 @@ Navigate back to the GitHub and merge the pull request.
 Move back into the slide deck while the pipeline runs.
 
 ## Demo 2
+
+>**On Stage Demo Video:**<br/>
+[Demo 1: Environment Tracing (3:47)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo2.mp4)
+
+
+[![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/images/ops40demo2.png)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops40/video/demos/ops40-demo2.mp4)
 
 At this point, hopefully, the pre-production deployment has completed. Show how production can be reconciled .via build ID (helm release version and container image version).
 

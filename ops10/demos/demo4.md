@@ -1,5 +1,10 @@
 # OPS 10 Demo 4 Script - SLOs in Log Analytics
 
+>**On Stage Demo Video:**<br/>
+[Demo 4: SLOs in Log Analytics (0:54)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/video/Demo4-SLO.mp4)
+
+[![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/images/demo4.png)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/video/Demo4-SLO.mp4)
+
 ## Background
 
 * Note: This is the same script as found embedded in the [main](../scripts/main.md) file, just broken out for convenience.

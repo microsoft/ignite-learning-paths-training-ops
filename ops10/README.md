@@ -15,7 +15,7 @@ In this session, you’ll get an introduction to modern operations disciplines a
 | Resources          | Links  |
 |-------------------|----------------------------------|
 | PowerPoint        | - [Presentation](presentations.md)  |
-| Videos            | - [Dry Run Rehearsal](coming soon) <br/>- [Microsoft Ignite Orlando Recording](https://myignite.techcommunity.microsoft.com/sessions/82996) <br/> - [Demo 1: App Insights Application Map](coming soon) <br/>- [Demo 2: Dashboards](coming soon) <br/>- [Demo 3:SLIs in Log Analytics](coming soon) <br/>- [Demo 4:SLOs in Log Analytics](coming soon)|
+| Videos            | - [Dry Run Rehearsal](coming soon) <br/>- [Microsoft Ignite Orlando Recording](https://myignite.techcommunity.microsoft.com/sessions/82996) <br/> - [Demo 1: App Insights Application Map](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/video/Demo1-ApplicationMap.mp4) <br/>- [Demo 2: Dashboards](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/video/Demo2-Dashboards.mp4) <br/>- [Demo 3:SLIs in Log Analytics](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/video/Demo3-SLI.mp4) <br/>- [Demo 4:SLOs in Log Analytics](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/video/Demo4-SLO.mp4)|
 | Demos             | - [Demo 1 - App Insights Application Map](./demos/demo1.md) <br/> - [Demo 2 - Dashboards](./demos/demo2.md) <br/> - [Demo 3 - SLIs in Log Analytics](./demos/demo3.md) <br/> - [Demo 4 - SLOs in Log Analytics](./demos/demo4.md) <br/>
 
 ---

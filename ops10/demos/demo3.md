@@ -1,5 +1,10 @@
 # OPS 10 Demo 3 Script - SLIs in Log Analytics
 
+>**On Stage Demo Video:**<br/>
+[Demo 3: SLIs in Log Analytics (1:33)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/video/Demo3-SLI.mp4)
+
+[![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/images/demo3.png)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/video/Demo3-SLI.mp4)
+
 ## Background
 
 * Note: This is the same script as found embedded in the [main](../scripts/main.md) file, just broken out for convenience.
