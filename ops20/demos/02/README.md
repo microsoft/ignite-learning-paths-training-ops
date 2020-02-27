@@ -1,7 +1,7 @@
 # Demo 2: Troubleshooting Guides & Status Page
 
 >**On Stage Demo Video:**<br/>
-[Demo 2: Troubleshooting Guides & Status Page (5:36)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_2_full.mp4)
+[Demo 2: Troubleshooting Guides & Status Page (5:38)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_2_full.mp4)
 
 [![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/screenshots/ops20-demo2.png)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_2_full.mp4)
 
@@ -27,7 +27,7 @@ We are going to use this as an opportunity to demonstrate how to create a new Tr
 
 The troubleshooting guide web gallery template file (JSON) is found in this repository.
 
-- [Gallery](TroubleshootingGuideGalleryTemplate.json)
+- [Troubleshooting Guide Gallery JSON file](TroubleshootingGuideGalleryTemplate.json)
 
 We are using the gallery method as it seems to be more responsive for on-stage demos.
 

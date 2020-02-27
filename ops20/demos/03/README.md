@@ -9,9 +9,7 @@
 
 **Answer:** We are demonstrating several tools within the Azure ecosystem that can help reduce the time to recover from a service disruption.
 
-This demo touches on five (5) unique products within the Azure ecosystem we will use to "respond" & "remediate" an active "incident".
-
-We will navigate through a number of tools beginning with the Application Dashboard. [Look here for instructions on how to create the dashboard](../../deployment/dashboard/README.md) prior to the demo.
+This demo touches on five (6) unique products within the Azure ecosystem we will use to "respond" & "remediate" an active "incident". We will navigate through a number of tools beginning with the Application Dashboard.
 
 > **Presenter Setup Checklist:**
 

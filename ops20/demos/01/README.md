@@ -71,8 +71,6 @@ Expand each step and explain what is happening
 - Update Work Item (Azure Boards)
 - Post to Chat Channel (Microsoft Teams)
 
-[Watch Demo 1: Part 1](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4)
-
 ---
 
 ## Part 2: Azure Boards
@@ -81,8 +79,6 @@ Switch to the tab containing Azure Boards. You should be looking at your work it
 
 >**Presenter Note:** After confirming there are no current work items, we send the alert using Postman.
 
-[Watch Demo 2: Part 2](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4)
-
 ---
 
 ## Part 3: Microsoft Teams
@@ -90,5 +86,3 @@ Switch to the tab containing Azure Boards. You should be looking at your work it
 Starting in Microsoft Teams, the audience should notice a new chat channel that mathes the number of the work item from Azure Boards. It is bold because it is new to us and there is an update in there we have not viewed.
 
 Open the new channel and point out the links that were provided.
-
-[Watch Demo 1: Part 3](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4)
