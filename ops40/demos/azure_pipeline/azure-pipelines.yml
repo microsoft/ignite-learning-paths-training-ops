@@ -10,21 +10,21 @@ variables:
   azureSubscription: azure-service-connection
 
   # Container Registry
-  containerRegistryName: ttacrgfhyn4s5xum2i-change-me
-  containerRegistryFqdn: ttacrgfhyn4s5xum2i.azurecr.io-change-me
+  containerRegistryName: ttacrkeztpebprwetu
+  containerRegistryFqdn: ttacrkeztpebprwetu.azurecr.io
 
   # AKS Pre-Production
-  aks-cluster-rg-pre-prod: change-me
-  aks-cluster-pre-prod: tailwindtradersaksgfhyn4s5xum2i-change-me
-  ingress-pre-prod: f2cd9488f0124e49b0e0.australiaeast.aksapp.io-change-me
+  aks-cluster-rg-pre-prod: TailwindTraders-RG
+  aks-cluster-pre-prod: windtradersakskeztpebprwetu
+  ingress-pre-prod: d959dbdc5ee248729ebc.australiaeast.aksapp.io
 
   # Production
-  aks-cluster-rg: change-me
-  aks-cluster: tailwindtradersaksgfhyn4s5xum2i-change-me
-  ingress: f2cd9488f0124e49b0e0.australiaeast.aksapp.io-change-me
+  aks-cluster-rg: TailwindTraders-RG
+  aks-cluster: windtradersakskeztpebprwetu
+  ingress: d959dbdc5ee248729ebc.australiaeast.aksapp.io
 
   # Production Database
-  hostDB: https://ttcuoponsdbhe2fbh2uefimy.documents.azure.com:443/-change-me
+  hostDB: https://ttshoppingdbkeztpebprwetu.documents.azure.com:443/ 
 
 stages:
 
