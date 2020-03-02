@@ -20,7 +20,7 @@ variables:
 
   # Production
   aks-cluster-rg: TailwindTraders-RG
-  aks-cluster: windtradersakskeztpebprwetu
+  aks-cluster: tailwindtradersakskeztpebprwetu
   ingress: d959dbdc5ee248729ebc.australiaeast.aksapp.io
 
   # Production Database
