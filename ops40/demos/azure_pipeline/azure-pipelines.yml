@@ -15,7 +15,7 @@ variables:
 
   # AKS Pre-Production
   aks-cluster-rg-pre-prod: TailwindTraders-RG
-  aks-cluster-pre-prod: windtradersakskeztpebprwetu
+  aks-cluster-pre-prod: tailwindtradersakskeztpebprwetu
   ingress-pre-prod: d959dbdc5ee248729ebc.australiaeast.aksapp.io
 
   # Production
