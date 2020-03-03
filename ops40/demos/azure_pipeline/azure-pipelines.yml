@@ -29,7 +29,6 @@ variables:
 stages:
 
 - stage: build
-  dependsOn: test
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
   jobs:
