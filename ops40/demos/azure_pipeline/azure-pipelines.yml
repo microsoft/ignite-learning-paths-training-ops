@@ -15,12 +15,12 @@ variables:
 
   # AKS Pre-Production
   aks-cluster-rg-pre-prod: TailwindTraders-RG
-  aks-cluster-pre-prod: windtradersakskeztpebprwetu
+  aks-cluster-pre-prod: tailwindtradersakskeztpebprwetu
   ingress-pre-prod: d959dbdc5ee248729ebc.australiaeast.aksapp.io
 
   # Production
   aks-cluster-rg: TailwindTraders-RG
-  aks-cluster: windtradersakskeztpebprwetu
+  aks-cluster: tailwindtradersakskeztpebprwetu
   ingress: d959dbdc5ee248729ebc.australiaeast.aksapp.io
 
   # Production Database
@@ -29,7 +29,6 @@ variables:
 stages:
 
 - stage: build
-  dependsOn: test
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
   jobs:
