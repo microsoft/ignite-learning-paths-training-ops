@@ -1,14 +1,9 @@
 # Demo 1: Creating An Incident Response Plan
 
->**Do you need to show videos instead of doing the demo live?:** Below, you'll find "stage-ready" videos that may be used in the event this presentation should be delivered offline.
+>**On Stage Demo Video:**<br/>
+[Demo 1: Creating An Incident Response Plan (7:14)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4)
 
-|  | Video | Description
-|--------|-------|-----|
-| [Part 1: Logic App](#part-1-logic-app) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4) | Describe the Logic App
-| [Part 2: Azure Boards](#part-2-azure-boards) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4) | Describe the configuration  and usage of Azure Boards
-| [Part 3: Microsoft Teams](#part-3-microsoft-teams) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4) | Describe what's happening in Microsoft Teams
-
----
+[![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/screenshots/ops20-demo1.png)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4)
 
 **Question:** *What are we trying to demonstrate?*
 
@@ -76,8 +71,6 @@ Expand each step and explain what is happening
 - Update Work Item (Azure Boards)
 - Post to Chat Channel (Microsoft Teams)
 
-[Watch Demo 1: Part 1](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4)
-
 ---
 
 ## Part 2: Azure Boards
@@ -86,8 +79,6 @@ Switch to the tab containing Azure Boards. You should be looking at your work it
 
 >**Presenter Note:** After confirming there are no current work items, we send the alert using Postman.
 
-[Watch Demo 2: Part 2](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4)
-
 ---
 
 ## Part 3: Microsoft Teams
@@ -95,5 +86,3 @@ Switch to the tab containing Azure Boards. You should be looking at your work it
 Starting in Microsoft Teams, the audience should notice a new chat channel that mathes the number of the work item from Azure Boards. It is bold because it is new to us and there is an update in there we have not viewed.
 
 Open the new channel and point out the links that were provided.
-
-[Watch Demo 1: Part 3](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_1_full.mp4)

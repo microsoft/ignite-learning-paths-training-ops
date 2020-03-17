@@ -1,13 +1,9 @@
 # Demo 2: Troubleshooting Guides & Status Page
 
->**Do you need to show videos instead of doing the demo live?:** Below, you'll find "stage-ready" videos that may be used in the event this presentation should be delivered offline.
+>**On Stage Demo Video:**<br/>
+[Demo 2: Troubleshooting Guides & Status Page (5:38)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_2_full.mp4)
 
-|  | Video | Description
-|--------|-------|-----|
-| [Part 1: Troubleshooting Guide](#part-1-azure-troubleshooting-guide) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_2_full.mp4) | Deploy the Troubleshooting Guide via [Gallery template found here](TroubleshootingGuide_Gallery_Template.json) and discuss features
-| [Part 2: Update Status Page](#part-2-update-status-page-from-microsoft-teams) | [Link](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_2_full.mp4) | Demonstrate opening, updating, and closing a status announcement
-
----
+[![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/screenshots/ops20-demo2.png)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops20/video/demo_2_full.mp4)
 
 **Question:** *What are we trying to demonstrate?*
 
@@ -31,7 +27,7 @@ We are going to use this as an opportunity to demonstrate how to create a new Tr
 
 The troubleshooting guide web gallery template file (JSON) is found in this repository.
 
-- [Gallery](TroubleshootingGuideGalleryTemplate.json)
+- [Troubleshooting Guide Gallery JSON file](TroubleshootingGuideGalleryTemplate.json)
 
 We are using the gallery method as it seems to be more responsive for on-stage demos.
 

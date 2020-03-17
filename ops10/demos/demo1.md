@@ -1,5 +1,11 @@
 # OPS 10 Demo 1 Script - App Insights Application Map
 
+>**On Stage Demo Video:**<br/>
+[Demo 1: App Insights Application Map (1:10)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/video/Demo1-ApplicationMap.mp4)
+
+
+[![](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/images/demo1.png)](https://globaleventcdn.blob.core.windows.net/assets/ops/ops10/video/Demo1-ApplicationMap.mp4)
+
 ## Background
 
 * Note: This is the same script as found embedded in the [main](../scripts/main.md) file, just broken out for convenience.
