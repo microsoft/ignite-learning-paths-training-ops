@@ -37,7 +37,7 @@ code.
 
 - This guide
 - PowerPoint presentation including notes for each slide [here](./presentations.md)
-- Full-length recording of presentation [Ignite Orlando recording](https://myignite.techcommunity.microsoft.com/sessions?q=OPS30)
+- Full-length recording of presentation [Ignite Orlando recording](https://myignite.techcommunity.microsoft.com/sessions/82998)
 - Director Cut Full-length recording of presentation  COMING SOON
 - Individual recordings of stage-ready hands-on demos (embedded in [slide deck](./presentations.md)), explanation videos listed above.
 
