@@ -94,7 +94,7 @@ az group create --name RESOURCE_GROUP_NAME --location PREFERRED_AZURE_LOCATION -
 3) Kick off the deploy:
 
 ```
-az group deployment create --resource-group RESOURCE_GROUP_NAME --template-uri https://raw.githubusercontent.com/microsoft/ignite-learning-paths-training-ops/master/deployment/azuredeploy.json  --parameters @params.json --subscription YOUR_SUBSCRIPTION_NAME
+az deployment group create --resource-group RESOURCE_GROUP_NAME --template-uri https://raw.githubusercontent.com/microsoft/ignite-learning-paths-training-ops/master/deployment/azuredeploy.json  --parameters @params.json --subscription YOUR_SUBSCRIPTION_NAME
 ```
 
 ## Connect to deployment
