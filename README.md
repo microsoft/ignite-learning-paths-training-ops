@@ -1,10 +1,10 @@
 # Ignite Learning Paths - Improving Your Reliability through Modern Operations Practices
 
-![Learning Path](https://img.shields.io/badge/Learning%20Path-OPS-fe5e00?logo=microsoft)  ![Session](https://img.shields.io/badge/🗣️Sessions-5-31c754)
+![Learning Path](https://img.shields.io/badge/Learning%20Path-OPS-fe5e00?logo=microsoft) ![Session](https://img.shields.io/badge/🗣️Sessions-5-31c754)
 
 Welcome!
 
-The content of this repository is available for you so you can reproduce any demo or learn how to present any session of the Learning Path presented at [Migrosoft Ignite](https://www.microsoft.com/ignite) and during [Microsoft Ignite The Tour](https://www.microsoft.com/ignite-the-tour/), in your local field office, a community user group, or even as a lunch-and-learn event for your company.
+The content of this repository is available for you so you can reproduce any demo or learn how to present any session of the Learning Path presented at [Microsoft Ignite](https://www.microsoft.com/ignite) and during [Microsoft Ignite The Tour](https://www.microsoft.com/ignite-the-tour/), in your local field office, a community user group, or even as a lunch-and-learn event for your company.
 
 ## Do the Demos
 
@@ -64,9 +64,9 @@ To know more about about to contribute to this project please refer to the [Code
 
 ## Become a Trained Presenter
 
-You don't need anything to present this content, it's all there to be used. However, by becoming a *Trained Presenter* the scalable content team will recognize you as well. *Trained Presenter* see their contact information (name, picture, website) in the bottom of each session.  
+You don't need anything to present this content, it's all there to be used. However, by becoming a _Trained Presenter_ the scalable content team will recognize you as well. _Trained Presenter_ see their contact information (name, picture, website) in the bottom of each session.
 
-To become a *Trained Presenter*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
+To become a _Trained Presenter_, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
 
 - Complete name:
 - The code of this presentation: \<Session Code (ex:APPS10)\>
