@@ -15,7 +15,7 @@ In this session, dive into capacity planning and cost estimation basics, includi
 | Resources          | Links  |
 |-------------------|----------------------------------|
 | PowerPoint        | - [Presentation](presentations.md)  |
-| Videos            | - [Microsoft Ignite Orlando Recording](coming soon) <br/> - [Demo 1: Retrieving Capacity Metrics](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/01_Capacity_Metrics.mp4) <br/>- [Demo 2: Cost Management](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/02_Cost_Management.mp4) [without audio](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/02_Cost_Management_noaudio.mp4)<br/>- [Demo 3: Scaling with Queues](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/03_Scaling.mp4) |
+| Videos            | - [Microsoft Ignite Orlando Recording](https://myignite.techcommunity.microsoft.com/sessions/83001) <br/> - [Demo 1: Retrieving Capacity Metrics](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/01_Capacity_Metrics.mp4) <br/>- [Demo 2: Cost Management](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/02_Cost_Management.mp4) [without audio](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/02_Cost_Management_noaudio.mp4)<br/>- [Demo 3: Scaling with Queues](https://globaleventcdn.blob.core.windows.net/assets/ops/ops50/03_Scaling.mp4) |
 | Demos             | - [Demo 1 - Retrieving Capacity Metrics](./demo-guide.md) <br/> - [Demo 2 - Cost Management](./demo-guide.md) <br/> - [Demo 3 - Scaling with Queues](./demo-guide.md)
 
 ---
