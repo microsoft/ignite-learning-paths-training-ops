@@ -34,7 +34,8 @@ stages:
   
   jobs:
   - job: tests
-    pool: Hosted Ubuntu 1604
+    pool:
+      vmImage: 'windows-latest'
     continueOnError: false
     timeoutInMinutes: 20
 
