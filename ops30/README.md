@@ -41,12 +41,3 @@ code.
 - Director Cut Full-length recording of presentation  COMING SOON
 - Individual recordings of stage-ready hands-on demos (embedded in [slide deck](./presentations.md)), explanation videos listed above.
 
-## Become a Trained Presenter
-
-To become a *Trained Presenter*, contact [scalablecontent@microsoft.com](mailto:scalablecontent@microsoft.com). In your email please include:
-
-- Complete name:
-- The code of this presentation: OPS30
-- Link (ex: unlisted YouTube video) to a video of you presenting (~10 minutes).
-
-> It doesn't need to be this content, the important part is to show your presenter skills
